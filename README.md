@@ -46,7 +46,7 @@ For Vercel:
 
 1. Import the GitHub repository.
 2. Keep the build command as `npm run build`.
-3. Use the detected Vite settings.
+3. Set the output directory to `.output` if Vercel asks for one.
 4. Deploy.
 
 The site is also suitable for a City-managed host. The UI reads the normalized JSON at build time, so the City can replace the source files and rerun the parser without changing the page structure.
