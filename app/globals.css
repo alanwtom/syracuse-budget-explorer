@@ -1,0 +1,342 @@
+@import 'tailwindcss';
+@import 'tw-animate-css';
+@import 'shadcn/tailwind.css';
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+  --font-heading: var(--font-sans);
+  --color-sidebar-ring: var(--sidebar-ring);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar: var(--sidebar);
+  --color-chart-5: var(--chart-5);
+  --color-chart-4: var(--chart-4);
+  --color-chart-3: var(--chart-3);
+  --color-chart-2: var(--chart-2);
+  --color-chart-1: var(--chart-1);
+  --color-ring: var(--ring);
+  --color-input: var(--input);
+  --color-border: var(--border);
+  --color-destructive: var(--destructive);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-accent: var(--accent);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-muted: var(--muted);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-secondary: var(--secondary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-primary: var(--primary);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-popover: var(--popover);
+  --color-card-foreground: var(--card-foreground);
+  --color-card: var(--card);
+  --radius-sm: calc(var(--radius) * 0.6);
+  --radius-md: calc(var(--radius) * 0.8);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) * 1.4);
+  --radius-2xl: calc(var(--radius) * 1.8);
+  --radius-3xl: calc(var(--radius) * 2.2);
+  --radius-4xl: calc(var(--radius) * 2.6);
+}
+
+body {
+  font-family: var(--font-geist-sans), Arial, Helvetica, sans-serif;
+  background: #f4f5f1;
+}
+
+:root {
+  --background: oklch(1 0 0);
+  --foreground: oklch(0.145 0 0);
+  --card: oklch(1 0 0);
+  --card-foreground: oklch(0.145 0 0);
+  --popover: oklch(1 0 0);
+  --popover-foreground: oklch(0.145 0 0);
+  --primary: oklch(0.205 0 0);
+  --primary-foreground: oklch(0.985 0 0);
+  --secondary: oklch(0.97 0 0);
+  --secondary-foreground: oklch(0.205 0 0);
+  --muted: oklch(0.97 0 0);
+  --muted-foreground: oklch(0.556 0 0);
+  --accent: oklch(0.97 0 0);
+  --accent-foreground: oklch(0.205 0 0);
+  --destructive: oklch(0.577 0.245 27.325);
+  --border: oklch(0.922 0 0);
+  --input: oklch(0.922 0 0);
+  --ring: oklch(0.708 0 0);
+  --chart-1: oklch(0.87 0 0);
+  --chart-2: oklch(0.556 0 0);
+  --chart-3: oklch(0.439 0 0);
+  --chart-4: oklch(0.371 0 0);
+  --chart-5: oklch(0.269 0 0);
+  --radius: 0.625rem;
+  --sidebar: oklch(0.985 0 0);
+  --sidebar-foreground: oklch(0.145 0 0);
+  --sidebar-primary: oklch(0.205 0 0);
+  --sidebar-primary-foreground: oklch(0.985 0 0);
+  --sidebar-accent: oklch(0.97 0 0);
+  --sidebar-accent-foreground: oklch(0.205 0 0);
+  --sidebar-border: oklch(0.922 0 0);
+  --sidebar-ring: oklch(0.708 0 0);
+}
+
+.dark {
+  --background: oklch(0.145 0 0);
+  --foreground: oklch(0.985 0 0);
+  --card: oklch(0.205 0 0);
+  --card-foreground: oklch(0.985 0 0);
+  --popover: oklch(0.205 0 0);
+  --popover-foreground: oklch(0.985 0 0);
+  --primary: oklch(0.922 0 0);
+  --primary-foreground: oklch(0.205 0 0);
+  --secondary: oklch(0.269 0 0);
+  --secondary-foreground: oklch(0.985 0 0);
+  --muted: oklch(0.269 0 0);
+  --muted-foreground: oklch(0.708 0 0);
+  --accent: oklch(0.269 0 0);
+  --accent-foreground: oklch(0.985 0 0);
+  --destructive: oklch(0.704 0.191 22.216);
+  --border: oklch(1 0 0 / 10%);
+  --input: oklch(1 0 0 / 15%);
+  --ring: oklch(0.556 0 0);
+  --chart-1: oklch(0.87 0 0);
+  --chart-2: oklch(0.556 0 0);
+  --chart-3: oklch(0.439 0 0);
+  --chart-4: oklch(0.371 0 0);
+  --chart-5: oklch(0.269 0 0);
+  --sidebar: oklch(0.205 0 0);
+  --sidebar-foreground: oklch(0.985 0 0);
+  --sidebar-primary: oklch(0.488 0.243 264.376);
+  --sidebar-primary-foreground: oklch(0.985 0 0);
+  --sidebar-accent: oklch(0.269 0 0);
+  --sidebar-accent-foreground: oklch(0.985 0 0);
+  --sidebar-border: oklch(1 0 0 / 10%);
+  --sidebar-ring: oklch(0.556 0 0);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+  html {
+    @apply font-sans;
+  }
+}
+
+@layer components {
+  .site-header {
+    background: #0f2b3d;
+    color: #fff;
+  }
+
+  .brand-mark {
+    display: flex;
+    height: 2.5rem;
+    width: 2.5rem;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #d8b65d;
+    border-radius: 0.75rem;
+    background: #173f50;
+    color: #f6df9f;
+    font-family: Georgia, serif;
+    font-size: 1.3rem;
+    font-weight: 700;
+  }
+
+  .live-dot {
+    height: 0.45rem;
+    width: 0.45rem;
+    border-radius: 999px;
+    background: #b8e0bf;
+    box-shadow: 0 0 0 3px rgb(184 224 191 / 15%);
+  }
+
+  .eyebrow {
+    color: #718087;
+    font-size: 0.68rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    line-height: 1.2;
+    text-transform: uppercase;
+  }
+
+  .section-title {
+    margin-top: 0.5rem;
+    color: #173140;
+    font-size: 1.35rem;
+    font-weight: 650;
+    letter-spacing: -0.035em;
+    line-height: 1.15;
+  }
+
+  .section-description {
+    margin-top: 0.55rem;
+    max-width: 42rem;
+    color: #5b6d74;
+    font-size: 0.9rem;
+    line-height: 1.65;
+  }
+
+  .panel {
+    border: 1px solid #dfe5df;
+    border-radius: 1.1rem;
+    background: rgb(255 255 255 / 88%);
+    padding: 1.35rem;
+    box-shadow: 0 8px 24px rgb(23 49 64 / 3%);
+  }
+
+  .hero-total {
+    border-radius: 1.25rem;
+    background: #173f50;
+    padding: 1.5rem;
+    box-shadow: 0 18px 42px rgb(15 43 61 / 16%);
+  }
+
+  .metric-card {
+    min-height: 8.6rem;
+    border: 1px solid #dfe5df;
+    border-radius: 1rem;
+    background: rgb(255 255 255 / 82%);
+    padding: 1rem;
+  }
+
+  .metric-card-accent {
+    border-color: #bdd4cf;
+    background: #eef5f2;
+  }
+
+  .metric-value {
+    margin-top: 0.8rem;
+    color: #173140;
+    font-size: 1.7rem;
+    font-weight: 650;
+    letter-spacing: -0.05em;
+    line-height: 1;
+  }
+
+  .metric-note {
+    margin-top: 0.6rem;
+    color: #718087;
+    font-size: 0.76rem;
+    line-height: 1.4;
+  }
+
+  .budget-track {
+    height: 0.55rem;
+    overflow: hidden;
+    border-radius: 999px;
+    background: #e6ece8;
+  }
+
+  .budget-bar {
+    height: 100%;
+    border-radius: inherit;
+    background: linear-gradient(90deg, #397d7a, #72a9a0);
+  }
+
+  .story-card {
+    display: grid;
+    grid-template-columns: 2rem minmax(0, 1fr);
+    gap: 0.7rem;
+    border-bottom: 1px solid #e6e8e1;
+    padding-bottom: 1rem;
+  }
+
+  .story-card:last-child {
+    border-bottom: 0;
+    padding-bottom: 0;
+  }
+
+  .story-number {
+    color: #b28b33;
+    font-family: Georgia, serif;
+    font-size: 1.05rem;
+    font-weight: 700;
+  }
+
+  .source-strip {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+    border: 1px solid #dfe5df;
+    border-radius: 1.1rem;
+    background: #eaf1ee;
+    padding: 1.35rem;
+  }
+
+  .change-card {
+    width: 100%;
+    border: 1px solid #e0e6e0;
+    border-radius: 0.9rem;
+    background: #fff;
+    padding: 1rem;
+    transition: border-color 160ms ease, box-shadow 160ms ease, transform 160ms ease;
+  }
+
+  .change-card:hover {
+    border-color: #9fc5c7;
+    box-shadow: 0 8px 18px rgb(23 49 64 / 7%);
+    transform: translateY(-1px);
+  }
+
+  .change-positive,
+  .change-negative {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.25rem;
+    white-space: nowrap;
+  }
+
+  .change-positive {
+    color: #2e716c;
+  }
+
+  .change-negative {
+    color: #a24e3e;
+  }
+
+  .hero-total .change-positive {
+    color: #b8e0bf;
+  }
+
+  .hero-total .change-negative {
+    color: #f0b6a7;
+  }
+
+  .field-label {
+    color: #52656d;
+    font-size: 0.78rem;
+    font-weight: 650;
+  }
+
+  .detail-stat {
+    border-radius: 0.9rem;
+    background: #eef5f2;
+    padding: 1rem;
+  }
+
+  @media (min-width: 640px) {
+    .panel,
+    .source-strip {
+      padding: 1.5rem;
+    }
+
+    .source-strip {
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+    }
+  }
+}
