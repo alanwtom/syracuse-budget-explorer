@@ -43,3 +43,6 @@ __pycache__/
 
 # local outreach drafts (not for the public repo)
 /docs/jason-outreach.md
+
+# local dev-environment metadata
+/.claude/
