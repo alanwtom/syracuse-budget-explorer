@@ -77,7 +77,8 @@ body {
   --chart-3: oklch(0.439 0 0);
   --chart-4: oklch(0.371 0 0);
   --chart-5: oklch(0.269 0 0);
-  --radius: 0.625rem;
+  /* Near-flat corners. Controls sit on the same surface language as the panels. */
+  --radius: 0.25rem;
   --sidebar: oklch(0.985 0 0);
   --sidebar-foreground: oklch(0.145 0 0);
   --sidebar-primary: oklch(0.205 0 0);
@@ -134,6 +135,11 @@ body {
   }
 }
 
+/* ---------------------------------------------------------------------------
+   Surface language: hairline borders, near-flat corners, no drop shadows.
+   Depth is carried by the border and the background step, not by a glow.
+   --------------------------------------------------------------------------- */
+
 @layer components {
   .site-header {
     background: #0f2b3d;
@@ -142,115 +148,112 @@ body {
 
   .brand-mark {
     display: flex;
-    height: 2.5rem;
-    width: 2.5rem;
+    height: 2rem;
+    width: 2rem;
     align-items: center;
     justify-content: center;
-    border: 1px solid #d8b65d;
-    border-radius: 0.75rem;
-    background: #173f50;
-    color: #f6df9f;
-    font-family: Georgia, serif;
-    font-size: 1.3rem;
-    font-weight: 700;
-  }
-
-  .live-dot {
-    height: 0.45rem;
-    width: 0.45rem;
-    border-radius: 999px;
-    background: #b8e0bf;
-    box-shadow: 0 0 0 3px rgb(184 224 191 / 15%);
+    border: 1px solid #3a5c6b;
+    border-radius: 3px;
+    background: transparent;
+    color: #e4ebe6;
+    font-size: 0.82rem;
+    font-weight: 560;
+    letter-spacing: 0.02em;
   }
 
   .eyebrow {
-    color: #718087;
-    font-size: 0.68rem;
-    font-weight: 700;
-    letter-spacing: 0.12em;
+    color: #6b7c83;
+    font-size: 0.66rem;
+    font-weight: 560;
+    letter-spacing: 0.1em;
     line-height: 1.2;
     text-transform: uppercase;
   }
 
   .section-title {
-    margin-top: 0.5rem;
-    color: #173140;
-    font-size: 1.35rem;
-    font-weight: 650;
-    letter-spacing: -0.035em;
-    line-height: 1.15;
+    margin-top: 0.55rem;
+    color: #12222c;
+    font-size: 1.32rem;
+    font-weight: 560;
+    letter-spacing: -0.022em;
+    line-height: 1.18;
   }
 
   .section-description {
-    margin-top: 0.55rem;
-    max-width: 42rem;
+    margin-top: 0.5rem;
+    max-width: 40rem;
     color: #5b6d74;
-    font-size: 0.9rem;
-    line-height: 1.65;
+    font-size: 0.875rem;
+    font-weight: 420;
+    letter-spacing: -0.005em;
+    line-height: 1.62;
   }
 
   .panel {
-    border: 1px solid #dfe5df;
-    border-radius: 1.1rem;
-    background: rgb(255 255 255 / 88%);
+    border: 1px solid #e1e5df;
+    border-radius: 4px;
+    background: #fff;
     padding: 1.35rem;
-    box-shadow: 0 8px 24px rgb(23 49 64 / 3%);
   }
 
   .hero-total {
-    border-radius: 1.25rem;
+    border: 1px solid #1d4a5d;
+    border-radius: 4px;
     background: #173f50;
     padding: 1.5rem;
-    box-shadow: 0 18px 42px rgb(15 43 61 / 16%);
   }
 
   .metric-card {
     min-height: 8.6rem;
-    border: 1px solid #dfe5df;
-    border-radius: 1rem;
-    background: rgb(255 255 255 / 82%);
+    border: 1px solid #e1e5df;
+    border-radius: 4px;
+    background: #fff;
     padding: 1rem;
   }
 
   .metric-card-accent {
-    border-color: #bdd4cf;
-    background: #eef5f2;
+    border-color: #cfdcd6;
+    background: #f2f6f3;
   }
 
   .metric-value {
     margin-top: 0.8rem;
-    color: #173140;
+    color: #12222c;
     font-size: 1.7rem;
-    font-weight: 650;
-    letter-spacing: -0.05em;
+    font-weight: 560;
+    letter-spacing: -0.035em;
     line-height: 1;
+    font-variant-numeric: tabular-nums;
   }
 
   .metric-note {
     margin-top: 0.6rem;
-    color: #718087;
+    color: #6b7c83;
     font-size: 0.76rem;
-    line-height: 1.4;
+    line-height: 1.45;
   }
 
   .budget-track {
-    height: 0.55rem;
+    height: 0.3rem;
     overflow: hidden;
-    border-radius: 999px;
-    background: #e6ece8;
+    border-radius: 1px;
+    background: #e6ebe6;
   }
 
+  /* Solid fill. A gradient here implies a scale the number does not have. */
   .budget-bar {
     height: 100%;
     border-radius: inherit;
-    background: linear-gradient(90deg, #397d7a, #72a9a0);
+    background: #3d7a74;
+    transform-origin: left center;
+    animation: bar-in 520ms cubic-bezier(0.22, 0.68, 0.28, 1) both;
   }
 
   .story-card {
     display: grid;
-    grid-template-columns: 2rem minmax(0, 1fr);
-    gap: 0.7rem;
-    border-bottom: 1px solid #e6e8e1;
+    grid-template-columns: 1.6rem minmax(0, 1fr);
+    gap: 0.75rem;
+    border-bottom: 1px solid #e9ebe5;
     padding-bottom: 1rem;
   }
 
@@ -260,35 +263,44 @@ body {
   }
 
   .story-number {
-    color: #b28b33;
-    font-family: Georgia, serif;
-    font-size: 1.05rem;
-    font-weight: 700;
+    color: #93a2a6;
+    font-size: 0.72rem;
+    font-weight: 560;
+    font-variant-numeric: tabular-nums;
+    letter-spacing: 0.04em;
   }
 
   .source-strip {
     display: flex;
     flex-direction: column;
     gap: 1.25rem;
-    border: 1px solid #dfe5df;
-    border-radius: 1.1rem;
-    background: #eaf1ee;
+    border: 1px solid #e1e5df;
+    border-radius: 4px;
+    background: #f0f3ef;
     padding: 1.35rem;
   }
 
+  /* Rest dim, resolve on hover. No lift, no shadow. */
   .change-card {
     width: 100%;
-    border: 1px solid #e0e6e0;
-    border-radius: 0.9rem;
+    border: 1px solid #e4e8e2;
+    border-radius: 4px;
     background: #fff;
     padding: 1rem;
-    transition: border-color 160ms ease, box-shadow 160ms ease, transform 160ms ease;
+    transition: border-color 140ms ease, background-color 140ms ease;
   }
 
   .change-card:hover {
-    border-color: #9fc5c7;
-    box-shadow: 0 8px 18px rgb(23 49 64 / 7%);
-    transform: translateY(-1px);
+    border-color: #b9cbc6;
+    background: #fbfcfa;
+  }
+
+  .change-card .change-arrow {
+    transition: transform 180ms cubic-bezier(0.22, 0.68, 0.28, 1);
+  }
+
+  .change-card:hover .change-arrow {
+    transform: translateX(0.2rem);
   }
 
   .change-positive,
@@ -297,6 +309,7 @@ body {
     align-items: center;
     gap: 0.25rem;
     white-space: nowrap;
+    font-variant-numeric: tabular-nums;
   }
 
   .change-positive {
@@ -317,13 +330,15 @@ body {
 
   .field-label {
     color: #52656d;
-    font-size: 0.78rem;
-    font-weight: 650;
+    font-size: 0.76rem;
+    font-weight: 560;
+    letter-spacing: -0.002em;
   }
 
   .detail-stat {
-    border-radius: 0.9rem;
-    background: #eef5f2;
+    border: 1px solid #e1e5df;
+    border-radius: 4px;
+    background: #f7f9f7;
     padding: 1rem;
   }
 
@@ -341,11 +356,40 @@ body {
   }
 }
 
+/* ---------------------------------------------------------------------------
+   Motion: one entrance, short and small. 8px of travel, never more.
+   Everything is opt-out under prefers-reduced-motion at the end of this file.
+   --------------------------------------------------------------------------- */
+
+@keyframes stagger-in {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes bar-in {
+  from { transform: scaleX(0); }
+  to { transform: scaleX(1); }
+}
+
+.stagger > * {
+  animation: stagger-in 340ms cubic-bezier(0.22, 0.68, 0.28, 1) both;
+}
+
+.stagger > *:nth-child(1) { animation-delay: 0ms; }
+.stagger > *:nth-child(2) { animation-delay: 40ms; }
+.stagger > *:nth-child(3) { animation-delay: 80ms; }
+.stagger > *:nth-child(4) { animation-delay: 120ms; }
+.stagger > *:nth-child(n + 5) { animation-delay: 160ms; }
+
+/* Numerals should not reflow as values change between views. */
+.tnum { font-variant-numeric: tabular-nums; }
+
 /* Keep source links readable on the dark header. */
-.site-header a { color: #dbe8e1; }
+.site-header a { color: #dbe8e1; transition: color 140ms ease; }
 .site-header a:hover { color: #ffffff; }
 .metric-note { color: #52656d; }
 :where(button, a, input, summary):focus-visible { outline: 2px solid #32736f; outline-offset: 3px; }
+
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; }
 }

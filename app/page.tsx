@@ -355,7 +355,7 @@ function Overview() {
   const city = data.summary.city;
   const maxFund = Math.max(...data.funds.map((fund) => fund.formal.fy27Adopted));
   return (
-    <div className="space-y-6">
+    <div className="stagger space-y-6">
       <div className="grid gap-6 lg:grid-cols-[1.25fr_.75fr]">
         <Panel
           eyebrow="One city, six funds"
@@ -424,7 +424,7 @@ function MoneyIn() {
       >
         <ProgressList items={data.summary.revenueSources} />
       </Panel>
-      <div className="space-y-6">
+      <div className="stagger space-y-6">
         <Panel eyebrow="Read this first" title="Two budgets meet here">
           <p className="text-sm leading-7 text-[#52656d]">
             The combined view is useful for the full public picture. It includes the Syracuse City School District, which is not a City fund. Use Explore lines when you want City account detail.
@@ -437,7 +437,7 @@ function MoneyIn() {
         </Panel>
         <Panel eyebrow="A key change" title="Temporary AIM aid rises">
           <div className="flex items-start gap-3">
-            <div className="mt-1 flex size-9 shrink-0 items-center justify-center rounded-full bg-[#f6df9f] text-[#725619]">
+            <div className="mt-0.5 flex size-8 shrink-0 items-center justify-center rounded-[3px] border border-[#d9e0da] text-[#5b6d74]">
               <ArrowUpRight aria-hidden="true" className="size-5" />
             </div>
             <p className="text-sm leading-7 text-[#52656d]">
@@ -460,7 +460,7 @@ function MoneyOut({ onExplore }: { onExplore: () => void }) {
       >
         <ProgressList items={data.summary.spendingSources} />
       </Panel>
-      <div className="space-y-6">
+      <div className="stagger space-y-6">
         <Panel eyebrow="City view" title="The General Fund in context">
           <div className="space-y-4">
             <div className="flex items-center justify-between border-b border-[#e6e8e1] pb-4">
@@ -505,7 +505,7 @@ function ChangeCard({ row, onOpen }: { row: Row; onOpen: (row: Row) => void }) {
       </div>
       <div className="mt-4 flex items-center justify-between gap-3 text-xs text-[#52656d]">
         <span>{rowBasis(row)}</span>
-        <span>{fmtPct(row.change.pct)} vs FY26 adopted</span>
+        <span className="inline-flex items-center gap-1">{fmtPct(row.change.pct)} vs FY26 adopted<ChevronRight aria-hidden="true" className="change-arrow size-3.5" /></span>
       </div>
     </button>
   );
@@ -521,7 +521,7 @@ function Changes({ onOpen }: { onOpen: (row: Row) => void }) {
   }, [filter]);
 
   return (
-    <div className="space-y-6">
+    <div className="stagger space-y-6">
       <Panel
         eyebrow="What changed"
         title="Large changes rise to the top"
@@ -533,7 +533,7 @@ function Changes({ onOpen }: { onOpen: (row: Row) => void }) {
               key={item}
               size="sm"
               variant={filter === item ? 'default' : 'outline'}
-              className={filter === item ? 'bg-[#173140] text-white hover:bg-[#234b5e]' : ''}
+              className={`rounded-[3px] font-normal transition-colors duration-150 ${filter === item ? 'bg-[#173140] text-white hover:bg-[#234b5e]' : 'border-[#dfe3dc] text-[#5b6d74] hover:bg-[#f3f5f1]'}`}
               aria-pressed={filter === item}
               onClick={() => setFilter(item)}
             >
@@ -642,7 +642,7 @@ function Explore({ onOpen }: { onOpen: (row: Row) => void }) {
   }
 
   return (
-    <div id="explore-lines" className="space-y-6">
+    <div id="explore-lines" className="stagger space-y-6">
       <Panel
         eyebrow="Department to account"
         title="Follow one line through time"
@@ -866,7 +866,7 @@ export default function Home() {
             </div>
           </div>
           <div className="flex flex-wrap items-center gap-x-4 gap-y-2 text-xs text-[#c2d2d1]">
-            <span className="inline-flex items-center gap-2"><span className="live-dot" /> FY2026–27 adopted</span>
+            <span className="inline-flex items-center gap-2">FY2026–27 adopted</span>
             <span className="hidden h-4 w-px bg-[#5a737c] sm:block" />
             <span>Updated {data.meta.lastUpdated}</span>
           </div>
@@ -883,18 +883,18 @@ export default function Home() {
         <section className="grid gap-6 lg:grid-cols-[1.3fr_.7fr] lg:items-end">
           <div>
             <p className="eyebrow text-[#32736f]">Public money, made legible</p>
-            <h1 className="mt-3 max-w-3xl text-4xl font-semibold leading-[1.04] tracking-[-0.055em] text-[#173140] sm:text-5xl">Understand the Syracuse budget.</h1>
+            <h1 className="mt-3 max-w-3xl text-4xl font-semibold leading-[1.04] tracking-[-0.038em] text-[#173140] sm:text-5xl">Understand the Syracuse budget.</h1>
             <p className="mt-5 max-w-2xl text-base leading-7 text-[#52656d] sm:text-lg">See where money comes from, where it goes, and what changed in the adopted FY2026–27 plan. Start with the summary. Drill down to a department or account when you want the detail.</p>
-            <div className="mt-4 flex flex-wrap gap-3"><a className="rounded-lg bg-[#173140] px-4 py-2 text-sm text-white" href="#budget-views" onClick={() => selectTab('explore')}>Explore a budget line</a><a className="py-2 text-sm underline" href="#about-project">About this project</a></div><div className="mt-4 flex flex-wrap gap-2">
-              <Badge variant="outline" className="border-[#bdd4cf] bg-[#eef5f2] text-[#32736f]">Official sources · Independent interpretation</Badge>
-              <Badge variant="outline" className="border-[#d8dcd5] bg-white text-[#52656d]">6 City funds</Badge>
-              <Badge variant="outline" className="border-[#d8dcd5] bg-white text-[#52656d]">FY21–FY27 history</Badge>
+            <div className="mt-4 flex flex-wrap gap-3"><a className="rounded-[4px] bg-[#173140] px-4 py-2 text-sm text-white transition-colors duration-150 hover:bg-[#22475a]" href="#budget-views" onClick={() => selectTab('explore')}>Explore a budget line</a><a className="py-2 text-sm underline" href="#about-project">About this project</a></div><div className="mt-4 flex flex-wrap gap-2">
+              <Badge variant="outline" className="rounded-[3px] border-[#cfdcd6] bg-transparent font-normal text-[#4c6b66]">Official sources · Independent interpretation</Badge>
+              <Badge variant="outline" className="rounded-[3px] border-[#dfe3dc] bg-transparent font-normal text-[#6b7c83]">6 City funds</Badge>
+              <Badge variant="outline" className="rounded-[3px] border-[#dfe3dc] bg-transparent font-normal text-[#6b7c83]">FY21–FY27 history</Badge>
             </div>
           </div>
           <div className="hero-total">
             <div className="flex items-center justify-between gap-4">
               <p className="eyebrow text-[#dbe8e1]">Net City funds</p>
-              <span className="rounded-full bg-[#f6df9f] px-2.5 py-1 text-[10px] font-bold uppercase tracking-[0.12em] text-[#725619]">Adopted</span>
+              <span className="text-[10px] font-medium uppercase tracking-[0.14em] text-[#9fb3ad]">Adopted</span>
             </div>
             <p className="mt-5 text-5xl font-semibold tracking-[-0.06em] text-white">{fmtCompact(data.summary.city.fy27Adopted)}</p>
             <div className="mt-3 flex items-center gap-2 text-sm text-[#dbe8e1]"><ChangeMark amount={data.summary.city.change} /> from FY26 adopted</div>
