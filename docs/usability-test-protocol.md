@@ -1,7 +1,12 @@
 # Usability test protocol
 
-Five participants, three tasks, roughly 20 minutes each. The product is frozen for the
-duration: every participant sees the same build, or the results cannot be pooled.
+Five participants, three tasks, roughly 20 minutes each.
+
+**Frozen build: tag `usability-freeze-1` (commit 9bc7565), served at
+<https://syracuse-budget-explorer-alans-project.vercel.app>.** Every participant sees this
+build. Any change under `app/` or `data/` invalidates the pool and needs a new tag and a
+fresh set of five. Sessions run against different builds are separate pools and must never
+be merged into one count.
 
 Recruit people who do not work in government, accounting or data. A participant who
 already knows what a fund balance is cannot tell you whether a resident understands one.
@@ -22,9 +27,9 @@ before the tasks are over. Start each participant at the site root with no tab p
 Read each task once, verbatim. Start timing when you finish reading. Stop when they give
 you an answer they are willing to commit to — not when they land on the right screen.
 
-1. Find how much Syracuse spends on Public Works.
-2. Find which department or category changed the most.
-3. Explain where Syracuse gets its revenue from.
+1. Find Public Works spending.
+2. Find the biggest year-over-year change.
+3. Explain where City revenue comes from.
 
 If they stall for 90 seconds, mark it, then ask "what would you try next?" and let them
 continue. Do not point. Do not confirm or deny a wrong answer until the debrief.
@@ -71,7 +76,9 @@ PROVENANCE PROBE
   Noticed after prompt 2:                   yes / no
   What they thought "workbook proposal" meant:
 
-WORDING THAT CONFUSED THEM (their words, verbatim):
+ONE QUOTE — ask at the end: "what confused you most?" (verbatim, their words):
+
+OTHER WORDING THAT TRIPPED THEM (verbatim):
 ```
 
 Record the answer they actually gave, not just pass or fail. A confident wrong answer is
@@ -79,6 +86,7 @@ the most valuable thing a session produces, and a pass/fail column throws it awa
 
 ## Reading the results
 
-A problem counts when it repeats across three or more participants. One person's confusion
-is noise; three is a defect. Fix the top one or two and leave the rest recorded — a list of
-known problems you chose not to fix yet is a stronger artifact than a list of fixes.
+Fix an issue only if it appears in two or more participants, or if it blocked task
+completion for anyone. One person's confusion is noise. Everything below that bar gets
+recorded and left alone — a list of known problems you chose not to fix yet is a stronger
+artifact than a list of fixes.
