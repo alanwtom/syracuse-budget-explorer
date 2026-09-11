@@ -801,7 +801,7 @@ def build_data(workbook_path: Path) -> dict[str, Any]:
             "note": "Older public layers support cross-checks. FY27 adopted totals come from the formal PDF and workbook.",
             "layers": [
                 {
-                    "label": "Approved Budget Expenditures, FY2023–24",
+                    "label": "Approved Budget Revenue, FY2023–24",
                     "url": "https://services6.arcgis.com/bdPqSfflsdgFRVVM/arcgis/rest/services/SYRPROD_FY24_Annual_Budget_Revenue/FeatureServer",
                 },
                 {
