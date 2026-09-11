@@ -1,6 +1,6 @@
 'use client';
 
-import { useEffect, useMemo, useState } from 'react';
+import { useEffect, useMemo, useRef, useState } from 'react';
 import {
   ArrowDownRight,
   ArrowUpRight,
@@ -51,6 +51,7 @@ type BudgetKey =
   | 'fy26Budget'
   | 'fy26Estimate'
   | 'fy27Proposed'
+  | 'fy27Adjusted'
   | 'fy27Adopted';
 
 type Row = {
@@ -196,6 +197,19 @@ function fmtPct(value: number | null) {
   return `${value >= 0 ? '+' : '−'}${Math.abs(value).toFixed(1)}%`;
 }
 
+function rowBasis(row: Row) {
+  if (row.adoptedMethod === 'adopted_pdf_amendment_only') return 'FY27 amendment only';
+  return row.values.fy27Adjusted !== undefined ? 'FY27 adjusted proposal' : 'FY27 workbook proposal';
+}
+
+function writeQuery(values: Record<string, string | null>) {
+  const url = new URL(window.location.href);
+  for (const [key, value] of Object.entries(values)) {
+    if (value) url.searchParams.set(key, value); else url.searchParams.delete(key);
+  }
+  window.history.replaceState(null, '', url);
+}
+
 function sectionLabel(value: string) {
   return value === 'revenue' ? 'Money in' : 'Money out';
 }
@@ -276,7 +290,7 @@ function ProgressList({ items }: { items: BarItem[] }) {
           <div className="budget-track" aria-label={`${item.label}: ${fmtMoney(item.amount)}, ${item.pct}%`}>
             <div className="budget-bar" style={{ width: `${Math.max(3, (item.amount / max) * 100)}%` }} />
           </div>
-          <p className="mt-1.5 text-xs text-[#718087]">{item.pct.toFixed(2)}% of the combined net budget</p>
+          <p className="mt-1.5 text-xs text-[#52656d]">{item.pct.toFixed(2)}% of the combined net budget</p>
         </li>
       ))}
     </ul>
@@ -308,9 +322,9 @@ function SourceStrip() {
     <section className="source-strip">
       <div>
         <p className="eyebrow">Follow the record</p>
-        <h2 className="mt-2 text-lg font-semibold text-[#173140]">Every number has a source.</h2>
+        <h2 className="mt-2 text-lg font-semibold text-[#173140]">Follow the sources and assumptions.</h2>
         <p className="mt-1 max-w-2xl text-sm leading-6 text-[#5b6d74]">
-          Formal adopted totals come from the City budget book. Account history comes from the City Auditor workbook. Older public layers are available for cross-checks.
+          Formal adopted totals come from the City budget book. Account history and proposals come from the City Auditor workbook; mapped amendments produce calculated adjustments. Older public layers are available for cross-checks.
         </p>
       </div>
       <div className="flex flex-wrap gap-x-5 gap-y-3">
@@ -331,11 +345,11 @@ function Overview() {
         <Panel
           eyebrow="One city, six funds"
           title="Where the City budget sits"
-          description="The formal adopted City-fund total is shown here after inter-fund appropriations. The school district is separate."
+          description="Fund shares use the gross City total. The headline subtracts inter-fund transfers to avoid double counting. The school district is separate."
         >
           <div className="space-y-5">
             {data.funds.map((fund) => {
-              const percent = (fund.formal.fy27Adopted / city.fy27Adopted) * 100;
+              const percent = (fund.formal.fy27Adopted / data.funds.reduce((sum, item) => sum + item.formal.fy27Adopted, 0)) * 100;
               return (
                 <div key={fund.id}>
                   <div className="mb-2 flex items-center justify-between gap-3">
@@ -348,8 +362,8 @@ function Overview() {
                       style={{ width: `${Math.max(2, (fund.formal.fy27Adopted / maxFund) * 100)}%` }}
                     />
                   </div>
-                  <div className="mt-1.5 flex justify-between text-xs text-[#718087]">
-                    <span>{percent.toFixed(1)}% of net City funds</span>
+                  <div className="mt-1.5 flex justify-between text-xs text-[#52656d]">
+                    <span>{percent.toFixed(1)}% of City funds before inter-fund adjustment</span>
                     <span className={fund.formal.change >= 0 ? 'change-positive' : 'change-negative'}>
                       {fmtPct(fund.formal.pct)} from FY26
                     </span>
@@ -440,11 +454,11 @@ function MoneyOut({ onExplore }: { onExplore: () => void }) {
             </div>
             <div className="flex items-center justify-between border-b border-[#e6e8e1] pb-4">
               <span className="text-sm text-[#5b6d74]">Employee benefits</span>
-              <span className="font-semibold tabular-nums text-[#173140]">{fmtCompact(114844549)}</span>
+              <span className="font-semibold tabular-nums text-[#173140]">{fmtCompact(data.summary.spendingSources.find((item) => item.label === 'Employee benefits')?.amount ?? 0)}</span>
             </div>
             <div className="flex items-center justify-between">
               <span className="text-sm text-[#5b6d74]">Police + Fire</span>
-              <span className="font-semibold tabular-nums text-[#173140]">{fmtCompact(111642018)}</span>
+              <span className="font-semibold tabular-nums text-[#173140]">{fmtCompact(data.summary.spendingSources.filter((item) => ['Police', 'Fire'].includes(item.label)).reduce((sum, item) => sum + item.amount, 0))}</span>
             </div>
           </div>
           <Button className="mt-6 bg-[#173140] text-white hover:bg-[#234b5e]" onClick={onExplore}>
@@ -468,14 +482,14 @@ function ChangeCard({ row, onOpen }: { row: Row; onOpen: (row: Row) => void }) {
       <div className="flex min-w-0 items-start justify-between gap-4">
         <div className="min-w-0">
           <p className="truncate text-sm font-semibold text-[#173140]">{row.name}</p>
-          <p className="mt-1 truncate text-xs text-[#718087]">
+          <p className="mt-1 truncate text-xs text-[#52656d]">
             {row.fundName} · {row.department ?? row.category ?? sectionLabel(row.section)}
           </p>
         </div>
         <ChangeMark amount={row.change.amount} />
       </div>
-      <div className="mt-4 flex items-center justify-between gap-3 text-xs text-[#718087]">
-        <span>{row.code ? `Account ${row.code}` : 'Adopted line'}</span>
+      <div className="mt-4 flex items-center justify-between gap-3 text-xs text-[#52656d]">
+        <span>{rowBasis(row)}</span>
         <span>{fmtPct(row.change.pct)} vs FY26 adopted</span>
       </div>
     </button>
@@ -496,7 +510,7 @@ function Changes({ onOpen }: { onOpen: (row: Row) => void }) {
       <Panel
         eyebrow="What changed"
         title="Large changes rise to the top"
-        description="A change is flagged at $250,000 or more, or at 20% when the prior budget was at least $25,000. Click any line for its history."
+        description="Compared with FY26 adopted: workbook proposals, adjusted where amendments are mapped. These are not verified adopted account totals. Flagged at $250,000 or at 20% on a prior budget of at least $25,000."
       >
         <div className="mb-6 flex flex-wrap gap-2" aria-label="Change type">
           {(['all', 'revenue', 'expense'] as const).map((item) => (
@@ -505,6 +519,7 @@ function Changes({ onOpen }: { onOpen: (row: Row) => void }) {
               size="sm"
               variant={filter === item ? 'default' : 'outline'}
               className={filter === item ? 'bg-[#173140] text-white hover:bg-[#234b5e]' : ''}
+              aria-pressed={filter === item}
               onClick={() => setFilter(item)}
             >
               {item === 'all' ? 'All changes' : item === 'revenue' ? 'Money in' : 'Money out'}
@@ -530,7 +545,7 @@ function Changes({ onOpen }: { onOpen: (row: Row) => void }) {
             <div key={amendment.id} className="flex flex-col gap-2 py-4 first:pt-0 last:pb-0 sm:flex-row sm:items-center sm:justify-between sm:gap-6">
               <div>
                 <p className="text-sm font-semibold text-[#173140]">{amendment.label}</p>
-                <p className="mt-1 text-xs leading-5 text-[#718087]">{amendment.detail}</p>
+                <p className="mt-1 text-xs leading-5 text-[#52656d]">{amendment.detail}</p>
               </div>
               <span className="shrink-0 text-sm font-semibold tabular-nums">
                 <span className={amendment.amount >= 0 ? 'change-positive' : 'change-negative'}>{fmtDelta(amendment.amount)}</span>
@@ -548,6 +563,31 @@ function Explore({ onOpen }: { onOpen: (row: Row) => void }) {
   const [section, setSection] = useState<'revenue' | 'expense'>('expense');
   const [department, setDepartment] = useState('all');
   const [query, setQuery] = useState('');
+  const [visibleCount, setVisibleCount] = useState(40);
+  const [restored, setRestored] = useState(false);
+  const [copied, setCopied] = useState(false);
+  // URL state is restored after hydration so server and client first renders agree.
+  /* oxlint-disable react/react-compiler */
+  useEffect(() => {
+    const params = new URLSearchParams(window.location.search);
+    const linkedRow = data.rows.find((item) => item.id === params.get('row'));
+    const fund = linkedRow?.fundId ?? params.get('fund');
+    if (data.funds.some((item) => item.id === fund)) setFundId(fund!);
+    const view = linkedRow?.section ?? params.get('view');
+    if (view === 'revenue' || view === 'expense') setSection(view);
+    const dept = params.get('department');
+    if (dept && data.rows.some((item) => item.department === dept)) setDepartment(dept);
+    setQuery(params.get('q') ?? '');
+    setRestored(true);
+  }, []);
+  /* oxlint-enable react/react-compiler */
+  useEffect(() => {
+    if (restored) writeQuery({ fund: fundId, view: section, department: department === 'all' ? null : department, q: query || null });
+  }, [fundId, section, department, query, restored]);
+  async function copyView() {
+    try { await navigator.clipboard.writeText(window.location.href); setCopied(true); }
+    catch { setCopied(false); }
+  }
 
   const departments = useMemo(() => {
     const values = data.rows
@@ -575,11 +615,13 @@ function Explore({ onOpen }: { onOpen: (row: Row) => void }) {
   const selectedFund = data.funds.find((fund) => fund.id === fundId) ?? data.funds[0];
 
   function changeFund(value: string) {
+    setVisibleCount(40);
     setFundId(value);
     setDepartment('all');
   }
 
   function changeSection(value: string) {
+    setVisibleCount(40);
     setSection(value as 'revenue' | 'expense');
     setDepartment('all');
   }
@@ -589,13 +631,13 @@ function Explore({ onOpen }: { onOpen: (row: Row) => void }) {
       <Panel
         eyebrow="Department to account"
         title="Follow one line through time"
-        description="Choose a fund, then open any account to see its history, change, and source trail."
+        description="Choose a fund and open a line for its history and source. FY27 detail is the workbook proposal, adjusted where a final amendment is mapped. Formal adopted totals are shown separately in Overview."
       >
         <div className="grid gap-4 md:grid-cols-3">
           <div className="field-label">
             <span>Fund</span>
             <Select value={fundId} onValueChange={(value) => changeFund(value ?? 'general-fund')}>
-              <SelectTrigger className="mt-2 w-full bg-white"><SelectValue>{selectedFund.name}</SelectValue></SelectTrigger>
+              <SelectTrigger aria-label="Fund" className="mt-2 w-full bg-white"><SelectValue>{selectedFund.name}</SelectValue></SelectTrigger>
               <SelectContent>
                 {data.funds.map((fund) => <SelectItem key={fund.id} value={fund.id}>{fund.name}</SelectItem>)}
               </SelectContent>
@@ -604,7 +646,7 @@ function Explore({ onOpen }: { onOpen: (row: Row) => void }) {
           <div className="field-label">
             <span>View</span>
             <Select value={section} onValueChange={(value) => changeSection(value ?? 'expense')}>
-              <SelectTrigger className="mt-2 w-full bg-white"><SelectValue>{sectionLabel(section)}</SelectValue></SelectTrigger>
+              <SelectTrigger aria-label="View" className="mt-2 w-full bg-white"><SelectValue>{sectionLabel(section)}</SelectValue></SelectTrigger>
               <SelectContent>
                 <SelectItem value="expense">Money out</SelectItem>
                 <SelectItem value="revenue">Money in</SelectItem>
@@ -613,8 +655,8 @@ function Explore({ onOpen }: { onOpen: (row: Row) => void }) {
           </div>
           <div className="field-label">
             <span>Department</span>
-            <Select value={department} onValueChange={(value) => setDepartment(value ?? 'all')}>
-              <SelectTrigger className="mt-2 w-full bg-white"><SelectValue>{department === 'all' ? 'All departments' : department}</SelectValue></SelectTrigger>
+            <Select value={department} onValueChange={(value) => { setVisibleCount(40); setDepartment(value ?? 'all'); }}>
+              <SelectTrigger aria-label="Department" className="mt-2 w-full bg-white"><SelectValue>{department === 'all' ? 'All departments' : department}</SelectValue></SelectTrigger>
               <SelectContent>
                 <SelectItem value="all">All departments</SelectItem>
                 {departments.map((item) => <SelectItem key={item} value={item}>{item}</SelectItem>)}
@@ -623,9 +665,9 @@ function Explore({ onOpen }: { onOpen: (row: Row) => void }) {
           </div>
         </div>
         <div className="relative mt-4 max-w-xl">
-          <Search aria-hidden="true" className="pointer-events-none absolute left-3 top-1/2 size-4 -translate-y-1/2 text-[#718087]" />
-          <Input value={query} onChange={(event) => setQuery(event.target.value)} placeholder="Search account, code, department…" className="h-10 bg-white pl-9" />
-          {query && <button type="button" aria-label="Clear search" onClick={() => setQuery('')} className="absolute right-3 top-1/2 -translate-y-1/2 text-[#718087] hover:text-[#173140]"><X aria-hidden="true" className="size-4" /></button>}
+          <Search aria-hidden="true" className="pointer-events-none absolute left-3 top-1/2 size-4 -translate-y-1/2 text-[#52656d]" />
+          <Input aria-label="Search account, code, department or division" value={query} onChange={(event) => { setVisibleCount(40); setCopied(false); setQuery(event.target.value); }} placeholder="Search account, code, department…" className="h-10 bg-white pl-9" />
+          {query && <button type="button" aria-label="Clear search" onClick={() => setQuery('')} className="absolute right-3 top-1/2 -translate-y-1/2 text-[#52656d] hover:text-[#173140]"><X aria-hidden="true" className="size-4" /></button>}
         </div>
       </Panel>
 
@@ -635,34 +677,38 @@ function Explore({ onOpen }: { onOpen: (row: Row) => void }) {
             <p className="eyebrow">{selectedFund.name} · {sectionLabel(section)}</p>
             <h2 className="mt-1 text-lg font-semibold text-[#173140]">{filteredRows.length} lines to inspect</h2>
           </div>
-          <p className="text-xs text-[#718087]">Sorted by absolute change from FY26 adopted</p>
+          <p className="text-xs text-[#52656d]">Sorted by absolute change from FY26 adopted; FY27 basis shown per line</p>
         </div>
         <Table>
           <TableHeader>
             <TableRow>
               <TableHead className="pl-5 sm:pl-6">Line item</TableHead>
               <TableHead>Department</TableHead>
-              <TableHead className="text-right">FY27 adopted</TableHead>
+              <TableHead className="text-right">FY27 detail</TableHead>
               <TableHead className="pr-5 text-right sm:pr-6">Change</TableHead>
             </TableRow>
           </TableHeader>
           <TableBody>
-            {filteredRows.slice(0, 80).map((row) => (
+            {filteredRows.slice(0, visibleCount).map((row) => (
               <TableRow key={row.id}>
                 <TableCell className="min-w-[250px] pl-5 sm:pl-6">
                   <button type="button" className="group text-left" onClick={() => onOpen(row)}>
                     <span className="block font-medium text-[#173140] group-hover:text-[#1e5870]">{row.name}</span>
-                    <span className="mt-1 block text-xs text-[#718087]">{row.code ? `Account ${row.code}` : 'Adopted line'} · {row.category ?? sectionLabel(row.section)}</span>
+                    <span className="mt-1 block text-xs text-[#52656d]">{row.code ? `Account ${row.code}` : 'Adopted line'} · {row.category ?? sectionLabel(row.section)}</span>
                   </button>
                 </TableCell>
-                <TableCell className="max-w-[220px] truncate text-[#5b6d74]">{row.department ?? '—'}</TableCell>
-                <TableCell className="text-right font-medium tabular-nums text-[#173140]">{fmtMoney(row.values.fy27Adopted ?? row.values.fy27Proposed)}</TableCell>
+                <TableCell className="min-w-[150px] max-w-[220px] whitespace-normal text-[#5b6d74]">{row.department ?? '—'}{row.division && <span className="mt-1 block text-xs">{row.division}</span>}</TableCell>
+                <TableCell className="text-right font-medium tabular-nums text-[#173140]">{fmtMoney(row.values.fy27Adjusted ?? row.values.fy27Proposed)}<span className="mt-1 block text-xs font-normal text-[#52656d]">{rowBasis(row)}</span></TableCell>
                 <TableCell className="pr-5 text-right tabular-nums sm:pr-6"><ChangeMark amount={row.change.amount} /></TableCell>
               </TableRow>
             ))}
           </TableBody>
         </Table>
-        {filteredRows.length > 80 && <p className="border-t border-[#e6e8e1] px-5 py-4 text-xs text-[#718087] sm:px-6">Showing the 80 largest changes. Search to narrow the list.</p>}
+        <div className="flex flex-wrap items-center justify-between gap-3 border-t border-[#e6e8e1] p-5">
+          <output className="text-sm text-[#52656d]">Showing {Math.min(visibleCount, filteredRows.length)} of {filteredRows.length} matching lines.</output>
+          {visibleCount < filteredRows.length && <Button variant="outline" onClick={() => setVisibleCount((count) => count + 40)}>Show 40 more</Button>}
+          <Button variant="outline" onClick={copyView}>{copied ? 'Link copied' : 'Copy view link'}</Button>
+        </div>
         {!filteredRows.length && <p className="px-5 py-8 text-sm text-[#5b6d74] sm:px-6">No lines match this search.</p>}
       </section>
     </div>
@@ -670,21 +716,22 @@ function Explore({ onOpen }: { onOpen: (row: Row) => void }) {
 }
 
 function RowSheet({ row, onClose }: { row: Row | null; onClose: () => void }) {
+  const titleRef = useRef<HTMLHeadingElement>(null);
   return (
     <Sheet open={Boolean(row)} onOpenChange={(open) => { if (!open) onClose(); }}>
-      <SheetContent side="right" className="w-full overflow-y-auto border-l border-[#dfe5df] bg-[#fbfcf8] sm:max-w-xl">
+      <SheetContent side="right" initialFocus={titleRef} className="data-[side=right]:w-full data-[side=right]:sm:max-w-xl overflow-y-auto overflow-x-hidden border-l border-[#dfe5df] bg-[#fbfcf8]">
         {row && (
           <>
             <SheetHeader className="border-b border-[#e6e8e1] px-6 pb-5 pt-7">
               <p className="eyebrow">{row.fundName} · {sectionLabel(row.section)}</p>
-              <SheetTitle className="mt-2 pr-6 text-2xl font-semibold tracking-[-0.03em] text-[#173140]">{row.name}</SheetTitle>
+              <SheetTitle ref={titleRef} tabIndex={-1} className="mt-2 pr-6 text-2xl font-semibold tracking-[-0.03em] text-[#173140]">{row.name}</SheetTitle>
               <SheetDescription className="mt-2 leading-6">{[row.department, row.division, row.code ? `Account ${row.code}` : null].filter(Boolean).join(' · ') || 'Adopted budget line'}</SheetDescription>
             </SheetHeader>
             <div className="space-y-6 px-6 py-6">
-              <div className="grid grid-cols-2 gap-3">
+              <div className="grid gap-3 sm:grid-cols-2">
                 <div className="detail-stat">
-                  <p className="eyebrow">FY27 adopted</p>
-                  <p className="mt-1 text-2xl font-semibold tracking-[-0.03em] text-[#173140]">{fmtMoney(row.values.fy27Adopted ?? row.values.fy27Proposed)}</p>
+                  <p className="eyebrow">{rowBasis(row)}</p>
+                  <p className="mt-1 text-2xl font-semibold tracking-[-0.03em] text-[#173140]">{fmtMoney(row.values.fy27Adjusted ?? row.values.fy27Proposed)}</p>
                 </div>
                 <div className="detail-stat">
                   <p className="eyebrow">Change</p>
@@ -693,14 +740,14 @@ function RowSheet({ row, onClose }: { row: Row | null; onClose: () => void }) {
               </div>
 
               <div>
-                <div className="mb-3 flex items-baseline justify-between">
+                <div className="mb-3 flex flex-col gap-1 sm:flex-row sm:items-baseline sm:justify-between sm:gap-3">
                   <h3 className="text-sm font-semibold text-[#173140]">History</h3>
-                  <span className="text-xs text-[#718087]">FY26 adopted → FY27 adopted</span>
+                  <span className="text-xs text-[#52656d]">Actuals, budgets and proposal — different bases</span>
                 </div>
                 <div className="divide-y divide-[#e6e8e1] rounded-2xl border border-[#e6e8e1] bg-white">
-                  {data.years.map((year) => (
+                  {data.years.filter((year) => year.key !== 'fy27Adjusted' || row.values.fy27Adjusted !== undefined).map((year) => (
                     <div key={year.key} className="flex items-center justify-between px-4 py-3 text-sm">
-                      <span className={year.key === 'fy27Adopted' ? 'font-semibold text-[#173140]' : 'text-[#5b6d74]'}>{year.label}</span>
+                      <span className={year.key === 'fy27Adopted' ? 'font-semibold text-[#173140]' : 'text-[#5b6d74]'}>{year.key === 'fy27Adjusted' ? rowBasis(row) : year.label}</span>
                       <span className={year.key === 'fy27Adopted' ? 'font-semibold tabular-nums text-[#173140]' : 'tabular-nums text-[#52656d]'}>{fmtMoney(row.values[year.key])}</span>
                     </div>
                   ))}
@@ -710,7 +757,7 @@ function RowSheet({ row, onClose }: { row: Row | null; onClose: () => void }) {
               {row.amendments?.length ? (
                 <div className="rounded-2xl border border-[#ead79d] bg-[#fff9e7] p-4">
                   <p className="eyebrow text-[#725619]">Final amendment applied</p>
-                  <p className="mt-1 text-sm leading-6 text-[#6e5b2d]">This line changed in the adopted plan after the final amendment list was applied.</p>
+                  <p className="mt-1 text-sm leading-6 text-[#6e5b2d]">A published amendment has been applied to the workbook proposal. This calculated figure is not a separately verified adopted account total.</p>
                 </div>
               ) : null}
               {row.note ? <p className="rounded-2xl bg-[#eef5f2] p-4 text-sm leading-6 text-[#52656d]">{row.note}</p> : null}
@@ -721,7 +768,7 @@ function RowSheet({ row, onClose }: { row: Row | null; onClose: () => void }) {
                   <ExternalSource source={data.sources.adoptedPdf}>Adopted PDF</ExternalSource>
                   <br />
                   <ExternalSource source={data.sources.workbook}>Auditor workbook</ExternalSource>
-                  <p className="pt-1 text-xs leading-5 text-[#718087]">{row.sourceSheet}{row.sourceRow ? `, row ${row.sourceRow}` : ''} · {row.adoptedMethod.replaceAll('_', ' ')}</p>
+                  <p className="pt-1 text-xs leading-5 text-[#52656d]">{row.sourceSheet}{row.sourceRow ? `, row ${row.sourceRow}` : ''} · {row.adoptedMethod.replaceAll('_', ' ')}</p>
                 </div>
               </div>
             </div>
@@ -765,7 +812,8 @@ export default function Home() {
           name: row.name,
           fund: row.fundName,
           section: row.section,
-          fy27Adopted: row.values.fy27Adopted ?? row.values.fy27Proposed ?? 0,
+          fy27Detail: row.values.fy27Adjusted ?? row.values.fy27Proposed ?? null,
+          basis: rowBasis(row),
           change: row.change.amount,
         };
       },
@@ -778,6 +826,19 @@ export default function Home() {
     return () => lifecycle.abort();
   }, []);
 
+  // URL state is restored after hydration so server and client first renders agree.
+  /* oxlint-disable react/react-compiler */
+  useEffect(() => {
+    const params = new URLSearchParams(window.location.search);
+    const requested = params.get('tab');
+    if (navItems.some((item) => item.value === requested)) setActiveTab(requested!);
+    const row = data.rows.find((item) => item.id === params.get('row'));
+    if (row) { setSelectedRow(row); setActiveTab('explore'); }
+  }, []);
+  /* oxlint-enable react/react-compiler */
+  function openRow(row: Row) { setSelectedRow(row); writeQuery({ row: row.id }); }
+  function selectTab(value: string) { setActiveTab(value); writeQuery({ tab: value }); }
+
   return (
     <main className="min-h-screen bg-[#f4f5f1] text-[#173140]">
       <header className="site-header">
@@ -786,7 +847,7 @@ export default function Home() {
             <div className="brand-mark" aria-hidden="true">S</div>
             <div>
               <p className="text-[15px] font-semibold tracking-[-0.01em] text-white">Syracuse Budget Explorer</p>
-              <p className="mt-0.5 text-xs text-[#b6c7c9]">A clearer view of the public record</p>
+              <p className="mt-0.5 text-xs text-[#b6c7c9]">Independent project by Alan Tom · Not a City website</p>
             </div>
           </div>
           <div className="flex flex-wrap items-center gap-x-4 gap-y-2 text-xs text-[#c2d2d1]">
@@ -807,10 +868,10 @@ export default function Home() {
         <section className="grid gap-6 lg:grid-cols-[1.3fr_.7fr] lg:items-end">
           <div>
             <p className="eyebrow text-[#32736f]">Public money, made legible</p>
-            <h1 className="mt-3 max-w-3xl text-4xl font-semibold leading-[1.04] tracking-[-0.055em] text-[#173140] sm:text-6xl">Understand the Syracuse budget.</h1>
+            <h1 className="mt-3 max-w-3xl text-4xl font-semibold leading-[1.04] tracking-[-0.055em] text-[#173140] sm:text-5xl">Understand the Syracuse budget.</h1>
             <p className="mt-5 max-w-2xl text-base leading-7 text-[#52656d] sm:text-lg">See where money comes from, where it goes, and what changed in the adopted FY2026–27 plan. Start with the summary. Drill down to a department or account when you want the detail.</p>
-            <div className="mt-6 flex flex-wrap gap-2">
-              <Badge variant="outline" className="border-[#bdd4cf] bg-[#eef5f2] text-[#32736f]">Official adopted data</Badge>
+            <div className="mt-4 flex flex-wrap gap-3"><a className="rounded-lg bg-[#173140] px-4 py-2 text-sm text-white" href="#budget-views" onClick={() => selectTab('explore')}>Explore a budget line</a><a className="py-2 text-sm underline" href="#about-project">About this project</a></div><div className="mt-4 flex flex-wrap gap-2">
+              <Badge variant="outline" className="border-[#bdd4cf] bg-[#eef5f2] text-[#32736f]">Official sources · Independent interpretation</Badge>
               <Badge variant="outline" className="border-[#d8dcd5] bg-white text-[#52656d]">6 City funds</Badge>
               <Badge variant="outline" className="border-[#d8dcd5] bg-white text-[#52656d]">FY21–FY27 history</Badge>
             </div>
@@ -826,8 +887,8 @@ export default function Home() {
           </div>
         </section>
 
-        <section className="mt-10">
-          <Tabs value={activeTab} onValueChange={(value) => setActiveTab(value ?? 'overview')}>
+        <section id="budget-views" className="mt-8 scroll-mt-4">
+          <Tabs value={activeTab} onValueChange={(value) => selectTab(value ?? 'overview')}>
             <div className="mb-6 overflow-x-auto pb-1">
               <TabsList variant="line" className="w-full justify-start gap-2 border-b border-[#dfe5df] rounded-none p-0">
                 {navItems.map((item) => {
@@ -838,16 +899,27 @@ export default function Home() {
             </div>
             <TabsContent value="overview"><Overview /></TabsContent>
             <TabsContent value="in"><MoneyIn /></TabsContent>
-            <TabsContent value="out"><MoneyOut onExplore={() => setActiveTab('explore')} /></TabsContent>
-            <TabsContent value="changes"><Changes onOpen={setSelectedRow} /></TabsContent>
-            <TabsContent value="explore"><Explore onOpen={setSelectedRow} /></TabsContent>
+            <TabsContent value="out"><MoneyOut onExplore={() => selectTab('explore')} /></TabsContent>
+            <TabsContent value="changes"><Changes onOpen={openRow} /></TabsContent>
+            <TabsContent value="explore"><Explore onOpen={openRow} /></TabsContent>
           </Tabs>
         </section>
 
         <div className="mt-8"><SourceStrip /></div>
+        <section id="about-project" className="panel mt-6 scroll-mt-4">
+          <h2 className="section-title">About this project</h2>
+          <p className="section-description">An independent civic-data project by Alan Tom, built with AI assistance to make public budget records easier to explore. Not affiliated with or endorsed by the City of Syracuse.</p>
+          <p className="mt-4 text-sm leading-6 text-[#52656d]">The work connects a workbook parser, a traceable data model and an interactive interface. The key decision: keep formal adopted totals separate from workbook account proposals and calculated amendment adjustments. Account detail has not been fully reconciled to the budget book.</p>
+          <a className="mt-4 inline-block text-sm underline" href="/project-notes.html" target="_blank" rel="noreferrer">Read the project notes and source findings</a>
+          <details className="mt-5 border-t border-[#dfe5df] pt-4">
+            <summary className="cursor-pointer text-sm font-semibold">Data checks and unresolved differences</summary>
+            <p className="mt-3 text-sm text-[#52656d]">Checks verify the exported data, not the authenticity or completeness of the source documents. Review items remain visible rather than being forced to match.</p>
+            <ul className="mt-4 space-y-4">{data.validation.map((check) => <li key={check.label} className="text-sm"><strong>{check.status === 'pass' ? 'Pass' : 'Needs review'} · {check.label}</strong><p className="mt-1 leading-6 text-[#52656d]">{check.detail}</p></li>)}</ul>
+          </details>
+        </section>
 
         <footer className="mt-8 border-t border-[#dfe5df] pt-6 pb-4">
-          <div className="flex flex-col gap-4 text-xs leading-5 text-[#718087] md:flex-row md:items-start md:justify-between">
+          <div className="flex flex-col gap-4 text-xs leading-5 text-[#52656d] md:flex-row md:items-start md:justify-between">
             <div className="max-w-2xl">
               <p className="font-semibold text-[#52656d]">Data note</p>
               <p className="mt-1">{data.meta.sourceNote} {data.meta.workbookCaveat}</p>
@@ -860,7 +932,7 @@ export default function Home() {
           </div>
         </footer>
       </div>
-      <RowSheet row={selectedRow} onClose={() => setSelectedRow(null)} />
+      <RowSheet row={selectedRow} onClose={() => { setSelectedRow(null); writeQuery({ row: null }); }} />
     </main>
   );
 }

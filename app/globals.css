@@ -340,3 +340,12 @@ body {
     }
   }
 }
+
+/* Keep source links readable on the dark header. */
+.site-header a { color: #dbe8e1; }
+.site-header a:hover { color: #ffffff; }
+.metric-note { color: #52656d; }
+:where(button, a, input, summary):focus-visible { outline: 2px solid #32736f; outline-offset: 3px; }
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; }
+}
