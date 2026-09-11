@@ -1,52 +1,68 @@
 # Syracuse Budget Explorer
 
-A resident-facing view of the City of Syracuse FY2026–27 adopted budget.
+An independent civic-data project by **Alan Tom**, built with AI assistance. Not affiliated with or endorsed by the City of Syracuse.
 
-The site answers four questions:
+## The problem
 
-- Where does the money come from?
-- Where does it go?
-- What changed?
-- Why did it change?
+Residents should be able to ask where public money goes and follow an answer back to the record. The official budget book and Auditor workbook offer different views: formal adopted totals in one, historical account detail and proposals in the other.
+
+## What this project demonstrates
+
+- A Python workbook ingestion path that retains sheet, row, account and department references.
+- A React interface for comparing funds, finding large changes, searching accounts and examining history.
+- Explicit source boundaries: formal adopted totals stay separate from workbook proposals and calculated amendment adjustments.
+- Data checks that expose unresolved differences instead of silently certifying them.
+
+The most important design decision was to preserve those distinctions. A workbook proposal is not automatically an adopted account amount. Where a final amendment maps to a workbook line, the interface labels the result **adjusted proposal**. An amendment without a matching line is labeled **amendment only**, not a full account total.
+
+## A two-minute demonstration
+
+1. Open Overview and explain why gross fund shares and the net City headline have different denominators.
+2. Choose Explore lines and search `overtime`. Open Police Field Services – Sworn.
+3. Compare the FY26 budget, FY26 estimate and FY27 workbook proposal. Explain why these are different measures; do not present a proposal as verified adopted spending.
+4. Follow the workbook sheet and row reference. Open About this project to show checks and unresolved differences.
+5. Use Copy view link to preserve filters. Opening a line also places its identifier in the URL.
+
+## Verification findings
+
+Source inspection exposed subtotal rows whose labels contained account codes, and unnumbered debt/transfer lines that the original parser omitted. The revised parser keeps numeric leaf rows and excludes their parent subtotals. Regression fixtures cover both cases. Water, Sewer and Sidewalk revenue and expense detail now match the transcribed formal totals; General Fund revenue matches, while expense detail retains a $3 difference. The General Fund residual traces to the Public Works stated total versus its detail. Crouse-Marshall has a documented scope difference. Downtown has both scope differences and conflicting workbook/PDF assessment figures. See [reconciliation notes](docs/reconciliation.md) for exact references.
+
+## Evidence and limits
+
+This is a portfolio prototype, not an audited financial reporting system. There are 916 records in the current export. Formal summary values and amendment definitions are manually transcribed from the cited budget PDF; the parser does not automatically extract or verify the PDF. Account detail has not been fully reconciled to formal totals. Residuals may reflect source differences, grouping or parser issues and require source review. The interface reports these limits.
+
+Project owner: Alan Tom. In this review pass, Alan requested a hiring-focused audit and directed the follow-up implementation. Codex assisted source inspection, parser and interface changes, regression tests, documentation and deployment preparation. This describes the observed collaboration; it does not claim that Alan manually wrote every line. This repository documents the resulting decisions, checks and limits; it does not claim resident adoption, measured time savings or production use. Mobile and keyboard smoke checks are not a full accessibility certification.
 
 ## Run locally
 
-```bash
-npm install
+Requires Node 22.13+ and Python 3 with `openpyxl` for workbook ingestion.
+
+```sh
+npm ci
 npm run dev
 ```
 
-Open `http://localhost:3000`.
+Open http://localhost:3000. There is no database or API key requirement.
 
-## Refresh the data
+## Refresh and validate
 
-The reusable ingestion path is:
-
-```text
-budget.xlsx → scripts/ingest_budget.py → data/budget.json → website
+```sh
+python -m pip install openpyxl
+python scripts/ingest_budget.py --workbook /path/to/workbook.xlsx --output data/budget.json
+python scripts/validate_budget.py
+python -m unittest discover -s scripts -p "test_*.py"
+npm run lint
+npx tsc --noEmit
+npm run build
+npm start
 ```
 
-Run the parser with the latest City Auditor workbook:
+For a new fiscal year, update the manually maintained formal totals, amendment definitions, narrative, year keys and source metadata in the ingestion script as well as supplying a new workbook. Replacing the workbook alone is insufficient.
 
-```bash
-python3 scripts/ingest_budget.py \
-  --workbook /path/to/2026-city-budget-workbook.xlsx \
-  --output data/budget.json
-```
+The validator checks unique IDs, finite values, change arithmetic, amendment record coverage and formal-total arithmetic. It reports every fund's account-detail residual separately. `check` is a failing invariant; `review` is an unresolved reconciliation difference. Neither is proof that source documents are accurate.
 
-The parser reads account history from the workbook. It applies the final FY27 amendments from the adopted budget PDF. Formal adopted fund totals are kept as a separate, reconciled layer because the Auditor notes that workbook figures can differ from the formal budget.
+## Deployment
 
-The current source links are stored in `data/budget.json` and point to the official Syracuse budget page, adopted PDF, Auditor workbook, and Open Data Portal.
+The cross-platform build generates Vercel Build Output at `.vercel/output` via Nitro's Vercel preset. Deploy the prebuilt output with a compatible Vercel workflow and verify the public link before sending it. No public deployment is claimed by this repository.
 
-## Deploy
-
-This is a standard React/Vinext site. It does not require ChatGPT Sites, a database, or an API key.
-
-For Vercel:
-
-1. Import the GitHub repository.
-2. Keep the build command as `npm run build`.
-3. Set the output directory to `.output` if Vercel asks for one.
-4. Deploy.
-
-The site is also suitable for a City-managed host. The UI reads the normalized JSON at build time, so the City can replace the source files and rerun the parser without changing the page structure.
+Official source links are recorded in `data/budget.json`. The application imports this normalized data at build time.
