@@ -36,3 +36,10 @@ next-env.d.ts
 /.wrangler/
 /outputs/
 /work/
+
+# local verification caches
+__pycache__/
+*.tsbuildinfo
+
+# local outreach drafts (not for the public repo)
+/docs/jason-outreach.md
