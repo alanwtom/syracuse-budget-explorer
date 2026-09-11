@@ -42,8 +42,12 @@
       "label": "FY27 proposed"
     },
     {
+      "key": "fy27Adjusted",
+      "label": "FY27 adjusted proposal"
+    },
+    {
       "key": "fy27Adopted",
-      "label": "FY27 adopted"
+      "label": "FY27 adopted (unverified)"
     }
   ],
   "summary": {
@@ -278,7 +282,7 @@
         "fy26Budget": 14393809.0,
         "fy26Estimate": 0.0,
         "fy27Proposed": 23880621.0,
-        "fy27Adopted": -879.0
+        "fy27Adjusted": -879.0
       },
       "source": "2026 City Budget Workbook",
       "sourceSheet": "General Fund",
@@ -650,6 +654,36 @@
       "change": {
         "amount": 0.0,
         "pct": 0.0
+      }
+    },
+    {
+      "id": "general-fund-revenue-less-uncollected-city-taxes-current-year-18",
+      "fundId": "general-fund",
+      "fundName": "General Fund",
+      "section": "revenue",
+      "level": "line",
+      "category": "Real Property Tax Items",
+      "department": null,
+      "division": null,
+      "code": null,
+      "name": "Less: Uncollected City Taxes - Current Year",
+      "values": {
+        "fy21Actual": 0.0,
+        "fy22Actual": 0.0,
+        "fy23Actual": 0.0,
+        "fy24Actual": 0.0,
+        "fy25Actual": 0.0,
+        "fy26Budget": -1194800.0,
+        "fy26Estimate": -1194800.0,
+        "fy27Proposed": -2000000.0
+      },
+      "source": "2026 City Budget Workbook",
+      "sourceSheet": "General Fund",
+      "sourceRow": 18,
+      "adoptedMethod": "workbook_detail_plus_adopted_amendments",
+      "change": {
+        "amount": -805200.0,
+        "pct": -67.4
       }
     },
     {
@@ -3762,7 +3796,7 @@
         "fy26Budget": 5000000.0,
         "fy26Estimate": 5000000.0,
         "fy27Proposed": 15000000.0,
-        "fy27Adopted": 35000000.0
+        "fy27Adjusted": 35000000.0
       },
       "source": "2026 City Budget Workbook",
       "sourceSheet": "General Fund",
@@ -3804,6 +3838,36 @@
       "change": {
         "amount": 0.0,
         "pct": 0.0
+      }
+    },
+    {
+      "id": "general-fund-revenue-federal-american-relief-plan-139",
+      "fundId": "general-fund",
+      "fundName": "General Fund",
+      "section": "revenue",
+      "level": "line",
+      "category": "Departmental Income",
+      "department": "Federal Aid",
+      "division": null,
+      "code": null,
+      "name": "Federal American Relief Plan",
+      "values": {
+        "fy21Actual": 0.0,
+        "fy22Actual": 0.0,
+        "fy23Actual": 16736551.0,
+        "fy24Actual": 4000000.0,
+        "fy25Actual": 0.0,
+        "fy26Budget": 0.0,
+        "fy26Estimate": 0.0,
+        "fy27Proposed": 0.0
+      },
+      "source": "2026 City Budget Workbook",
+      "sourceSheet": "General Fund",
+      "sourceRow": 139,
+      "adoptedMethod": "workbook_detail_plus_adopted_amendments",
+      "change": {
+        "amount": 0,
+        "pct": null
       }
     },
     {
@@ -4137,36 +4201,6 @@
       }
     },
     {
-      "id": "general-fund-revenue-tax-levy-152",
-      "fundId": "general-fund",
-      "fundName": "General Fund",
-      "section": "revenue",
-      "level": "line",
-      "category": "Departmental Income",
-      "department": "Miscellaneous Revenue",
-      "division": null,
-      "code": null,
-      "name": "Tax Levy",
-      "values": {
-        "fy21Actual": 0.0,
-        "fy22Actual": 0.0,
-        "fy23Actual": 39014410.0,
-        "fy24Actual": 43157414.0,
-        "fy25Actual": 54866750.0,
-        "fy26Budget": 58970189.0,
-        "fy26Estimate": 58970189.0,
-        "fy27Proposed": 61913554.0
-      },
-      "source": "2026 City Budget Workbook",
-      "sourceSheet": "General Fund",
-      "sourceRow": 152,
-      "adoptedMethod": "workbook_detail_plus_adopted_amendments",
-      "change": {
-        "amount": 2943365.0,
-        "pct": 5.0
-      }
-    },
-    {
       "id": "general-fund-revenue-tax-levy-153",
       "fundId": "general-fund",
       "fundName": "General Fund",
@@ -4197,6 +4231,36 @@
       }
     },
     {
+      "id": "general-fund-revenue-1-added-pursuant-to-law-154",
+      "fundId": "general-fund",
+      "fundName": "General Fund",
+      "section": "revenue",
+      "level": "line",
+      "category": "Departmental Income",
+      "department": "Tax Levy",
+      "division": "Tax Levy",
+      "code": null,
+      "name": "1% Added Pursuant to Law",
+      "values": {
+        "fy21Actual": 0.0,
+        "fy22Actual": 0.0,
+        "fy23Actual": 404467.0,
+        "fy24Actual": 471124.0,
+        "fy25Actual": 543235.0,
+        "fy26Budget": 583864.0,
+        "fy26Estimate": 583864.0,
+        "fy27Proposed": 613005.0
+      },
+      "source": "2026 City Budget Workbook",
+      "sourceSheet": "General Fund",
+      "sourceRow": 154,
+      "adoptedMethod": "workbook_detail_plus_adopted_amendments",
+      "change": {
+        "amount": 29141.0,
+        "pct": 5.0
+      }
+    },
+    {
       "id": "general-fund-expense-510100-160",
       "fundId": "general-fund",
       "fundName": "General Fund",
@@ -4216,7 +4280,7 @@
         "fy26Budget": 556248.0,
         "fy26Estimate": 616956.0,
         "fy27Proposed": 653769.0,
-        "fy27Adopted": 753769.0
+        "fy27Adjusted": 753769.0
       },
       "source": "2026 City Budget Workbook",
       "sourceSheet": "General Fund",
@@ -6241,36 +6305,6 @@
       }
     },
     {
-      "id": "general-fund-expense-540300-261",
-      "fundId": "general-fund",
-      "fundName": "General Fund",
-      "section": "expense",
-      "level": "account",
-      "category": "Division of Equity Compliance & Social Impact",
-      "department": "Executive",
-      "division": "Division of Equity Compliance & Social Impact",
-      "code": "540300",
-      "name": "Office Supplies",
-      "values": {
-        "fy21Actual": 0.0,
-        "fy22Actual": 129228.0,
-        "fy23Actual": 90646.0,
-        "fy24Actual": 146201.51,
-        "fy25Actual": 159321.61,
-        "fy26Budget": 191852.0,
-        "fy26Estimate": 126783.0,
-        "fy27Proposed": 191747.0
-      },
-      "source": "2026 City Budget Workbook",
-      "sourceSheet": "General Fund",
-      "sourceRow": 261,
-      "adoptedMethod": "workbook_detail_plus_adopted_amendments",
-      "change": {
-        "amount": -105.0,
-        "pct": -0.1
-      }
-    },
-    {
       "id": "general-fund-expense-540300-262",
       "fundId": "general-fund",
       "fundName": "General Fund",
@@ -6440,7 +6474,7 @@
         "fy26Budget": 1142434.0,
         "fy26Estimate": 1094076.0,
         "fy27Proposed": 1147058.0,
-        "fy27Adopted": 1227058.0
+        "fy27Adjusted": 1227058.0
       },
       "source": "2026 City Budget Workbook",
       "sourceSheet": "General Fund",
@@ -6572,36 +6606,6 @@
       "change": {
         "amount": 0,
         "pct": null
-      }
-    },
-    {
-      "id": "general-fund-expense-520200-274",
-      "fundId": "general-fund",
-      "fundName": "General Fund",
-      "section": "expense",
-      "level": "account",
-      "category": "Office of Personnel & Labor Relations",
-      "department": "Executive",
-      "division": "Office of Personnel & Labor Relations",
-      "code": "520200",
-      "name": "Office Equipment & Furnishings",
-      "values": {
-        "fy21Actual": 0.0,
-        "fy22Actual": 2442.0,
-        "fy23Actual": 16683.0,
-        "fy24Actual": 0.0,
-        "fy25Actual": 0.0,
-        "fy26Budget": 64400.0,
-        "fy26Estimate": 10000.0,
-        "fy27Proposed": 20000.0
-      },
-      "source": "2026 City Budget Workbook",
-      "sourceSheet": "General Fund",
-      "sourceRow": 274,
-      "adoptedMethod": "workbook_detail_plus_adopted_amendments",
-      "change": {
-        "amount": -44400.0,
-        "pct": -68.9
       }
     },
     {
@@ -7475,36 +7479,6 @@
       }
     },
     {
-      "id": "general-fund-expense-510100-317",
-      "fundId": "general-fund",
-      "fundName": "General Fund",
-      "section": "expense",
-      "level": "account",
-      "category": "Bureau of City Payment Center",
-      "department": "Department of Finance",
-      "division": "Bureau of City Payment Center",
-      "code": "510100",
-      "name": "Salaries",
-      "values": {
-        "fy21Actual": 644214.0,
-        "fy22Actual": 754881.0,
-        "fy23Actual": 849038.0,
-        "fy24Actual": 811878.41,
-        "fy25Actual": 891409.01,
-        "fy26Budget": 937790.0,
-        "fy26Estimate": 949792.0,
-        "fy27Proposed": 943105.0
-      },
-      "source": "2026 City Budget Workbook",
-      "sourceSheet": "General Fund",
-      "sourceRow": 317,
-      "adoptedMethod": "workbook_detail_plus_adopted_amendments",
-      "change": {
-        "amount": 5315.0,
-        "pct": 0.6
-      }
-    },
-    {
       "id": "general-fund-expense-510100-318",
       "fundId": "general-fund",
       "fundName": "General Fund",
@@ -7652,36 +7626,6 @@
       "change": {
         "amount": 0,
         "pct": null
-      }
-    },
-    {
-      "id": "general-fund-expense-540300-324",
-      "fundId": "general-fund",
-      "fundName": "General Fund",
-      "section": "expense",
-      "level": "account",
-      "category": "Bureau of City Payment Center",
-      "department": "Department of Finance",
-      "division": "Bureau of City Payment Center",
-      "code": "540300",
-      "name": "Office Supplies",
-      "values": {
-        "fy21Actual": 220834.0,
-        "fy22Actual": 198962.0,
-        "fy23Actual": 266808.0,
-        "fy24Actual": 229992.61,
-        "fy25Actual": 250704.82,
-        "fy26Budget": 277647.0,
-        "fy26Estimate": 249912.0,
-        "fy27Proposed": 266947.0
-      },
-      "source": "2026 City Budget Workbook",
-      "sourceSheet": "General Fund",
-      "sourceRow": 324,
-      "adoptedMethod": "workbook_detail_plus_adopted_amendments",
-      "change": {
-        "amount": -10700.0,
-        "pct": -3.9
       }
     },
     {
@@ -8132,36 +8076,6 @@
       "change": {
         "amount": 0,
         "pct": null
-      }
-    },
-    {
-      "id": "general-fund-expense-540300-346",
-      "fundId": "general-fund",
-      "fundName": "General Fund",
-      "section": "expense",
-      "level": "account",
-      "category": "Parking Violations Bureau",
-      "department": "Department of Finance",
-      "division": "Parking Violations Bureau",
-      "code": "540300",
-      "name": "Office Supplies",
-      "values": {
-        "fy21Actual": 29472.0,
-        "fy22Actual": 34041.0,
-        "fy23Actual": 46595.0,
-        "fy24Actual": 54565.79,
-        "fy25Actual": 71532.13,
-        "fy26Budget": 77303.0,
-        "fy26Estimate": 64473.0,
-        "fy27Proposed": 72155.0
-      },
-      "source": "2026 City Budget Workbook",
-      "sourceSheet": "General Fund",
-      "sourceRow": 346,
-      "adoptedMethod": "workbook_detail_plus_adopted_amendments",
-      "change": {
-        "amount": -5148.0,
-        "pct": -6.7
       }
     },
     {
@@ -8855,36 +8769,6 @@
       }
     },
     {
-      "id": "general-fund-expense-540300-381",
-      "fundId": "general-fund",
-      "fundName": "General Fund",
-      "section": "expense",
-      "level": "account",
-      "category": "City Clerk's Office",
-      "department": "Office of the City Clerk",
-      "division": "City Clerk's Office",
-      "code": "540300",
-      "name": "Office Supplies",
-      "values": {
-        "fy21Actual": 5916.0,
-        "fy22Actual": 6573.0,
-        "fy23Actual": 11332.0,
-        "fy24Actual": 6966.65,
-        "fy25Actual": 12048.22,
-        "fy26Budget": 9740.0,
-        "fy26Estimate": 9485.0,
-        "fy27Proposed": 26440.0
-      },
-      "source": "2026 City Budget Workbook",
-      "sourceSheet": "General Fund",
-      "sourceRow": 381,
-      "adoptedMethod": "workbook_detail_plus_adopted_amendments",
-      "change": {
-        "amount": 16700.0,
-        "pct": 171.5
-      }
-    },
-    {
       "id": "general-fund-expense-540300-382",
       "fundId": "general-fund",
       "fundName": "General Fund",
@@ -8994,7 +8878,7 @@
         "fy26Budget": 0.0,
         "fy26Estimate": 0.0,
         "fy27Proposed": 15000.0,
-        "fy27Adopted": 50000.0
+        "fy27Adjusted": 50000.0
       },
       "source": "2026 City Budget Workbook",
       "sourceSheet": "General Fund",
@@ -9096,36 +8980,6 @@
       "change": {
         "amount": 35000.0,
         "pct": null
-      }
-    },
-    {
-      "id": "general-fund-expense-540300-392",
-      "fundId": "general-fund",
-      "fundName": "General Fund",
-      "section": "expense",
-      "level": "account",
-      "category": "Department of Assessment",
-      "department": "Department of Assessment",
-      "division": "Department of Assessment",
-      "code": "540300",
-      "name": "Office Supplies",
-      "values": {
-        "fy21Actual": 13518.0,
-        "fy22Actual": 52349.0,
-        "fy23Actual": 38463.0,
-        "fy24Actual": 47871.75,
-        "fy25Actual": 72077.65,
-        "fy26Budget": 80025.0,
-        "fy26Estimate": 50380.0,
-        "fy27Proposed": 581425.0
-      },
-      "source": "2026 City Budget Workbook",
-      "sourceSheet": "General Fund",
-      "sourceRow": 392,
-      "adoptedMethod": "workbook_detail_plus_adopted_amendments",
-      "change": {
-        "amount": 501400.0,
-        "pct": 626.6
       }
     },
     {
@@ -9448,7 +9302,7 @@
         "fy26Budget": 3221988.0,
         "fy26Estimate": 3127390.0,
         "fy27Proposed": 3033667.0,
-        "fy27Adopted": 3133667.0
+        "fy27Adjusted": 3133667.0
       },
       "source": "2026 City Budget Workbook",
       "sourceSheet": "General Fund",
@@ -9550,36 +9404,6 @@
       "change": {
         "amount": -4000.0,
         "pct": -100.0
-      }
-    },
-    {
-      "id": "general-fund-expense-540300-418",
-      "fundId": "general-fund",
-      "fundName": "General Fund",
-      "section": "expense",
-      "level": "account",
-      "category": "Law Department",
-      "department": "Department of Law",
-      "division": "Law Department",
-      "code": "540300",
-      "name": "Office Supplies",
-      "values": {
-        "fy21Actual": 1550804.0,
-        "fy22Actual": 1981841.0,
-        "fy23Actual": 1657999.0,
-        "fy24Actual": 1887915.72,
-        "fy25Actual": 1678702.39,
-        "fy26Budget": 1277462.0,
-        "fy26Estimate": 1996703.0,
-        "fy27Proposed": 1776024.0
-      },
-      "source": "2026 City Budget Workbook",
-      "sourceSheet": "General Fund",
-      "sourceRow": 418,
-      "adoptedMethod": "workbook_detail_plus_adopted_amendments",
-      "change": {
-        "amount": 498562.0,
-        "pct": 39.0
       }
     },
     {
@@ -10723,36 +10547,6 @@
       }
     },
     {
-      "id": "general-fund-expense-540300-471",
-      "fundId": "general-fund",
-      "fundName": "General Fund",
-      "section": "expense",
-      "level": "account",
-      "category": "Division of Code Enforcement",
-      "department": "Department of Neighborhood & Business Development",
-      "division": "Division of Code Enforcement",
-      "code": "540300",
-      "name": "Office Supplies",
-      "values": {
-        "fy21Actual": 1468857.0,
-        "fy22Actual": 1637412.0,
-        "fy23Actual": 1698220.0,
-        "fy24Actual": 1749743.2,
-        "fy25Actual": 2400522.08,
-        "fy26Budget": 2902107.0,
-        "fy26Estimate": 2958536.0,
-        "fy27Proposed": 3090489.0
-      },
-      "source": "2026 City Budget Workbook",
-      "sourceSheet": "General Fund",
-      "sourceRow": 471,
-      "adoptedMethod": "workbook_detail_plus_adopted_amendments",
-      "change": {
-        "amount": 188382.0,
-        "pct": 6.5
-      }
-    },
-    {
       "id": "general-fund-expense-540300-472",
       "fundId": "general-fund",
       "fundName": "General Fund",
@@ -11803,36 +11597,6 @@
       }
     },
     {
-      "id": "general-fund-expense-510100-519",
-      "fundId": "general-fund",
-      "fundName": "General Fund",
-      "section": "expense",
-      "level": "account",
-      "category": "DPW Environmental Services",
-      "department": "Department of Public Works",
-      "division": "DPW Environmental Services",
-      "code": "510100",
-      "name": "Salaries",
-      "values": {
-        "fy21Actual": 652531.0,
-        "fy22Actual": 798139.0,
-        "fy23Actual": 926112.0,
-        "fy24Actual": 1071653.07,
-        "fy25Actual": 978846.4,
-        "fy26Budget": 1210868.0,
-        "fy26Estimate": 1205110.0,
-        "fy27Proposed": 1166624.0
-      },
-      "source": "2026 City Budget Workbook",
-      "sourceSheet": "General Fund",
-      "sourceRow": 519,
-      "adoptedMethod": "workbook_detail_plus_adopted_amendments",
-      "change": {
-        "amount": -44244.0,
-        "pct": -3.7
-      }
-    },
-    {
       "id": "general-fund-expense-510100-520",
       "fundId": "general-fund",
       "fundName": "General Fund",
@@ -12133,36 +11897,6 @@
       }
     },
     {
-      "id": "general-fund-expense-540500-531",
-      "fundId": "general-fund",
-      "fundName": "General Fund",
-      "section": "expense",
-      "level": "account",
-      "category": "DPW Environmental Services",
-      "department": "Department of Public Works",
-      "division": "DPW Environmental Services",
-      "code": "540500",
-      "name": "Operating Supplies & Expenses",
-      "values": {
-        "fy21Actual": 23827.0,
-        "fy22Actual": 10100.0,
-        "fy23Actual": 5573.0,
-        "fy24Actual": 6103.55,
-        "fy25Actual": 5661.22,
-        "fy26Budget": 16400.0,
-        "fy26Estimate": 13303.0,
-        "fy27Proposed": 13900.0
-      },
-      "source": "2026 City Budget Workbook",
-      "sourceSheet": "General Fund",
-      "sourceRow": 531,
-      "adoptedMethod": "workbook_detail_plus_adopted_amendments",
-      "change": {
-        "amount": -2500.0,
-        "pct": -15.2
-      }
-    },
-    {
       "id": "general-fund-expense-540300-532",
       "fundId": "general-fund",
       "fundName": "General Fund",
@@ -12310,36 +12044,6 @@
       "change": {
         "amount": 0,
         "pct": null
-      }
-    },
-    {
-      "id": "general-fund-expense-510100-538",
-      "fundId": "general-fund",
-      "fundName": "General Fund",
-      "section": "expense",
-      "level": "account",
-      "category": "DPW Building Services",
-      "department": "Department of Public Works",
-      "division": "DPW Building Services",
-      "code": "510100",
-      "name": "Salaries",
-      "values": {
-        "fy21Actual": 2976399.0,
-        "fy22Actual": 3562385.0,
-        "fy23Actual": 3859887.0,
-        "fy24Actual": 3917935.59,
-        "fy25Actual": 3653592.95,
-        "fy26Budget": 3629431.0,
-        "fy26Estimate": 4140085.0,
-        "fy27Proposed": 4281177.0
-      },
-      "source": "2026 City Budget Workbook",
-      "sourceSheet": "General Fund",
-      "sourceRow": 538,
-      "adoptedMethod": "workbook_detail_plus_adopted_amendments",
-      "change": {
-        "amount": 651746.0,
-        "pct": 18.0
       }
     },
     {
@@ -12670,36 +12374,6 @@
       "change": {
         "amount": 0,
         "pct": null
-      }
-    },
-    {
-      "id": "general-fund-expense-540300-551",
-      "fundId": "general-fund",
-      "fundName": "General Fund",
-      "section": "expense",
-      "level": "account",
-      "category": "DPW Building Services",
-      "department": "Department of Public Works",
-      "division": "DPW Building Services",
-      "code": "540300",
-      "name": "Office Supplies",
-      "values": {
-        "fy21Actual": 253709.0,
-        "fy22Actual": 346788.0,
-        "fy23Actual": 341934.0,
-        "fy24Actual": 310844.98,
-        "fy25Actual": 258705.43,
-        "fy26Budget": 423000.0,
-        "fy26Estimate": 379134.0,
-        "fy27Proposed": 443200.0
-      },
-      "source": "2026 City Budget Workbook",
-      "sourceSheet": "General Fund",
-      "sourceRow": 551,
-      "adoptedMethod": "workbook_detail_plus_adopted_amendments",
-      "change": {
-        "amount": 20200.0,
-        "pct": 4.8
       }
     },
     {
@@ -18133,36 +17807,6 @@
       }
     },
     {
-      "id": "general-fund-expense-510100-773",
-      "fundId": "general-fund",
-      "fundName": "General Fund",
-      "section": "expense",
-      "level": "account",
-      "category": "Parks Administration",
-      "department": "Department of Parks, Recreation & Youth Programs",
-      "division": "Parks Administration",
-      "code": "510100",
-      "name": "Salaries",
-      "values": {
-        "fy21Actual": 370032.0,
-        "fy22Actual": 406453.0,
-        "fy23Actual": 461474.0,
-        "fy24Actual": 509783.62,
-        "fy25Actual": 561338.56,
-        "fy26Budget": 640584.0,
-        "fy26Estimate": 588607.0,
-        "fy27Proposed": 618365.0
-      },
-      "source": "2026 City Budget Workbook",
-      "sourceSheet": "General Fund",
-      "sourceRow": 773,
-      "adoptedMethod": "workbook_detail_plus_adopted_amendments",
-      "change": {
-        "amount": -22219.0,
-        "pct": -3.5
-      }
-    },
-    {
       "id": "general-fund-expense-510100-774",
       "fundId": "general-fund",
       "fundName": "General Fund",
@@ -18542,7 +18186,7 @@
         "fy26Budget": 2325783.0,
         "fy26Estimate": 2217282.0,
         "fy27Proposed": 2311796.0,
-        "fy27Adopted": 2361796.0
+        "fy27Adjusted": 2361796.0
       },
       "source": "2026 City Budget Workbook",
       "sourceSheet": "General Fund",
@@ -19566,7 +19210,7 @@
         "fy26Budget": 159925.0,
         "fy26Estimate": 129422.0,
         "fy27Proposed": 207800.0,
-        "fy27Adopted": 382800.0
+        "fy27Adjusted": 382800.0
       },
       "source": "2026 City Budget Workbook",
       "sourceSheet": "General Fund",
@@ -20170,7 +19814,7 @@
         "fy26Budget": 51500.0,
         "fy26Estimate": 10000.0,
         "fy27Proposed": 51500.0,
-        "fy27Adopted": 0.0
+        "fy27Adjusted": 0.0
       },
       "source": "2026 City Budget Workbook",
       "sourceSheet": "General Fund",
@@ -20324,7 +19968,7 @@
         "fy26Budget": 50000.0,
         "fy26Estimate": 50000.0,
         "fy27Proposed": 75000.0,
-        "fy27Adopted": 100000.0
+        "fy27Adjusted": 100000.0
       },
       "source": "2026 City Budget Workbook",
       "sourceSheet": "General Fund",
@@ -20358,7 +20002,7 @@
         "fy26Budget": 199250.0,
         "fy26Estimate": 196820.0,
         "fy27Proposed": 246860.0,
-        "fy27Adopted": 296860.0
+        "fy27Adjusted": 296860.0
       },
       "source": "2026 City Budget Workbook",
       "sourceSheet": "General Fund",
@@ -20872,7 +20516,7 @@
         "fy26Budget": 1250000.0,
         "fy26Estimate": 1250000.0,
         "fy27Proposed": 250000.0,
-        "fy27Adopted": 1000000.0
+        "fy27Adjusted": 1000000.0
       },
       "source": "2026 City Budget Workbook",
       "sourceSheet": "General Fund",
@@ -20966,7 +20610,7 @@
         "fy26Budget": 0.0,
         "fy26Estimate": 0.0,
         "fy27Proposed": 0.0,
-        "fy27Adopted": 100000.0
+        "fy27Adjusted": 100000.0
       },
       "source": "2026 City Budget Workbook",
       "sourceSheet": "General Fund",
@@ -21060,7 +20704,7 @@
         "fy26Budget": 1500000.0,
         "fy26Estimate": 1500000.0,
         "fy27Proposed": 1500000.0,
-        "fy27Adopted": 500000.0
+        "fy27Adjusted": 500000.0
       },
       "source": "2026 City Budget Workbook",
       "sourceSheet": "General Fund",
@@ -21094,7 +20738,7 @@
         "fy26Budget": 6502212.0,
         "fy26Estimate": 6703227.0,
         "fy27Proposed": 7283978.0,
-        "fy27Adopted": 6383978.0
+        "fy27Adjusted": 6383978.0
       },
       "source": "2026 City Budget Workbook",
       "sourceSheet": "General Fund",
@@ -21128,7 +20772,7 @@
         "fy26Budget": 11655185.0,
         "fy26Estimate": 11158615.0,
         "fy27Proposed": 12117072.0,
-        "fy27Adopted": 11617072.0
+        "fy27Adjusted": 11617072.0
       },
       "source": "2026 City Budget Workbook",
       "sourceSheet": "General Fund",
@@ -21282,7 +20926,7 @@
         "fy26Budget": 46616490.0,
         "fy26Estimate": 46898957.0,
         "fy27Proposed": 51313289.0,
-        "fy27Adopted": 50413289.0
+        "fy27Adjusted": 50413289.0
       },
       "source": "2026 City Budget Workbook",
       "sourceSheet": "General Fund",
@@ -21586,7 +21230,7 @@
         "fy26Budget": 2121500.0,
         "fy26Estimate": 2121500.0,
         "fy27Proposed": 2453000.0,
-        "fy27Adopted": 333000.0
+        "fy27Adjusted": 333000.0
       },
       "source": "2026 City Budget Workbook",
       "sourceSheet": "General Fund",
@@ -21598,6 +21242,126 @@
       "change": {
         "amount": -1788500.0,
         "pct": -84.3
+      }
+    },
+    {
+      "id": "general-fund-expense-ban-interest-903",
+      "fundId": "general-fund",
+      "fundName": "General Fund",
+      "section": "expense",
+      "level": "line",
+      "category": "Capital Appropriations & Debt Service",
+      "department": "Transfer to Capital Projects Fund",
+      "division": null,
+      "code": null,
+      "name": "BAN Interest",
+      "values": {
+        "fy21Actual": 0.0,
+        "fy22Actual": 0.0,
+        "fy23Actual": 0.0,
+        "fy24Actual": 634937.0,
+        "fy25Actual": 14908.0,
+        "fy26Budget": 0.0,
+        "fy26Estimate": 0.0,
+        "fy27Proposed": 0.0
+      },
+      "source": "2026 City Budget Workbook",
+      "sourceSheet": "General Fund",
+      "sourceRow": 903,
+      "adoptedMethod": "workbook_detail_plus_adopted_amendments",
+      "change": {
+        "amount": 0,
+        "pct": null
+      }
+    },
+    {
+      "id": "general-fund-expense-serial-bond-principal-interest-905",
+      "fundId": "general-fund",
+      "fundName": "General Fund",
+      "section": "expense",
+      "level": "line",
+      "category": "Capital Appropriations & Debt Service",
+      "department": "Transfer to Debt Service Fund",
+      "division": null,
+      "code": null,
+      "name": "Serial Bond Principal & Interest",
+      "values": {
+        "fy21Actual": 17542436.0,
+        "fy22Actual": 18727080.0,
+        "fy23Actual": 19342246.0,
+        "fy24Actual": 24417887.0,
+        "fy25Actual": 23969296.0,
+        "fy26Budget": 24850934.0,
+        "fy26Estimate": 25016271.0,
+        "fy27Proposed": 26495345.0
+      },
+      "source": "2026 City Budget Workbook",
+      "sourceSheet": "General Fund",
+      "sourceRow": 905,
+      "adoptedMethod": "workbook_detail_plus_adopted_amendments",
+      "change": {
+        "amount": 1644411.0,
+        "pct": 6.6
+      }
+    },
+    {
+      "id": "general-fund-expense-one-percent-1-added-pursuant-to-law-906",
+      "fundId": "general-fund",
+      "fundName": "General Fund",
+      "section": "expense",
+      "level": "line",
+      "category": "Capital Appropriations & Debt Service",
+      "department": "Transfer to Debt Service Fund",
+      "division": null,
+      "code": null,
+      "name": "One Percent (1%) Added Pursuant to Law",
+      "values": {
+        "fy21Actual": 0.0,
+        "fy22Actual": 0.0,
+        "fy23Actual": 404467.0,
+        "fy24Actual": 4711245.0,
+        "fy25Actual": 0.0,
+        "fy26Budget": 583864.0,
+        "fy26Estimate": 583864.0,
+        "fy27Proposed": 613005.0
+      },
+      "source": "2026 City Budget Workbook",
+      "sourceSheet": "General Fund",
+      "sourceRow": 906,
+      "adoptedMethod": "workbook_detail_plus_adopted_amendments",
+      "change": {
+        "amount": 29141.0,
+        "pct": 5.0
+      }
+    },
+    {
+      "id": "water-fund-revenue-unreserved-undesignated-3",
+      "fundId": "water-fund",
+      "fundName": "Water",
+      "section": "revenue",
+      "level": "line",
+      "category": null,
+      "department": null,
+      "division": null,
+      "code": null,
+      "name": "Unreserved, Undesignated",
+      "values": {
+        "fy21Actual": 0.0,
+        "fy22Actual": 0.0,
+        "fy23Actual": 0.0,
+        "fy24Actual": 0.0,
+        "fy25Actual": 0.0,
+        "fy26Budget": 2365846.0,
+        "fy26Estimate": 0.0,
+        "fy27Proposed": 3689133.0
+      },
+      "source": "2026 City Budget Workbook",
+      "sourceSheet": "Water Fund",
+      "sourceRow": 3,
+      "adoptedMethod": "workbook_detail_formal_fund_total",
+      "change": {
+        "amount": 1323287.0,
+        "pct": 55.9
       }
     },
     {
@@ -24061,6 +23825,36 @@
       }
     },
     {
+      "id": "water-fund-expense-bad-debt-expense-109",
+      "fundId": "water-fund",
+      "fundName": "Water",
+      "section": "expense",
+      "level": "line",
+      "category": "Special Objects of Expense",
+      "department": null,
+      "division": null,
+      "code": null,
+      "name": "Bad Debt Expense",
+      "values": {
+        "fy21Actual": 0.0,
+        "fy22Actual": 0.0,
+        "fy23Actual": 0.0,
+        "fy24Actual": 0.0,
+        "fy25Actual": 456851.0,
+        "fy26Budget": 0.0,
+        "fy26Estimate": 0.0,
+        "fy27Proposed": 0.0
+      },
+      "source": "2026 City Budget Workbook",
+      "sourceSheet": "Water Fund",
+      "sourceRow": 109,
+      "adoptedMethod": "workbook_detail_formal_fund_total",
+      "change": {
+        "amount": 0,
+        "pct": null
+      }
+    },
+    {
       "id": "water-fund-expense-599850-110",
       "fundId": "water-fund",
       "fundName": "Water",
@@ -24268,6 +24062,126 @@
       "change": {
         "amount": 0.0,
         "pct": 0.0
+      }
+    },
+    {
+      "id": "water-fund-expense-transfer-general-fund-117",
+      "fundId": "water-fund",
+      "fundName": "Water",
+      "section": "expense",
+      "level": "line",
+      "category": "Special Objects of Expense",
+      "department": null,
+      "division": null,
+      "code": null,
+      "name": "Transfer - General Fund",
+      "values": {
+        "fy21Actual": 2300000.0,
+        "fy22Actual": 2300000.0,
+        "fy23Actual": 2300000.0,
+        "fy24Actual": 2300000.0,
+        "fy25Actual": 2800000.0,
+        "fy26Budget": 2800000.0,
+        "fy26Estimate": 2800000.0,
+        "fy27Proposed": 2800000.0
+      },
+      "source": "2026 City Budget Workbook",
+      "sourceSheet": "Water Fund",
+      "sourceRow": 117,
+      "adoptedMethod": "workbook_detail_formal_fund_total",
+      "change": {
+        "amount": 0.0,
+        "pct": 0.0
+      }
+    },
+    {
+      "id": "water-fund-expense-serial-bond-principal-interest-119",
+      "fundId": "water-fund",
+      "fundName": "Water",
+      "section": "expense",
+      "level": "line",
+      "category": "Cash Capital Appropriations & Debt Service",
+      "department": null,
+      "division": null,
+      "code": null,
+      "name": "Serial Bond Principal & Interest",
+      "values": {
+        "fy21Actual": 5288130.0,
+        "fy22Actual": 4924324.0,
+        "fy23Actual": 5172437.0,
+        "fy24Actual": 5532295.0,
+        "fy25Actual": 1278267.0,
+        "fy26Budget": 5688929.0,
+        "fy26Estimate": 5352757.0,
+        "fy27Proposed": 5826623.0
+      },
+      "source": "2026 City Budget Workbook",
+      "sourceSheet": "Water Fund",
+      "sourceRow": 119,
+      "adoptedMethod": "workbook_detail_formal_fund_total",
+      "change": {
+        "amount": 137694.0,
+        "pct": 2.4
+      }
+    },
+    {
+      "id": "water-fund-expense-transfer-cash-capital-120",
+      "fundId": "water-fund",
+      "fundName": "Water",
+      "section": "expense",
+      "level": "line",
+      "category": "Cash Capital Appropriations & Debt Service",
+      "department": null,
+      "division": null,
+      "code": null,
+      "name": "Transfer - Cash Capital",
+      "values": {
+        "fy21Actual": 1688000.0,
+        "fy22Actual": 3562000.0,
+        "fy23Actual": 4050000.0,
+        "fy24Actual": 2704000.0,
+        "fy25Actual": 0.0,
+        "fy26Budget": 1595000.0,
+        "fy26Estimate": 1595000.0,
+        "fy27Proposed": 1145000.0
+      },
+      "source": "2026 City Budget Workbook",
+      "sourceSheet": "Water Fund",
+      "sourceRow": 120,
+      "adoptedMethod": "workbook_detail_formal_fund_total",
+      "change": {
+        "amount": -450000.0,
+        "pct": -28.2
+      }
+    },
+    {
+      "id": "sewer-fund-revenue-unreserved-undesignated-3",
+      "fundId": "sewer-fund",
+      "fundName": "Sewer",
+      "section": "revenue",
+      "level": "line",
+      "category": null,
+      "department": null,
+      "division": null,
+      "code": null,
+      "name": "Unreserved, Undesignated",
+      "values": {
+        "fy21Actual": 0.0,
+        "fy22Actual": 0.0,
+        "fy23Actual": 0.0,
+        "fy24Actual": 0.0,
+        "fy25Actual": 0.0,
+        "fy26Budget": 728800.0,
+        "fy26Estimate": 0.0,
+        "fy27Proposed": 2086902.0
+      },
+      "source": "2026 City Budget Workbook",
+      "sourceSheet": "Sewer Fund",
+      "sourceRow": 3,
+      "adoptedMethod": "workbook_detail_formal_fund_total",
+      "change": {
+        "amount": 1358102.0,
+        "pct": 186.3
       }
     },
     {
@@ -24991,6 +24905,36 @@
       }
     },
     {
+      "id": "sewer-fund-expense-bad-debt-expense-33",
+      "fundId": "sewer-fund",
+      "fundName": "Sewer",
+      "section": "expense",
+      "level": "line",
+      "category": "Special Objects of Expense",
+      "department": null,
+      "division": null,
+      "code": null,
+      "name": "Bad Debt Expense",
+      "values": {
+        "fy21Actual": 0.0,
+        "fy22Actual": 0.0,
+        "fy23Actual": 0.0,
+        "fy24Actual": 0.0,
+        "fy25Actual": 140003.0,
+        "fy26Budget": 0.0,
+        "fy26Estimate": 0.0,
+        "fy27Proposed": 0.0
+      },
+      "source": "2026 City Budget Workbook",
+      "sourceSheet": "Sewer Fund",
+      "sourceRow": 33,
+      "adoptedMethod": "workbook_detail_formal_fund_total",
+      "change": {
+        "amount": 0,
+        "pct": null
+      }
+    },
+    {
       "id": "sewer-fund-expense-590100-34",
       "fundId": "sewer-fund",
       "fundName": "Sewer",
@@ -25141,6 +25085,126 @@
       }
     },
     {
+      "id": "sewer-fund-expense-transfer-general-fund-39",
+      "fundId": "sewer-fund",
+      "fundName": "Sewer",
+      "section": "expense",
+      "level": "line",
+      "category": "Special Objects of Expense",
+      "department": null,
+      "division": "Bad Debt Expense",
+      "code": null,
+      "name": "Transfer - General Fund",
+      "values": {
+        "fy21Actual": 525000.0,
+        "fy22Actual": 525000.0,
+        "fy23Actual": 525000.0,
+        "fy24Actual": 525000.0,
+        "fy25Actual": 540750.0,
+        "fy26Budget": 540750.0,
+        "fy26Estimate": 540750.0,
+        "fy27Proposed": 540750.0
+      },
+      "source": "2026 City Budget Workbook",
+      "sourceSheet": "Sewer Fund",
+      "sourceRow": 39,
+      "adoptedMethod": "workbook_detail_formal_fund_total",
+      "change": {
+        "amount": 0.0,
+        "pct": 0.0
+      }
+    },
+    {
+      "id": "sewer-fund-expense-serial-bond-principal-interest-41",
+      "fundId": "sewer-fund",
+      "fundName": "Sewer",
+      "section": "expense",
+      "level": "line",
+      "category": "Cash Capital Appropriations & Debt Service",
+      "department": null,
+      "division": null,
+      "code": null,
+      "name": "Serial Bond Principal & Interest",
+      "values": {
+        "fy21Actual": 663427.0,
+        "fy22Actual": 660497.0,
+        "fy23Actual": 631774.0,
+        "fy24Actual": 533794.0,
+        "fy25Actual": 48443.0,
+        "fy26Budget": 267875.0,
+        "fy26Estimate": 267875.0,
+        "fy27Proposed": 266582.0
+      },
+      "source": "2026 City Budget Workbook",
+      "sourceSheet": "Sewer Fund",
+      "sourceRow": 41,
+      "adoptedMethod": "workbook_detail_formal_fund_total",
+      "change": {
+        "amount": -1293.0,
+        "pct": -0.5
+      }
+    },
+    {
+      "id": "sewer-fund-expense-transfer-cash-capital-42",
+      "fundId": "sewer-fund",
+      "fundName": "Sewer",
+      "section": "expense",
+      "level": "line",
+      "category": "Cash Capital Appropriations & Debt Service",
+      "department": null,
+      "division": "Serial Bond Principal & Interest",
+      "code": null,
+      "name": "Transfer - Cash Capital",
+      "values": {
+        "fy21Actual": 994000.0,
+        "fy22Actual": 0.0,
+        "fy23Actual": 1518140.0,
+        "fy24Actual": 650000.0,
+        "fy25Actual": 0.0,
+        "fy26Budget": 673000.0,
+        "fy26Estimate": 673000.0,
+        "fy27Proposed": 955000.0
+      },
+      "source": "2026 City Budget Workbook",
+      "sourceSheet": "Sewer Fund",
+      "sourceRow": 42,
+      "adoptedMethod": "workbook_detail_formal_fund_total",
+      "change": {
+        "amount": 282000.0,
+        "pct": 41.9
+      }
+    },
+    {
+      "id": "sidewalk-fund-revenue-unreserved-undesignated-3",
+      "fundId": "sidewalk-fund",
+      "fundName": "Municipal Sidewalk",
+      "section": "revenue",
+      "level": "line",
+      "category": null,
+      "department": null,
+      "division": null,
+      "code": null,
+      "name": "Unreserved, Undesignated",
+      "values": {
+        "fy21Actual": 0.0,
+        "fy22Actual": 0.0,
+        "fy23Actual": 0.0,
+        "fy24Actual": 0.0,
+        "fy25Actual": 0.0,
+        "fy26Budget": -1349724.0,
+        "fy26Estimate": 0.0,
+        "fy27Proposed": -915273.0
+      },
+      "source": "2026 City Budget Workbook",
+      "sourceSheet": "Sidewalk Fund",
+      "sourceRow": 3,
+      "adoptedMethod": "workbook_detail_formal_fund_total",
+      "change": {
+        "amount": 434451.0,
+        "pct": 32.2
+      }
+    },
+    {
       "id": "sidewalk-fund-revenue-450310-4",
       "fundId": "sidewalk-fund",
       "fundName": "Municipal Sidewalk",
@@ -25198,6 +25262,36 @@
       "change": {
         "amount": 0.0,
         "pct": 0.0
+      }
+    },
+    {
+      "id": "sidewalk-fund-revenue-federal-american-relief-plan-6",
+      "fundId": "sidewalk-fund",
+      "fundName": "Municipal Sidewalk",
+      "section": "revenue",
+      "level": "line",
+      "category": "Unreserved, Undesignated",
+      "department": null,
+      "division": null,
+      "code": null,
+      "name": "Federal American Relief Plan",
+      "values": {
+        "fy21Actual": 0.0,
+        "fy22Actual": 0.0,
+        "fy23Actual": 439536.0,
+        "fy24Actual": 0.0,
+        "fy25Actual": 0.0,
+        "fy26Budget": 0.0,
+        "fy26Estimate": 0.0,
+        "fy27Proposed": 0.0
+      },
+      "source": "2026 City Budget Workbook",
+      "sourceSheet": "Sidewalk Fund",
+      "sourceRow": 6,
+      "adoptedMethod": "workbook_detail_formal_fund_total",
+      "change": {
+        "amount": 0,
+        "pct": null
       }
     },
     {
@@ -25411,6 +25505,96 @@
       }
     },
     {
+      "id": "sidewalk-fund-expense-transfer-general-fund-19",
+      "fundId": "sidewalk-fund",
+      "fundName": "Municipal Sidewalk",
+      "section": "expense",
+      "level": "line",
+      "category": "Special Objects of Expense",
+      "department": null,
+      "division": null,
+      "code": null,
+      "name": "Transfer - General Fund",
+      "values": {
+        "fy21Actual": 0.0,
+        "fy22Actual": 0.0,
+        "fy23Actual": 97714.0,
+        "fy24Actual": 195428.0,
+        "fy25Actual": 0.0,
+        "fy26Budget": 0.0,
+        "fy26Estimate": 0.0,
+        "fy27Proposed": 0.0
+      },
+      "source": "2026 City Budget Workbook",
+      "sourceSheet": "Sidewalk Fund",
+      "sourceRow": 19,
+      "adoptedMethod": "workbook_detail_formal_fund_total",
+      "change": {
+        "amount": 0,
+        "pct": null
+      }
+    },
+    {
+      "id": "sidewalk-fund-expense-serial-bond-principal-interest-21",
+      "fundId": "sidewalk-fund",
+      "fundName": "Municipal Sidewalk",
+      "section": "expense",
+      "level": "line",
+      "category": "Cash Capital Appropriations & Debt Service",
+      "department": null,
+      "division": null,
+      "code": null,
+      "name": "Serial Bond Principal & Interest",
+      "values": {
+        "fy21Actual": 0.0,
+        "fy22Actual": 0.0,
+        "fy23Actual": 0.0,
+        "fy24Actual": 292000.0,
+        "fy25Actual": 0.0,
+        "fy26Budget": 1041319.0,
+        "fy26Estimate": 1496406.0,
+        "fy27Proposed": 1467424.0
+      },
+      "source": "2026 City Budget Workbook",
+      "sourceSheet": "Sidewalk Fund",
+      "sourceRow": 21,
+      "adoptedMethod": "workbook_detail_formal_fund_total",
+      "change": {
+        "amount": 426105.0,
+        "pct": 40.9
+      }
+    },
+    {
+      "id": "sidewalk-fund-expense-transfer-cash-capital-22",
+      "fundId": "sidewalk-fund",
+      "fundName": "Municipal Sidewalk",
+      "section": "expense",
+      "level": "line",
+      "category": "Cash Capital Appropriations & Debt Service",
+      "department": null,
+      "division": "Serial Bond Principal & Interest",
+      "code": null,
+      "name": "Transfer - Cash Capital",
+      "values": {
+        "fy21Actual": 0.0,
+        "fy22Actual": 0.0,
+        "fy23Actual": 0.0,
+        "fy24Actual": 35000.0,
+        "fy25Actual": 0.0,
+        "fy26Budget": 0.0,
+        "fy26Estimate": 0.0,
+        "fy27Proposed": 0.0
+      },
+      "source": "2026 City Budget Workbook",
+      "sourceSheet": "Sidewalk Fund",
+      "sourceRow": 22,
+      "adoptedMethod": "workbook_detail_formal_fund_total",
+      "change": {
+        "amount": 0,
+        "pct": null
+      }
+    },
+    {
       "id": "crouse-marshall-revenue-interest-3",
       "fundId": "crouse-marshall",
       "fundName": "Crouse-Marshall assessment",
@@ -25582,36 +25766,6 @@
       "change": {
         "amount": 0.0,
         "pct": 0.0
-      }
-    },
-    {
-      "id": "crouse-marshall-expense-administration-10",
-      "fundId": "crouse-marshall",
-      "fundName": "Crouse-Marshall assessment",
-      "section": "expense",
-      "level": "line",
-      "category": "City Reimbursement (50/50)",
-      "department": "Crouse-Marshall assessment",
-      "division": null,
-      "code": null,
-      "name": "Administration",
-      "values": {
-        "fy21Actual": 14400.0,
-        "fy22Actual": 15175.0,
-        "fy23Actual": 20993.0,
-        "fy24Actual": 21976.0,
-        "fy25Actual": 35545.0,
-        "fy26Budget": 38641.0,
-        "fy26Estimate": 38829.0,
-        "fy27Proposed": 40627.0
-      },
-      "source": "2026 City Budget Workbook",
-      "sourceSheet": "Crouse Marshall Special",
-      "sourceRow": 10,
-      "adoptedMethod": "workbook_detail_formal_fund_total",
-      "change": {
-        "amount": 1986.0,
-        "pct": 5.1
       }
     },
     {
@@ -25791,36 +25945,6 @@
       }
     },
     {
-      "id": "crouse-marshall-expense-environmental-maintenance-17",
-      "fundId": "crouse-marshall",
-      "fundName": "Crouse-Marshall assessment",
-      "section": "expense",
-      "level": "line",
-      "category": "Marketing",
-      "department": "Crouse-Marshall assessment",
-      "division": null,
-      "code": null,
-      "name": "Environmental Maintenance",
-      "values": {
-        "fy21Actual": 12930.0,
-        "fy22Actual": 11930.0,
-        "fy23Actual": 26513.0,
-        "fy24Actual": 7479.0,
-        "fy25Actual": 25509.0,
-        "fy26Budget": 31200.0,
-        "fy26Estimate": 31316.0,
-        "fy27Proposed": 31200.0
-      },
-      "source": "2026 City Budget Workbook",
-      "sourceSheet": "Crouse Marshall Special",
-      "sourceRow": 17,
-      "adoptedMethod": "workbook_detail_formal_fund_total",
-      "change": {
-        "amount": 0.0,
-        "pct": 0.0
-      }
-    },
-    {
       "id": "crouse-marshall-expense-depreciation-tractor-sweeper-18",
       "fundId": "crouse-marshall",
       "fundName": "Crouse-Marshall assessment",
@@ -25995,36 +26119,6 @@
       }
     },
     {
-      "id": "crouse-marshall-expense-personnel-24",
-      "fundId": "crouse-marshall",
-      "fundName": "Crouse-Marshall assessment",
-      "section": "expense",
-      "level": "line",
-      "category": "Environmental Maintenance",
-      "department": "Crouse-Marshall assessment",
-      "division": null,
-      "code": null,
-      "name": "Personnel",
-      "values": {
-        "fy21Actual": 30440.0,
-        "fy22Actual": 29545.0,
-        "fy23Actual": 20355.0,
-        "fy24Actual": 31630.0,
-        "fy25Actual": 26067.0,
-        "fy26Budget": 29059.0,
-        "fy26Estimate": 27452.0,
-        "fy27Proposed": 26061.0
-      },
-      "source": "2026 City Budget Workbook",
-      "sourceSheet": "Crouse Marshall Special",
-      "sourceRow": 24,
-      "adoptedMethod": "workbook_detail_formal_fund_total",
-      "change": {
-        "amount": -2998.0,
-        "pct": -10.3
-      }
-    },
-    {
       "id": "crouse-marshall-expense-ft-maintenance-25",
       "fundId": "crouse-marshall",
       "fundName": "Crouse-Marshall assessment",
@@ -26109,36 +26203,6 @@
       "change": {
         "amount": -4656.0,
         "pct": -60.1
-      }
-    },
-    {
-      "id": "crouse-marshall-expense-security-28",
-      "fundId": "crouse-marshall",
-      "fundName": "Crouse-Marshall assessment",
-      "section": "expense",
-      "level": "line",
-      "category": "Personnel",
-      "department": "Crouse-Marshall assessment",
-      "division": null,
-      "code": null,
-      "name": "Security",
-      "values": {
-        "fy21Actual": 41930.0,
-        "fy22Actual": 42550.0,
-        "fy23Actual": 53014.0,
-        "fy24Actual": 66185.0,
-        "fy25Actual": 72289.0,
-        "fy26Budget": 73688.0,
-        "fy26Estimate": 74394.0,
-        "fy27Proposed": 77113.0
-      },
-      "source": "2026 City Budget Workbook",
-      "sourceSheet": "Crouse Marshall Special",
-      "sourceRow": 28,
-      "adoptedMethod": "workbook_detail_formal_fund_total",
-      "change": {
-        "amount": 3425.0,
-        "pct": 4.6
       }
     },
     {
@@ -26255,36 +26319,6 @@
       "change": {
         "amount": 0.0,
         "pct": 0.0
-      }
-    },
-    {
-      "id": "crouse-marshall-revenue-special-assessment-levy-34",
-      "fundId": "crouse-marshall",
-      "fundName": "Crouse-Marshall assessment",
-      "section": "revenue",
-      "level": "line",
-      "category": "Security",
-      "department": "Crouse-Marshall assessment",
-      "division": null,
-      "code": null,
-      "name": "Special Assessment Levy",
-      "values": {
-        "fy21Actual": 93750.0,
-        "fy22Actual": 93750.0,
-        "fy23Actual": 97257.0,
-        "fy24Actual": 132457.0,
-        "fy25Actual": 146519.0,
-        "fy26Budget": 176567.0,
-        "fy26Estimate": 176567.0,
-        "fy27Proposed": 181863.0
-      },
-      "source": "2026 City Budget Workbook",
-      "sourceSheet": "Crouse Marshall Special",
-      "sourceRow": 34,
-      "adoptedMethod": "workbook_detail_formal_fund_total",
-      "change": {
-        "amount": 5296.0,
-        "pct": 3.0
       }
     },
     {
@@ -26471,36 +26505,6 @@
       "change": {
         "amount": 150627.0,
         "pct": 87.6
-      }
-    },
-    {
-      "id": "downtown-assessment-expense-administration-10",
-      "fundId": "downtown-assessment",
-      "fundName": "Downtown assessment",
-      "section": "expense",
-      "level": "line",
-      "category": "Various Grants",
-      "department": "Downtown assessment",
-      "division": null,
-      "code": null,
-      "name": "Administration",
-      "values": {
-        "fy21Actual": 236968.0,
-        "fy22Actual": 230784.0,
-        "fy23Actual": 260934.0,
-        "fy24Actual": 171652.0,
-        "fy25Actual": 185070.0,
-        "fy26Budget": 241398.0,
-        "fy26Estimate": 221280.0,
-        "fy27Proposed": 221775.0
-      },
-      "source": "2026 City Budget Workbook",
-      "sourceSheet": "Downtown Special",
-      "sourceRow": 10,
-      "adoptedMethod": "workbook_detail_formal_fund_total",
-      "change": {
-        "amount": -19623.0,
-        "pct": -8.1
       }
     },
     {
@@ -26712,36 +26716,6 @@
       }
     },
     {
-      "id": "downtown-assessment-expense-marketing-19",
-      "fundId": "downtown-assessment",
-      "fundName": "Downtown assessment",
-      "section": "expense",
-      "level": "line",
-      "category": "Administration",
-      "department": "Downtown assessment",
-      "division": null,
-      "code": null,
-      "name": "Marketing",
-      "values": {
-        "fy21Actual": 67759.0,
-        "fy22Actual": 0.0,
-        "fy23Actual": 27055.0,
-        "fy24Actual": 47232.0,
-        "fy25Actual": 284680.0,
-        "fy26Budget": 442117.0,
-        "fy26Estimate": 334534.0,
-        "fy27Proposed": 568717.0
-      },
-      "source": "2026 City Budget Workbook",
-      "sourceSheet": "Downtown Special",
-      "sourceRow": 19,
-      "adoptedMethod": "workbook_detail_formal_fund_total",
-      "change": {
-        "amount": 126600.0,
-        "pct": 28.6
-      }
-    },
-    {
       "id": "downtown-assessment-expense-salaries-and-fringe-20",
       "fundId": "downtown-assessment",
       "fundName": "Downtown assessment",
@@ -26895,36 +26869,6 @@
       "change": {
         "amount": 170.0,
         "pct": 3.9
-      }
-    },
-    {
-      "id": "downtown-assessment-expense-environmental-maintenance-26",
-      "fundId": "downtown-assessment",
-      "fundName": "Downtown assessment",
-      "section": "expense",
-      "level": "line",
-      "category": "Marketing",
-      "department": "Downtown assessment",
-      "division": null,
-      "code": null,
-      "name": "Environmental Maintenance",
-      "values": {
-        "fy21Actual": 296977.0,
-        "fy22Actual": 279660.0,
-        "fy23Actual": 306663.0,
-        "fy24Actual": 330170.0,
-        "fy25Actual": 307874.0,
-        "fy26Budget": 430397.0,
-        "fy26Estimate": 416696.0,
-        "fy27Proposed": 516033.0
-      },
-      "source": "2026 City Budget Workbook",
-      "sourceSheet": "Downtown Special",
-      "sourceRow": 26,
-      "adoptedMethod": "workbook_detail_formal_fund_total",
-      "change": {
-        "amount": 85636.0,
-        "pct": 19.9
       }
     },
     {
@@ -27110,36 +27054,6 @@
       }
     },
     {
-      "id": "downtown-assessment-expense-economic-development-34",
-      "fundId": "downtown-assessment",
-      "fundName": "Downtown assessment",
-      "section": "expense",
-      "level": "line",
-      "category": "Environmental Maintenance",
-      "department": "Downtown assessment",
-      "division": null,
-      "code": null,
-      "name": "Economic Development",
-      "values": {
-        "fy21Actual": 180794.0,
-        "fy22Actual": 186395.0,
-        "fy23Actual": 215507.0,
-        "fy24Actual": 272204.0,
-        "fy25Actual": 265456.0,
-        "fy26Budget": 354630.0,
-        "fy26Estimate": 334242.0,
-        "fy27Proposed": 375018.0
-      },
-      "source": "2026 City Budget Workbook",
-      "sourceSheet": "Downtown Special",
-      "sourceRow": 34,
-      "adoptedMethod": "workbook_detail_formal_fund_total",
-      "change": {
-        "amount": 20388.0,
-        "pct": 5.7
-      }
-    },
-    {
       "id": "downtown-assessment-expense-salaries-and-fringe-35",
       "fundId": "downtown-assessment",
       "fundName": "Downtown assessment",
@@ -27215,36 +27129,6 @@
       "change": {
         "amount": 0,
         "pct": null
-      }
-    },
-    {
-      "id": "downtown-assessment-expense-transportation-38",
-      "fundId": "downtown-assessment",
-      "fundName": "Downtown assessment",
-      "section": "expense",
-      "level": "line",
-      "category": "Economic Development",
-      "department": "Downtown assessment",
-      "division": null,
-      "code": null,
-      "name": "Transportation",
-      "values": {
-        "fy21Actual": 0.0,
-        "fy22Actual": 30783.0,
-        "fy23Actual": 0.0,
-        "fy24Actual": 96445.0,
-        "fy25Actual": 110474.0,
-        "fy26Budget": 149622.0,
-        "fy26Estimate": 121541.0,
-        "fy27Proposed": 139104.0
-      },
-      "source": "2026 City Budget Workbook",
-      "sourceSheet": "Downtown Special",
-      "sourceRow": 38,
-      "adoptedMethod": "workbook_detail_formal_fund_total",
-      "change": {
-        "amount": -10518.0,
-        "pct": -7.0
       }
     },
     {
@@ -27375,36 +27259,6 @@
       "change": {
         "amount": 0.0,
         "pct": 0.0
-      }
-    },
-    {
-      "id": "downtown-assessment-expense-security-44",
-      "fundId": "downtown-assessment",
-      "fundName": "Downtown assessment",
-      "section": "expense",
-      "level": "line",
-      "category": "Transportation",
-      "department": "Downtown assessment",
-      "division": null,
-      "code": null,
-      "name": "Security",
-      "values": {
-        "fy21Actual": 177462.0,
-        "fy22Actual": 313464.0,
-        "fy23Actual": 193753.0,
-        "fy24Actual": 232850.0,
-        "fy25Actual": 275177.0,
-        "fy26Budget": 410183.0,
-        "fy26Estimate": 398164.0,
-        "fy27Proposed": 441211.0
-      },
-      "source": "2026 City Budget Workbook",
-      "sourceSheet": "Downtown Special",
-      "sourceRow": 44,
-      "adoptedMethod": "workbook_detail_formal_fund_total",
-      "change": {
-        "amount": 31028.0,
-        "pct": 7.6
       }
     },
     {
@@ -27658,36 +27512,6 @@
       }
     },
     {
-      "id": "downtown-assessment-revenue-special-assessment-levy-55",
-      "fundId": "downtown-assessment",
-      "fundName": "Downtown assessment",
-      "section": "revenue",
-      "level": "line",
-      "category": "Reserve",
-      "department": "Downtown assessment",
-      "division": null,
-      "code": null,
-      "name": "Special Assessment Levy",
-      "values": {
-        "fy21Actual": 959914.0,
-        "fy22Actual": 872612.0,
-        "fy23Actual": 1027524.0,
-        "fy24Actual": 1095920.0,
-        "fy25Actual": 1118990.0,
-        "fy26Budget": 1370770.0,
-        "fy26Estimate": 1370770.0,
-        "fy27Proposed": 1441892.0
-      },
-      "source": "2026 City Budget Workbook",
-      "sourceSheet": "Downtown Special",
-      "sourceRow": 55,
-      "adoptedMethod": "workbook_detail_formal_fund_total",
-      "change": {
-        "amount": 71122.0,
-        "pct": 5.2
-      }
-    },
-    {
       "id": "downtown-assessment-revenue-special-assessment-56",
       "fundId": "downtown-assessment",
       "fundName": "Downtown assessment",
@@ -27790,7 +27614,7 @@
       "name": "Parks Grounds Maintenance facility repair",
       "values": {
         "fy27Proposed": 0,
-        "fy27Adopted": 125000
+        "fy27Adjusted": 125000
       },
       "source": "FY2026–27 adopted budget PDF",
       "sourceSheet": "Subsequent Events",
@@ -28056,24 +27880,99 @@
   ],
   "validation": [
     {
-      "label": "General Fund adopted total",
+      "label": "Unique record IDs",
       "status": "pass",
-      "detail": "Workbook proposal $354,521,743 plus revenue and expense amendments of $-3,881,500 each equals formal adopted $350,640,243."
+      "detail": "916 exported records checked."
     },
     {
-      "label": "General Fund expense amendments",
+      "label": "Finite account values",
       "status": "pass",
-      "detail": "The structured amendment list totals $-3,881,500."
+      "detail": "Every supplied historical amount must be a finite number."
     },
     {
-      "label": "Formal City fund total",
+      "label": "Record change arithmetic",
       "status": "pass",
-      "detail": "The formal adopted fund totals net to $393.8M after $3.3M in inter-fund appropriations."
+      "detail": "0 mismatches against the displayed FY27 basis and FY26 budget."
     },
     {
-      "label": "Workbook formulas",
+      "label": "Formal City fund reconciliation",
       "status": "pass",
-      "detail": "2115 workbook formulas scanned; 0 could not be read as simple arithmetic."
+      "detail": "Exported fund totals plus inter-fund adjustment: $393,755,721; formal net: $393,755,721. This checks transcribed totals, not source authenticity."
+    },
+    {
+      "label": "Combined City and school total",
+      "status": "pass",
+      "detail": "City net plus school district must equal the combined net total."
+    },
+    {
+      "label": "Amendment record coverage",
+      "status": "pass",
+      "detail": "Every listed amendment must map to an exported record."
+    },
+    {
+      "label": "General Fund revenue: detail versus formal",
+      "status": "pass",
+      "detail": "Detail $350,640,243.00; formal $350,640,243.00; difference $0.00. Detail uses workbook proposals and mapped amendments; it is not certified adopted account data."
+    },
+    {
+      "label": "General Fund expense: detail versus formal",
+      "status": "review",
+      "detail": "Detail $350,640,246.00; formal $350,640,243.00; difference $3.00. Detail uses workbook proposals and mapped amendments; it is not certified adopted account data. The original $3 residual traces to General Fund!N499: Public Works is stated as $41,121,923 while its exported detail sums to $41,121,926. Values are retained, not forced to match."
+    },
+    {
+      "label": "Water revenue: detail versus formal",
+      "status": "pass",
+      "detail": "Detail $33,175,883.00; formal $33,175,883.00; difference $0.00. Detail uses workbook proposals and mapped amendments; it is not certified adopted account data."
+    },
+    {
+      "label": "Water expense: detail versus formal",
+      "status": "pass",
+      "detail": "Detail $33,175,883.00; formal $33,175,883.00; difference $0.00. Detail uses workbook proposals and mapped amendments; it is not certified adopted account data."
+    },
+    {
+      "label": "Sewer revenue: detail versus formal",
+      "status": "pass",
+      "detail": "Detail $8,966,902.00; formal $8,966,902.00; difference $0.00. Detail uses workbook proposals and mapped amendments; it is not certified adopted account data."
+    },
+    {
+      "label": "Sewer expense: detail versus formal",
+      "status": "pass",
+      "detail": "Detail $8,966,902.00; formal $8,966,902.00; difference $0.00. Detail uses workbook proposals and mapped amendments; it is not certified adopted account data."
+    },
+    {
+      "label": "Municipal Sidewalk revenue: detail versus formal",
+      "status": "pass",
+      "detail": "Detail $2,719,688.00; formal $2,719,688.00; difference $0.00. Detail uses workbook proposals and mapped amendments; it is not certified adopted account data."
+    },
+    {
+      "label": "Municipal Sidewalk expense: detail versus formal",
+      "status": "pass",
+      "detail": "Detail $2,719,688.00; formal $2,719,688.00; difference $0.00. Detail uses workbook proposals and mapped amendments; it is not certified adopted account data."
+    },
+    {
+      "label": "Crouse-Marshall assessment revenue: detail versus formal",
+      "status": "review",
+      "detail": "Detail $199,863.00; formal $181,863.00; difference $18,000.00. Detail uses workbook proposals and mapped amendments; it is not certified adopted account data. The $181,863 formal assessment excludes $18,000 of other program revenue. The workbook operating revenue and expense totals are both $199,863 (sheet rows 2, 9 and 35). These totals have different scopes."
+    },
+    {
+      "label": "Crouse-Marshall assessment expense: detail versus formal",
+      "status": "review",
+      "detail": "Detail $199,863.00; formal $181,863.00; difference $18,000.00. Detail uses workbook proposals and mapped amendments; it is not certified adopted account data. The $181,863 formal assessment excludes $18,000 of other program revenue. The workbook operating revenue and expense totals are both $199,863 (sheet rows 2, 9 and 35). These totals have different scopes."
+    },
+    {
+      "label": "Downtown assessment revenue: detail versus formal",
+      "status": "review",
+      "detail": "Detail $2,484,919.00; formal $1,411,892.00; difference $1,073,027.00. Detail uses workbook proposals and mapped amendments; it is not certified adopted account data. Scope and source discrepancies both apply: adopted PDF page 61 gives assessment $1,390,714 plus allowance $21,178 = $1,411,892; workbook K56 instead has $1,309,714, K58 $21,178, and K55 states $1,441,892. PDF page 227 also shows broader program spending $2,609,019 versus workbook detail $2,609,020. Do not treat workbook district detail as the adopted levy."
+    },
+    {
+      "label": "Downtown assessment expense: detail versus formal",
+      "status": "review",
+      "detail": "Detail $2,609,020.00; formal $1,411,892.00; difference $1,197,128.00. Detail uses workbook proposals and mapped amendments; it is not certified adopted account data. Scope and source discrepancies both apply: adopted PDF page 61 gives assessment $1,390,714 plus allowance $21,178 = $1,411,892; workbook K56 instead has $1,309,714, K58 $21,178, and K55 states $1,441,892. PDF page 227 also shows broader program spending $2,609,019 versus workbook detail $2,609,020. Do not treat workbook district detail as the adopted levy."
+    },
+    {
+      "label": "Workbook formula scan",
+      "status": "pass",
+      "detail": "2115 formulas scanned; 0 unreadable. This checks readability, not formula correctness."
     }
   ],
   "sources": {

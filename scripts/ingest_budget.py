@@ -15,6 +15,7 @@ from pathlib import Path
 from typing import Any
 
 from openpyxl import load_workbook
+from validate_budget import validate
 
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -408,12 +409,9 @@ def row_values(row: list[Any], year_columns: dict[str, int]) -> dict[str, float]
 
 
 def should_keep_line(sheet_name: str, label: str) -> bool:
-    if sheet_name in {"Crouse Marshall Special", "Downtown Special"}:
-        return bool(label) and not is_total_label(label)
-    if sheet_name == "General Fund":
-        wanted = ("unreserved", "cash capital", "tax levy")
-        return any(term in label.lower() for term in wanted)
-    return False
+    # Debt service, reserves and transfers often have no account code.
+    # Keep numeric leaf lines; hierarchy filtering below excludes their subtotals.
+    return bool(label) and not is_total_label(label)
 
 
 def record_from_row(
@@ -540,7 +538,18 @@ def parse_sheet(ws, sheet_name: str) -> list[dict[str, Any]]:
                 account=account,
                 account_column=account_column or line_column,
             )
-            if record:
+            # Indentation defines hierarchy in this workbook. A row followed by
+            # a deeper label is a subtotal/group, even when its label contains
+            # an account code (for example Contractual Expenses + Office Supplies).
+            is_parent = False
+            current_column = account_column or line_column
+            for next_number in range(row_number + 1, ws.max_row + 1):
+                next_labels = [(col, clean(ws.cell(next_number, col).value)) for col in range(1, label_limit + 1)]
+                next_labels = [(col, value) for col, value in next_labels if value and value != "`"]
+                if next_labels:
+                    is_parent = next_labels[-1][0] > current_column
+                    break
+            if record and not is_parent:
                 records.append(record)
 
         for index, label in enumerate(labels, start=1):
@@ -610,7 +619,7 @@ def apply_amendments(rows: list[dict[str, Any]]) -> list[dict[str, Any]]:
                 "division": None,
                 "code": amendment["code"],
                 "name": amendment["label"],
-                "values": {"fy27Proposed": 0, "fy27Adopted": amendment["amount"]},
+                "values": {"fy27Proposed": 0, "fy27Adjusted": amendment["amount"]},
                 "source": "FY2026–27 adopted budget PDF",
                 "sourceSheet": "Subsequent Events",
                 "sourceRow": None,
@@ -624,7 +633,7 @@ def apply_amendments(rows: list[dict[str, Any]]) -> list[dict[str, Any]]:
         row = candidates[0][1]
         proposed = row["values"].get("fy27Proposed", 0)
         adopted = amendment.get("adopted_value", proposed + amendment["amount"])
-        row["values"]["fy27Adopted"] = round(float(adopted), 2)
+        row["values"]["fy27Adjusted"] = round(float(adopted), 2)
         row.setdefault("amendments", []).append(amendment["id"])
         applied.append(
             {
@@ -636,7 +645,7 @@ def apply_amendments(rows: list[dict[str, Any]]) -> list[dict[str, Any]]:
     return applied
 
 
-def change_for(values: dict[str, float], base: str = "fy26Budget", target: str = "fy27Adopted") -> dict[str, float | None]:
+def change_for(values: dict[str, float], base: str = "fy26Budget", target: str = "fy27Adjusted") -> dict[str, float | None]:
     old = values.get(base, 0) or 0
     new = values.get(target, values.get("fy27Proposed", 0)) or 0
     change = round(new - old, 2)
@@ -745,38 +754,7 @@ def build_data(workbook_path: Path) -> dict[str, Any]:
 
     applied = apply_amendments(rows)
     add_changes(rows)
-    general_proposed = 354521743
-    general_adopted = 350640243
-    revenue_amendment_total = sum(item["amount"] for item in AMENDMENTS if item["section"] == "revenue")
-    expense_amendment_total = sum(
-        item["amount"] for item in AMENDMENTS if item["section"] == "expense"
-    )
-    validation = [
-        {
-            "label": "General Fund adopted total",
-            "status": "pass"
-            if general_proposed + revenue_amendment_total == general_adopted
-            and general_proposed + expense_amendment_total == general_adopted
-            else "check",
-            "detail": f"Workbook proposal ${general_proposed:,.0f} plus revenue and expense amendments of ${revenue_amendment_total:,.0f} each equals formal adopted ${general_adopted:,.0f}.",
-        },
-        {
-            "label": "General Fund expense amendments",
-            "status": "pass" if expense_amendment_total == -3881500 else "check",
-            "detail": f"The structured amendment list totals ${expense_amendment_total:,.0f}.",
-        },
-        {
-            "label": "Formal City fund total",
-            "status": "pass",
-            "detail": "The formal adopted fund totals net to $393.8M after $3.3M in inter-fund appropriations.",
-        },
-        {
-            "label": "Workbook formulas",
-            "status": "pass" if formula_errors == 0 else "check",
-            "detail": f"{formula_cells} workbook formulas scanned; {formula_errors} could not be read as simple arithmetic.",
-        },
-    ]
-    return {
+    result = {
         "meta": {
             "title": "Syracuse Budget Explorer",
             "fiscalPeriod": "FY2026–27",
@@ -795,7 +773,8 @@ def build_data(workbook_path: Path) -> dict[str, Any]:
             {"key": "fy26Budget", "label": "FY26 adopted"},
             {"key": "fy26Estimate", "label": "FY26 estimate"},
             {"key": "fy27Proposed", "label": "FY27 proposed"},
-            {"key": "fy27Adopted", "label": "FY27 adopted"},
+            {"key": "fy27Adjusted", "label": "FY27 adjusted proposal"},
+            {"key": "fy27Adopted", "label": "FY27 adopted (unverified)"},
         ],
         "summary": build_summary(),
         "funds": build_funds(),
@@ -809,7 +788,7 @@ def build_data(workbook_path: Path) -> dict[str, Any]:
             for amendment in AMENDMENTS
         ],
         "appliedAmendments": applied,
-        "validation": validation,
+        "validation": [],
         "sources": {
             "budgetPage": {"label": "City budget page", "url": BUDGET_PAGE_URL},
             "adoptedPdf": {"label": "FY2026–27 adopted budget PDF", "url": PDF_URL},
@@ -836,6 +815,9 @@ def build_data(workbook_path: Path) -> dict[str, Any]:
             ],
         },
     }
+    result["validation"] = validate(result)
+    result["validation"].append({"label": "Workbook formula scan", "status": "pass" if formula_errors == 0 else "check", "detail": f"{formula_cells} formulas scanned; {formula_errors} unreadable. This checks readability, not formula correctness."})
+    return result
 
 
 def main() -> None:
@@ -845,7 +827,7 @@ def main() -> None:
     args = parser.parse_args()
     data = build_data(args.workbook)
     args.output.parent.mkdir(parents=True, exist_ok=True)
-    args.output.write_text(json.dumps(data, indent=2, ensure_ascii=False) + "\n")
+    args.output.write_text(json.dumps(data, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
     print(json.dumps({"rows": len(data["rows"]), "appliedAmendments": len(data["appliedAmendments"]), "output": str(args.output)}))
 
 
