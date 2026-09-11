@@ -2,6 +2,8 @@
 
 [![CI](https://github.com/alanwtom/syracuse-budget-explorer/actions/workflows/ci.yml/badge.svg)](https://github.com/alanwtom/syracuse-budget-explorer/actions/workflows/ci.yml)
 
+**Live demo: <https://syracuse-budget-explorer-alans-project.vercel.app>**
+
 An independent civic-data project by **Alan Tom**, built with AI assistance. Not affiliated with or endorsed by the City of Syracuse.
 
 ## The problem
@@ -70,6 +72,15 @@ The validator checks unique IDs, finite values, change arithmetic, amendment rec
 
 ## Deployment
 
-The cross-platform build generates Vercel Build Output at `.vercel/output` via Nitro's Vercel preset. Deploy the prebuilt output with a compatible Vercel workflow and verify the public link before sending it. No public deployment is claimed by this repository.
+The cross-platform build generates Vercel Build Output at `.vercel/output` via Nitro's Vercel
+preset. The live demo above is deployed from that prebuilt output:
+
+```sh
+npm run build
+npx vercel deploy --prebuilt --prod
+```
+
+The demo is a prototype for reading the data, not a City service and not an audited financial
+reporting system.
 
 Official source links are recorded in `data/budget.json`. The application imports this normalized data at build time.
