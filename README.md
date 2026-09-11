@@ -1,5 +1,7 @@
 # Syracuse Budget Explorer
 
+[![CI](https://github.com/alanwtom/syracuse-budget-explorer/actions/workflows/ci.yml/badge.svg)](https://github.com/alanwtom/syracuse-budget-explorer/actions/workflows/ci.yml)
+
 An independent civic-data project by **Alan Tom**, built with AI assistance. Not affiliated with or endorsed by the City of Syracuse.
 
 ## The problem
@@ -47,10 +49,10 @@ Open http://localhost:3000. There is no database or API key requirement.
 ## Refresh and validate
 
 ```sh
-python -m pip install openpyxl
+python -m pip install -r scripts/requirements.txt
 python scripts/ingest_budget.py --workbook /path/to/workbook.xlsx --output data/budget.json
 python scripts/validate_budget.py
-python -m unittest discover -s scripts -p "test_*.py"
+npm test
 npm run lint
 npx tsc --noEmit
 npm run build
@@ -58,6 +60,11 @@ npm start
 ```
 
 For a new fiscal year, update the manually maintained formal totals, amendment definitions, narrative, year keys and source metadata in the ingestion script as well as supplying a new workbook. Replacing the workbook alone is insufficient.
+
+Continuous integration runs the regression tests, the validator, lint, the typecheck and the
+production build on every push to `main` and on every pull request. A `check` fails the build;
+a `review` does not, because an unresolved source difference is a finding to report rather than
+a defect to fix.
 
 The validator checks unique IDs, finite values, change arithmetic, amendment record coverage and formal-total arithmetic. It reports every fund's account-detail residual separately. `check` is a failing invariant; `review` is an unresolved reconciliation difference. Neither is proof that source documents are accurate.
 

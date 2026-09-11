@@ -1,0 +1,2 @@
+# Workbook ingestion and its regression tests.
+openpyxl==3.1.5

@@ -11,6 +11,7 @@
     "start": "srvx serve --dir=. --prod --host=localhost --static=./.vercel/output/static --entry=./.vercel/output/functions/__server.func/index.mjs",
     "lint": "oxlint",
     "format": "oxfmt",
+    "test": "python -m unittest discover -s scripts -p \"test_*.py\"",
     "validate:data": "python scripts/validate_budget.py",
     "build:sites": "node scripts/build-sites.mjs"
   },
