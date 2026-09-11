@@ -214,6 +214,21 @@ function sectionLabel(value: string) {
   return value === 'revenue' ? 'Money in' : 'Money out';
 }
 
+// `pass`, `review` and `check` are three distinct confidence states and must not
+// be collapsed. A `check` is a failing invariant in the exported data; a `review`
+// is an unresolved difference between sources that is reported, not resolved.
+const checkStates = {
+  pass: { label: 'Pass', className: 'text-[#2f6b4f]' },
+  review: { label: 'Unresolved difference', className: 'text-[#8a5a1b]' },
+  check: { label: 'Failed check', className: 'text-[#a33126]' },
+} as const;
+
+function checkState(status: string) {
+  if (status in checkStates) return checkStates[status as keyof typeof checkStates];
+  // An unrecognised status is reported verbatim rather than assumed to be benign.
+  return { label: status, className: 'text-[#a33126]' };
+}
+
 function isLargeChange(row: Row) {
   const old = row.values.fy26Budget ?? 0;
   const amountLarge = Math.abs(row.change.amount) >= 250000;
@@ -913,8 +928,8 @@ export default function Home() {
           <a className="mt-4 inline-block text-sm underline" href="/project-notes.html" target="_blank" rel="noreferrer">Read the project notes and source findings</a>
           <details className="mt-5 border-t border-[#dfe5df] pt-4">
             <summary className="cursor-pointer text-sm font-semibold">Data checks and unresolved differences</summary>
-            <p className="mt-3 text-sm text-[#52656d]">Checks verify the exported data, not the authenticity or completeness of the source documents. Review items remain visible rather than being forced to match.</p>
-            <ul className="mt-4 space-y-4">{data.validation.map((check) => <li key={check.label} className="text-sm"><strong>{check.status === 'pass' ? 'Pass' : 'Needs review'} · {check.label}</strong><p className="mt-1 leading-6 text-[#52656d]">{check.detail}</p></li>)}</ul>
+            <p className="mt-3 text-sm text-[#52656d]">Checks verify the exported data, not the authenticity or completeness of the source documents. A <strong>failed check</strong> means the exported data breaks an invariant it must satisfy. An <strong>unresolved difference</strong> means two sources disagree, or measure different things; these stay visible rather than being forced to match.</p>
+            <ul className="mt-4 space-y-4">{data.validation.map((item) => { const state = checkState(item.status); return <li key={item.label} className="text-sm"><strong><span className={state.className}>{state.label}</span> · {item.label}</strong><p className="mt-1 leading-6 text-[#52656d]">{item.detail}</p></li>; })}</ul>
           </details>
         </section>
 
