@@ -27905,6 +27905,11 @@
       "detail": "City net plus school district must equal the combined net total."
     },
     {
+      "label": "Formal totals match the adopted PDF",
+      "status": "pass",
+      "detail": "Six fund totals plus the inter-fund adjustment read from physical page 63 of the adopted PDF (sha256 5bcaf70a5e20...). All agree with the exported values."
+    },
+    {
       "label": "Amendment record coverage",
       "status": "pass",
       "detail": "Every listed amendment must map to an exported record."

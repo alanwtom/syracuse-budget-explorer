@@ -33,7 +33,7 @@ Source inspection exposed subtotal rows whose labels contained account codes, an
 
 ## Evidence and limits
 
-This is a portfolio prototype, not an audited financial reporting system. There are 916 records in the current export. Formal summary values and amendment definitions are manually transcribed from the cited budget PDF; the parser does not automatically extract or verify the PDF. Account detail has not been fully reconciled to formal totals. Residuals may reflect source differences, grouping or parser issues and require source review. The interface reports these limits.
+This is a portfolio prototype, not an audited financial reporting system. There are 916 records in the current export. The six formal fund totals and the inter-fund adjustment are read back out of the adopted PDF by `scripts/extract_pdf_totals.py` and checked against the exported values, so those figures are verified rather than trusted; a regression test confirms the check fails when a total is wrong. Amendment definitions and the narrative remain manually transcribed, and account-level PDF detail is not yet extracted. Account detail has not been fully reconciled to formal totals. Residuals may reflect source differences, grouping or parser issues and require source review. The interface reports these limits.
 
 Project owner: Alan Tom. In this review pass, Alan requested a hiring-focused audit and directed the follow-up implementation. Codex assisted source inspection, parser and interface changes, regression tests, documentation and deployment preparation. This describes the observed collaboration; it does not claim that Alan manually wrote every line. This repository documents the resulting decisions, checks and limits; it does not claim resident adoption, measured time savings or production use. Mobile and keyboard smoke checks are not a full accessibility certification.
 
@@ -52,6 +52,7 @@ Open http://localhost:3000. There is no database or API key requirement.
 
 ```sh
 python -m pip install -r scripts/requirements.txt
+python scripts/extract_pdf_totals.py --pdf /path/to/adopted.pdf --output data/pdf_totals.json
 python scripts/ingest_budget.py --workbook /path/to/workbook.xlsx --output data/budget.json
 python scripts/validate_budget.py
 npm test

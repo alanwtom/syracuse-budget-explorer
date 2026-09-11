@@ -17,6 +17,14 @@ class ValidationTests(unittest.TestCase):
         self.assertFalse(any(c['status'] == 'check' for c in checks))
         self.assertTrue(any(c['status'] == 'review' for c in checks))
 
+    def test_pdf_totals_agree_with_exported_formal_totals(self):
+        self.assertEqual(self.status('Formal totals match the adopted PDF'), 'pass')
+
+    def test_transcription_error_is_caught_against_the_pdf(self):
+        """A wrong formal total must fail, or the check proves nothing."""
+        self.data['funds'][0]['formal']['fy27Adopted'] += 1000
+        self.assertEqual(self.status('Formal totals match the adopted PDF'), 'check')
+
     def test_duplicate_id(self):
         self.data['rows'].append(copy.deepcopy(self.data['rows'][0]))
         self.assertEqual(self.status('Unique record IDs'), 'check')

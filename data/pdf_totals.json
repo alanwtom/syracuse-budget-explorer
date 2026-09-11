@@ -1,0 +1,25 @@
+{
+  "source": "FY2026-27 adopted budget PDF",
+  "sourcePdfSha256": "5bcaf70a5e20855de7401f31b64d3f57eb6fcdea1eb3cc672e45d9787871296c",
+  "sourcePage": 63,
+  "sourcePageNote": "Physical page 63 of the adopted PDF; the printed page number is 14 lower. Extracted from the ALL FUNDS - TOTAL REVENUES summary.",
+  "fy26Adopted": {
+    "general-fund": 333036573.0,
+    "sidewalk-fund": 2285237.0,
+    "water-fund": 31031846.0,
+    "sewer-fund": 7483800.0,
+    "downtown-assessment": 1370770.0,
+    "crouse-marshall": 176567.0,
+    "interfund": -3340750.0
+  },
+  "fy27Adopted": {
+    "general-fund": 350640243.0,
+    "sidewalk-fund": 2719688.0,
+    "water-fund": 33175883.0,
+    "sewer-fund": 8966902.0,
+    "downtown-assessment": 1411892.0,
+    "crouse-marshall": 181863.0,
+    "interfund": -3340750.0
+  },
+  "netFy27Adopted": 393755721.0
+}

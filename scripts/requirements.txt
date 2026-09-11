@@ -1,2 +1,5 @@
 # Workbook ingestion and its regression tests.
 openpyxl==3.1.5
+
+# Reading the formal totals back out of the adopted budget PDF.
+pypdf==5.1.0

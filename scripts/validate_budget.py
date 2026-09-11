@@ -25,6 +25,30 @@ def validate(data):
     check('Formal City fund reconciliation', abs(net - s['city']['fy27Adopted']) < .01,
           f'Exported fund totals plus inter-fund adjustment: ${net:,.0f}; formal net: ${s["city"]["fy27Adopted"]:,.0f}. This checks transcribed totals, not source authenticity.')
     check('Combined City and school total', abs(s['city']['fy27Adopted'] + s['schoolDistrict']['fy27Adopted'] - s['combinedNet']['fy27Adopted']) < .01, 'City net plus school district must equal the combined net total.')
+    # Check the transcribed formal totals against figures read back out of the
+    # adopted PDF. Without this, the six most load-bearing numbers in the project
+    # are trusted rather than verified.
+    pdf_path = Path(__file__).resolve().parents[1] / 'data/pdf_totals.json'
+    if pdf_path.exists():
+        pdf = json.loads(pdf_path.read_text(encoding='utf-8'))
+        mismatched = []
+        for fund in data['funds']:
+            expected = pdf['fy27Adopted'].get(fund['id'])
+            if expected is None:
+                mismatched.append(f"{fund['id']} (absent from the PDF summary)")
+            elif abs(expected - fund['formal']['fy27Adopted']) > .01:
+                mismatched.append(f"{fund['id']}: exported ${fund['formal']['fy27Adopted']:,.0f} vs PDF ${expected:,.0f}")
+        interfund_ok = abs(pdf['fy27Adopted']['interfund'] - s['interfund']) < .01
+        if not interfund_ok:
+            mismatched.append(f"inter-fund: exported ${s['interfund']:,.0f} vs PDF ${pdf['fy27Adopted']['interfund']:,.0f}")
+        check('Formal totals match the adopted PDF', not mismatched,
+              f"Six fund totals plus the inter-fund adjustment read from physical page {pdf['sourcePage']} of the adopted PDF "
+              f"(sha256 {pdf['sourcePdfSha256'][:12]}...). "
+              + ('All agree with the exported values.' if not mismatched else 'Differences: ' + '; '.join(mismatched)))
+    else:
+        checks.append({'label': 'Formal totals match the adopted PDF', 'status': 'review',
+                       'detail': 'data/pdf_totals.json is absent. Run scripts/extract_pdf_totals.py against the adopted PDF to verify the transcribed totals.'})
+
     applied = data.get('appliedAmendments', [])
     by_id = {r['id']: r for r in rows}
     check('Amendment record coverage', len(applied) == len(data['amendments']) and all(a['rowId'] in by_id for a in applied), 'Every listed amendment must map to an exported record.')
