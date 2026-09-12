@@ -50,6 +50,25 @@ That check is the accuracy measure, and it is reported rather than assumed:
 | Column totals incomplete (a figure could not be read) | 11 |
 | Reconciliation rate | 85.9% |
 
+The page range is found rather than configured: the tables are the longest run of pages
+carrying a "REVENUE SUMMARY" or "EXPENDITURE SUMMARY" heading, ignoring the single mention on
+the contents page. That section starts on a different page in every year.
+
+Running the same parser over the five most recent adopted budgets:
+
+| Budget | Pages found | Sections | Reconciling fully | Rate |
+| --- | --- | --- | --- | --- |
+| 2022-23 | 25-79 | 58 | 40 | 78.5% |
+| 2023-24 | 25-83 | 60 | 32 | 69.7% |
+| 2024-25 | 23-77 | 58 | 38 | 75.8% |
+| 2025-26 | 38-77 | 28 | 14 | 66.0% |
+| 2026-27 | 50-77 | 30 | 21 | 85.9% |
+
+The parser runs on all five without modification and never silently produces a wrong figure:
+a block that does not reconcile is reported as a mismatch. It is most accurate on 2026-27,
+which it was developed against, so the earlier years carry more unexplained disagreements and
+should be treated as unverified until those are examined.
+
 Three parsing details matter for a future year's document. Column positions are measured per
 page, because the tables do not set their columns identically throughout. Word spacing is split
 at 1.5pt, because the revenue pages set text tightly enough that the default runs whole labels

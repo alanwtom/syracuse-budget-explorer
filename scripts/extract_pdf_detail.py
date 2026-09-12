@@ -41,6 +41,9 @@ HEADER_MAX_X = 100.0     # labels left of this open a section
 # runs whole labels together ("TOTALWATERFUNDREVENUE"). Anything from 0.8 to 2.0
 # splits both page styles correctly without breaking digits apart.
 WORD_TOLERANCE = 1.5
+# Pages whose text layer is unreadable can split the tables into two blocks.
+# Blocks closer than this many pages are treated as one section.
+MAX_BLOCK_GAP = 20
 
 
 def to_number(text):
@@ -269,11 +272,56 @@ def reconcile(sections):
     return results
 
 
+def detect_page_range(pdf):
+    """Find the budget-summary tables without being told where they are.
+
+    Each statement page carries a "REVENUE SUMMARY" or "EXPENDITURE SUMMARY"
+    heading. The contents page mentions those words once in isolation, so the
+    tables are the longest consecutive run of pages that carry them. The section
+    starts at a different page in every fiscal year, so it has to be found rather
+    than configured.
+    """
+    hits = []
+    for index, page in enumerate(pdf.pages):
+        try:
+            text = page.extract_text() or ""
+        except Exception:
+            continue
+        if STATEMENT_START.search(text):
+            hits.append(index + 1)
+    if not hits:
+        return None
+    runs = [[hits[0]]]
+    for page_number in hits[1:]:
+        if page_number - runs[-1][-1] <= 2:
+            runs[-1].append(page_number)
+        else:
+            runs.append([page_number])
+
+    # A lone hit is the contents page or a stray mention, not a table.
+    blocks = [r for r in runs if len(r) > 1] or runs
+
+    # Some years set a stretch of pages in a font that extracts as nothing
+    # readable, splitting the tables into two blocks with a gap between them.
+    # Blocks close together belong to the same section.
+    merged = [blocks[0]]
+    for block in blocks[1:]:
+        if block[0] - merged[-1][-1] <= MAX_BLOCK_GAP:
+            merged[-1] = merged[-1] + block
+        else:
+            merged.append(block)
+    longest = max(merged, key=lambda b: b[-1] - b[0])
+    # The final total of a section often prints a page after its last heading.
+    return longest[0], min(longest[-1] + 2, len(pdf.pages))
+
+
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--pdf", default="work/adopted.pdf")
-    parser.add_argument("--first-page", type=int, default=50)
-    parser.add_argument("--last-page", type=int, default=76)
+    parser.add_argument("--first-page", type=int, default=None,
+                        help="override the detected first page")
+    parser.add_argument("--last-page", type=int, default=None,
+                        help="override the detected last page")
     parser.add_argument("--output", default="data/pdf_detail.json")
     args = parser.parse_args()
 
@@ -284,8 +332,13 @@ def main():
 
     all_lines = []
     with pdfplumber.open(str(pdf_path)) as pdf:
-        last = min(args.last_page, len(pdf.pages))
-        for index in range(args.first_page - 1, last):
+        detected = detect_page_range(pdf)
+        if detected is None and (args.first_page is None or args.last_page is None):
+            raise SystemExit("No budget-summary pages found; pass --first-page and --last-page.")
+        first = args.first_page or detected[0]
+        last = min(args.last_page or detected[1], len(pdf.pages))
+        args.first_page, args.last_page = first, last
+        for index in range(first - 1, last):
             all_lines += merge_wrapped_labels(read_lines(pdf.pages[index], index + 1))
 
     all_lines = resolve_columns(all_lines)

@@ -9,6 +9,7 @@ import unittest
 
 from extract_pdf_detail import (
     SEPARATOR,
+    detect_page_range,
     TOTAL_LINE,
     build_sections,
     merge_wrapped_labels,
@@ -168,6 +169,43 @@ class ColumnAlignment(unittest.TestCase):
         for section in report:
             for column in section["columns"]:
                 self.assertEqual(column["status"], "exact", (section["name"], column))
+
+
+class FakePage:
+    def __init__(self, text):
+        self._text = text
+
+    def extract_text(self):
+        return self._text
+
+
+class FakePdf:
+    """Stands in for a PDF whose pages carry the given headings."""
+    def __init__(self, heading_pages, total=120):
+        self.pages = [
+            FakePage("REVENUE SUMMARY - ADOPTED BUDGET" if n + 1 in heading_pages else "narrative")
+            for n in range(total)
+        ]
+
+
+class PageDetection(unittest.TestCase):
+    def test_the_contents_page_mention_is_not_mistaken_for_the_tables(self):
+        first, last = detect_page_range(FakePdf([9] + list(range(50, 76))))
+        self.assertEqual(first, 50)
+
+    def test_blocks_split_by_unreadable_pages_are_joined(self):
+        """One year sets the pages between two blocks in an unreadable font."""
+        first, last = detect_page_range(FakePdf([9] + list(range(38, 50)) + list(range(64, 76))))
+        self.assertEqual(first, 38)
+        self.assertGreaterEqual(last, 75)
+
+    def test_a_distant_block_is_not_absorbed(self):
+        first, last = detect_page_range(FakePdf(list(range(25, 40)) + [100, 101], total=120))
+        self.assertEqual(first, 25)
+        self.assertLess(last, 100)
+
+    def test_a_pdf_with_no_headings_reports_nothing_rather_than_guessing(self):
+        self.assertIsNone(detect_page_range(FakePdf([])))
 
 
 if __name__ == "__main__":

@@ -2,15 +2,15 @@
   "sourcePdfSha256": "5bcaf70a5e20855de7401f31b64d3f57eb6fcdea1eb3cc672e45d9787871296c",
   "pageRange": [
     50,
-    76
+    77
   ],
   "summary": {
-    "sections": 29,
-    "sectionsClean": 20,
-    "columnsExact": 85,
+    "sections": 30,
+    "sectionsClean": 21,
+    "columnsExact": 86,
     "columnsMismatched": 14,
     "columnsIncomplete": 11,
-    "reconciliationRate": 0.8586,
+    "reconciliationRate": 0.86,
     "unreadableFigures": 11
   },
   "sections": [
@@ -1258,6 +1258,49 @@
           "difference": 535760506,
           "status": "incomplete: unreadable figures excluded",
           "rowsSummed": 24
+        }
+      ]
+    },
+    {
+      "name": "Full Valuation",
+      "page": 77,
+      "level": "department",
+      "header": null,
+      "rowCount": 8,
+      "coveredBySubtotals": 0,
+      "unreadableFigures": 0,
+      "columns": [
+        {
+          "column": 0,
+          "printed": null,
+          "summed": 21734730695,
+          "difference": null,
+          "status": "no printed total",
+          "rowsSummed": 6
+        },
+        {
+          "column": 1,
+          "printed": null,
+          "summed": 36270267,
+          "difference": null,
+          "status": "no printed total",
+          "rowsSummed": 2
+        },
+        {
+          "column": 2,
+          "printed": 38912422955,
+          "summed": 38912422955,
+          "difference": 0,
+          "status": "exact",
+          "rowsSummed": 6
+        },
+        {
+          "column": 3,
+          "printed": null,
+          "summed": 40125926,
+          "difference": null,
+          "status": "no printed total",
+          "rowsSummed": 2
         }
       ]
     }
