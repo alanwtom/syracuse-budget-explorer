@@ -31,6 +31,41 @@ The most important design decision was to preserve those distinctions. A workboo
 
 Source inspection exposed subtotal rows whose labels contained account codes, and unnumbered debt/transfer lines that the original parser omitted. The revised parser keeps numeric leaf rows and excludes their parent subtotals. Regression fixtures cover both cases. Water, Sewer and Sidewalk revenue and expense detail now match the transcribed formal totals; General Fund revenue matches, while expense detail retains a $3 difference. The General Fund residual traces to the Public Works stated total versus its detail. Crouse-Marshall has a documented scope difference. Downtown has both scope differences and conflicting workbook/PDF assessment figures. See [reconciliation notes](docs/reconciliation.md) for exact references.
 
+## Reading the PDF
+
+`scripts/extract_pdf_detail.py` parses the adopted budget's line-item tables directly from the
+PDF. The tables nest two deep: a fund or category sits at the left margin, its departments are
+indented, and each block closes with a total the document itself prints. Summing every numeric
+row would double-count, so rows are grouped by indentation and each block is checked against
+its own printed total.
+
+That check is the accuracy measure, and it is reported rather than assumed:
+
+| | |
+| --- | --- |
+| Sections found | 29 |
+| Sections reconciling on every column | 20 |
+| Column totals matching exactly | 85 |
+| Column totals disagreeing | 14 |
+| Column totals incomplete (a figure could not be read) | 11 |
+| Reconciliation rate | 85.9% |
+
+Three parsing details matter for a future year's document. Column positions are measured per
+page, because the tables do not set their columns identically throughout. Word spacing is split
+at 1.5pt, because the revenue pages set text tightly enough that the default runs whole labels
+together. Column rules printed as runs of `=` or `_` are discarded before a line is tested for
+being a total.
+
+Some figures are set in a subset font whose character map is wrong, so their digits arrive as
+characters in U+00E7–U+00F4. There were 11 such figures. They are marked unreadable and left out
+of sums; they are never guessed, and a sum missing one is reported as incomplete rather than as
+a disagreement, because the damage is in the document and not in the parse.
+
+The parser reproduces the $3 Public Works difference already recorded in the reconciliation
+notes, this time from the PDF rather than the workbook, and surfaces a $1 difference in
+Neighborhood & Business Development. The remaining disagreements are recorded in
+`data/pdf_detail.json` and are not yet explained.
+
 ## Evidence and limits
 
 This is a portfolio prototype, not an audited financial reporting system. There are 916 records in the current export. The six formal fund totals and the inter-fund adjustment are read back out of the adopted PDF by `scripts/extract_pdf_totals.py` and checked against the exported values, so those figures are verified rather than trusted; a regression test confirms the check fails when a total is wrong. Amendment definitions and the narrative remain manually transcribed, and account-level PDF detail is not yet extracted. Account detail has not been fully reconciled to formal totals. Residuals may reflect source differences, grouping or parser issues and require source review. The interface reports these limits.

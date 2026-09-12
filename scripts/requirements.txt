@@ -3,3 +3,6 @@ openpyxl==3.1.5
 
 # Reading the formal totals back out of the adopted budget PDF.
 pypdf==5.1.0
+
+# Positional text extraction for the budget tables (word x/y coordinates).
+pdfplumber==0.11.4
