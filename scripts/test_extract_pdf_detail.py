@@ -569,6 +569,32 @@ class PriorYearLayouts(unittest.TestCase):
         self.assertEqual(len(column_centres(rows)), 3)
 
 
+class DroppedSigns(unittest.TestCase):
+    """Three earlier books print a credit without its minus sign."""
+
+    def test_a_total_short_by_twice_a_line_names_that_line(self):
+        rows = [
+            line("Police", 27),
+            line("Police General Services Sworn", 88, [("619", 444)]),
+            line("Police Field Services Sworn", 88, [("43,965,018", 444)]),
+            line("Police Field Services Civilian", 88, [("4,019,871", 444)]),
+            line("Total Police", 88, [("47,984,270", 444)]),
+        ]
+        column = reconcile(build_sections(resolve_columns(rows)))[0]["columns"][0]
+        self.assertEqual(column["status"], "mismatch", "the page says what it says")
+        self.assertIn("Police General Services Sworn", column["hint"])
+
+    def test_rounding_is_not_mistaken_for_a_dropped_sign(self):
+        rows = [
+            line("Law", 27),
+            line("Law Department", 88, [("1", 444)]),
+            line("Bureau of Adjudication", 88, [("100", 444)]),
+            line("Total Law", 88, [("99", 444)]),
+        ]
+        column = reconcile(build_sections(resolve_columns(rows)))[0]["columns"][0]
+        self.assertIsNone(column["hint"])
+
+
 class DamageReporting(unittest.TestCase):
     def test_an_unreadable_figure_makes_a_sum_incomplete_not_mismatched(self):
         """Damage in the document must not be reported as a parsing failure."""

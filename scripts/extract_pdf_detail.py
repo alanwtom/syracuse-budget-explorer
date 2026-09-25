@@ -858,6 +858,16 @@ def reconcile(sections):
                 if method is None and section["level"] == "department":
                     method = _signed_fit(section, previous)
                 status = "exact" if method else "mismatch"
+            hint = None
+            if status == "mismatch" and difference and abs(difference) > 3:   # not rounding
+                # A book that drops a line's minus sign leaves a total short by
+                # exactly twice that line. It stays a mismatch, since the page
+                # says what it says, but the likely cause is named.
+                for row in section["rows"]:
+                    value = row["columns"][index] if index < len(row["columns"]) else None
+                    if value and difference == 2 * value:
+                        hint = f"adds up if {row['label'] or 'an unlabelled line'} ({value:,}) is negative"
+                        break
             per_column.append({
                 "column": index,
                 "printed": printed,
@@ -865,6 +875,7 @@ def reconcile(sections):
                 "difference": difference,
                 "status": status,
                 "method": method,
+                "hint": hint,
                 "rowsSummed": len(values),
             })
         verified = bool([c for c in per_column if c["printed"] is not None]) and all(

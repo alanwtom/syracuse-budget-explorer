@@ -198,11 +198,22 @@ department:
 | 2023-24 | Public Works revenue, FY22 actual | $125 | again $125 for FY22 on no printed line; the 2022-23 book is short $125 for FY22 too, there in the projection |
 | 2024-25 | Executive and Neighborhood & Business Development | $145,415 | the Division of Equity Compliance & Social Impact is printed under Neighborhood but counted in Executive's total |
 
-Those were traced by hand. Six more differences have the same signature, a single column off while
-every other column of the same rows matches, and are taken to be the books' own but have not been
-traced one by one: 2022-23 Downtown assessment ($494), 2023-24 Code Enforcement ($11,307) and
-Police ($1,238), 2024-25 State Aid ($24,190) and Special Objects ($9,708), and a 2025-26 Water
-fund subtotal ($29,866). All are recorded in each year's report with their page numbers.
+Six further differences were each one column off while every other column matched. Each was
+traced against the page itself and, for actual spending, against the City Auditor's workbook,
+which records FY21 to FY25 actuals line by line. All six are in the books:
+
+| Budget | Where | Difference | What the sources show |
+| --- | --- | --- | --- |
+| 2022-23 | Downtown assessment, FY22 projected | $494 | "Transportation" prints 247; the total adds up only if it is -247. A minus sign dropped |
+| 2023-24 | Police, FY22 actual | $1,238 | "Police General Services - Sworn" prints 619; the total needs -619. A minus sign dropped |
+| 2025-26 | Sewer fund special objects, FY24 actual | $29,866 | "Bad Debt Expense" prints 14,933; the subtotal needs -14,933. A minus sign dropped |
+| 2024-25 | State aid, FY23 actual | $24,190 | "State Highway Aid" prints $351,286; the book's own total and the Auditor's workbook both give $375,476 |
+| 2023-24 | Code Enforcement revenue, FY22 actual | $11,307 | the book's lines and the workbook agree exactly at $3,454,425; the printed total says $3,465,732, and no workbook line accounts for the rest |
+| 2024-25 | Special objects of expense, FY23 actual | $9,708 | the book's lines and the workbook agree exactly at $97,351,453; the printed total is $9,708 higher, and no workbook line accounts for it |
+
+The dropped minus sign is common enough to look for: a total short by exactly twice one of its
+lines now carries a note naming that line in the report. It stays a disagreement, because the
+page prints what it prints.
 
 ## Evidence and limits
 

@@ -33,6 +33,7 @@
           "difference": -1,
           "status": "mismatch",
           "method": null,
+          "hint": null,
           "rowsSummed": 11
         },
         {
@@ -42,6 +43,7 @@
           "difference": 0,
           "status": "exact",
           "method": null,
+          "hint": null,
           "rowsSummed": 11
         },
         {
@@ -51,6 +53,7 @@
           "difference": 0,
           "status": "exact",
           "method": null,
+          "hint": null,
           "rowsSummed": 11
         },
         {
@@ -60,6 +63,7 @@
           "difference": 0,
           "status": "exact",
           "method": null,
+          "hint": null,
           "rowsSummed": 10
         }
       ],
@@ -279,6 +283,7 @@
           "difference": 0,
           "status": "exact",
           "method": null,
+          "hint": null,
           "rowsSummed": 9
         },
         {
@@ -288,6 +293,7 @@
           "difference": 0,
           "status": "exact",
           "method": null,
+          "hint": null,
           "rowsSummed": 9
         },
         {
@@ -297,6 +303,7 @@
           "difference": 0,
           "status": "exact",
           "method": null,
+          "hint": null,
           "rowsSummed": 9
         },
         {
@@ -306,6 +313,7 @@
           "difference": 0,
           "status": "exact",
           "method": null,
+          "hint": null,
           "rowsSummed": 9
         }
       ],
@@ -447,6 +455,7 @@
           "difference": 0,
           "status": "exact",
           "method": null,
+          "hint": null,
           "rowsSummed": 18
         },
         {
@@ -456,6 +465,7 @@
           "difference": 0,
           "status": "exact",
           "method": null,
+          "hint": null,
           "rowsSummed": 18
         },
         {
@@ -465,6 +475,7 @@
           "difference": 0,
           "status": "exact",
           "method": null,
+          "hint": null,
           "rowsSummed": 18
         },
         {
@@ -474,6 +485,7 @@
           "difference": 0,
           "status": "exact",
           "method": null,
+          "hint": null,
           "rowsSummed": 18
         }
       ],
@@ -732,6 +744,7 @@
           "difference": 0,
           "status": "exact",
           "method": null,
+          "hint": null,
           "rowsSummed": 1
         },
         {
@@ -741,6 +754,7 @@
           "difference": 0,
           "status": "exact",
           "method": null,
+          "hint": null,
           "rowsSummed": 1
         },
         {
@@ -750,6 +764,7 @@
           "difference": 0,
           "status": "exact",
           "method": null,
+          "hint": null,
           "rowsSummed": 1
         },
         {
@@ -759,6 +774,7 @@
           "difference": 0,
           "status": "exact",
           "method": null,
+          "hint": null,
           "rowsSummed": 1
         }
       ],
@@ -796,6 +812,7 @@
           "difference": 0,
           "status": "exact",
           "method": null,
+          "hint": null,
           "rowsSummed": 13
         },
         {
@@ -805,6 +822,7 @@
           "difference": 0,
           "status": "exact",
           "method": null,
+          "hint": null,
           "rowsSummed": 13
         },
         {
@@ -814,6 +832,7 @@
           "difference": 0,
           "status": "exact",
           "method": null,
+          "hint": null,
           "rowsSummed": 13
         },
         {
@@ -823,6 +842,7 @@
           "difference": 0,
           "status": "exact",
           "method": null,
+          "hint": null,
           "rowsSummed": 13
         }
       ],
@@ -1016,6 +1036,7 @@
           "difference": 0,
           "status": "exact",
           "method": null,
+          "hint": null,
           "rowsSummed": 5
         },
         {
@@ -1025,6 +1046,7 @@
           "difference": 0,
           "status": "exact",
           "method": null,
+          "hint": null,
           "rowsSummed": 5
         },
         {
@@ -1034,6 +1056,7 @@
           "difference": 0,
           "status": "exact",
           "method": null,
+          "hint": null,
           "rowsSummed": 5
         },
         {
@@ -1043,6 +1066,7 @@
           "difference": 0,
           "status": "exact",
           "method": null,
+          "hint": null,
           "rowsSummed": 5
         }
       ],
@@ -1132,6 +1156,7 @@
           "difference": 0,
           "status": "exact",
           "method": null,
+          "hint": null,
           "rowsSummed": 4
         },
         {
@@ -1141,6 +1166,7 @@
           "difference": 0,
           "status": "exact",
           "method": null,
+          "hint": null,
           "rowsSummed": 4
         },
         {
@@ -1150,6 +1176,7 @@
           "difference": 0,
           "status": "exact",
           "method": null,
+          "hint": null,
           "rowsSummed": 4
         },
         {
@@ -1159,6 +1186,7 @@
           "difference": 0,
           "status": "exact",
           "method": null,
+          "hint": null,
           "rowsSummed": 4
         }
       ],
@@ -1235,6 +1263,7 @@
           "difference": 0,
           "status": "exact",
           "method": null,
+          "hint": null,
           "rowsSummed": 5
         },
         {
@@ -1244,6 +1273,7 @@
           "difference": 0,
           "status": "exact",
           "method": null,
+          "hint": null,
           "rowsSummed": 5
         },
         {
@@ -1253,6 +1283,7 @@
           "difference": 0,
           "status": "exact",
           "method": null,
+          "hint": null,
           "rowsSummed": 5
         },
         {
@@ -1262,6 +1293,7 @@
           "difference": 0,
           "status": "exact",
           "method": null,
+          "hint": null,
           "rowsSummed": 5
         }
       ],
@@ -1351,6 +1383,7 @@
           "difference": 0,
           "status": "exact",
           "method": null,
+          "hint": null,
           "rowsSummed": 1
         },
         {
@@ -1360,6 +1393,7 @@
           "difference": 0,
           "status": "exact",
           "method": null,
+          "hint": null,
           "rowsSummed": 1
         },
         {
@@ -1369,6 +1403,7 @@
           "difference": 0,
           "status": "exact",
           "method": null,
+          "hint": null,
           "rowsSummed": 1
         },
         {
@@ -1378,6 +1413,7 @@
           "difference": 0,
           "status": "exact",
           "method": null,
+          "hint": null,
           "rowsSummed": 1
         }
       ],
@@ -1415,6 +1451,7 @@
           "difference": 0,
           "status": "exact",
           "method": null,
+          "hint": null,
           "rowsSummed": 20
         },
         {
@@ -1424,6 +1461,7 @@
           "difference": 0,
           "status": "exact",
           "method": null,
+          "hint": null,
           "rowsSummed": 20
         },
         {
@@ -1433,6 +1471,7 @@
           "difference": 0,
           "status": "exact",
           "method": null,
+          "hint": null,
           "rowsSummed": 20
         },
         {
@@ -1442,6 +1481,7 @@
           "difference": 0,
           "status": "exact",
           "method": null,
+          "hint": null,
           "rowsSummed": 20
         }
       ],
@@ -1726,6 +1766,7 @@
           "difference": 0,
           "status": "exact",
           "method": null,
+          "hint": null,
           "rowsSummed": 1
         },
         {
@@ -1735,6 +1776,7 @@
           "difference": 0,
           "status": "exact",
           "method": null,
+          "hint": null,
           "rowsSummed": 1
         },
         {
@@ -1744,6 +1786,7 @@
           "difference": 0,
           "status": "exact",
           "method": null,
+          "hint": null,
           "rowsSummed": 1
         },
         {
@@ -1753,6 +1796,7 @@
           "difference": 0,
           "status": "exact",
           "method": null,
+          "hint": null,
           "rowsSummed": 1
         }
       ],
@@ -1790,6 +1834,7 @@
           "difference": -1,
           "status": "mismatch",
           "method": null,
+          "hint": null,
           "rowsSummed": 9
         },
         {
@@ -1799,6 +1844,7 @@
           "difference": 0,
           "status": "exact",
           "method": null,
+          "hint": null,
           "rowsSummed": 9
         },
         {
@@ -1808,6 +1854,7 @@
           "difference": 0,
           "status": "exact",
           "method": null,
+          "hint": null,
           "rowsSummed": 9
         },
         {
@@ -1817,6 +1864,7 @@
           "difference": 0,
           "status": "exact",
           "method": null,
+          "hint": null,
           "rowsSummed": 9
         }
       ],
@@ -1958,6 +2006,7 @@
           "difference": 0,
           "status": "exact",
           "method": null,
+          "hint": null,
           "rowsSummed": 4
         },
         {
@@ -1967,6 +2016,7 @@
           "difference": 0,
           "status": "exact",
           "method": null,
+          "hint": null,
           "rowsSummed": 4
         },
         {
@@ -1976,6 +2026,7 @@
           "difference": 0,
           "status": "exact",
           "method": null,
+          "hint": null,
           "rowsSummed": 4
         },
         {
@@ -1985,6 +2036,7 @@
           "difference": 0,
           "status": "exact",
           "method": null,
+          "hint": null,
           "rowsSummed": 4
         }
       ],
@@ -2061,6 +2113,7 @@
           "difference": 0,
           "status": "exact",
           "method": null,
+          "hint": null,
           "rowsSummed": 2
         },
         {
@@ -2070,6 +2123,7 @@
           "difference": 0,
           "status": "exact",
           "method": null,
+          "hint": null,
           "rowsSummed": 2
         },
         {
@@ -2079,6 +2133,7 @@
           "difference": 0,
           "status": "exact",
           "method": null,
+          "hint": null,
           "rowsSummed": 2
         },
         {
@@ -2088,6 +2143,7 @@
           "difference": 0,
           "status": "exact",
           "method": null,
+          "hint": null,
           "rowsSummed": 2
         }
       ],
@@ -2138,6 +2194,7 @@
           "difference": 1,
           "status": "incomplete: unreadable figures excluded",
           "method": null,
+          "hint": null,
           "rowsSummed": 7
         },
         {
@@ -2147,6 +2204,7 @@
           "difference": 0,
           "status": "exact",
           "method": null,
+          "hint": null,
           "rowsSummed": 7
         },
         {
@@ -2156,6 +2214,7 @@
           "difference": 0,
           "status": "exact",
           "method": null,
+          "hint": null,
           "rowsSummed": 7
         },
         {
@@ -2165,6 +2224,7 @@
           "difference": null,
           "status": "no printed total",
           "method": null,
+          "hint": null,
           "rowsSummed": 6
         }
       ],
@@ -2280,6 +2340,7 @@
           "difference": 0,
           "status": "exact",
           "method": null,
+          "hint": null,
           "rowsSummed": 7
         },
         {
@@ -2289,6 +2350,7 @@
           "difference": 0,
           "status": "exact",
           "method": null,
+          "hint": null,
           "rowsSummed": 7
         },
         {
@@ -2298,6 +2360,7 @@
           "difference": 0,
           "status": "exact",
           "method": null,
+          "hint": null,
           "rowsSummed": 7
         },
         {
@@ -2307,6 +2370,7 @@
           "difference": 0,
           "status": "exact",
           "method": null,
+          "hint": null,
           "rowsSummed": 7
         }
       ],
@@ -2422,6 +2486,7 @@
           "difference": 0,
           "status": "exact",
           "method": null,
+          "hint": null,
           "rowsSummed": 8
         },
         {
@@ -2431,6 +2496,7 @@
           "difference": 0,
           "status": "exact",
           "method": null,
+          "hint": null,
           "rowsSummed": 8
         },
         {
@@ -2440,6 +2506,7 @@
           "difference": 0,
           "status": "exact",
           "method": null,
+          "hint": null,
           "rowsSummed": 8
         },
         {
@@ -2449,6 +2516,7 @@
           "difference": null,
           "status": "no printed total",
           "method": null,
+          "hint": null,
           "rowsSummed": 6
         }
       ],
@@ -2577,6 +2645,7 @@
           "difference": 0,
           "status": "exact",
           "method": null,
+          "hint": null,
           "rowsSummed": 2
         },
         {
@@ -2586,6 +2655,7 @@
           "difference": 0,
           "status": "exact",
           "method": null,
+          "hint": null,
           "rowsSummed": 2
         },
         {
@@ -2595,6 +2665,7 @@
           "difference": 0,
           "status": "exact",
           "method": null,
+          "hint": null,
           "rowsSummed": 2
         },
         {
@@ -2604,6 +2675,7 @@
           "difference": 0,
           "status": "exact",
           "method": null,
+          "hint": null,
           "rowsSummed": 2
         }
       ],
@@ -2654,6 +2726,7 @@
           "difference": 0,
           "status": "exact",
           "method": null,
+          "hint": null,
           "rowsSummed": 2
         },
         {
@@ -2663,6 +2736,7 @@
           "difference": 0,
           "status": "exact",
           "method": null,
+          "hint": null,
           "rowsSummed": 2
         },
         {
@@ -2672,6 +2746,7 @@
           "difference": 0,
           "status": "exact",
           "method": null,
+          "hint": null,
           "rowsSummed": 2
         },
         {
@@ -2681,6 +2756,7 @@
           "difference": 0,
           "status": "exact",
           "method": null,
+          "hint": null,
           "rowsSummed": 2
         }
       ],
@@ -2731,6 +2807,7 @@
           "difference": 0,
           "status": "exact",
           "method": null,
+          "hint": null,
           "rowsSummed": 22
         },
         {
@@ -2740,6 +2817,7 @@
           "difference": 0,
           "status": "exact",
           "method": null,
+          "hint": null,
           "rowsSummed": 22
         },
         {
@@ -2749,6 +2827,7 @@
           "difference": 0,
           "status": "exact",
           "method": null,
+          "hint": null,
           "rowsSummed": 22
         },
         {
@@ -2758,6 +2837,7 @@
           "difference": 0,
           "status": "exact",
           "method": null,
+          "hint": null,
           "rowsSummed": 22
         }
       ],
@@ -3068,6 +3148,7 @@
           "difference": 0,
           "status": "exact",
           "method": null,
+          "hint": null,
           "rowsSummed": 3
         },
         {
@@ -3077,6 +3158,7 @@
           "difference": 0,
           "status": "exact",
           "method": null,
+          "hint": null,
           "rowsSummed": 3
         },
         {
@@ -3086,6 +3168,7 @@
           "difference": 0,
           "status": "exact",
           "method": null,
+          "hint": null,
           "rowsSummed": 3
         },
         {
@@ -3095,6 +3178,7 @@
           "difference": 0,
           "status": "exact",
           "method": null,
+          "hint": null,
           "rowsSummed": 3
         }
       ],
@@ -3158,6 +3242,7 @@
           "difference": -1,
           "status": "mismatch",
           "method": null,
+          "hint": null,
           "rowsSummed": 3
         },
         {
@@ -3167,6 +3252,7 @@
           "difference": 0,
           "status": "exact",
           "method": null,
+          "hint": null,
           "rowsSummed": 3
         },
         {
@@ -3176,6 +3262,7 @@
           "difference": 0,
           "status": "exact",
           "method": null,
+          "hint": null,
           "rowsSummed": 3
         },
         {
@@ -3185,6 +3272,7 @@
           "difference": 0,
           "status": "exact",
           "method": null,
+          "hint": null,
           "rowsSummed": 3
         }
       ],
@@ -3248,6 +3336,7 @@
           "difference": 0,
           "status": "exact",
           "method": null,
+          "hint": null,
           "rowsSummed": 12
         },
         {
@@ -3257,6 +3346,7 @@
           "difference": 0,
           "status": "exact",
           "method": null,
+          "hint": null,
           "rowsSummed": 12
         },
         {
@@ -3266,6 +3356,7 @@
           "difference": 0,
           "status": "exact",
           "method": null,
+          "hint": null,
           "rowsSummed": 12
         },
         {
@@ -3275,6 +3366,7 @@
           "difference": null,
           "status": "no printed total",
           "method": null,
+          "hint": null,
           "rowsSummed": 11
         }
       ],
@@ -3455,6 +3547,7 @@
           "difference": 0,
           "status": "exact",
           "method": null,
+          "hint": null,
           "rowsSummed": 4
         },
         {
@@ -3464,6 +3557,7 @@
           "difference": 0,
           "status": "exact",
           "method": null,
+          "hint": null,
           "rowsSummed": 4
         },
         {
@@ -3473,6 +3567,7 @@
           "difference": 0,
           "status": "exact",
           "method": null,
+          "hint": null,
           "rowsSummed": 4
         },
         {
@@ -3482,6 +3577,7 @@
           "difference": 0,
           "status": "exact",
           "method": null,
+          "hint": null,
           "rowsSummed": 4
         }
       ],
@@ -3558,6 +3654,7 @@
           "difference": 0,
           "status": "exact",
           "method": null,
+          "hint": null,
           "rowsSummed": 2
         },
         {
@@ -3567,6 +3664,7 @@
           "difference": 0,
           "status": "exact",
           "method": null,
+          "hint": null,
           "rowsSummed": 2
         },
         {
@@ -3576,6 +3674,7 @@
           "difference": 0,
           "status": "exact",
           "method": null,
+          "hint": null,
           "rowsSummed": 2
         },
         {
@@ -3585,6 +3684,7 @@
           "difference": 0,
           "status": "exact",
           "method": null,
+          "hint": null,
           "rowsSummed": 2
         }
       ],
@@ -3635,6 +3735,7 @@
           "difference": 40427,
           "status": "incomplete: unreadable figures excluded",
           "method": null,
+          "hint": null,
           "rowsSummed": 2
         },
         {
@@ -3644,6 +3745,7 @@
           "difference": 0,
           "status": "exact",
           "method": null,
+          "hint": null,
           "rowsSummed": 2
         },
         {
@@ -3653,6 +3755,7 @@
           "difference": 0,
           "status": "exact",
           "method": null,
+          "hint": null,
           "rowsSummed": 2
         },
         {
@@ -3662,6 +3765,7 @@
           "difference": null,
           "status": "no printed total",
           "method": null,
+          "hint": null,
           "rowsSummed": 1
         }
       ],
@@ -3712,6 +3816,7 @@
           "difference": 0,
           "status": "exact",
           "method": null,
+          "hint": null,
           "rowsSummed": 3
         },
         {
@@ -3721,6 +3826,7 @@
           "difference": 1,
           "status": "mismatch",
           "method": null,
+          "hint": null,
           "rowsSummed": 3
         },
         {
@@ -3730,6 +3836,7 @@
           "difference": 0,
           "status": "exact",
           "method": null,
+          "hint": null,
           "rowsSummed": 3
         },
         {
@@ -3739,6 +3846,7 @@
           "difference": 0,
           "status": "exact",
           "method": null,
+          "hint": null,
           "rowsSummed": 3
         }
       ],
@@ -3802,6 +3910,7 @@
           "difference": 0,
           "status": "exact",
           "method": null,
+          "hint": null,
           "rowsSummed": 9
         },
         {
@@ -3811,6 +3920,7 @@
           "difference": 0,
           "status": "exact",
           "method": null,
+          "hint": null,
           "rowsSummed": 9
         },
         {
@@ -3820,6 +3930,7 @@
           "difference": 0,
           "status": "exact",
           "method": null,
+          "hint": null,
           "rowsSummed": 9
         },
         {
@@ -3829,6 +3940,7 @@
           "difference": 3,
           "status": "mismatch",
           "method": null,
+          "hint": null,
           "rowsSummed": 9
         }
       ],
@@ -3970,6 +4082,7 @@
           "difference": 0,
           "status": "exact",
           "method": null,
+          "hint": null,
           "rowsSummed": 2
         },
         {
@@ -3979,6 +4092,7 @@
           "difference": 0,
           "status": "exact",
           "method": null,
+          "hint": null,
           "rowsSummed": 2
         },
         {
@@ -3988,6 +4102,7 @@
           "difference": 0,
           "status": "exact",
           "method": null,
+          "hint": null,
           "rowsSummed": 2
         },
         {
@@ -3997,6 +4112,7 @@
           "difference": 0,
           "status": "exact",
           "method": null,
+          "hint": null,
           "rowsSummed": 2
         }
       ],
@@ -4047,6 +4163,7 @@
           "difference": 0,
           "status": "exact",
           "method": null,
+          "hint": null,
           "rowsSummed": 2
         },
         {
@@ -4056,6 +4173,7 @@
           "difference": 0,
           "status": "exact",
           "method": null,
+          "hint": null,
           "rowsSummed": 2
         },
         {
@@ -4065,6 +4183,7 @@
           "difference": 0,
           "status": "exact",
           "method": null,
+          "hint": null,
           "rowsSummed": 2
         },
         {
@@ -4074,6 +4193,7 @@
           "difference": 0,
           "status": "exact",
           "method": null,
+          "hint": null,
           "rowsSummed": 2
         }
       ],
@@ -4124,6 +4244,7 @@
           "difference": 0,
           "status": "exact",
           "method": null,
+          "hint": null,
           "rowsSummed": 4
         },
         {
@@ -4133,6 +4254,7 @@
           "difference": 0,
           "status": "exact",
           "method": null,
+          "hint": null,
           "rowsSummed": 4
         },
         {
@@ -4142,6 +4264,7 @@
           "difference": 0,
           "status": "exact",
           "method": null,
+          "hint": null,
           "rowsSummed": 4
         },
         {
@@ -4151,6 +4274,7 @@
           "difference": null,
           "status": "no printed total",
           "method": null,
+          "hint": null,
           "rowsSummed": 2
         }
       ],
@@ -4227,6 +4351,7 @@
           "difference": 781232,
           "status": "incomplete: unreadable figures excluded",
           "method": null,
+          "hint": null,
           "rowsSummed": 15
         },
         {
@@ -4236,6 +4361,7 @@
           "difference": 1,
           "status": "incomplete: unreadable figures excluded",
           "method": null,
+          "hint": null,
           "rowsSummed": 15
         },
         {
@@ -4245,6 +4371,7 @@
           "difference": 0,
           "status": "exact",
           "method": null,
+          "hint": null,
           "rowsSummed": 15
         },
         {
@@ -4254,6 +4381,7 @@
           "difference": null,
           "status": "no printed total",
           "method": null,
+          "hint": null,
           "rowsSummed": 10
         }
       ],
@@ -4473,6 +4601,7 @@
           "difference": 0,
           "status": "exact",
           "method": null,
+          "hint": null,
           "rowsSummed": 52
         },
         {
@@ -4482,6 +4611,7 @@
           "difference": 0,
           "status": "exact",
           "method": null,
+          "hint": null,
           "rowsSummed": 52
         },
         {
@@ -4491,6 +4621,7 @@
           "difference": 0,
           "status": "exact",
           "method": null,
+          "hint": null,
           "rowsSummed": 52
         },
         {
@@ -4500,6 +4631,7 @@
           "difference": null,
           "status": "no printed total",
           "method": null,
+          "hint": null,
           "rowsSummed": 44
         }
       ],
@@ -5291,6 +5423,7 @@
           "difference": 0,
           "status": "exact",
           "method": null,
+          "hint": null,
           "rowsSummed": 3
         },
         {
@@ -5300,6 +5433,7 @@
           "difference": 0,
           "status": "exact",
           "method": null,
+          "hint": null,
           "rowsSummed": 3
         },
         {
@@ -5309,6 +5443,7 @@
           "difference": 0,
           "status": "exact",
           "method": null,
+          "hint": null,
           "rowsSummed": 3
         },
         {
@@ -5318,6 +5453,7 @@
           "difference": null,
           "status": "no printed total",
           "method": null,
+          "hint": null,
           "rowsSummed": 2
         }
       ],
@@ -5381,6 +5517,7 @@
           "difference": 0,
           "status": "exact",
           "method": null,
+          "hint": null,
           "rowsSummed": 4
         },
         {
@@ -5390,6 +5527,7 @@
           "difference": 0,
           "status": "exact",
           "method": null,
+          "hint": null,
           "rowsSummed": 4
         },
         {
@@ -5399,6 +5537,7 @@
           "difference": 0,
           "status": "exact",
           "method": null,
+          "hint": null,
           "rowsSummed": 4
         },
         {
@@ -5408,6 +5547,7 @@
           "difference": 0,
           "status": "exact",
           "method": null,
+          "hint": null,
           "rowsSummed": 4
         }
       ],
@@ -5484,6 +5624,7 @@
           "difference": 0,
           "status": "exact",
           "method": null,
+          "hint": null,
           "rowsSummed": 3
         },
         {
@@ -5493,6 +5634,7 @@
           "difference": 0,
           "status": "exact",
           "method": null,
+          "hint": null,
           "rowsSummed": 3
         },
         {
@@ -5502,6 +5644,7 @@
           "difference": 0,
           "status": "exact",
           "method": null,
+          "hint": null,
           "rowsSummed": 3
         },
         {
@@ -5511,6 +5654,7 @@
           "difference": 0,
           "status": "exact",
           "method": null,
+          "hint": null,
           "rowsSummed": 3
         }
       ],
@@ -5574,6 +5718,7 @@
           "difference": 0,
           "status": "exact",
           "method": null,
+          "hint": null,
           "rowsSummed": 5
         },
         {
@@ -5583,6 +5728,7 @@
           "difference": 0,
           "status": "exact",
           "method": null,
+          "hint": null,
           "rowsSummed": 5
         },
         {
@@ -5592,6 +5738,7 @@
           "difference": 0,
           "status": "exact",
           "method": null,
+          "hint": null,
           "rowsSummed": 5
         },
         {
@@ -5601,6 +5748,7 @@
           "difference": 0,
           "status": "exact",
           "method": null,
+          "hint": null,
           "rowsSummed": 5
         }
       ],
@@ -5690,6 +5838,7 @@
           "difference": 47594,
           "status": "mismatch",
           "method": null,
+          "hint": null,
           "rowsSummed": 10
         },
         {
@@ -5699,6 +5848,7 @@
           "difference": 0,
           "status": "exact",
           "method": null,
+          "hint": null,
           "rowsSummed": 10
         },
         {
@@ -5708,6 +5858,7 @@
           "difference": 0,
           "status": "exact",
           "method": null,
+          "hint": null,
           "rowsSummed": 10
         },
         {
@@ -5717,6 +5868,7 @@
           "difference": 0,
           "status": "exact",
           "method": null,
+          "hint": null,
           "rowsSummed": 10
         }
       ],
@@ -5871,6 +6023,7 @@
           "difference": 0,
           "status": "exact",
           "method": null,
+          "hint": null,
           "rowsSummed": 2
         },
         {
@@ -5880,6 +6033,7 @@
           "difference": 0,
           "status": "exact",
           "method": null,
+          "hint": null,
           "rowsSummed": 2
         },
         {
@@ -5889,6 +6043,7 @@
           "difference": 0,
           "status": "exact",
           "method": null,
+          "hint": null,
           "rowsSummed": 2
         },
         {
@@ -5898,6 +6053,7 @@
           "difference": 0,
           "status": "exact",
           "method": null,
+          "hint": null,
           "rowsSummed": 2
         }
       ],
@@ -5948,6 +6104,7 @@
           "difference": 0,
           "status": "exact",
           "method": null,
+          "hint": null,
           "rowsSummed": 3
         },
         {
@@ -5957,6 +6114,7 @@
           "difference": 0,
           "status": "exact",
           "method": null,
+          "hint": null,
           "rowsSummed": 3
         },
         {
@@ -5966,6 +6124,7 @@
           "difference": 0,
           "status": "exact",
           "method": null,
+          "hint": null,
           "rowsSummed": 3
         },
         {
@@ -5975,6 +6134,7 @@
           "difference": 0,
           "status": "exact",
           "method": null,
+          "hint": null,
           "rowsSummed": 3
         }
       ],
@@ -6038,6 +6198,7 @@
           "difference": 0,
           "status": "exact",
           "method": null,
+          "hint": null,
           "rowsSummed": 6
         },
         {
@@ -6047,6 +6208,7 @@
           "difference": 0,
           "status": "exact",
           "method": null,
+          "hint": null,
           "rowsSummed": 6
         },
         {
@@ -6056,6 +6218,7 @@
           "difference": 0,
           "status": "exact",
           "method": null,
+          "hint": null,
           "rowsSummed": 6
         },
         {
@@ -6065,6 +6228,7 @@
           "difference": 0,
           "status": "exact",
           "method": null,
+          "hint": null,
           "rowsSummed": 6
         }
       ],
@@ -6167,6 +6331,7 @@
           "difference": 0,
           "status": "exact",
           "method": null,
+          "hint": null,
           "rowsSummed": 2
         },
         {
@@ -6176,6 +6341,7 @@
           "difference": 0,
           "status": "exact",
           "method": null,
+          "hint": null,
           "rowsSummed": 2
         },
         {
@@ -6185,6 +6351,7 @@
           "difference": 0,
           "status": "exact",
           "method": null,
+          "hint": null,
           "rowsSummed": 2
         },
         {
@@ -6194,6 +6361,7 @@
           "difference": 0,
           "status": "exact",
           "method": null,
+          "hint": null,
           "rowsSummed": 2
         }
       ],
@@ -6244,6 +6412,7 @@
           "difference": 0,
           "status": "exact",
           "method": null,
+          "hint": null,
           "rowsSummed": 3
         },
         {
@@ -6253,6 +6422,7 @@
           "difference": 0,
           "status": "exact",
           "method": null,
+          "hint": null,
           "rowsSummed": 3
         },
         {
@@ -6262,6 +6432,7 @@
           "difference": 0,
           "status": "exact",
           "method": null,
+          "hint": null,
           "rowsSummed": 3
         },
         {
@@ -6271,6 +6442,7 @@
           "difference": 0,
           "status": "exact",
           "method": null,
+          "hint": null,
           "rowsSummed": 3
         }
       ],
@@ -6334,6 +6506,7 @@
           "difference": 0,
           "status": "exact",
           "method": null,
+          "hint": null,
           "rowsSummed": 6
         },
         {
@@ -6343,6 +6516,7 @@
           "difference": 0,
           "status": "exact",
           "method": null,
+          "hint": null,
           "rowsSummed": 6
         },
         {
@@ -6352,6 +6526,7 @@
           "difference": 0,
           "status": "exact",
           "method": null,
+          "hint": null,
           "rowsSummed": 6
         },
         {
@@ -6361,6 +6536,7 @@
           "difference": 0,
           "status": "exact",
           "method": null,
+          "hint": null,
           "rowsSummed": 6
         }
       ],
@@ -6463,6 +6639,7 @@
           "difference": 0,
           "status": "exact",
           "method": null,
+          "hint": null,
           "rowsSummed": 6
         },
         {
@@ -6472,6 +6649,7 @@
           "difference": 0,
           "status": "exact",
           "method": null,
+          "hint": null,
           "rowsSummed": 6
         },
         {
@@ -6481,6 +6659,7 @@
           "difference": 0,
           "status": "exact",
           "method": null,
+          "hint": null,
           "rowsSummed": 6
         },
         {
@@ -6490,6 +6669,7 @@
           "difference": 0,
           "status": "exact",
           "method": null,
+          "hint": null,
           "rowsSummed": 6
         }
       ],
@@ -6592,6 +6772,7 @@
           "difference": 0,
           "status": "exact",
           "method": null,
+          "hint": null,
           "rowsSummed": 4
         },
         {
@@ -6601,6 +6782,7 @@
           "difference": 0,
           "status": "exact",
           "method": null,
+          "hint": null,
           "rowsSummed": 4
         }
       ],
@@ -6669,6 +6851,7 @@
           "difference": -131762891,
           "status": "exact",
           "method": "growth factor applied to the line above",
+          "hint": null,
           "rowsSummed": 0
         },
         {
@@ -6678,6 +6861,7 @@
           "difference": -136270267,
           "status": "exact",
           "method": "growth factor applied to the line above",
+          "hint": null,
           "rowsSummed": 0
         }
       ],
@@ -6713,6 +6897,7 @@
           "difference": -131762891,
           "status": "exact",
           "method": "running total",
+          "hint": null,
           "rowsSummed": 2
         },
         {
@@ -6722,6 +6907,7 @@
           "difference": -136270267,
           "status": "exact",
           "method": "running total",
+          "hint": null,
           "rowsSummed": 2
         }
       ],
@@ -6768,6 +6954,7 @@
           "difference": 11510000,
           "status": "exact",
           "method": "subtracted",
+          "hint": null,
           "rowsSummed": 2
         },
         {
@@ -6777,6 +6964,7 @@
           "difference": 11142614,
           "status": "exact",
           "method": "subtracted",
+          "hint": null,
           "rowsSummed": 2
         }
       ],
@@ -6823,6 +7011,7 @@
           "difference": 0,
           "status": "exact",
           "method": null,
+          "hint": null,
           "rowsSummed": 4
         },
         {
@@ -6832,6 +7021,7 @@
           "difference": 0,
           "status": "exact",
           "method": null,
+          "hint": null,
           "rowsSummed": 4
         }
       ],
@@ -6900,6 +7090,7 @@
           "difference": null,
           "status": "no printed total",
           "method": null,
+          "hint": null,
           "rowsSummed": 5
         },
         {
@@ -6909,6 +7100,7 @@
           "difference": null,
           "status": "no printed total",
           "method": null,
+          "hint": null,
           "rowsSummed": 0
         },
         {
@@ -6918,6 +7110,7 @@
           "difference": -1,
           "status": "mismatch",
           "method": null,
+          "hint": null,
           "rowsSummed": 5
         }
       ],
@@ -7002,6 +7195,7 @@
           "difference": null,
           "status": "no printed total",
           "method": null,
+          "hint": null,
           "rowsSummed": 0
         },
         {
@@ -7011,6 +7205,7 @@
           "difference": null,
           "status": "no printed total",
           "method": null,
+          "hint": null,
           "rowsSummed": 5
         },
         {
@@ -7020,6 +7215,7 @@
           "difference": -140125926,
           "status": "exact",
           "method": "carried into the total column",
+          "hint": null,
           "rowsSummed": 0
         }
       ],
@@ -7104,6 +7300,7 @@
           "difference": null,
           "status": "no printed total",
           "method": null,
+          "hint": null,
           "rowsSummed": 0
         },
         {
@@ -7113,6 +7310,7 @@
           "difference": null,
           "status": "no printed total",
           "method": null,
+          "hint": null,
           "rowsSummed": 10
         },
         {
@@ -7122,6 +7320,7 @@
           "difference": -36877373,
           "status": "exact",
           "method": "carried into the total column",
+          "hint": null,
           "rowsSummed": 0
         }
       ],
