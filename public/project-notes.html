@@ -1,1 +1,86 @@
-<!doctype html><html lang="en"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Project notes · Syracuse Budget Explorer</title><style>body{margin:0;background:#f4f5f1;color:#173140;font:17px/1.7 Arial,sans-serif}main{max-width:780px;margin:auto;padding:40px 24px}h1{font-size:clamp(30px,6vw,46px);line-height:1.15;letter-spacing:-.04em}h2{margin-top:38px;font-size:24px}a{color:#1e5870;text-underline-offset:4px}section{background:#fff;border:1px solid #dfe5df;border-radius:18px;padding:26px;margin-top:24px}.label{font-size:12px;text-transform:uppercase;letter-spacing:.12em;color:#52656d}li{margin:12px 0}a:focus-visible{outline:2px solid #32736f;outline-offset:4px}</style><main><a href="/">← Back to the explorer</a><p class="label">Independent project · Alan Tom · September 2026</p><h1>Making a public budget easier to inspect.</h1><p>A civic-data prototype connecting the City’s budget documents to a searchable interface. Built with AI assistance; not affiliated with or endorsed by the City of Syracuse.</p><section><h2>The problem and approach</h2><p>A resident should be able to move from a question to an account’s history and then to the source. The adopted PDF and Auditor workbook answer different questions. This project keeps formal adopted totals separate from workbook proposals and calculated amendment adjustments.</p><h2>What the review changed</h2><ul><li>Removed subtotals that had been mistaken for individual accounts.</li><li>Included unnumbered debt and transfer lines that had been omitted.</li><li>Added checks against exported records, complete result browsing, shareable filtered views, and clearer source labels.</li></ul><h2>How to try it in two minutes</h2><p>Open Explore lines, search “overtime,” and open Police Field Services – Sworn. Compare FY26 adopted, FY26 estimate, and FY27 proposal; then follow the workbook sheet and row reference. The different bases matter as much as the amounts.</p></section><section><h2>Evidence and limits</h2><p>Eight regression tests cover parser and validation failures. Water, Sewer and Sidewalk revenue and expense detail match the transcribed formal totals, as does General Fund revenue. Matching totals does not certify every account as adopted.</p><p>The General Fund’s $3 expense residual traces to the Public Works stated total versus its detail. Crouse-Marshall’s $18,000 difference comes from other operating revenue outside the assessment. Downtown has both scope differences and conflicting workbook/PDF values; these remain visible.</p><p><a href="/reconciliation.md">Read the exact source references and reconciliation notes</a></p><h2>Contribution and AI assistance</h2><p>Project owner: Alan Tom. During this review, Alan requested a hiring-focused audit and directed the follow-up implementation. Codex assisted source inspection, parser and interface changes, tests, documentation and deployment preparation. This describes the observed collaboration and does not claim every line was manually written by Alan.</p><p>This prototype has not been certified for accessibility or audited as a financial reporting system. No resident adoption or measured time savings are claimed.</p></section></main></html>
+<!doctype html>
+<html lang="en">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Project notes · Syracuse Budget Explorer</title>
+<style>
+  body { margin: 0; background: #f4f5f1; color: #173140; font: 17px/1.65 system-ui, -apple-system, "Segoe UI", Arial, sans-serif; }
+  main { max-width: 760px; margin: auto; padding: 40px 24px 64px; }
+  h1 { font-size: clamp(30px, 6vw, 44px); line-height: 1.15; letter-spacing: -0.03em; font-weight: 600; margin: 12px 0 8px; }
+  h2 { margin: 0 0 8px; font-size: 20px; font-weight: 600; letter-spacing: -0.01em; }
+  p { margin: 8px 0; }
+  a { color: #1e5870; text-underline-offset: 4px; }
+  a:focus-visible { outline: 2px solid #32736f; outline-offset: 4px; }
+  section { background: #fff; border: 1px solid #e1e5df; border-radius: 4px; padding: 24px; margin-top: 20px; }
+  .label { font-size: 12px; text-transform: uppercase; letter-spacing: 0.1em; color: #6b7c83; }
+  ul { padding-left: 20px; margin: 8px 0; }
+  li { margin: 6px 0; }
+  table { border-collapse: collapse; width: 100%; font-size: 15px; }
+  th, td { text-align: left; padding: 6px 8px; border-bottom: 1px solid #e9ebe5; }
+  th { font-weight: 600; color: #52656d; }
+  td.n { text-align: right; font-variant-numeric: tabular-nums; }
+  .wrap { overflow-x: auto; }
+</style>
+<main>
+  <a href="/">&larr; Back to the explorer</a>
+  <p class="label">Independent project · Alan Tom</p>
+  <h1>Making the Syracuse budget easy to check.</h1>
+  <p>A plain-language guide to the City's adopted budget for July 2026 to June 2027. It is not a City website and is not endorsed by the City.</p>
+
+  <section>
+    <h2>What it does</h2>
+    <p>It shows where the money comes from, where it goes and what changed. You can search any of 916 budget lines, see its history back to 2021, and see which official document each number comes from.</p>
+  </section>
+
+  <section>
+    <h2>Where the numbers come from</h2>
+    <p>Two City documents: the adopted budget book (the official figures) and the City Auditor's budget spreadsheet (each line's history and the proposed budget). The spreadsheet is not official, so the site checks it against the book.</p>
+    <ul>
+      <li>The totals for all six City funds match the budget book.</li>
+      <li>151 lines match the budget book exactly. The site marks them "FY27 adopted".</li>
+      <li>Every other line is shown as proposed, with any final changes the book lists. The site never calls a line adopted unless the book prints that amount.</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Checking the budget books</h2>
+    <p>A program reads the tables in the budget book PDF, adds each one up, and compares the result with the total the book prints. It has been run on the last five budget books.</p>
+    <div class="wrap">
+      <table>
+        <tr><th>Budget book</th><th>Tables that add up</th><th>Totals matching</th></tr>
+        <tr><td>2022-23</td><td class="n">80 of 97</td><td class="n">94.4%</td></tr>
+        <tr><td>2023-24</td><td class="n">86 of 106</td><td class="n">93.3%</td></tr>
+        <tr><td>2024-25</td><td class="n">86 of 99</td><td class="n">94.9%</td></tr>
+        <tr><td>2025-26</td><td class="n">45 of 75</td><td class="n">93.3%</td></tr>
+        <tr><td>2026-27</td><td class="n">43 of 53</td><td class="n">96.1%</td></tr>
+      </table>
+    </div>
+    <p>Every remaining difference was traced. All of them are in the books themselves: most are $1 to $3 of rounding, and twelve are real mistakes, such as a minus sign left off or a line left out of a table but still counted in its total. They are listed on the site under <a href="/#about-project">"Mistakes we found in the City's budget books"</a>.</p>
+    <p>Figures the PDF prints in a broken font are left out and marked unreadable. They are never guessed.</p>
+  </section>
+
+  <section>
+    <h2>Try it in two minutes</h2>
+    <ul>
+      <li>Open <strong>Explore lines</strong>, choose <strong>Money in</strong>, and search "Sales Tax". The line shows that it matches the budget book, and on which page.</li>
+      <li>Search "overtime" under Money out. That line is shown as "FY27 proposed", because the book doesn't confirm it.</li>
+      <li>Scroll to <strong>About this project</strong> to see how far the numbers can be trusted, and the mistakes found in the books.</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Limits</h2>
+    <ul>
+      <li>This is not an audit.</li>
+      <li>Lines the budget book doesn't confirm are proposals, not adopted amounts.</li>
+      <li>The final amendments and the summary text are copied by hand from the budget book.</li>
+      <li>The site has not yet been tested with residents.</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Credits</h2>
+    <p>Built by Alan Tom with AI coding assistants (Codex and Claude). Source code and the full method: <a href="https://github.com/alanwtom/syracuse-budget-explorer">github.com/alanwtom/syracuse-budget-explorer</a>.</p>
+  </section>
+</main>
+</html>

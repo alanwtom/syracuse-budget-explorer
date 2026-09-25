@@ -2,11 +2,13 @@
 
 Five participants, three tasks, roughly 20 minutes each.
 
-**Frozen build: tag `usability-freeze-1` (commit 9bc7565), served at
-<https://syracuse-budget-explorer-alans-project.vercel.app>.** Every participant sees this
-build. Any change under `app/` or `data/` invalidates the pool and needs a new tag and a
-fresh set of five. Sessions run against different builds are separate pools and must never
-be merged into one count.
+**Every participant must see the same build.** Before the first session, tag the commit that
+is live at <https://syracuse-budget-explorer-alans-project.vercel.app> and don't deploy again
+until the fifth session is done. A change under `app/` or `data/` partway through starts a
+new group of five. Results from different builds are kept separate, never added together.
+
+(An earlier tag, `usability-freeze-1`, marks a build from before the redesign and the budget
+book checks. No sessions were run on it.)
 
 Recruit people who do not work in government, accounting or data. A participant who
 already knows what a fund balance is cannot tell you whether a resident understands one.
