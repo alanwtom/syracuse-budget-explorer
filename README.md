@@ -58,10 +58,10 @@ Running the same parser over the five most recent adopted budgets:
 
 | Budget | Pages found | Sections | Sections verified | Column rate |
 | --- | --- | --- | --- | --- |
-| 2022-23 | 25-79 | 85 | 59 | 81.4% |
-| 2023-24 | 25-83 | 90 | 62 | 84.3% |
-| 2024-25 | 23-77 | 87 | 62 | 84.0% |
-| 2025-26 | 38-77 | 69 | 32 | 81.5% |
+| 2022-23 | 25-79 | 97 | 80 | 94.4% |
+| 2023-24 | 25-84 | 106 | 86 | 93.3% |
+| 2024-25 | 23-77 | 99 | 86 | 94.9% |
+| 2025-26 | 38-77 | 75 | 45 | 93.3% |
 | 2026-27 | 50-77 | 53 | 43 | 96.1% |
 
 A section counts as verified only when the document prints a total for it and every column of
@@ -161,6 +161,48 @@ sums at all: a subtotal scaled by a growth factor, a running total, a subtractio
 negative, or rows in one column with their total carried into the next. Each such total is
 checked against that one identity and no other. The identities hold in both year columns of
 the 2025-26 and 2026-27 schedules, and a wrong figure still fails them.
+
+### The earlier budgets
+
+The four earlier books share the layout but not every habit of it, and each difference was found
+by a total that failed to add up:
+
+- Their comparison summaries carry a "% change" column. Left inside a label, the percentage
+  broke the match between "TOTAL DEPARTMENTAL: 4.6%" and the "Departmental Operating
+  Expenditures" heading it closes.
+- On even pages the page number prints on the left and was read as a first column, pushing every
+  figure on the page one column right.
+- A department total can print on the page after its divisions, so a page break is no longer
+  treated as the end of a block.
+- The 2024-25 book prints its "$ Difference" column without signs, so a cut of $4,324 reads
+  "4,324". That column is checked row by row instead: each difference must match its two years,
+  within the $1 that comes from working it out before rounding.
+- Some blocks print their total with no label, or under a neighbour's label where a block's
+  labels run a line out of step. A line equal to every row above it in its block, in every
+  column, is taken as that block's total and counted once. It is not reported as verified,
+  since matching its rows is how it was found.
+- The tax cap schedules do not always print a sign: "Plus Available Carryover" is taken away
+  from the subtractions around it. A worksheet block of at most four lines is accepted when a
+  single choice of signs reproduces the printed total in every year column at once.
+
+What remains in these years is in the books themselves. Most of it is $1 to $3 of rounding. The
+rest is a line left out of a table while its amount stays in the total, confirmed where a
+neighbouring year's book prints the missing line, and one line printed under the wrong
+department:
+
+| Budget | Where | Difference | What the books show |
+| --- | --- | --- | --- |
+| 2022-23 | Finance revenue summary, FY23 | $15,123 | "Sale of Tax Property, $15,123" is missing; the 2023-24 book lists it for FY23 |
+| 2022-23 | Public Works revenue, FY21 actual and FY22 projected | $111 and $125 | amounts in the total that appear on no line of the page |
+| 2023-24 | Finance revenue, FY23 | $40,000 | "Service Kill Fees, $40,000" is missing; the 2022-23 book lists it |
+| 2023-24 | Public Works revenue, FY22 actual | $125 | again $125 for FY22 on no printed line; the 2022-23 book is short $125 for FY22 too, there in the projection |
+| 2024-25 | Executive and Neighborhood & Business Development | $145,415 | the Division of Equity Compliance & Social Impact is printed under Neighborhood but counted in Executive's total |
+
+Those were traced by hand. Six more differences have the same signature, a single column off while
+every other column of the same rows matches, and are taken to be the books' own but have not been
+traced one by one: 2022-23 Downtown assessment ($494), 2023-24 Code Enforcement ($11,307) and
+Police ($1,238), 2024-25 State Aid ($24,190) and Special Objects ($9,708), and a 2025-26 Water
+fund subtotal ($29,866). All are recorded in each year's report with their page numbers.
 
 ## Evidence and limits
 

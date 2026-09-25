@@ -20,7 +20,7 @@
       "page": 50,
       "level": "fund",
       "header": "Real Property Tax Items",
-      "rowCount": 16,
+      "rowCount": 15,
       "coveredBySubtotals": 0,
       "unreadableFigures": 0,
       "verified": false,
@@ -60,7 +60,7 @@
           "difference": 0,
           "status": "exact",
           "method": null,
-          "rowsSummed": 11
+          "rowsSummed": 10
         }
       ],
       "rows": [
@@ -152,19 +152,6 @@
             5000,
             0,
             null
-          ],
-          "unreadable": false
-        },
-        {
-          "code": null,
-          "label": "",
-          "fund": "GENERAL FUND",
-          "page": 50,
-          "values": [
-            null,
-            null,
-            null,
-            0
           ],
           "unreadable": false
         },
@@ -1790,7 +1777,7 @@
       "page": 54,
       "level": "fund",
       "header": null,
-      "rowCount": 12,
+      "rowCount": 9,
       "coveredBySubtotals": 9,
       "unreadableFigures": 0,
       "verified": false,
@@ -1862,19 +1849,6 @@
         },
         {
           "code": null,
-          "label": "",
-          "fund": "GENERAL FUND",
-          "page": 51,
-          "values": [
-            null,
-            null,
-            null,
-            null
-          ],
-          "unreadable": false
-        },
-        {
-          "code": null,
           "label": "Total Code Enforcement",
           "fund": null,
           "page": 52,
@@ -1914,19 +1888,6 @@
         },
         {
           "code": null,
-          "label": "",
-          "fund": "GENERAL FUND",
-          "page": 52,
-          "values": [
-            null,
-            null,
-            null,
-            null
-          ],
-          "unreadable": false
-        },
-        {
-          "code": null,
           "label": "Total Police",
           "fund": null,
           "page": 53,
@@ -1948,19 +1909,6 @@
             350000,
             303462,
             350000
-          ],
-          "unreadable": false
-        },
-        {
-          "code": null,
-          "label": "",
-          "fund": "GENERAL FUND",
-          "page": 53,
-          "values": [
-            null,
-            null,
-            null,
-            null
           ],
           "unreadable": false
         },
@@ -2461,7 +2409,7 @@
       "page": 56,
       "level": "fund",
       "header": null,
-      "rowCount": 11,
+      "rowCount": 8,
       "coveredBySubtotals": 7,
       "unreadableFigures": 2,
       "verified": true,
@@ -2546,19 +2494,6 @@
         },
         {
           "code": null,
-          "label": "",
-          "fund": "GENERAL FUND",
-          "page": 50,
-          "values": [
-            null,
-            null,
-            null,
-            null
-          ],
-          "unreadable": false
-        },
-        {
-          "code": null,
           "label": "TOTAL DEPARTMENTAL INCOME",
           "fund": null,
           "page": 54,
@@ -2567,19 +2502,6 @@
             26925280,
             25465849,
             26863586
-          ],
-          "unreadable": false
-        },
-        {
-          "code": null,
-          "label": "",
-          "fund": "GENERAL FUND",
-          "page": 54,
-          "values": [
-            null,
-            null,
-            null,
-            null
           ],
           "unreadable": false
         },
@@ -2621,19 +2543,6 @@
             null
           ],
           "unreadable": true
-        },
-        {
-          "code": null,
-          "label": "",
-          "fund": "GENERAL FUND",
-          "page": 55,
-          "values": [
-            null,
-            null,
-            null,
-            null
-          ],
-          "unreadable": false
         },
         {
           "code": null,
@@ -2714,7 +2623,7 @@
         },
         {
           "code": null,
-          "label": "1% Added Pursuant to Law",
+          "label": "Added Pursuant to Law",
           "fund": "GENERAL FUND",
           "page": 57,
           "values": [
@@ -4305,7 +4214,7 @@
       "page": 66,
       "level": "fund",
       "header": null,
-      "rowCount": 17,
+      "rowCount": 15,
       "coveredBySubtotals": 9,
       "unreadableFigures": 5,
       "verified": false,
@@ -4403,19 +4312,6 @@
         },
         {
           "code": null,
-          "label": "",
-          "fund": "GENERAL FUND",
-          "page": 64,
-          "values": [
-            null,
-            null,
-            null,
-            null
-          ],
-          "unreadable": false
-        },
-        {
-          "code": null,
           "label": "Office of the City Auditor",
           "fund": "GENERAL FUND",
           "page": 65,
@@ -4507,19 +4403,6 @@
         },
         {
           "code": null,
-          "label": "",
-          "fund": "GENERAL FUND",
-          "page": 65,
-          "values": [
-            null,
-            null,
-            null,
-            null
-          ],
-          "unreadable": false
-        },
-        {
-          "code": null,
           "label": "Total Public Works",
           "fund": null,
           "page": 66,
@@ -4576,8 +4459,8 @@
       "name": "SPECIAL OBJECTS",
       "page": 68,
       "level": "fund",
-      "header": null,
-      "rowCount": 60,
+      "header": "Special Objects of Expense",
+      "rowCount": 59,
       "coveredBySubtotals": 0,
       "unreadableFigures": 8,
       "verified": true,
@@ -5088,19 +4971,6 @@
             null
           ],
           "unreadable": true
-        },
-        {
-          "code": null,
-          "label": "",
-          "fund": "GENERAL FUND",
-          "page": 67,
-          "values": [
-            null,
-            null,
-            null,
-            null
-          ],
-          "unreadable": false
         },
         {
           "code": "590810",
@@ -6717,15 +6587,6 @@
       "columns": [
         {
           "column": 0,
-          "printed": null,
-          "summed": 0,
-          "difference": null,
-          "status": "no printed total",
-          "method": null,
-          "rowsSummed": 0
-        },
-        {
-          "column": 1,
           "printed": 130898958,
           "summed": 130898958,
           "difference": 0,
@@ -6734,7 +6595,7 @@
           "rowsSummed": 4
         },
         {
-          "column": 2,
+          "column": 1,
           "printed": 136270267,
           "summed": 136270267,
           "difference": 0,
@@ -6750,7 +6611,6 @@
           "fund": "CROUSE MARSHALL SPECIAL ASSESSMENT",
           "page": 76,
           "values": [
-            null,
             123312473,
             127415912
           ],
@@ -6762,7 +6622,6 @@
           "fund": "CROUSE MARSHALL SPECIAL ASSESSMENT",
           "page": 76,
           "values": [
-            null,
             1161670,
             1370770
           ],
@@ -6774,7 +6633,6 @@
           "fund": "CROUSE MARSHALL SPECIAL ASSESSMENT",
           "page": 76,
           "values": [
-            null,
             147140,
             176567
           ],
@@ -6786,7 +6644,6 @@
           "fund": "CROUSE MARSHALL SPECIAL ASSESSMENT",
           "page": 76,
           "values": [
-            null,
             6277675,
             7307018
           ],
@@ -6807,15 +6664,6 @@
       "columns": [
         {
           "column": 0,
-          "printed": null,
-          "summed": 0,
-          "difference": null,
-          "status": "no printed total",
-          "method": null,
-          "rowsSummed": 0
-        },
-        {
-          "column": 1,
           "printed": 131762891,
           "summed": 0,
           "difference": -131762891,
@@ -6824,7 +6672,7 @@
           "rowsSummed": 0
         },
         {
-          "column": 2,
+          "column": 1,
           "printed": 136270267,
           "summed": 0,
           "difference": -136270267,
@@ -6840,7 +6688,6 @@
           "fund": "CROUSE MARSHALL SPECIAL ASSESSMENT",
           "page": 76,
           "values": [
-            null,
             null,
             null
           ],
@@ -6861,15 +6708,6 @@
       "columns": [
         {
           "column": 0,
-          "printed": null,
-          "summed": 0,
-          "difference": null,
-          "status": "no printed total",
-          "method": null,
-          "rowsSummed": 0
-        },
-        {
-          "column": 1,
           "printed": 137971084,
           "summed": 6208193,
           "difference": -131762891,
@@ -6878,7 +6716,7 @@
           "rowsSummed": 2
         },
         {
-          "column": 2,
+          "column": 1,
           "printed": 142025267,
           "summed": 5755000,
           "difference": -136270267,
@@ -6894,7 +6732,6 @@
           "fund": "CROUSE MARSHALL SPECIAL ASSESSMENT",
           "page": 76,
           "values": [
-            null,
             6208193,
             5755000
           ],
@@ -6906,7 +6743,6 @@
           "fund": "CROUSE MARSHALL SPECIAL ASSESSMENT",
           "page": 76,
           "values": [
-            null,
             0,
             0
           ],
@@ -6927,15 +6763,6 @@
       "columns": [
         {
           "column": 0,
-          "printed": null,
-          "summed": 0,
-          "difference": null,
-          "status": "no printed total",
-          "method": null,
-          "rowsSummed": 0
-        },
-        {
-          "column": 1,
           "printed": -5755000,
           "summed": 5755000,
           "difference": 11510000,
@@ -6944,7 +6771,7 @@
           "rowsSummed": 2
         },
         {
-          "column": 2,
+          "column": 1,
           "printed": -5571307,
           "summed": 5571307,
           "difference": 11142614,
@@ -6960,7 +6787,6 @@
           "fund": "CROUSE MARSHALL SPECIAL ASSESSMENT",
           "page": 76,
           "values": [
-            null,
             5755000,
             5571307
           ],
@@ -6972,7 +6798,6 @@
           "fund": "CROUSE MARSHALL SPECIAL ASSESSMENT",
           "page": 76,
           "values": [
-            null,
             0,
             0
           ],
@@ -6993,15 +6818,6 @@
       "columns": [
         {
           "column": 0,
-          "printed": null,
-          "summed": 0,
-          "difference": null,
-          "status": "no printed total",
-          "method": null,
-          "rowsSummed": 0
-        },
-        {
-          "column": 1,
           "printed": 136270267,
           "summed": 136270267,
           "difference": 0,
@@ -7010,7 +6826,7 @@
           "rowsSummed": 4
         },
         {
-          "column": 2,
+          "column": 1,
           "printed": 140125926,
           "summed": 140125926,
           "difference": 0,
@@ -7026,7 +6842,6 @@
           "fund": "CROUSE MARSHALL SPECIAL ASSESSMENT",
           "page": 76,
           "values": [
-            null,
             127415912,
             130359277
           ],
@@ -7038,7 +6853,6 @@
           "fund": "CROUSE MARSHALL SPECIAL ASSESSMENT",
           "page": 76,
           "values": [
-            null,
             1370770,
             1411893
           ],
@@ -7050,7 +6864,6 @@
           "fund": "CROUSE MARSHALL SPECIAL ASSESSMENT",
           "page": 76,
           "values": [
-            null,
             176567,
             181864
           ],
@@ -7062,7 +6875,6 @@
           "fund": "CROUSE MARSHALL SPECIAL ASSESSMENT",
           "page": 76,
           "values": [
-            null,
             7307018,
             8172892
           ],
@@ -7107,80 +6919,66 @@
           "status": "mismatch",
           "method": null,
           "rowsSummed": 5
-        },
-        {
-          "column": 3,
-          "printed": null,
-          "summed": 0,
-          "difference": null,
-          "status": "no printed total",
-          "method": null,
-          "rowsSummed": 0
         }
       ],
       "rows": [
         {
           "code": null,
-          "label": "2021/2022 61.83%",
+          "label": "2021/2022",
           "fund": "CROUSE MARSHALL SPECIAL ASSESSMENT",
           "page": 77,
           "values": [
             4019344386,
             null,
-            6500637855,
-            null
+            6500637855
           ],
           "unreadable": false
         },
         {
           "code": null,
-          "label": "2022/2023 59.69%",
+          "label": "2022/2023",
           "fund": "CROUSE MARSHALL SPECIAL ASSESSMENT",
           "page": 77,
           "values": [
             4184136940,
             null,
-            7009778757,
-            null
+            7009778757
           ],
           "unreadable": false
         },
         {
           "code": null,
-          "label": "2023/2024 55.09%",
+          "label": "2023/2024",
           "fund": "CROUSE MARSHALL SPECIAL ASSESSMENT",
           "page": 77,
           "values": [
             4378684615,
             null,
-            7948238546,
-            null
+            7948238546
           ],
           "unreadable": false
         },
         {
           "code": null,
-          "label": "2024/2025 53.68%",
+          "label": "2024/2025",
           "fund": "CROUSE MARSHALL SPECIAL ASSESSMENT",
           "page": 77,
           "values": [
             4524164423,
             null,
-            8428026123,
-            null
+            8428026123
           ],
           "unreadable": false
         },
         {
           "code": null,
-          "label": "2025/2026 51.28%",
+          "label": "2025/2026",
           "fund": "CROUSE MARSHALL SPECIAL ASSESSMENT",
           "page": 77,
           "values": [
             4628400330,
             null,
-            9025741673,
-            null
+            9025741673
           ],
           "unreadable": false
         }
@@ -7223,15 +7021,6 @@
           "status": "exact",
           "method": "carried into the total column",
           "rowsSummed": 0
-        },
-        {
-          "column": 3,
-          "printed": null,
-          "summed": 0,
-          "difference": null,
-          "status": "no printed total",
-          "method": null,
-          "rowsSummed": 0
         }
       ],
       "rows": [
@@ -7243,7 +7032,6 @@
           "values": [
             null,
             61913554,
-            null,
             null
           ],
           "unreadable": false
@@ -7256,7 +7044,6 @@
           "values": [
             null,
             68445723,
-            null,
             null
           ],
           "unreadable": false
@@ -7269,7 +7056,6 @@
           "values": [
             null,
             1411893,
-            null,
             null
           ],
           "unreadable": false
@@ -7282,7 +7068,6 @@
           "values": [
             null,
             181864,
-            null,
             null
           ],
           "unreadable": false
@@ -7295,7 +7080,6 @@
           "values": [
             null,
             8172892,
-            null,
             null
           ],
           "unreadable": false
@@ -7339,15 +7123,6 @@
           "status": "exact",
           "method": "carried into the total column",
           "rowsSummed": 0
-        },
-        {
-          "column": 3,
-          "printed": null,
-          "summed": 0,
-          "difference": null,
-          "status": "no printed total",
-          "method": null,
-          "rowsSummed": 0
         }
       ],
       "rows": [
@@ -7359,7 +7134,6 @@
           "values": [
             null,
             26495345,
-            null,
             null
           ],
           "unreadable": false
@@ -7372,7 +7146,6 @@
           "values": [
             null,
             1467424,
-            null,
             null
           ],
           "unreadable": false
@@ -7385,7 +7158,6 @@
           "values": [
             null,
             5826623,
-            null,
             null
           ],
           "unreadable": false
@@ -7398,7 +7170,6 @@
           "values": [
             null,
             1343400,
-            null,
             null
           ],
           "unreadable": false
@@ -7411,7 +7182,6 @@
           "values": [
             null,
             266581,
-            null,
             null
           ],
           "unreadable": false
@@ -7424,7 +7194,6 @@
           "values": [
             null,
             333000,
-            null,
             null
           ],
           "unreadable": false
@@ -7437,7 +7206,6 @@
           "values": [
             null,
             0,
-            null,
             null
           ],
           "unreadable": false
@@ -7450,7 +7218,6 @@
           "values": [
             null,
             1145000,
-            null,
             null
           ],
           "unreadable": false
@@ -7463,7 +7230,6 @@
           "values": [
             null,
             0,
-            null,
             null
           ],
           "unreadable": false
@@ -7476,7 +7242,6 @@
           "values": [
             null,
             0,
-            null,
             null
           ],
           "unreadable": false

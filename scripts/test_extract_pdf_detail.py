@@ -9,6 +9,10 @@ import unittest
 
 from extract_pdf_detail import (
     FACTOR,
+    NUMERIC,
+    PERCENT,
+    STATEMENT_START,
+    column_centres,
     FUND_HEADER,
     PAGE_HEADING,
     join_split_figures,
@@ -439,6 +443,130 @@ class FundHeadings(unittest.TestCase):
     def test_the_assessment_department_is_not_a_fund(self):
         """Read as a fund, it filed 51 General Fund lines under a fund that does not exist."""
         self.assertIsNone(FUND_HEADER.search("Assessment"))
+
+
+class PriorYearLayouts(unittest.TestCase):
+    """Layouts found in the 2022-23 to 2025-26 budget books."""
+
+    def report(self, lines):
+        return reconcile(build_sections(resolve_columns(lines)))
+
+    def test_a_percentage_is_not_part_of_a_label(self):
+        """"TOTAL DEPARTMENTAL: 4.6%" must still close "Departmental Operating Expenditures"."""
+        self.assertTrue(PERCENT.match("4.6%"))
+        self.assertTrue(PERCENT.match("(2.5%)"))
+        self.assertIsNone(to_number("4.6%"))
+
+    def test_a_figure_may_carry_a_dollar_sign(self):
+        self.assertTrue(NUMERIC.match("$5,296,329,457"))
+        self.assertEqual(to_number("$5,296,329,457"), 5296329457)
+
+    def test_the_tax_schedules_start_statements_of_their_own(self):
+        for title in ("PROPERTY TAX CAP CALCULATION", "COMPUTATION OF CONSTITUTIONAL TAX LIMIT"):
+            self.assertTrue(STATEMENT_START.search(title), title)
+
+    def test_a_department_total_on_the_page_after_its_rows(self):
+        """"Total Public Works" printed on the next page still closes its divisions."""
+        rows = [
+            line("EXPENDITURE SUMMARY - ADOPTED BUDGET", 280, page=67),
+            line("Public Works", 24, page=67),
+            line("DPW Main Office", 148, [("100", 723)], page=67),
+            line("DPW Street Repair", 148, [("50", 723)], page=67),
+            line("EXPENDITURE SUMMARY - ADOPTED BUDGET", 280, page=68),
+            line("Total Public Works", 148, [("150", 723)], page=68),
+        ]
+        total = next(s for s in self.report(rows) if s["name"] == "Public Works")
+        self.assertEqual(total["rowCount"], 2)
+        self.assertEqual(total["columns"][0]["status"], "exact")
+
+    def test_a_heading_that_adds_a_first_word(self):
+        """"Cash Capital Appropriations & Debt Service" closes at "TOTAL CAPITAL APPROPRIATION ..."."""
+        rows = [
+            line("Cash Capital Appropriations & Debt Service", 24),
+            line("Transfer to Capital Projects Fund", 24),
+            line("Cash Capital Appropriations", 117, [("12,209,300", 723)]),
+            line("Transfer to Debt Service Fund", 24),
+            line("Serial Bond Principal & Interest", 117, [("19,515,920", 723)]),
+            line("TOTAL CAPITAL APPROPRIATION AND DEBT SERVICE", 24, [("31,725,220", 723)]),
+        ]
+        self.assertEqual(self.report(rows)[-1]["columns"][0]["status"], "exact")
+
+    def test_an_unlabelled_total_is_counted_once(self):
+        """The 2023-24 Federal Aid block prints its total with no label."""
+        rows = [
+            line("GENERAL FUND", 53),
+            line("Federal Aid", 53),
+            line("Federal American Relief Plan", 53, [("16,736,551", 638), ("4,000,000", 723)]),
+            line("", 0, [("16,736,551", 638), ("4,000,000", 723)]),
+            line("Sale of Property", 53),
+            line("Sale of Surplus", 53, [("100", 638), ("200", 723)]),
+            line("TOTAL SALE OF PROPERTY", 53, [("100", 638), ("200", 723)]),
+            line("TOTAL GENERAL FUND REVENUE", 53, [("16,736,651", 638), ("4,000,200", 723)]),
+        ]
+        fund = next(s for s in self.report(rows) if s["name"] == "GENERAL FUND REVENUE")
+        for column in fund["columns"]:
+            self.assertEqual(column["status"], "exact", column)
+
+    def test_a_subtotal_under_the_wrong_label_is_still_a_subtotal(self):
+        """Where a block's labels print a line out of step, its subtotal carries a neighbour's."""
+        rows = [
+            line("MUNICIPAL SIDEWALK FUND", 76),
+            line("Cash Capital Appropriations & Debt Service", 211),
+            line("Serial Bond Principal", 211, [("184,000", 550), ("779,317", 638)]),
+            line("Serial Bonds Interest", 211, [("113,120", 550), ("262,002", 638)]),
+            line("Serial Bond Principal & Interest", 226, [("297,120", 550), ("1,041,319", 638)]),
+            line("TOTAL MUNICIPAL SIDEWALK FUND BUDGET", 76, [("297,120", 550), ("1,041,319", 638)]),
+        ]
+        fund = self.report(rows)[-1]
+        self.assertEqual([c["status"] for c in fund["columns"] if c["printed"] is not None], ["exact", "exact"])
+
+    def test_a_difference_column_printed_without_signs(self):
+        """2024-25 prints a cut of $4,324 as "4,324"; it is checked row by row."""
+        rows = [
+            line("Executive", 24),
+            line("Office of the Mayor", 160, [("720,994", 444), ("967,374", 550), ("246,380", 638)]),
+            line("Gun Violence Prevention", 160, [("270,000", 444), ("265,676", 550), ("4,324", 638)]),
+            line("Total Executive", 160, [("990,994", 444), ("1,233,050", 550), ("242,056", 638)]),
+        ]
+        column = self.report(rows)[0]["columns"][2]
+        self.assertEqual(column["status"], "exact")
+        self.assertIn("each row's difference", column["method"])
+
+    def test_a_wrong_difference_is_not_excused(self):
+        rows = [
+            line("Executive", 24),
+            line("Office of the Mayor", 160, [("720,994", 444), ("967,374", 550), ("246,380", 638)]),
+            line("Gun Violence Prevention", 160, [("270,000", 444), ("265,676", 550), ("9,999", 638)]),
+            line("Total Executive", 160, [("990,994", 444), ("1,233,050", 550), ("242,056", 638)]),
+        ]
+        self.assertEqual(self.report(rows)[0]["columns"][2]["status"], "mismatch")
+
+    def test_a_line_taken_away_without_a_printed_sign(self):
+        """"Plus Available Carryover" reduces the subtractions it sits among."""
+        rows = [
+            line("PILOTS Receivable for the Coming Year", 206, [("4,814,904", 550), ("6,040,150", 723)]),
+            line("Plus Available Carryover from the Prior Year", 206, [("1,329,273", 550), ("939,980", 723)]),
+            line("Subtotal", 199, [("3,485,631", 550), ("5,100,170", 723)]),
+        ]
+        columns = [c for c in self.report(rows)[0]["columns"] if c["printed"] is not None]
+        self.assertEqual([c["status"] for c in columns], ["exact", "exact"])
+        self.assertEqual(columns[0]["method"], "lines added and taken away")
+
+    def test_signs_must_agree_across_columns(self):
+        """One choice of signs has to reproduce every column, not a different one each."""
+        rows = [
+            line("PILOTS Receivable for the Coming Year", 206, [("4,814,904", 550), ("6,040,150", 723)]),
+            line("Plus Available Carryover from the Prior Year", 206, [("1,329,273", 550), ("939,980", 723)]),
+            line("Subtotal", 199, [("3,485,631", 550), ("6,980,130", 723)]),
+        ]
+        columns = [c for c in self.report(rows)[0]["columns"] if c["printed"] is not None]
+        self.assertIn("mismatch", [c["status"] for c in columns])
+
+    def test_a_stray_number_in_a_label_is_not_a_column(self):
+        """"Legal Costs 207A" must not shift a full page of figures one column over."""
+        rows = [line(f"Row {n}", 117, [("1,000", 444), ("2,000", 550), ("1,000", 638)]) for n in range(10)]
+        rows.append(line("Legal Costs", 117, [("207", 300), ("70,000", 444), ("70,000", 550), ("0", 638)]))
+        self.assertEqual(len(column_centres(rows)), 3)
 
 
 class DamageReporting(unittest.TestCase):
