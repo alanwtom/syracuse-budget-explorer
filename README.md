@@ -147,6 +147,11 @@ npm run build
 npx vercel deploy --prebuilt --prod
 ```
 
+A GitHub Actions workflow deploys automatically once CI passes on `main`, so the demo cannot
+drift behind the repository the way it did when deploying was manual. It requires a
+`VERCEL_TOKEN` repository secret; without one the job reports that it skipped rather than
+failing. The project and organisation ids are already set as secrets.
+
 The demo is a prototype for reading the data, not a City service and not an audited financial
 reporting system.
 
