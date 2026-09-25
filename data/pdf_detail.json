@@ -5,13 +5,13 @@
     77
   ],
   "summary": {
-    "sections": 49,
+    "sections": 51,
     "sectionsVerified": 29,
     "sectionsUncheckable": 0,
-    "columnsExact": 128,
-    "columnsMismatched": 43,
+    "columnsExact": 130,
+    "columnsMismatched": 49,
     "columnsIncomplete": 14,
-    "reconciliationRate": 0.7485,
+    "reconciliationRate": 0.7263,
     "unreadableFigures": 13
   },
   "sections": [
@@ -4532,12 +4532,12 @@
       ]
     },
     {
-      "name": "MUNICIPAL SIDEWALK FUND BUDGET",
+      "name": "Subtotal",
       "page": 70,
-      "level": "fund",
+      "level": "department",
       "header": "Serial Bond Principal & Interest",
-      "rowCount": 1,
-      "coveredBySubtotals": 1,
+      "rowCount": 0,
+      "coveredBySubtotals": 0,
       "unreadableFigures": 0,
       "verified": false,
       "fund": "MUNICIPAL SIDEWALK FUND",
@@ -4545,34 +4545,80 @@
         {
           "column": 0,
           "printed": 0,
-          "summed": 39144,
-          "difference": 39144,
-          "status": "mismatch",
-          "rowsSummed": 1
+          "summed": 0,
+          "difference": 0,
+          "status": "exact",
+          "rowsSummed": 0
         },
         {
           "column": 1,
           "printed": 1041319,
-          "summed": 88459,
-          "difference": -952860,
+          "summed": 0,
+          "difference": -1041319,
           "status": "mismatch",
-          "rowsSummed": 1
+          "rowsSummed": 0
         },
         {
           "column": 2,
           "printed": 1496406,
-          "summed": 74723,
-          "difference": -1421683,
+          "summed": 0,
+          "difference": -1496406,
           "status": "mismatch",
-          "rowsSummed": 1
+          "rowsSummed": 0
         },
         {
           "column": 3,
           "printed": 1467424,
-          "summed": 91998,
-          "difference": -1375426,
+          "summed": 0,
+          "difference": -1467424,
           "status": "mismatch",
-          "rowsSummed": 1
+          "rowsSummed": 0
+        }
+      ],
+      "rows": []
+    },
+    {
+      "name": "MUNICIPAL SIDEWALK FUND BUDGET",
+      "page": 70,
+      "level": "fund",
+      "header": null,
+      "rowCount": 2,
+      "coveredBySubtotals": 2,
+      "unreadableFigures": 0,
+      "verified": false,
+      "fund": "MUNICIPAL SIDEWALK FUND",
+      "columns": [
+        {
+          "column": 0,
+          "printed": 1033508,
+          "summed": 39144,
+          "difference": -994364,
+          "status": "mismatch",
+          "rowsSummed": 2
+        },
+        {
+          "column": 1,
+          "printed": 2285237,
+          "summed": 1129778,
+          "difference": -1155459,
+          "status": "mismatch",
+          "rowsSummed": 2
+        },
+        {
+          "column": 2,
+          "printed": 2686392,
+          "summed": 1571129,
+          "difference": -1115263,
+          "status": "mismatch",
+          "rowsSummed": 2
+        },
+        {
+          "column": 3,
+          "printed": 2719688,
+          "summed": 1559422,
+          "difference": -1160266,
+          "status": "mismatch",
+          "rowsSummed": 2
         }
       ],
       "rows": [
@@ -4586,6 +4632,19 @@
             88459,
             74723,
             91998
+          ],
+          "unreadable": false
+        },
+        {
+          "code": null,
+          "label": "Subtotal",
+          "fund": null,
+          "page": 70,
+          "values": [
+            0,
+            1041319,
+            1496406,
+            1467424
           ],
           "unreadable": false
         }
@@ -4941,12 +5000,12 @@
       ]
     },
     {
-      "name": "WATER FUND BUDGET",
+      "name": "Subtotal",
       "page": 71,
-      "level": "fund",
+      "level": "department",
       "header": null,
-      "rowCount": 3,
-      "coveredBySubtotals": 3,
+      "rowCount": 0,
+      "coveredBySubtotals": 0,
       "unreadableFigures": 0,
       "verified": false,
       "fund": "WATER FUND",
@@ -4954,34 +5013,80 @@
         {
           "column": 0,
           "printed": 1278267,
-          "summed": 20109381,
-          "difference": 18831114,
+          "summed": 0,
+          "difference": -1278267,
           "status": "mismatch",
-          "rowsSummed": 3
+          "rowsSummed": 0
         },
         {
           "column": 1,
           "printed": 7283929,
-          "summed": 25342917,
-          "difference": 18058988,
+          "summed": 0,
+          "difference": -7283929,
           "status": "mismatch",
-          "rowsSummed": 3
+          "rowsSummed": 0
         },
         {
           "column": 2,
           "printed": 6947757,
-          "summed": 23225005,
-          "difference": 16277248,
+          "summed": 0,
+          "difference": -6947757,
           "status": "mismatch",
-          "rowsSummed": 3
+          "rowsSummed": 0
         },
         {
           "column": 3,
           "printed": 6971623,
-          "summed": 27349260,
-          "difference": 20377637,
+          "summed": 0,
+          "difference": -6971623,
           "status": "mismatch",
-          "rowsSummed": 3
+          "rowsSummed": 0
+        }
+      ],
+      "rows": []
+    },
+    {
+      "name": "WATER FUND BUDGET",
+      "page": 71,
+      "level": "fund",
+      "header": null,
+      "rowCount": 4,
+      "coveredBySubtotals": 4,
+      "unreadableFigures": 0,
+      "verified": false,
+      "fund": "WATER FUND",
+      "columns": [
+        {
+          "column": 0,
+          "printed": 21387648,
+          "summed": 21387648,
+          "difference": 0,
+          "status": "exact",
+          "rowsSummed": 4
+        },
+        {
+          "column": 1,
+          "printed": 31031846,
+          "summed": 32626846,
+          "difference": 1595000,
+          "status": "mismatch",
+          "rowsSummed": 4
+        },
+        {
+          "column": 2,
+          "printed": 28577762,
+          "summed": 30172762,
+          "difference": 1595000,
+          "status": "mismatch",
+          "rowsSummed": 4
+        },
+        {
+          "column": 3,
+          "printed": 33175883,
+          "summed": 34320883,
+          "difference": 1145000,
+          "status": "mismatch",
+          "rowsSummed": 4
         }
       ],
       "rows": [
@@ -5021,6 +5126,19 @@
             1595000,
             1595000,
             1145000
+          ],
+          "unreadable": false
+        },
+        {
+          "code": null,
+          "label": "Subtotal",
+          "fund": null,
+          "page": 71,
+          "values": [
+            1278267,
+            7283929,
+            6947757,
+            6971623
           ],
           "unreadable": false
         }

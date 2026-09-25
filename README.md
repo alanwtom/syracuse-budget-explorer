@@ -43,12 +43,12 @@ That check is the accuracy measure, and it is reported rather than assumed:
 
 | | |
 | --- | --- |
-| Sections found | 49 |
+| Sections found | 51 |
 | Sections verified against their printed total | 29 |
-| Column totals matching exactly | 128 |
-| Column totals disagreeing | 43 |
+| Column totals matching exactly | 130 |
+| Column totals disagreeing | 49 |
 | Column totals incomplete (a figure could not be read) | 14 |
-| Column reconciliation rate | 74.9% |
+| Column reconciliation rate | 72.6% |
 
 The page range is found rather than configured: the tables are the longest run of pages
 carrying a "REVENUE SUMMARY" or "EXPENDITURE SUMMARY" heading, ignoring the single mention on
@@ -62,7 +62,7 @@ Running the same parser over the five most recent adopted budgets:
 | 2023-24 | 25-83 | 90 | 51 | 69.3% |
 | 2024-25 | 23-77 | 87 | 56 | 74.9% |
 | 2025-26 | 38-77 | 47 | 26 | 66.1% |
-| 2026-27 | 50-77 | 49 | 29 | 74.9% |
+| 2026-27 | 50-77 | 51 | 29 | 72.6% |
 
 A section counts as verified only when the document prints a total for it and every column of
 that total matches the rows summed beneath it. Sections with nothing to check against are
@@ -100,9 +100,20 @@ a disagreement, because the damage is in the document and not in the parse.
 The parser reproduces the $3 Public Works difference already recorded in the reconciliation
 notes, this time from the PDF rather than the workbook, and surfaces a $1 difference in
 Neighborhood & Business Development. The remaining disagreements are recorded in
-`data/pdf_detail.json` with their page numbers and are not yet explained. They cluster on the
-fund expense pages, where some totals print their figures on a different line from their
-label; that layout is not yet parsed correctly and is reported rather than guessed at.
+`data/pdf_detail.json` with their page numbers.
+
+On the fund expense pages a grand total's label prints on its own baseline with its figures
+underneath, while the figures beside the label belong to the block above. Read naively the Water
+fund's total came out as $6,971,623, its capital block, instead of the $33,175,883 the budget
+book prints. The figures are now swapped rather than discarded, and the displaced row stays as
+the closing subtotal of its block, so Water and Municipal Sidewalk report their published
+totals. A page number is also an unlabelled figure, so the repair only applies when the row
+below carries a figure for every column the total does.
+
+Those two funds still do not reconcile, and the reported rate falls from 74.9% to 72.6% because
+the repair exposes the disagreement instead of hiding it behind a wrong total. The cause is a
+block on those pages whose own rows are not being captured, which leaves a subtotal attached to
+the wrong row above it. That is unresolved.
 
 ## Evidence and limits
 

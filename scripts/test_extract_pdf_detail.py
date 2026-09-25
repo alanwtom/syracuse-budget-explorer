@@ -9,6 +9,7 @@ import unittest
 
 from extract_pdf_detail import (
     SEPARATOR,
+    attach_split_totals,
     detect_page_range,
     TOTAL_LINE,
     build_sections,
@@ -146,6 +147,51 @@ class Subtotals(unittest.TestCase):
         fund = report[-1]
         self.assertEqual(fund["columns"][0]["summed"], 150, "leaves were counted twice")
         self.assertEqual(fund["columns"][0]["status"], "exact")
+
+
+class SplitTotals(unittest.TestCase):
+    """A fund total whose figures print on the line beneath its label."""
+
+    def test_the_total_takes_the_figures_printed_below_it(self):
+        repaired = attach_split_totals([
+            line("TOTAL WATER FUND BUDGET", 53,
+                 [("1,278,267", 444), ("7,283,929", 550), ("6,947,757", 638), ("6,971,623", 723)]),
+            line("", 0,
+                 [("21,387,648", 444), ("31,031,846", 550), ("28,577,762", 638), ("33,175,883", 723)]),
+        ])
+        total = next(l for l in repaired if l["label"].startswith("TOTAL"))
+        self.assertEqual(total["figures"][-1]["text"], "33,175,883")
+
+    def test_the_displaced_figures_survive_as_a_closing_subtotal(self):
+        """Dropping them would leave the block with nothing to check against."""
+        repaired = attach_split_totals([
+            line("TOTAL WATER FUND BUDGET", 53,
+                 [("1,278,267", 444), ("7,283,929", 550), ("6,947,757", 638), ("6,971,623", 723)]),
+            line("", 0,
+                 [("21,387,648", 444), ("31,031,846", 550), ("28,577,762", 638), ("33,175,883", 723)]),
+        ])
+        self.assertEqual(len(repaired), 2)
+        displaced = repaired[0]
+        self.assertEqual(displaced["figures"][-1]["text"], "6,971,623")
+        self.assertTrue(TOTAL_LINE.match(displaced["label"]))
+        self.assertGreater(displaced["indent"], 100, "must close its block, not the fund")
+
+    def test_a_page_number_beneath_a_total_is_not_mistaken_for_its_figures(self):
+        rows = [
+            line("TOTAL SEWER FUND BUDGET", 53, [("1", 444), ("2", 550), ("3", 638), ("4", 723)]),
+            line("", 0, [("58", 742)]),
+        ]
+        repaired = attach_split_totals(rows)
+        total = next(l for l in repaired if l["label"].startswith("TOTAL"))
+        self.assertEqual([f["text"] for f in total["figures"]], ["1", "2", "3", "4"])
+
+    def test_a_department_total_is_left_alone(self):
+        repaired = attach_split_totals([
+            line("Total Executive", 180, [("100", 444), ("200", 550)]),
+            line("", 0, [("900", 444), ("800", 550)]),
+        ])
+        total = repaired[0]
+        self.assertEqual(total["figures"][0]["text"], "100")
 
 
 class DamageReporting(unittest.TestCase):

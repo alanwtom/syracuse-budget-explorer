@@ -143,16 +143,20 @@ def merge_wrapped_labels(lines):
 
 
 def attach_split_totals(lines):
-    """Give a total its figures when the document prints them on the next line.
+    """Repair a fund total whose figures print on the line below its label.
 
-    Some fund totals are set with the label on one baseline and its figures on
-    the next, leaving a row of figures that belongs to no label at all. The
-    figures sharing the label's baseline belong to the block above it, which is
-    already counted through that block's own subtotal.
+    On the fund expense pages the grand total's label sits on its own baseline
+    and its figures print underneath, while the figures that share the label's
+    baseline belong to the block above it. Read naively, the fund total takes the
+    block's figures and the real total is left owned by nothing, to be summed
+    into the next section as though it were an ordinary row.
 
-    Reassigning the orphan is the only reading that leaves every figure owned by
-    something. Left alone it would be summed into the following section as if it
-    were an ordinary row.
+    Both readings are geometrically plausible, so the document decides: the
+    figures are swapped rather than discarded, and the displaced row stays as a
+    member of the block. Only a fund-level total is repaired, and only when the
+    row below carries no label of its own. Whether the repair was right is then
+    settled by the same reconciliation every other section faces - if the swap is
+    wrong, the block stops adding up and is reported as a mismatch.
     """
     out = []
     skip = False
@@ -163,11 +167,22 @@ def attach_split_totals(lines):
         following = lines[index + 1] if index + 1 < len(lines) else None
         if (
             TOTAL_LINE.match(line["label"])
+            and line["indent"] <= HEADER_MAX_X
+            and line["figures"]
             and following is not None
             and not following["label"]
-            and following["figures"]
+            # A page number is also an unlabelled figure. A displaced total
+            # carries a figure for every column the total line does.
+            and len(following["figures"]) == len(line["figures"]) >= 2
         ):
-            out.append(dict(line, figures=following["figures"]))
+            # The figures on the label's baseline are the closing subtotal of the
+            # block above, not an extra row inside it. Labelling them as such
+            # lets them close that block instead of being added on top of it.
+            # Indented past the fund margin so it closes the block above it
+            # rather than the whole fund.
+            out.append(dict(following, label="Subtotal", code=None,
+                            indent=HEADER_MAX_X + 1, figures=line["figures"]))
+            out.append(dict(line, figures=following["figures"], splitTotal=True))
             skip = True
             continue
         out.append(line)
@@ -218,6 +233,42 @@ def resolve_columns(lines):
     return resolved
 
 
+def absorb_rolled_up_subtotals(subtotals, closing):
+    """Drop subtotals that a later one already rolls up.
+
+    These tables sometimes close several blocks and then print a combined figure
+    for them before the fund total. Treating that combined figure as a sibling of
+    the blocks it summarises counts them twice. If a trailing run of subtotals
+    sums to the closing figure on every column both report, the closing figure
+    supersedes them.
+    """
+    closing_values = closing["columns"]
+    for start in range(len(subtotals)):
+        run = subtotals[start:]
+        if not run:
+            continue
+        matched = False
+        for index, value in enumerate(closing_values):
+            if value is None:
+                continue
+            total = 0
+            seen = False
+            for member in run:
+                member_value = member["columns"][index] if index < len(member["columns"]) else None
+                if member_value is not None:
+                    total += member_value
+                    seen = True
+            if not seen:
+                continue
+            if abs(total - value) > 0.01:
+                matched = False
+                break
+            matched = True
+        if matched:
+            return subtotals[:start]
+    return subtotals
+
+
 def build_sections(lines):
     """Walk the document in order, closing each block at the total that names it.
 
@@ -264,7 +315,7 @@ def build_sections(lines):
             if grand:
                 subtotals, orphans, leaves = [], [], []
             else:
-                subtotals = subtotals + [line]
+                subtotals = absorb_rolled_up_subtotals(subtotals, line) + [line]
                 leaves = []
             header = None
             continue
@@ -418,7 +469,8 @@ def main():
         last = min(args.last_page or detected[1], len(pdf.pages))
         args.first_page, args.last_page = first, last
         for index in range(first - 1, last):
-            all_lines += merge_wrapped_labels(read_lines(pdf.pages[index], index + 1))
+            all_lines += attach_split_totals(
+                merge_wrapped_labels(read_lines(pdf.pages[index], index + 1)))
 
     all_lines = resolve_columns(all_lines)
     sections = build_sections(all_lines)
