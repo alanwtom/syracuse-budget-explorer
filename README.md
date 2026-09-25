@@ -43,12 +43,12 @@ That check is the accuracy measure, and it is reported rather than assumed:
 
 | | |
 | --- | --- |
-| Sections found | 51 |
-| Sections verified against their printed total | 34 |
-| Column totals matching exactly | 153 |
-| Column totals disagreeing | 27 |
-| Column totals incomplete (a figure could not be read) | 10 |
-| Column reconciliation rate | 85.0% |
+| Sections found | 53 |
+| Sections verified against their printed total | 43 |
+| Column totals matching exactly | 174 |
+| Column totals disagreeing | 7 |
+| Column totals incomplete (a figure could not be read) | 4 |
+| Column reconciliation rate | 96.1% |
 
 The page range is found rather than configured: the tables are the longest run of pages
 carrying a "REVENUE SUMMARY" or "EXPENDITURE SUMMARY" heading, ignoring the single mention on
@@ -58,11 +58,11 @@ Running the same parser over the five most recent adopted budgets:
 
 | Budget | Pages found | Sections | Sections verified | Column rate |
 | --- | --- | --- | --- | --- |
-| 2022-23 | 25-79 | 85 | 57 | 77.0% |
-| 2023-24 | 25-83 | 90 | 51 | 69.3% |
-| 2024-25 | 23-77 | 87 | 58 | 77.5% |
-| 2025-26 | 38-77 | 47 | 27 | 70.2% |
-| 2026-27 | 50-77 | 51 | 34 | 85.0% |
+| 2022-23 | 25-79 | 85 | 59 | 81.4% |
+| 2023-24 | 25-83 | 90 | 62 | 84.3% |
+| 2024-25 | 23-77 | 87 | 62 | 84.0% |
+| 2025-26 | 38-77 | 69 | 32 | 81.5% |
+| 2026-27 | 50-77 | 53 | 43 | 96.1% |
 
 A section counts as verified only when the document prints a total for it and every column of
 that total matches the rows summed beneath it. Sections with nothing to check against are
@@ -93,14 +93,28 @@ together. Column rules printed as runs of `=` or `_` are discarded before a line
 being a total.
 
 Some figures are set in a subset font whose character map is wrong, so their digits arrive as
-characters in U+00E7–U+00F4. There were 11 such figures. They are marked unreadable and left out
+characters in U+00E7–U+00F4. There are 21 such figures in the sections parsed. They are marked unreadable and left out
 of sums; they are never guessed, and a sum missing one is reported as incomplete rather than as
 a disagreement, because the damage is in the document and not in the parse.
 
-The parser reproduces the $3 Public Works difference already recorded in the reconciliation
-notes, this time from the PDF rather than the workbook, and surfaces a $1 difference in
-Neighborhood & Business Development. The remaining disagreements are recorded in
-`data/pdf_detail.json` with their page numbers.
+Every remaining disagreement in the 2026-27 budget is in the budget book itself. In each case
+every other column of the same rows matches exactly, so the rows are being read correctly and it
+is the printed total that differs:
+
+| Page | Section | Column | Difference |
+| --- | --- | --- | --- |
+| 50 | Real property tax items | FY25 actual | $1 |
+| 54 | Departmental income | FY25 actual | $1 |
+| 61 | Downtown special assessment revenue | FY25 actual | $1 |
+| 65 | Neighborhood & Business Development | FY26 adopted | $1 |
+| 66 | Public Works | FY27 adopted | $3 |
+| 71 | Water fund special objects of expense | FY25 actual | $47,594 |
+| 77 | Five-year full valuation | Taxable value | $1 |
+
+The $3 Public Works difference is the one already recorded in the reconciliation notes from the
+workbook; the parser found it again, independently, in the PDF. The Water fund figure is the only
+one larger than rounding: the book prints a subtotal of $7,463,788 for rows that add up to
+$7,511,382.
 
 On the fund expense pages a grand total's label prints on its own baseline with its figures
 underneath, while the figures beside the label belong to the block above. Read naively the Water
@@ -127,9 +141,22 @@ the operating line above it was counted again inside the next subtotal. And the 
 "Fiscal Year Ending June 30, 2027" was being read as a row worth 2,027, which is exactly the
 difference that had kept the Water and Sewer totals from matching.
 
-Every fund's expense total now reconciles exactly. Still open: the General Fund revenue summary
-(pages 54 and 56) and the tax levy pages (76 and 77). Those disagreements are recorded with their
-page numbers.
+Every fund's expense total now reconciles exactly.
+
+On the revenue pages every heading and every total sits at the same left margin, so indentation
+cannot show nesting: "Finance" and "Total Finance" line up exactly with "Departmental Income"
+and "TOTAL DEPARTMENTAL INCOME". There the name does. Each margin heading opens a block, and a
+margin total closes the block whose heading it names, after normalising the ampersand and plural
+endings, since "Capital Appropriations & Debt Service" closes at "TOTAL CAPITAL APPROPRIATION
+AND DEBT SERVICE".
+
+The property tax cap and constitutional tax limit pages are worksheets rather than tables. Some
+figures print in two touching pieces, so $136,270,267 reads as "1" and "36,270,267" and a
+negative loses its sign; pieces with no gap between them are rejoined. Some totals there are not
+sums at all: a subtotal scaled by a growth factor, a running total, a subtraction shown as a
+negative, or rows in one column with their total carried into the next. Each such total is
+checked against that one identity and no other. The identities hold in both year columns of
+the 2025-26 and 2026-27 schedules, and a wrong figure still fails them.
 
 ## Evidence and limits
 

@@ -27,6 +27,11 @@ import pdfplumber
 # Digits lost to the broken subset-font encoding.
 UNREADABLE = re.compile(r"[ç-ô]")
 NUMERIC = re.compile(r"^\(?-?[\d,ç-ô]+\)?$")
+# A multiplier such as a growth factor ("1.0066"). It scales a figure; it is
+# never an amount to be added.
+FACTOR = re.compile(r"^\d*\.\d+$")
+# A dash standing in an amount column means nothing was budgeted.
+PLACEHOLDER = re.compile(r"^[-–]$")
 # The tables print rules between columns as runs of "=" or "_". They carry no
 # meaning and must not survive into a label, or a total line stops looking like one.
 SEPARATOR = re.compile(r"^[=_\-–—]+$")
@@ -58,7 +63,7 @@ MAX_BLOCK_GAP = 20
 
 def to_number(text):
     """Parse a printed figure. Parenthesised values are negative."""
-    if UNREADABLE.search(text):
+    if UNREADABLE.search(text) or FACTOR.match(text):
         return None
     negative = text.strip().startswith("(")
     digits = re.sub(r"[^\d]", "", text)
@@ -89,9 +94,42 @@ def group_into_lines(page, tolerance=ROW_TOLERANCE):
     return [sorted(line, key=lambda w: w["x0"]) for line in lines]
 
 
+def join_split_figures(line):
+    """Rejoin a figure the PDF set in two touching pieces.
+
+    The tax cap worksheet prints $136,270,267 as "1" and "36,270,267" with no
+    gap at all between them, and a negative as "(" and "5,755,000)". Read apart,
+    the leading digit becomes a figure of its own and the amount loses a hundred
+    million dollars, or its sign. Columns sit tens of points apart, so pieces
+    that touch are one figure.
+    """
+    joined = []
+    for word in line:
+        previous = joined[-1] if joined else None
+        if (
+            previous is not None
+            and word["x0"] - previous["x1"] <= 0.5
+            and re.fullmatch(r"\(?\d*", previous["text"])
+            and re.match(r"[\d.,]", word["text"])
+        ):
+            joined[-1] = dict(previous, text=previous["text"] + word["text"], x1=word["x1"])
+            continue
+        joined.append(word)
+    return joined
+
+
 def read_lines(page, page_number):
     parsed = []
     for line in group_into_lines(page):
+        line = join_split_figures(line)
+        # A dash with no words to its right is an empty amount, not a rule or a
+        # hyphen. Dropping it would leave the row looking like a heading.
+        line = [
+            dict(w, text="0") if PLACEHOLDER.match(w["text"])
+            and not any(any(c.isalpha() for c in o["text"]) for o in line if o["x0"] > w["x0"])
+            else w
+            for w in line
+        ]
         kept = [w for w in line if not SEPARATOR.match(w["text"])]
 
         # An account code is six bare digits at the head of the row. Printed
@@ -103,7 +141,7 @@ def read_lines(page, page_number):
             code = kept[0]["text"]
             kept = kept[1:]
 
-        figures = [w for w in kept if NUMERIC.match(w["text"])]
+        figures = [w for w in kept if NUMERIC.match(w["text"]) or FACTOR.match(w["text"])]
         label_words = [w for w in kept if w not in figures]
         label = " ".join(w["text"] for w in label_words).strip().rstrip(":").strip()
         if not label and not figures:
@@ -117,7 +155,8 @@ def read_lines(page, page_number):
             "indent": round(min((w["x0"] for w in label_words), default=0.0), 1),
             "figures": [
                 {"text": w["text"], "right": round(w["x1"], 1),
-                 "unreadable": bool(UNREADABLE.search(w["text"]))}
+                 "unreadable": bool(UNREADABLE.search(w["text"])),
+                 "factor": float(w["text"]) if FACTOR.match(w["text"]) else None}
                 for w in figures
             ],
         })
@@ -298,6 +337,17 @@ def to_columns(line, centres):
     return slots
 
 
+def to_factor_columns(line, centres):
+    slots = [None] * len(centres)
+    for figure in line["figures"]:
+        if figure.get("factor") is None:
+            continue
+        index = min(range(len(centres)), key=lambda i: abs(centres[i] - figure["right"]))
+        if abs(centres[index] - figure["right"]) <= COLUMN_TOLERANCE and slots[index] is None:
+            slots[index] = figure["factor"]
+    return slots
+
+
 def resolve_columns(lines):
     """Attach column-aligned values to every line, using each page's own layout.
 
@@ -313,7 +363,11 @@ def resolve_columns(lines):
         page_lines = by_page[page]
         centres = column_centres(page_lines)
         for line in page_lines:
-            resolved.append(dict(line, columns=to_columns(line, centres) if centres else []))
+            resolved.append(dict(
+                line,
+                columns=to_columns(line, centres) if centres else [],
+                factors=to_factor_columns(line, centres) if centres else [],
+            ))
     return resolved
 
 
@@ -417,11 +471,30 @@ def build_sections(lines):
     leaves = []      # rows under the current header, not yet closed by a total
     orphans = []     # rows whose header closed without printing a total
     subtotals = []   # department totals already closed inside this fund
+    # Sub-headings inside a fund since the last department total, with their rows.
+    # "Total Exclusions" closes both "Net Debt Exclusions" and "Net Capital
+    # Exclusions", so a total can name more than the block directly above it.
+    sub_blocks = []
 
     def flush():
-        nonlocal leaves, orphans, subtotals
+        nonlocal leaves, orphans, subtotals, sub_blocks
         blocks[-1]["members"].extend(subtotals + orphans + leaves)
-        leaves, orphans, subtotals = [], [], []
+        leaves, orphans, subtotals, sub_blocks = [], [], [], []
+
+    def close_department(line, name, members):
+        nonlocal leaves, subtotals, sub_blocks
+        sections.append({
+            "name": name,
+            "page": line["page"],
+            "level": "department",
+            "header": header["label"] if header else None,
+            "fund": fund,
+            "printed": line["columns"],
+            "rows": members,
+            "coveredBySubtotals": sum(1 for m in members if m.get("closesBlock")),
+        })
+        subtotals = absorb_rolled_up_subtotals(subtotals, line) + [dict(line, closesBlock=True)]
+        leaves, sub_blocks = [], []
 
     for line in lines:
         heading = STATEMENT_START.search(line["label"])
@@ -431,7 +504,7 @@ def build_sections(lines):
                 # Revenue and expenditure statements never share a block.
                 statement = kind
                 blocks = [{"name": None, "members": []}]
-                leaves, orphans, subtotals = [], [], []
+                leaves, orphans, subtotals, sub_blocks = [], [], [], []
             else:
                 # The heading repeats on every page of a statement. A block
                 # carries over the page break; only the rows are handed up.
@@ -443,13 +516,30 @@ def build_sections(lines):
         if total_match and line["figures"]:
             name = (total_match.group("named") or total_match.group("bare")).strip()
             grand = line["indent"] <= HEADER_MAX_X
-            if grand:
-                flush()
-                index = _matching_block(blocks, _block_name(name))
-                members = [m for block in blocks[index:] for m in block["members"]]
-                blocks = blocks[:index] if index > 0 else [{"name": None, "members": []}]
-            else:
+            if not grand:
                 members = leaves
+                wanted = _block_name(name) if total_match.group("named") else None
+                if wanted and sub_blocks:
+                    sub_blocks[-1]["rows"] = leaves
+                    named = []
+                    for block in reversed(sub_blocks):
+                        if block["name"] == wanted or block["name"].endswith(" " + wanted):
+                            named.insert(0, block)
+                        else:
+                            break
+                    if len(named) > 1:
+                        members = [row for block in named for row in block["rows"]]
+                        # Those rows now belong to this total, not to the fund
+                        # total above it, which would otherwise count them twice.
+                        taken = {id(row) for row in members}
+                        orphans = [row for row in orphans if id(row) not in taken]
+                close_department(line, name, members)
+                header = None
+                continue
+            flush()
+            index = _matching_block(blocks, _block_name(name))
+            members = [m for block in blocks[index:] for m in block["members"]]
+            blocks = blocks[:index] if index > 0 else [{"name": None, "members": []}]
             sections.append({
                 "name": name,
                 "page": line["page"],
@@ -460,12 +550,7 @@ def build_sections(lines):
                 "rows": members,
                 "coveredBySubtotals": sum(1 for m in members if m.get("closesBlock")),
             })
-            closed = dict(line, closesBlock=True)
-            if grand:
-                blocks[-1]["members"].append(closed)
-            else:
-                subtotals = absorb_rolled_up_subtotals(subtotals, line) + [closed]
-                leaves = []
+            blocks[-1]["members"].append(dict(line, closesBlock=True))
             header = None
             continue
 
@@ -482,8 +567,19 @@ def build_sections(lines):
             # the block above it even though it is indented past the fund
             # margin. Without this, rows above it are counted again in the
             # subtotal of the block it opens.
+            if sub_blocks:
+                sub_blocks[-1]["rows"] = leaves
             orphans = orphans + leaves
             leaves = []
+            sub_blocks.append({"name": _block_name(line["label"]), "rows": []})
+            continue
+
+        if (line["figures"] and leaves and sub_blocks
+                and _block_name(line["label"]) == sub_blocks[-1]["name"]):
+            # A row repeating its block's heading, after the rows of that block,
+            # is the block's total: the tax limit schedule closes "Tax Levy"
+            # this way rather than with the word "Total".
+            close_department(line, line["label"], leaves)
             continue
 
         if line["figures"]:
@@ -491,9 +587,48 @@ def build_sections(lines):
     return sections
 
 
+def _worksheet_identity(section, index, printed, total, previous):
+    """Check a total that is not a plain sum against the arithmetic it shows.
+
+    The tax cap and tax limit schedules are worksheets. Some totals there are
+    carried into a further column than their rows, some subtract, and some are
+    a running figure: the line above scaled by a growth factor, or the line
+    above plus what follows. Each is checked against that one identity only;
+    a total that satisfies none of them stays a mismatch.
+    """
+    columns = [row["columns"] for row in section["rows"]]
+    here = [c[index] for c in columns if index < len(c) and c[index] is not None]
+    if not here:
+        # Rows in one column, their total carried into the next.
+        others = [
+            j for j in range(max((len(c) for c in columns), default=0))
+            if j != index
+            and (j >= len(section["printed"]) or section["printed"][j] is None)
+            and any(j < len(c) and c[j] is not None for c in columns)
+        ]
+        if len(others) == 1:
+            carried = sum(c[others[0]] for c in columns if others[0] < len(c) and c[others[0]] is not None)
+            if carried == printed:
+                return "carried into the total column"
+    if printed < 0 and -total == printed:
+        return "subtracted"
+    before = previous["printed"][index] if previous and index < len(previous["printed"]) else None
+    if before is not None:
+        factors = [row["factors"][index] for row in section["rows"]
+                   if index < len(row.get("factors") or []) and row["factors"][index] is not None]
+        if len(factors) == 1 and abs(round(before * factors[0]) - printed) <= 1:
+            return "growth factor applied to the line above"
+        if before + total == printed:
+            return "running total"
+    return None
+
+
 def reconcile(sections):
     results = []
+    previous = None   # the department total just above, on the same page
     for section in sections:
+        if previous is not None and previous["page"] != section["page"]:
+            previous = None
         columns = [row["columns"] for row in section["rows"]]
         per_column = []
         # A cell is unreadable only when a figure was printed and could not be
@@ -509,6 +644,7 @@ def reconcile(sections):
             # it a mismatch would blame the parse for damage in the document.
             blocked = any(f["unreadable"] for row in section["rows"] for f in row["figures"])
             difference = None if printed is None else total - printed
+            method = None
             if printed is None:
                 status = "no printed total"
             elif difference == 0:
@@ -516,18 +652,22 @@ def reconcile(sections):
             elif blocked:
                 status = "incomplete: unreadable figures excluded"
             else:
-                status = "mismatch"
+                method = (_worksheet_identity(section, index, printed, total, previous)
+                          if section["level"] == "department" else None)
+                status = "exact" if method else "mismatch"
             per_column.append({
                 "column": index,
                 "printed": printed,
                 "summed": total,
                 "difference": difference,
                 "status": status,
+                "method": method,
                 "rowsSummed": len(values),
             })
         verified = bool([c for c in per_column if c["printed"] is not None]) and all(
             c["status"] == "exact" for c in per_column if c["printed"] is not None
         )
+        previous = section if section["level"] == "department" else None
         results.append({
             "name": section["name"],
             "page": section["page"],

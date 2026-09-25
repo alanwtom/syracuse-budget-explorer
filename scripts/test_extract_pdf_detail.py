@@ -8,7 +8,9 @@ without a PDF.
 import unittest
 
 from extract_pdf_detail import (
+    FACTOR,
     PAGE_HEADING,
+    join_split_figures,
     SEPARATOR,
     join_wrapped_labels,
     shift_figures_to_waiting_labels,
@@ -31,7 +33,8 @@ def line(label, indent, figures=(), page=1, code=None):
         "label": label,
         "indent": indent,
         "figures": [
-            {"text": t, "right": x, "unreadable": any("ç" <= c <= "ô" for c in t)}
+            {"text": t, "right": x, "unreadable": any("ç" <= c <= "ô" for c in t),
+             "factor": float(t) if FACTOR.match(t) else None}
             for t, x in figures
         ],
     }
@@ -334,6 +337,96 @@ class NamedBlocks(unittest.TestCase):
         ]
         report = reconcile(build_sections(resolve_columns(lines)))
         self.assertEqual(report[-1]["columns"][0]["status"], "exact")
+
+
+def word(text, x0, x1, top=100):
+    return {"text": text, "x0": x0, "x1": x1, "top": top}
+
+
+class SplitFigures(unittest.TestCase):
+    """The tax cap worksheet sets some figures in two touching pieces."""
+
+    def test_a_leading_digit_touching_its_figure_is_rejoined(self):
+        joined = join_split_figures([word("1", 500, 505), word("36,270,267", 505, 545)])
+        self.assertEqual([w["text"] for w in joined], ["136,270,267"])
+
+    def test_an_opening_parenthesis_touching_its_figure_is_rejoined(self):
+        joined = join_split_figures([word("(", 500, 503), word("5,755,000)", 503, 540)])
+        self.assertEqual(to_number(joined[0]["text"]), -5755000)
+
+    def test_figures_in_separate_columns_stay_apart(self):
+        joined = join_split_figures([word("0", 440, 445), word("2,625,846", 500, 545)])
+        self.assertEqual([w["text"] for w in joined], ["0", "2,625,846"])
+
+    def test_a_growth_factor_is_not_an_amount(self):
+        self.assertIsNone(to_number("1.0066"))
+
+
+class Worksheets(unittest.TestCase):
+    """Totals on the tax schedules that are formulas rather than plain sums."""
+
+    def report(self, lines):
+        return reconcile(build_sections(resolve_columns(lines)))
+
+    def test_a_subtotal_scaled_by_a_growth_factor(self):
+        rows = [
+            line("Prior Year Levy", 179, [("100,000", 723)]),
+            line("Subtotal", 172, [("100,000", 723)]),
+            line("Tax Base Growth Factor", 166, [("1.0066", 723)]),
+            line("Subtotal", 172, [("100,660", 723)]),
+        ]
+        column = self.report(rows)[1]["columns"][0]
+        self.assertEqual(column["status"], "exact")
+        self.assertEqual(column["method"], "growth factor applied to the line above")
+
+    def test_a_running_subtotal(self):
+        rows = [
+            line("Prior Year Levy", 179, [("100,000", 723)]),
+            line("Subtotal", 172, [("100,000", 723)]),
+            line("Additions", 166),
+            line("PILOTS", 179, [("5,000", 723)]),
+            line("Subtotal", 172, [("105,000", 723)]),
+        ]
+        self.assertEqual(self.report(rows)[1]["columns"][0]["method"], "running total")
+
+    def test_a_subtraction_printed_as_a_negative(self):
+        rows = [
+            line("PILOTS Receivable for the Coming Year", 179, [("5,755,000", 723)]),
+            line("Subtotal", 172, [("(5,755,000)", 723)]),
+        ]
+        self.assertEqual(self.report(rows)[0]["columns"][0]["method"], "subtracted")
+
+    def test_rows_in_one_column_with_their_total_carried_into_the_next(self):
+        rows = [
+            line("Tax Levy", 224),
+            line("City", 233, [("61,913,554", 509)]),
+            line("School District", 233, [("68,445,723", 509)]),
+            line("Tax Levy", 322, [("130,359,277", 606)]),
+        ]
+        column = [c for c in self.report(rows)[0]["columns"] if c["printed"] is not None][0]
+        self.assertEqual(column["method"], "carried into the total column")
+
+    def test_a_total_can_close_several_blocks_it_names(self):
+        rows = [
+            line("Net Debt Exclusions", 224),
+            line("City Gen Fund", 233, [("26,495,345", 509)]),
+            line("Net Capital Exclusions", 224),
+            line("City Gen Fund", 233, [("333,000", 509)]),
+            line("Total Exclusions", 322, [("26,828,345", 606)]),
+        ]
+        report = self.report(rows)
+        self.assertEqual(report[0]["rowCount"], 2)
+        self.assertEqual([c for c in report[0]["columns"] if c["printed"] is not None][0]["status"], "exact")
+
+    def test_a_wrong_figure_still_fails_every_identity(self):
+        """The rules explain a worksheet total; they must not excuse a wrong one."""
+        rows = [
+            line("Prior Year Levy", 179, [("100,000", 723)]),
+            line("Subtotal", 172, [("100,000", 723)]),
+            line("Tax Base Growth Factor", 166, [("1.0066", 723)]),
+            line("Subtotal", 172, [("100,999", 723)]),
+        ]
+        self.assertEqual(self.report(rows)[1]["columns"][0]["status"], "mismatch")
 
 
 class DamageReporting(unittest.TestCase):

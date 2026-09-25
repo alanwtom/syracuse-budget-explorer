@@ -5,13 +5,13 @@
     77
   ],
   "summary": {
-    "sections": 51,
-    "sectionsVerified": 36,
+    "sections": 53,
+    "sectionsVerified": 43,
     "sectionsUncheckable": 0,
-    "columnsExact": 164,
-    "columnsMismatched": 22,
+    "columnsExact": 174,
+    "columnsMismatched": 7,
     "columnsIncomplete": 4,
-    "reconciliationRate": 0.8817,
+    "reconciliationRate": 0.9613,
     "unreadableFigures": 21
   },
   "sections": [
@@ -32,6 +32,7 @@
           "summed": 8801160,
           "difference": -1,
           "status": "mismatch",
+          "method": null,
           "rowsSummed": 11
         },
         {
@@ -40,6 +41,7 @@
           "summed": 7985700,
           "difference": 0,
           "status": "exact",
+          "method": null,
           "rowsSummed": 11
         },
         {
@@ -48,6 +50,7 @@
           "summed": 6948003,
           "difference": 0,
           "status": "exact",
+          "method": null,
           "rowsSummed": 11
         },
         {
@@ -56,6 +59,7 @@
           "summed": 7026807,
           "difference": 0,
           "status": "exact",
+          "method": null,
           "rowsSummed": 11
         }
       ],
@@ -287,6 +291,7 @@
           "summed": 127859558,
           "difference": 0,
           "status": "exact",
+          "method": null,
           "rowsSummed": 9
         },
         {
@@ -295,6 +300,7 @@
           "summed": 130750761,
           "difference": 0,
           "status": "exact",
+          "method": null,
           "rowsSummed": 9
         },
         {
@@ -303,6 +309,7 @@
           "summed": 131351104,
           "difference": 0,
           "status": "exact",
+          "method": null,
           "rowsSummed": 9
         },
         {
@@ -311,6 +318,7 @@
           "summed": 133686341,
           "difference": 0,
           "status": "exact",
+          "method": null,
           "rowsSummed": 9
         }
       ],
@@ -451,6 +459,7 @@
           "summed": 4997651,
           "difference": 0,
           "status": "exact",
+          "method": null,
           "rowsSummed": 18
         },
         {
@@ -459,6 +468,7 @@
           "summed": 11926750,
           "difference": 0,
           "status": "exact",
+          "method": null,
           "rowsSummed": 18
         },
         {
@@ -467,6 +477,7 @@
           "summed": 10485972,
           "difference": 0,
           "status": "exact",
+          "method": null,
           "rowsSummed": 18
         },
         {
@@ -475,6 +486,7 @@
           "summed": 11052492,
           "difference": 0,
           "status": "exact",
+          "method": null,
           "rowsSummed": 18
         }
       ],
@@ -732,6 +744,7 @@
           "summed": 57139,
           "difference": 0,
           "status": "exact",
+          "method": null,
           "rowsSummed": 1
         },
         {
@@ -740,6 +753,7 @@
           "summed": 60000,
           "difference": 0,
           "status": "exact",
+          "method": null,
           "rowsSummed": 1
         },
         {
@@ -748,6 +762,7 @@
           "summed": 54336,
           "difference": 0,
           "status": "exact",
+          "method": null,
           "rowsSummed": 1
         },
         {
@@ -756,6 +771,7 @@
           "summed": 60000,
           "difference": 0,
           "status": "exact",
+          "method": null,
           "rowsSummed": 1
         }
       ],
@@ -792,6 +808,7 @@
           "summed": 4813131,
           "difference": 0,
           "status": "exact",
+          "method": null,
           "rowsSummed": 13
         },
         {
@@ -800,6 +817,7 @@
           "summed": 4748000,
           "difference": 0,
           "status": "exact",
+          "method": null,
           "rowsSummed": 13
         },
         {
@@ -808,6 +826,7 @@
           "summed": 5304407,
           "difference": 0,
           "status": "exact",
+          "method": null,
           "rowsSummed": 13
         },
         {
@@ -816,6 +835,7 @@
           "summed": 5405500,
           "difference": 0,
           "status": "exact",
+          "method": null,
           "rowsSummed": 13
         }
       ],
@@ -1008,6 +1028,7 @@
           "summed": 792540,
           "difference": 0,
           "status": "exact",
+          "method": null,
           "rowsSummed": 5
         },
         {
@@ -1016,6 +1037,7 @@
           "summed": 755000,
           "difference": 0,
           "status": "exact",
+          "method": null,
           "rowsSummed": 5
         },
         {
@@ -1024,6 +1046,7 @@
           "summed": 678065,
           "difference": 0,
           "status": "exact",
+          "method": null,
           "rowsSummed": 5
         },
         {
@@ -1032,6 +1055,7 @@
           "summed": 790100,
           "difference": 0,
           "status": "exact",
+          "method": null,
           "rowsSummed": 5
         }
       ],
@@ -1120,6 +1144,7 @@
           "summed": 284872,
           "difference": 0,
           "status": "exact",
+          "method": null,
           "rowsSummed": 4
         },
         {
@@ -1128,6 +1153,7 @@
           "summed": 406000,
           "difference": 0,
           "status": "exact",
+          "method": null,
           "rowsSummed": 4
         },
         {
@@ -1136,6 +1162,7 @@
           "summed": 361115,
           "difference": 0,
           "status": "exact",
+          "method": null,
           "rowsSummed": 4
         },
         {
@@ -1144,6 +1171,7 @@
           "summed": 76800,
           "difference": 0,
           "status": "exact",
+          "method": null,
           "rowsSummed": 4
         }
       ],
@@ -1219,6 +1247,7 @@
           "summed": 3091120,
           "difference": 0,
           "status": "exact",
+          "method": null,
           "rowsSummed": 5
         },
         {
@@ -1227,6 +1256,7 @@
           "summed": 2162500,
           "difference": 0,
           "status": "exact",
+          "method": null,
           "rowsSummed": 5
         },
         {
@@ -1235,6 +1265,7 @@
           "summed": 926184,
           "difference": 0,
           "status": "exact",
+          "method": null,
           "rowsSummed": 5
         },
         {
@@ -1243,6 +1274,7 @@
           "summed": 2212500,
           "difference": 0,
           "status": "exact",
+          "method": null,
           "rowsSummed": 5
         }
       ],
@@ -1331,6 +1363,7 @@
           "summed": 207782,
           "difference": 0,
           "status": "exact",
+          "method": null,
           "rowsSummed": 1
         },
         {
@@ -1339,6 +1372,7 @@
           "summed": 350000,
           "difference": 0,
           "status": "exact",
+          "method": null,
           "rowsSummed": 1
         },
         {
@@ -1347,6 +1381,7 @@
           "summed": 303462,
           "difference": 0,
           "status": "exact",
+          "method": null,
           "rowsSummed": 1
         },
         {
@@ -1355,6 +1390,7 @@
           "summed": 350000,
           "difference": 0,
           "status": "exact",
+          "method": null,
           "rowsSummed": 1
         }
       ],
@@ -1391,6 +1427,7 @@
           "summed": 7037718,
           "difference": 0,
           "status": "exact",
+          "method": null,
           "rowsSummed": 20
         },
         {
@@ -1399,6 +1436,7 @@
           "summed": 6515030,
           "difference": 0,
           "status": "exact",
+          "method": null,
           "rowsSummed": 20
         },
         {
@@ -1407,6 +1445,7 @@
           "summed": 7352308,
           "difference": 0,
           "status": "exact",
+          "method": null,
           "rowsSummed": 20
         },
         {
@@ -1415,6 +1454,7 @@
           "summed": 6914194,
           "difference": 0,
           "status": "exact",
+          "method": null,
           "rowsSummed": 20
         }
       ],
@@ -1698,6 +1738,7 @@
           "summed": 0,
           "difference": 0,
           "status": "exact",
+          "method": null,
           "rowsSummed": 1
         },
         {
@@ -1706,6 +1747,7 @@
           "summed": 2000,
           "difference": 0,
           "status": "exact",
+          "method": null,
           "rowsSummed": 1
         },
         {
@@ -1714,6 +1756,7 @@
           "summed": 0,
           "difference": 0,
           "status": "exact",
+          "method": null,
           "rowsSummed": 1
         },
         {
@@ -1722,6 +1765,7 @@
           "summed": 2000,
           "difference": 0,
           "status": "exact",
+          "method": null,
           "rowsSummed": 1
         }
       ],
@@ -1758,6 +1802,7 @@
           "summed": 21281953,
           "difference": -1,
           "status": "mismatch",
+          "method": null,
           "rowsSummed": 9
         },
         {
@@ -1766,6 +1811,7 @@
           "summed": 26925280,
           "difference": 0,
           "status": "exact",
+          "method": null,
           "rowsSummed": 9
         },
         {
@@ -1774,6 +1820,7 @@
           "summed": 25465849,
           "difference": 0,
           "status": "exact",
+          "method": null,
           "rowsSummed": 9
         },
         {
@@ -1782,6 +1829,7 @@
           "summed": 26863586,
           "difference": 0,
           "status": "exact",
+          "method": null,
           "rowsSummed": 9
         }
       ],
@@ -1961,6 +2009,7 @@
           "summed": 11914650,
           "difference": 0,
           "status": "exact",
+          "method": null,
           "rowsSummed": 4
         },
         {
@@ -1969,6 +2018,7 @@
           "summed": 9593000,
           "difference": 0,
           "status": "exact",
+          "method": null,
           "rowsSummed": 4
         },
         {
@@ -1977,6 +2027,7 @@
           "summed": 9260050,
           "difference": 0,
           "status": "exact",
+          "method": null,
           "rowsSummed": 4
         },
         {
@@ -1985,6 +2036,7 @@
           "summed": 7093000,
           "difference": 0,
           "status": "exact",
+          "method": null,
           "rowsSummed": 4
         }
       ],
@@ -2060,6 +2112,7 @@
           "summed": 496929,
           "difference": 0,
           "status": "exact",
+          "method": null,
           "rowsSummed": 2
         },
         {
@@ -2068,6 +2121,7 @@
           "summed": 1495000,
           "difference": 0,
           "status": "exact",
+          "method": null,
           "rowsSummed": 2
         },
         {
@@ -2076,6 +2130,7 @@
           "summed": 5832000,
           "difference": 0,
           "status": "exact",
+          "method": null,
           "rowsSummed": 2
         },
         {
@@ -2084,6 +2139,7 @@
           "summed": 1035000,
           "difference": 0,
           "status": "exact",
+          "method": null,
           "rowsSummed": 2
         }
       ],
@@ -2133,6 +2189,7 @@
           "summed": 79542538,
           "difference": 1,
           "status": "incomplete: unreadable figures excluded",
+          "method": null,
           "rowsSummed": 7
         },
         {
@@ -2141,6 +2198,7 @@
           "summed": 79429584,
           "difference": 0,
           "status": "exact",
+          "method": null,
           "rowsSummed": 7
         },
         {
@@ -2149,6 +2207,7 @@
           "summed": 79580230,
           "difference": 0,
           "status": "exact",
+          "method": null,
           "rowsSummed": 7
         },
         {
@@ -2157,6 +2216,7 @@
           "summed": 74529584,
           "difference": null,
           "status": "no printed total",
+          "method": null,
           "rowsSummed": 6
         }
       ],
@@ -2271,6 +2331,7 @@
           "summed": 3504224,
           "difference": 0,
           "status": "exact",
+          "method": null,
           "rowsSummed": 7
         },
         {
@@ -2279,6 +2340,7 @@
           "summed": 3493250,
           "difference": 0,
           "status": "exact",
+          "method": null,
           "rowsSummed": 7
         },
         {
@@ -2287,6 +2349,7 @@
           "summed": 3520551,
           "difference": 0,
           "status": "exact",
+          "method": null,
           "rowsSummed": 7
         },
         {
@@ -2295,6 +2358,7 @@
           "summed": 3493250,
           "difference": 0,
           "status": "exact",
+          "method": null,
           "rowsSummed": 7
         }
       ],
@@ -2409,6 +2473,7 @@
           "summed": 253401013,
           "difference": 0,
           "status": "exact",
+          "method": null,
           "rowsSummed": 8
         },
         {
@@ -2417,6 +2482,7 @@
           "summed": 274066384,
           "difference": 0,
           "status": "exact",
+          "method": null,
           "rowsSummed": 8
         },
         {
@@ -2425,6 +2491,7 @@
           "summed": 261957787,
           "difference": 0,
           "status": "exact",
+          "method": null,
           "rowsSummed": 8
         },
         {
@@ -2433,6 +2500,7 @@
           "summed": 179197984,
           "difference": null,
           "status": "no printed total",
+          "method": null,
           "rowsSummed": 6
         }
       ],
@@ -2599,6 +2667,7 @@
           "summed": 54866750,
           "difference": 0,
           "status": "exact",
+          "method": null,
           "rowsSummed": 2
         },
         {
@@ -2607,6 +2676,7 @@
           "summed": 58970189,
           "difference": 0,
           "status": "exact",
+          "method": null,
           "rowsSummed": 2
         },
         {
@@ -2615,6 +2685,7 @@
           "summed": 58970189,
           "difference": 0,
           "status": "exact",
+          "method": null,
           "rowsSummed": 2
         },
         {
@@ -2623,6 +2694,7 @@
           "summed": 61913554,
           "difference": 0,
           "status": "exact",
+          "method": null,
           "rowsSummed": 2
         }
       ],
@@ -2672,6 +2744,7 @@
           "summed": 2766820,
           "difference": 0,
           "status": "exact",
+          "method": null,
           "rowsSummed": 2
         },
         {
@@ -2680,6 +2753,7 @@
           "summed": 2285237,
           "difference": 0,
           "status": "exact",
+          "method": null,
           "rowsSummed": 2
         },
         {
@@ -2688,6 +2762,7 @@
           "summed": 3658560,
           "difference": 0,
           "status": "exact",
+          "method": null,
           "rowsSummed": 2
         },
         {
@@ -2696,6 +2771,7 @@
           "summed": 2719688,
           "difference": 0,
           "status": "exact",
+          "method": null,
           "rowsSummed": 2
         }
       ],
@@ -2745,6 +2821,7 @@
           "summed": 27667077,
           "difference": 0,
           "status": "exact",
+          "method": null,
           "rowsSummed": 22
         },
         {
@@ -2753,6 +2830,7 @@
           "summed": 31031846,
           "difference": 0,
           "status": "exact",
+          "method": null,
           "rowsSummed": 22
         },
         {
@@ -2761,6 +2839,7 @@
           "summed": 28056619,
           "difference": 0,
           "status": "exact",
+          "method": null,
           "rowsSummed": 22
         },
         {
@@ -2769,6 +2848,7 @@
           "summed": 33175883,
           "difference": 0,
           "status": "exact",
+          "method": null,
           "rowsSummed": 22
         }
       ],
@@ -3078,6 +3158,7 @@
           "summed": 6898650,
           "difference": 0,
           "status": "exact",
+          "method": null,
           "rowsSummed": 3
         },
         {
@@ -3086,6 +3167,7 @@
           "summed": 7483800,
           "difference": 0,
           "status": "exact",
+          "method": null,
           "rowsSummed": 3
         },
         {
@@ -3094,6 +3176,7 @@
           "summed": 6860000,
           "difference": 0,
           "status": "exact",
+          "method": null,
           "rowsSummed": 3
         },
         {
@@ -3102,6 +3185,7 @@
           "summed": 8966902,
           "difference": 0,
           "status": "exact",
+          "method": null,
           "rowsSummed": 3
         }
       ],
@@ -3164,6 +3248,7 @@
           "summed": 1118990,
           "difference": -1,
           "status": "mismatch",
+          "method": null,
           "rowsSummed": 3
         },
         {
@@ -3172,6 +3257,7 @@
           "summed": 1370770,
           "difference": 0,
           "status": "exact",
+          "method": null,
           "rowsSummed": 3
         },
         {
@@ -3180,6 +3266,7 @@
           "summed": 1370770,
           "difference": 0,
           "status": "exact",
+          "method": null,
           "rowsSummed": 3
         },
         {
@@ -3188,6 +3275,7 @@
           "summed": 1411892,
           "difference": 0,
           "status": "exact",
+          "method": null,
           "rowsSummed": 3
         }
       ],
@@ -3250,6 +3338,7 @@
           "summed": 10388907,
           "difference": 0,
           "status": "exact",
+          "method": null,
           "rowsSummed": 12
         },
         {
@@ -3258,6 +3347,7 @@
           "summed": 9674830,
           "difference": 0,
           "status": "exact",
+          "method": null,
           "rowsSummed": 12
         },
         {
@@ -3266,6 +3356,7 @@
           "summed": 9826600,
           "difference": 0,
           "status": "exact",
+          "method": null,
           "rowsSummed": 12
         },
         {
@@ -3274,6 +3365,7 @@
           "summed": 9681733,
           "difference": null,
           "status": "no printed total",
+          "method": null,
           "rowsSummed": 11
         }
       ],
@@ -3453,6 +3545,7 @@
           "summed": 3989564,
           "difference": 0,
           "status": "exact",
+          "method": null,
           "rowsSummed": 4
         },
         {
@@ -3461,6 +3554,7 @@
           "summed": 4571896,
           "difference": 0,
           "status": "exact",
+          "method": null,
           "rowsSummed": 4
         },
         {
@@ -3469,6 +3563,7 @@
           "summed": 4425314,
           "difference": 0,
           "status": "exact",
+          "method": null,
           "rowsSummed": 4
         },
         {
@@ -3477,6 +3572,7 @@
           "summed": 4489915,
           "difference": 0,
           "status": "exact",
+          "method": null,
           "rowsSummed": 4
         }
       ],
@@ -3552,6 +3648,7 @@
           "summed": 781232,
           "difference": 0,
           "status": "exact",
+          "method": null,
           "rowsSummed": 2
         },
         {
@@ -3560,6 +3657,7 @@
           "summed": 916778,
           "difference": 0,
           "status": "exact",
+          "method": null,
           "rowsSummed": 2
         },
         {
@@ -3568,6 +3666,7 @@
           "summed": 821522,
           "difference": 0,
           "status": "exact",
+          "method": null,
           "rowsSummed": 2
         },
         {
@@ -3576,6 +3675,7 @@
           "summed": 1373052,
           "difference": 0,
           "status": "exact",
+          "method": null,
           "rowsSummed": 2
         }
       ],
@@ -3625,6 +3725,7 @@
           "summed": 5105959,
           "difference": 40427,
           "status": "incomplete: unreadable figures excluded",
+          "method": null,
           "rowsSummed": 2
         },
         {
@@ -3633,6 +3734,7 @@
           "summed": 5302185,
           "difference": 0,
           "status": "exact",
+          "method": null,
           "rowsSummed": 2
         },
         {
@@ -3641,6 +3743,7 @@
           "summed": 5671802,
           "difference": 0,
           "status": "exact",
+          "method": null,
           "rowsSummed": 2
         },
         {
@@ -3649,6 +3752,7 @@
           "summed": 841100,
           "difference": null,
           "status": "no printed total",
+          "method": null,
           "rowsSummed": 1
         }
       ],
@@ -3698,6 +3802,7 @@
           "summed": 6821016,
           "difference": 0,
           "status": "exact",
+          "method": null,
           "rowsSummed": 3
         },
         {
@@ -3706,6 +3811,7 @@
           "summed": 7486515,
           "difference": 1,
           "status": "mismatch",
+          "method": null,
           "rowsSummed": 3
         },
         {
@@ -3714,6 +3820,7 @@
           "summed": 7462211,
           "difference": 0,
           "status": "exact",
+          "method": null,
           "rowsSummed": 3
         },
         {
@@ -3722,6 +3829,7 @@
           "summed": 7659904,
           "difference": 0,
           "status": "exact",
+          "method": null,
           "rowsSummed": 3
         }
       ],
@@ -3784,6 +3892,7 @@
           "summed": 34841124,
           "difference": 0,
           "status": "exact",
+          "method": null,
           "rowsSummed": 9
         },
         {
@@ -3792,6 +3901,7 @@
           "summed": 37123572,
           "difference": 0,
           "status": "exact",
+          "method": null,
           "rowsSummed": 9
         },
         {
@@ -3800,6 +3910,7 @@
           "summed": 39230701,
           "difference": 0,
           "status": "exact",
+          "method": null,
           "rowsSummed": 9
         },
         {
@@ -3808,6 +3919,7 @@
           "summed": 41121926,
           "difference": 3,
           "status": "mismatch",
+          "method": null,
           "rowsSummed": 9
         }
       ],
@@ -3948,6 +4060,7 @@
           "summed": 62948449,
           "difference": 0,
           "status": "exact",
+          "method": null,
           "rowsSummed": 2
         },
         {
@@ -3956,6 +4069,7 @@
           "summed": 62234298,
           "difference": 0,
           "status": "exact",
+          "method": null,
           "rowsSummed": 2
         },
         {
@@ -3964,6 +4078,7 @@
           "summed": 63734099,
           "difference": 0,
           "status": "exact",
+          "method": null,
           "rowsSummed": 2
         },
         {
@@ -3972,6 +4087,7 @@
           "summed": 63746688,
           "difference": 0,
           "status": "exact",
+          "method": null,
           "rowsSummed": 2
         }
       ],
@@ -4021,6 +4137,7 @@
           "summed": 45810520,
           "difference": 0,
           "status": "exact",
+          "method": null,
           "rowsSummed": 2
         },
         {
@@ -4029,6 +4146,7 @@
           "summed": 46526393,
           "difference": 0,
           "status": "exact",
+          "method": null,
           "rowsSummed": 2
         },
         {
@@ -4037,6 +4155,7 @@
           "summed": 47159096,
           "difference": 0,
           "status": "exact",
+          "method": null,
           "rowsSummed": 2
         },
         {
@@ -4045,6 +4164,7 @@
           "summed": 47895330,
           "difference": 0,
           "status": "exact",
+          "method": null,
           "rowsSummed": 2
         }
       ],
@@ -4094,6 +4214,7 @@
           "summed": 11235152,
           "difference": 0,
           "status": "exact",
+          "method": null,
           "rowsSummed": 4
         },
         {
@@ -4102,6 +4223,7 @@
           "summed": 12177651,
           "difference": 0,
           "status": "exact",
+          "method": null,
           "rowsSummed": 4
         },
         {
@@ -4110,6 +4232,7 @@
           "summed": 11398553,
           "difference": 0,
           "status": "exact",
+          "method": null,
           "rowsSummed": 4
         },
         {
@@ -4118,6 +4241,7 @@
           "summed": 1283989,
           "difference": null,
           "status": "no printed total",
+          "method": null,
           "rowsSummed": 2
         }
       ],
@@ -4193,6 +4317,7 @@
           "summed": 184512577,
           "difference": 781232,
           "status": "incomplete: unreadable figures excluded",
+          "method": null,
           "rowsSummed": 15
         },
         {
@@ -4201,6 +4326,7 @@
           "summed": 189338054,
           "difference": 1,
           "status": "incomplete: unreadable figures excluded",
+          "method": null,
           "rowsSummed": 15
         },
         {
@@ -4209,6 +4335,7 @@
           "summed": 192515954,
           "difference": 0,
           "status": "exact",
+          "method": null,
           "rowsSummed": 15
         },
         {
@@ -4217,6 +4344,7 @@
           "summed": 168774743,
           "difference": null,
           "status": "no printed total",
+          "method": null,
           "rowsSummed": 10
         }
       ],
@@ -4461,6 +4589,7 @@
           "summed": 102608524,
           "difference": 0,
           "status": "exact",
+          "method": null,
           "rowsSummed": 52
         },
         {
@@ -4469,6 +4598,7 @@
           "summed": 116142222,
           "difference": 0,
           "status": "exact",
+          "method": null,
           "rowsSummed": 52
         },
         {
@@ -4477,6 +4607,7 @@
           "summed": 112499628,
           "difference": 0,
           "status": "exact",
+          "method": null,
           "rowsSummed": 52
         },
         {
@@ -4485,6 +4616,7 @@
           "summed": 53777937,
           "difference": null,
           "status": "no printed total",
+          "method": null,
           "rowsSummed": 44
         }
       ],
@@ -5288,6 +5420,7 @@
           "summed": 31426954,
           "difference": 0,
           "status": "exact",
+          "method": null,
           "rowsSummed": 3
         },
         {
@@ -5296,6 +5429,7 @@
           "summed": 26972434,
           "difference": 0,
           "status": "exact",
+          "method": null,
           "rowsSummed": 3
         },
         {
@@ -5304,6 +5438,7 @@
           "summed": 27137771,
           "difference": 0,
           "status": "exact",
+          "method": null,
           "rowsSummed": 3
         },
         {
@@ -5312,6 +5447,7 @@
           "summed": 26495345,
           "difference": null,
           "status": "no printed total",
+          "method": null,
           "rowsSummed": 2
         }
       ],
@@ -5374,6 +5510,7 @@
           "summed": 39144,
           "difference": 0,
           "status": "exact",
+          "method": null,
           "rowsSummed": 4
         },
         {
@@ -5382,6 +5519,7 @@
           "summed": 88459,
           "difference": 0,
           "status": "exact",
+          "method": null,
           "rowsSummed": 4
         },
         {
@@ -5390,6 +5528,7 @@
           "summed": 74723,
           "difference": 0,
           "status": "exact",
+          "method": null,
           "rowsSummed": 4
         },
         {
@@ -5398,6 +5537,7 @@
           "summed": 91998,
           "difference": 0,
           "status": "exact",
+          "method": null,
           "rowsSummed": 4
         }
       ],
@@ -5473,6 +5613,7 @@
           "summed": 1033508,
           "difference": 0,
           "status": "exact",
+          "method": null,
           "rowsSummed": 3
         },
         {
@@ -5481,6 +5622,7 @@
           "summed": 2285237,
           "difference": 0,
           "status": "exact",
+          "method": null,
           "rowsSummed": 3
         },
         {
@@ -5489,6 +5631,7 @@
           "summed": 2686392,
           "difference": 0,
           "status": "exact",
+          "method": null,
           "rowsSummed": 3
         },
         {
@@ -5497,6 +5640,7 @@
           "summed": 2719688,
           "difference": 0,
           "status": "exact",
+          "method": null,
           "rowsSummed": 3
         }
       ],
@@ -5559,6 +5703,7 @@
           "summed": 12645593,
           "difference": 0,
           "status": "exact",
+          "method": null,
           "rowsSummed": 5
         },
         {
@@ -5567,6 +5712,7 @@
           "summed": 15736557,
           "difference": 0,
           "status": "exact",
+          "method": null,
           "rowsSummed": 5
         },
         {
@@ -5575,6 +5721,7 @@
           "summed": 13602359,
           "difference": 0,
           "status": "exact",
+          "method": null,
           "rowsSummed": 5
         },
         {
@@ -5583,6 +5730,7 @@
           "summed": 16658109,
           "difference": 0,
           "status": "exact",
+          "method": null,
           "rowsSummed": 5
         }
       ],
@@ -5671,6 +5819,7 @@
           "summed": 7511382,
           "difference": 47594,
           "status": "mismatch",
+          "method": null,
           "rowsSummed": 10
         },
         {
@@ -5679,6 +5828,7 @@
           "summed": 8011360,
           "difference": 0,
           "status": "exact",
+          "method": null,
           "rowsSummed": 10
         },
         {
@@ -5687,6 +5837,7 @@
           "summed": 8027646,
           "difference": 0,
           "status": "exact",
+          "method": null,
           "rowsSummed": 10
         },
         {
@@ -5695,6 +5846,7 @@
           "summed": 9546151,
           "difference": 0,
           "status": "exact",
+          "method": null,
           "rowsSummed": 10
         }
       ],
@@ -5848,6 +6000,7 @@
           "summed": 1278267,
           "difference": 0,
           "status": "exact",
+          "method": null,
           "rowsSummed": 2
         },
         {
@@ -5856,6 +6009,7 @@
           "summed": 7283929,
           "difference": 0,
           "status": "exact",
+          "method": null,
           "rowsSummed": 2
         },
         {
@@ -5864,6 +6018,7 @@
           "summed": 6947757,
           "difference": 0,
           "status": "exact",
+          "method": null,
           "rowsSummed": 2
         },
         {
@@ -5872,6 +6027,7 @@
           "summed": 6971623,
           "difference": 0,
           "status": "exact",
+          "method": null,
           "rowsSummed": 2
         }
       ],
@@ -5921,6 +6077,7 @@
           "summed": 21387648,
           "difference": 0,
           "status": "exact",
+          "method": null,
           "rowsSummed": 3
         },
         {
@@ -5929,6 +6086,7 @@
           "summed": 31031846,
           "difference": 0,
           "status": "exact",
+          "method": null,
           "rowsSummed": 3
         },
         {
@@ -5937,6 +6095,7 @@
           "summed": 28577762,
           "difference": 0,
           "status": "exact",
+          "method": null,
           "rowsSummed": 3
         },
         {
@@ -5945,6 +6104,7 @@
           "summed": 33175883,
           "difference": 0,
           "status": "exact",
+          "method": null,
           "rowsSummed": 3
         }
       ],
@@ -6007,6 +6167,7 @@
           "summed": 2709871,
           "difference": 0,
           "status": "exact",
+          "method": null,
           "rowsSummed": 6
         },
         {
@@ -6015,6 +6176,7 @@
           "summed": 2713996,
           "difference": 0,
           "status": "exact",
+          "method": null,
           "rowsSummed": 6
         },
         {
@@ -6023,6 +6185,7 @@
           "summed": 2739540,
           "difference": 0,
           "status": "exact",
+          "method": null,
           "rowsSummed": 6
         },
         {
@@ -6031,6 +6194,7 @@
           "summed": 2930807,
           "difference": 0,
           "status": "exact",
+          "method": null,
           "rowsSummed": 6
         }
       ],
@@ -6132,6 +6296,7 @@
           "summed": 48443,
           "difference": 0,
           "status": "exact",
+          "method": null,
           "rowsSummed": 2
         },
         {
@@ -6140,6 +6305,7 @@
           "summed": 940875,
           "difference": 0,
           "status": "exact",
+          "method": null,
           "rowsSummed": 2
         },
         {
@@ -6148,6 +6314,7 @@
           "summed": 940875,
           "difference": 0,
           "status": "exact",
+          "method": null,
           "rowsSummed": 2
         },
         {
@@ -6156,6 +6323,7 @@
           "summed": 1221582,
           "difference": 0,
           "status": "exact",
+          "method": null,
           "rowsSummed": 2
         }
       ],
@@ -6205,6 +6373,7 @@
           "summed": 6181177,
           "difference": 0,
           "status": "exact",
+          "method": null,
           "rowsSummed": 3
         },
         {
@@ -6213,6 +6382,7 @@
           "summed": 7483800,
           "difference": 0,
           "status": "exact",
+          "method": null,
           "rowsSummed": 3
         },
         {
@@ -6221,6 +6391,7 @@
           "summed": 7414550,
           "difference": 0,
           "status": "exact",
+          "method": null,
           "rowsSummed": 3
         },
         {
@@ -6229,6 +6400,7 @@
           "summed": 8966902,
           "difference": 0,
           "status": "exact",
+          "method": null,
           "rowsSummed": 3
         }
       ],
@@ -6291,6 +6463,7 @@
           "summed": 1138436,
           "difference": 0,
           "status": "exact",
+          "method": null,
           "rowsSummed": 6
         },
         {
@@ -6299,6 +6472,7 @@
           "summed": 1370770,
           "difference": 0,
           "status": "exact",
+          "method": null,
           "rowsSummed": 6
         },
         {
@@ -6307,6 +6481,7 @@
           "summed": 1725478,
           "difference": 0,
           "status": "exact",
+          "method": null,
           "rowsSummed": 6
         },
         {
@@ -6315,6 +6490,7 @@
           "summed": 1411892,
           "difference": 0,
           "status": "exact",
+          "method": null,
           "rowsSummed": 6
         }
       ],
@@ -6416,6 +6592,7 @@
           "summed": 147140,
           "difference": 0,
           "status": "exact",
+          "method": null,
           "rowsSummed": 6
         },
         {
@@ -6424,6 +6601,7 @@
           "summed": 176567,
           "difference": 0,
           "status": "exact",
+          "method": null,
           "rowsSummed": 6
         },
         {
@@ -6432,6 +6610,7 @@
           "summed": 194591,
           "difference": 0,
           "status": "exact",
+          "method": null,
           "rowsSummed": 6
         },
         {
@@ -6440,6 +6619,7 @@
           "summed": 181863,
           "difference": 0,
           "status": "exact",
+          "method": null,
           "rowsSummed": 6
         }
       ],
@@ -6532,39 +6712,34 @@
       "rowCount": 4,
       "coveredBySubtotals": 0,
       "unreadableFigures": 0,
-      "verified": false,
+      "verified": true,
       "fund": "CROUSE MARSHALL SPECIAL ASSESSMENT",
       "columns": [
         {
           "column": 0,
-          "printed": 1,
+          "printed": null,
           "summed": 0,
-          "difference": -1,
-          "status": "mismatch",
+          "difference": null,
+          "status": "no printed total",
+          "method": null,
           "rowsSummed": 0
         },
         {
           "column": 1,
-          "printed": 30898958,
+          "printed": 130898958,
           "summed": 130898958,
-          "difference": 100000000,
-          "status": "mismatch",
+          "difference": 0,
+          "status": "exact",
+          "method": null,
           "rowsSummed": 4
         },
         {
           "column": 2,
-          "printed": 1,
-          "summed": 0,
-          "difference": -1,
-          "status": "mismatch",
-          "rowsSummed": 0
-        },
-        {
-          "column": 3,
-          "printed": 36270267,
+          "printed": 136270267,
           "summed": 136270267,
-          "difference": 100000000,
-          "status": "mismatch",
+          "difference": 0,
+          "status": "exact",
+          "method": null,
           "rowsSummed": 4
         }
       ],
@@ -6577,7 +6752,6 @@
           "values": [
             null,
             123312473,
-            null,
             127415912
           ],
           "unreadable": false
@@ -6590,7 +6764,6 @@
           "values": [
             null,
             1161670,
-            null,
             1370770
           ],
           "unreadable": false
@@ -6603,7 +6776,6 @@
           "values": [
             null,
             147140,
-            null,
             176567
           ],
           "unreadable": false
@@ -6616,7 +6788,6 @@
           "values": [
             null,
             6277675,
-            null,
             7307018
           ],
           "unreadable": false
@@ -6631,50 +6802,44 @@
       "rowCount": 1,
       "coveredBySubtotals": 0,
       "unreadableFigures": 0,
-      "verified": false,
+      "verified": true,
       "fund": "CROUSE MARSHALL SPECIAL ASSESSMENT",
       "columns": [
         {
           "column": 0,
-          "printed": 1,
+          "printed": null,
           "summed": 0,
-          "difference": -1,
-          "status": "mismatch",
+          "difference": null,
+          "status": "no printed total",
+          "method": null,
           "rowsSummed": 0
         },
         {
           "column": 1,
-          "printed": 31762891,
+          "printed": 131762891,
           "summed": 0,
-          "difference": -31762891,
-          "status": "mismatch",
+          "difference": -131762891,
+          "status": "exact",
+          "method": "growth factor applied to the line above",
           "rowsSummed": 0
         },
         {
           "column": 2,
-          "printed": 1,
+          "printed": 136270267,
           "summed": 0,
-          "difference": -1,
-          "status": "mismatch",
-          "rowsSummed": 0
-        },
-        {
-          "column": 3,
-          "printed": 36270267,
-          "summed": 0,
-          "difference": -36270267,
-          "status": "mismatch",
+          "difference": -136270267,
+          "status": "exact",
+          "method": "growth factor applied to the line above",
           "rowsSummed": 0
         }
       ],
       "rows": [
         {
           "code": null,
-          "label": "Tax Base Growth Factor .0066 .0000",
+          "label": "Tax Base Growth Factor",
           "fund": "CROUSE MARSHALL SPECIAL ASSESSMENT",
           "page": 76,
           "values": [
-            null,
             null,
             null,
             null
@@ -6688,105 +6853,173 @@
       "page": 76,
       "level": "department",
       "header": null,
-      "rowCount": 0,
+      "rowCount": 2,
       "coveredBySubtotals": 0,
       "unreadableFigures": 0,
-      "verified": false,
+      "verified": true,
       "fund": "CROUSE MARSHALL SPECIAL ASSESSMENT",
       "columns": [
         {
           "column": 0,
-          "printed": 1,
+          "printed": null,
           "summed": 0,
-          "difference": -1,
-          "status": "mismatch",
+          "difference": null,
+          "status": "no printed total",
+          "method": null,
           "rowsSummed": 0
         },
         {
           "column": 1,
-          "printed": 37971084,
-          "summed": 0,
-          "difference": -37971084,
-          "status": "mismatch",
-          "rowsSummed": 0
+          "printed": 137971084,
+          "summed": 6208193,
+          "difference": -131762891,
+          "status": "exact",
+          "method": "running total",
+          "rowsSummed": 2
         },
         {
           "column": 2,
-          "printed": 1,
+          "printed": 142025267,
+          "summed": 5755000,
+          "difference": -136270267,
+          "status": "exact",
+          "method": "running total",
+          "rowsSummed": 2
+        }
+      ],
+      "rows": [
+        {
+          "code": null,
+          "label": "PILOTS Receivable for the Prior Year",
+          "fund": "CROUSE MARSHALL SPECIAL ASSESSMENT",
+          "page": 76,
+          "values": [
+            null,
+            6208193,
+            5755000
+          ],
+          "unreadable": false
+        },
+        {
+          "code": null,
+          "label": "Tort Exclusion Amount Claimed in PY",
+          "fund": "CROUSE MARSHALL SPECIAL ASSESSMENT",
+          "page": 76,
+          "values": [
+            null,
+            0,
+            0
+          ],
+          "unreadable": false
+        }
+      ]
+    },
+    {
+      "name": "Subtotal",
+      "page": 76,
+      "level": "department",
+      "header": null,
+      "rowCount": 2,
+      "coveredBySubtotals": 0,
+      "unreadableFigures": 0,
+      "verified": true,
+      "fund": "CROUSE MARSHALL SPECIAL ASSESSMENT",
+      "columns": [
+        {
+          "column": 0,
+          "printed": null,
           "summed": 0,
-          "difference": -1,
-          "status": "mismatch",
+          "difference": null,
+          "status": "no printed total",
+          "method": null,
           "rowsSummed": 0
         },
         {
-          "column": 3,
-          "printed": 42025267,
-          "summed": 0,
-          "difference": -42025267,
-          "status": "mismatch",
-          "rowsSummed": 0
+          "column": 1,
+          "printed": -5755000,
+          "summed": 5755000,
+          "difference": 11510000,
+          "status": "exact",
+          "method": "subtracted",
+          "rowsSummed": 2
+        },
+        {
+          "column": 2,
+          "printed": -5571307,
+          "summed": 5571307,
+          "difference": 11142614,
+          "status": "exact",
+          "method": "subtracted",
+          "rowsSummed": 2
         }
       ],
-      "rows": []
+      "rows": [
+        {
+          "code": null,
+          "label": "PILOTS Receivable for the Coming Year",
+          "fund": "CROUSE MARSHALL SPECIAL ASSESSMENT",
+          "page": 76,
+          "values": [
+            null,
+            5755000,
+            5571307
+          ],
+          "unreadable": false
+        },
+        {
+          "code": null,
+          "label": "Plus Available Carryover from the Prior Year",
+          "fund": "CROUSE MARSHALL SPECIAL ASSESSMENT",
+          "page": 76,
+          "values": [
+            null,
+            0,
+            0
+          ],
+          "unreadable": false
+        }
+      ]
     },
     {
       "name": "Tax Levy & Special Assessments",
       "page": 76,
       "level": "department",
       "header": null,
-      "rowCount": 5,
+      "rowCount": 4,
       "coveredBySubtotals": 0,
       "unreadableFigures": 0,
-      "verified": false,
+      "verified": true,
       "fund": "CROUSE MARSHALL SPECIAL ASSESSMENT",
       "columns": [
         {
           "column": 0,
-          "printed": 1,
-          "summed": 1,
-          "difference": 0,
-          "status": "exact",
-          "rowsSummed": 1
+          "printed": null,
+          "summed": 0,
+          "difference": null,
+          "status": "no printed total",
+          "method": null,
+          "rowsSummed": 0
         },
         {
           "column": 1,
-          "printed": 35440116,
-          "summed": 172540534,
-          "difference": 137100418,
-          "status": "mismatch",
-          "rowsSummed": 5
+          "printed": 136270267,
+          "summed": 136270267,
+          "difference": 0,
+          "status": "exact",
+          "method": null,
+          "rowsSummed": 4
         },
         {
           "column": 2,
-          "printed": 1,
-          "summed": 1,
+          "printed": 140125926,
+          "summed": 140125926,
           "difference": 0,
           "status": "exact",
-          "rowsSummed": 1
-        },
-        {
-          "column": 3,
-          "printed": 40022787,
-          "summed": 180251852,
-          "difference": 140229065,
-          "status": "mismatch",
-          "rowsSummed": 5
+          "method": null,
+          "rowsSummed": 4
         }
       ],
       "rows": [
-        {
-          "code": null,
-          "label": "Property Tax Cap AFTER Exclusions",
-          "fund": "CROUSE MARSHALL SPECIAL ASSESSMENT",
-          "page": 76,
-          "values": [
-            null,
-            127415912,
-            null,
-            130359277
-          ],
-          "unreadable": false
-        },
         {
           "code": null,
           "label": "Adopted Tax Levy",
@@ -6794,9 +7027,8 @@
           "page": 76,
           "values": [
             null,
-            1370770,
-            null,
-            1411893
+            127415912,
+            130359277
           ],
           "unreadable": false
         },
@@ -6807,9 +7039,8 @@
           "page": 76,
           "values": [
             null,
-            176567,
-            null,
-            181864
+            1370770,
+            1411893
           ],
           "unreadable": false
         },
@@ -6820,9 +7051,8 @@
           "page": 76,
           "values": [
             null,
-            7307018,
-            null,
-            8172892
+            176567,
+            181864
           ],
           "unreadable": false
         },
@@ -6832,10 +7062,9 @@
           "fund": "CROUSE MARSHALL SPECIAL ASSESSMENT",
           "page": 76,
           "values": [
-            1,
-            36270267,
-            1,
-            40125926
+            null,
+            7307018,
+            8172892
           ],
           "unreadable": false
         }
@@ -6845,7 +7074,7 @@
       "name": "Full Valuation",
       "page": 77,
       "level": "department",
-      "header": "",
+      "header": null,
       "rowCount": 5,
       "coveredBySubtotals": 0,
       "unreadableFigures": 0,
@@ -6858,6 +7087,7 @@
           "summed": 21734730694,
           "difference": null,
           "status": "no printed total",
+          "method": null,
           "rowsSummed": 5
         },
         {
@@ -6866,6 +7096,7 @@
           "summed": 0,
           "difference": null,
           "status": "no printed total",
+          "method": null,
           "rowsSummed": 0
         },
         {
@@ -6874,6 +7105,7 @@
           "summed": 38912422954,
           "difference": -1,
           "status": "mismatch",
+          "method": null,
           "rowsSummed": 5
         },
         {
@@ -6882,6 +7114,7 @@
           "summed": 0,
           "difference": null,
           "status": "no printed total",
+          "method": null,
           "rowsSummed": 0
         }
       ],
@@ -6954,14 +7187,14 @@
       ]
     },
     {
-      "name": "Exclusions",
+      "name": "Tax Levy",
       "page": 77,
       "level": "department",
       "header": null,
-      "rowCount": 0,
+      "rowCount": 5,
       "coveredBySubtotals": 0,
       "unreadableFigures": 0,
-      "verified": false,
+      "verified": true,
       "fund": "CROUSE MARSHALL SPECIAL ASSESSMENT",
       "columns": [
         {
@@ -6970,22 +7203,25 @@
           "summed": 0,
           "difference": null,
           "status": "no printed total",
+          "method": null,
           "rowsSummed": 0
         },
         {
           "column": 1,
           "printed": null,
-          "summed": 0,
+          "summed": 140125926,
           "difference": null,
           "status": "no printed total",
-          "rowsSummed": 0
+          "method": null,
+          "rowsSummed": 5
         },
         {
           "column": 2,
-          "printed": 36877373,
+          "printed": 140125926,
           "summed": 0,
-          "difference": -36877373,
-          "status": "mismatch",
+          "difference": -140125926,
+          "status": "exact",
+          "method": "carried into the total column",
           "rowsSummed": 0
         },
         {
@@ -6994,10 +7230,258 @@
           "summed": 0,
           "difference": null,
           "status": "no printed total",
+          "method": null,
           "rowsSummed": 0
         }
       ],
-      "rows": []
+      "rows": [
+        {
+          "code": null,
+          "label": "City",
+          "fund": "CROUSE MARSHALL SPECIAL ASSESSMENT",
+          "page": 77,
+          "values": [
+            null,
+            61913554,
+            null,
+            null
+          ],
+          "unreadable": false
+        },
+        {
+          "code": null,
+          "label": "School District",
+          "fund": "CROUSE MARSHALL SPECIAL ASSESSMENT",
+          "page": 77,
+          "values": [
+            null,
+            68445723,
+            null,
+            null
+          ],
+          "unreadable": false
+        },
+        {
+          "code": null,
+          "label": "Downtown Special District",
+          "fund": "CROUSE MARSHALL SPECIAL ASSESSMENT",
+          "page": 77,
+          "values": [
+            null,
+            1411893,
+            null,
+            null
+          ],
+          "unreadable": false
+        },
+        {
+          "code": null,
+          "label": "Crouse-Marshall Special District",
+          "fund": "CROUSE MARSHALL SPECIAL ASSESSMENT",
+          "page": 77,
+          "values": [
+            null,
+            181864,
+            null,
+            null
+          ],
+          "unreadable": false
+        },
+        {
+          "code": null,
+          "label": "Special Benefit Assessments",
+          "fund": "CROUSE MARSHALL SPECIAL ASSESSMENT",
+          "page": 77,
+          "values": [
+            null,
+            8172892,
+            null,
+            null
+          ],
+          "unreadable": false
+        }
+      ]
+    },
+    {
+      "name": "Exclusions",
+      "page": 77,
+      "level": "department",
+      "header": null,
+      "rowCount": 10,
+      "coveredBySubtotals": 0,
+      "unreadableFigures": 0,
+      "verified": true,
+      "fund": "CROUSE MARSHALL SPECIAL ASSESSMENT",
+      "columns": [
+        {
+          "column": 0,
+          "printed": null,
+          "summed": 0,
+          "difference": null,
+          "status": "no printed total",
+          "method": null,
+          "rowsSummed": 0
+        },
+        {
+          "column": 1,
+          "printed": null,
+          "summed": 36877373,
+          "difference": null,
+          "status": "no printed total",
+          "method": null,
+          "rowsSummed": 10
+        },
+        {
+          "column": 2,
+          "printed": 36877373,
+          "summed": 0,
+          "difference": -36877373,
+          "status": "exact",
+          "method": "carried into the total column",
+          "rowsSummed": 0
+        },
+        {
+          "column": 3,
+          "printed": null,
+          "summed": 0,
+          "difference": null,
+          "status": "no printed total",
+          "method": null,
+          "rowsSummed": 0
+        }
+      ],
+      "rows": [
+        {
+          "code": null,
+          "label": "City Gen Fund",
+          "fund": "CROUSE MARSHALL SPECIAL ASSESSMENT",
+          "page": 77,
+          "values": [
+            null,
+            26495345,
+            null,
+            null
+          ],
+          "unreadable": false
+        },
+        {
+          "code": null,
+          "label": "Municipal Sidewalk Fund",
+          "fund": "CROUSE MARSHALL SPECIAL ASSESSMENT",
+          "page": 77,
+          "values": [
+            null,
+            1467424,
+            null,
+            null
+          ],
+          "unreadable": false
+        },
+        {
+          "code": null,
+          "label": "City Water",
+          "fund": "CROUSE MARSHALL SPECIAL ASSESSMENT",
+          "page": 77,
+          "values": [
+            null,
+            5826623,
+            null,
+            null
+          ],
+          "unreadable": false
+        },
+        {
+          "code": null,
+          "label": "School District",
+          "fund": "CROUSE MARSHALL SPECIAL ASSESSMENT",
+          "page": 77,
+          "values": [
+            null,
+            1343400,
+            null,
+            null
+          ],
+          "unreadable": false
+        },
+        {
+          "code": null,
+          "label": "Sewer Fund",
+          "fund": "CROUSE MARSHALL SPECIAL ASSESSMENT",
+          "page": 77,
+          "values": [
+            null,
+            266581,
+            null,
+            null
+          ],
+          "unreadable": false
+        },
+        {
+          "code": null,
+          "label": "City Gen Fund",
+          "fund": "CROUSE MARSHALL SPECIAL ASSESSMENT",
+          "page": 77,
+          "values": [
+            null,
+            333000,
+            null,
+            null
+          ],
+          "unreadable": false
+        },
+        {
+          "code": null,
+          "label": "Municipal Sidewalk Fund",
+          "fund": "CROUSE MARSHALL SPECIAL ASSESSMENT",
+          "page": 77,
+          "values": [
+            null,
+            0,
+            null,
+            null
+          ],
+          "unreadable": false
+        },
+        {
+          "code": null,
+          "label": "City Water",
+          "fund": "CROUSE MARSHALL SPECIAL ASSESSMENT",
+          "page": 77,
+          "values": [
+            null,
+            1145000,
+            null,
+            null
+          ],
+          "unreadable": false
+        },
+        {
+          "code": null,
+          "label": "School District",
+          "fund": "CROUSE MARSHALL SPECIAL ASSESSMENT",
+          "page": 77,
+          "values": [
+            null,
+            0,
+            null,
+            null
+          ],
+          "unreadable": false
+        },
+        {
+          "code": null,
+          "label": "Sewer Fund",
+          "fund": "CROUSE MARSHALL SPECIAL ASSESSMENT",
+          "page": 77,
+          "values": [
+            null,
+            0,
+            null,
+            null
+          ],
+          "unreadable": false
+        }
+      ]
     }
   ]
 }
