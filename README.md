@@ -215,6 +215,18 @@ The dropped minus sign is common enough to look for: a total short by exactly tw
 lines now carries a note naming that line in the report. It stays a disagreement, because the
 page prints what it prints.
 
+### What residents see
+
+The "Mistakes we found in the City's budget books" list on the site comes from
+`data/book_findings.json`: one plain sentence per mistake, with its book, page and amount. The
+count of $1 to $3 rounding differences under each book is taken from that book's report. The
+earlier books' reports are kept in `data/earlier_books/` with their totals only, since the PDFs
+themselves are not in the repository.
+
+Every sentence is checked by the validator against its book's report. If the page and amount a
+sentence gives stop appearing as a mismatch, because the parser or the source changed, the build
+fails rather than showing residents a claim the evidence no longer supports.
+
 ## Evidence and limits
 
 This is a portfolio prototype, not an audited financial reporting system. There are 916 records in the current export. The six formal fund totals and the inter-fund adjustment are read back out of the adopted PDF by `scripts/extract_pdf_totals.py` and checked against the exported values, so those figures are verified rather than trusted; a regression test confirms the check fails when a total is wrong. Amendment definitions and the narrative remain manually transcribed, and account-level PDF detail is not yet extracted. Account detail has not been fully reconciled to formal totals. Residuals may reflect source differences, grouping or parser issues and require source review. The interface reports these limits.

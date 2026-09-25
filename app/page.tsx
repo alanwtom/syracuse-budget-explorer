@@ -137,6 +137,7 @@ type BudgetData = {
   validation: { label: string; status: string; detail: string }[];
   pdfConfirmation?: { confirmed: number; conflicting: number; available: number };
   bookDifferences?: { page: number; fund: string | null; section: string; difference: number }[];
+  bookFindings?: { book: string; url: string | null; rounding: number; findings: { pages: number[]; text: string }[] }[];
   sources: Record<string, { label: string; url: string }>;
   openData: {
     catalogUrl: string;
@@ -290,6 +291,54 @@ function TrustSummary() {
         </li>
       ))}
     </ul>
+  );
+}
+
+function pageLabel(pages: number[]) {
+  if (pages.length === 1) return `Page ${pages[0]}`;
+  if (pages.length === 2 && pages[1] === pages[0] + 1) return `Pages ${pages[0]}\u2013${pages[1]}`;
+  return `Pages ${pages.slice(0, -1).join(', ')} and ${pages[pages.length - 1]}`;
+}
+
+function BookMistakes() {
+  const books = (data.bookFindings ?? []).filter((b) => b.findings.length > 0 || b.rounding > 0);
+  if (books.length === 0) return null;
+  const total = books.reduce((n, b) => n + b.findings.length, 0);
+  return (
+    <div className="mt-6">
+      <h3 className="text-sm font-semibold text-[#173140]">Mistakes we found in the City&rsquo;s budget books</h3>
+      <p className="mt-2 text-sm leading-6 text-[#52656d]">
+        We added up every table in the last {['', 'one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine'][books.length] ?? books.length} adopted
+        budgets and compared each one with the total the book prints. These {total} places don&rsquo;t match by more than a few dollars.
+        They are mistakes in the books themselves, not in how we read them.
+      </p>
+      <p className="mt-2 text-xs leading-5 text-[#6b7c83]">Page numbers are the page of the PDF file, which is where a PDF viewer will take you. The number printed on the page itself can be lower.</p>
+      <div className="mt-4 space-y-5">
+        {books.map((book) => (
+          <div key={book.book}>
+            <p className="text-sm font-semibold text-[#173140]">
+              {book.book} budget book
+              {book.url ? (
+                <a className="ml-2 text-xs font-normal underline text-[#52656d]" href={book.url} target="_blank" rel="noreferrer">PDF</a>
+              ) : null}
+            </p>
+            <ul className="mt-2 space-y-2">
+              {book.findings.map((f) => (
+                <li key={f.text} className="flex flex-col text-sm leading-6 text-[#34474f] sm:flex-row sm:gap-3">
+                  <span className="shrink-0 text-xs leading-6 text-[#6b7c83] sm:w-24">{pageLabel(f.pages)}</span>
+                  <span>{f.text}</span>
+                </li>
+              ))}
+            </ul>
+            {book.rounding > 0 ? (
+              <p className="mt-2 text-xs leading-5 text-[#6b7c83]">
+                Plus {book.rounding} {book.rounding === 1 ? 'place' : 'places'} off by $1 to $3, which is rounding.
+              </p>
+            ) : null}
+          </div>
+        ))}
+      </div>
+    </div>
   );
 }
 
@@ -1012,6 +1061,7 @@ export default function Home() {
           <p className="section-description">An independent civic-data project by Alan Tom, built with AI assistance to make public budget records easier to explore. Not affiliated with or endorsed by the City of Syracuse.</p>
           <h3 className="mt-6 text-sm font-semibold text-[#173140]">Can you trust these numbers?</h3>
           <TrustSummary />
+          <BookMistakes />
           <a className="mt-4 inline-block text-sm underline" href="/project-notes.html" target="_blank" rel="noreferrer">Read the project notes and source findings</a>
           <details className="mt-5 border-t border-[#dfe5df] pt-4">
             <summary className="cursor-pointer text-sm font-semibold">Technical checks</summary>

@@ -970,6 +970,8 @@ def main():
     parser.add_argument("--last-page", type=int, default=None,
                         help="override the detected last page")
     parser.add_argument("--output", default="data/pdf_detail.json")
+    parser.add_argument("--compact", action="store_true",
+                        help="keep section totals only, dropping the line items")
     args = parser.parse_args()
 
     pdf_path = Path(args.pdf)
@@ -1018,6 +1020,9 @@ def main():
         },
         "sections": report,
     }
+    if args.compact:
+        # Enough to check a finding against, without every line of the book.
+        payload["sections"] = [{k: v for k, v in section.items() if k != "rows"} for section in report]
     Path(args.output).write_text(json.dumps(payload, indent=2) + "\n", encoding="utf-8")
     print(json.dumps(payload["summary"]))
 

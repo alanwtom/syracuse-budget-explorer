@@ -28217,6 +28217,11 @@
       "detail": "151 account rows carry the same FY27 figure in the adopted PDF as in the workbook, matched on fund and account code and taken only from PDF sections that reconcile to their own printed totals. 0 disagree. Rows without a confirmation are not thereby wrong; the PDF simply does not print a reconciling figure for them."
     },
     {
+      "label": "Budget book mistakes shown to residents still match the parser",
+      "status": "pass",
+      "detail": "12 findings across 5 budget books, each checked against that book's report for its page and amount. All match."
+    },
+    {
       "label": "Amendment record coverage",
       "status": "pass",
       "detail": "Every listed amendment must map to an exported record."
@@ -28374,6 +28379,117 @@
       "fund": "CROUSE MARSHALL SPECIAL ASSESSMENT",
       "section": "Full Valuation",
       "difference": -1
+    }
+  ],
+  "bookFindings": [
+    {
+      "book": "2026-27",
+      "url": "https://www.syr.gov/files/sharedassets/public/v/3/departments/budget/documents/budget-documents/08-12-fy27-final-adopted-budget.pdf",
+      "rounding": 6,
+      "findings": [
+        {
+          "pages": [
+            71
+          ],
+          "text": "A Water Fund subtotal for 2025 spending is $47,594 less than the lines above it add up to."
+        }
+      ]
+    },
+    {
+      "book": "2025-26",
+      "url": "https://www.syr.gov/files/sharedassets/public/v/1/2025-2026-budget.pdf",
+      "rounding": 8,
+      "findings": [
+        {
+          "pages": [
+            74
+          ],
+          "text": "Sewer Fund “Bad Debt Expense” is printed as $14,933 but should be −$14,933. The total only adds up with the minus sign."
+        }
+      ]
+    },
+    {
+      "book": "2024-25",
+      "url": "https://www.syr.gov/files/content/public/v/27/departments/budget/city-budget/2024-2025-budget_1.pdf",
+      "rounding": 9,
+      "findings": [
+        {
+          "pages": [
+            56
+          ],
+          "text": "State Highway Aid for 2023 is printed as $351,286. The book’s own total and the City Auditor’s records both say $375,476."
+        },
+        {
+          "pages": [
+            38,
+            39
+          ],
+          "text": "The Equity Compliance division ($145,415) is listed under Neighborhood & Business Development, but its money is counted in the Executive department’s total."
+        },
+        {
+          "pages": [
+            68
+          ],
+          "text": "The 2023 total for “special objects” spending is $9,708 higher than its lines, which match the City Auditor’s records."
+        }
+      ]
+    },
+    {
+      "book": "2023-24",
+      "url": "https://www.syr.gov/files/content/public/v/27/departments/budget/city-budget/2023-2024-budget_1.pdf",
+      "rounding": 15,
+      "findings": [
+        {
+          "pages": [
+            27,
+            56
+          ],
+          "text": "A $40,000 line, Service Kill Fees, is left out of the Finance table but still counted in its total. The previous year’s book lists it."
+        },
+        {
+          "pages": [
+            57
+          ],
+          "text": "Code Enforcement’s 2022 revenue total is $11,307 higher than its lines, which match the City Auditor’s records."
+        },
+        {
+          "pages": [
+            71
+          ],
+          "text": "“Police General Services” is printed as $619 but should be −$619. The total only adds up with the minus sign."
+        },
+        {
+          "pages": [
+            59
+          ],
+          "text": "Public Works revenue for 2022 includes $125 that is not on any line."
+        }
+      ]
+    },
+    {
+      "book": "2022-23",
+      "url": "https://www.syr.gov/files/sharedassets/public/v/4/departments/budget/budget-links/2022-2023-budget.pdf",
+      "rounding": 14,
+      "findings": [
+        {
+          "pages": [
+            27
+          ],
+          "text": "A $15,123 line, Sale of Tax Property, is left out of the Finance table but still counted in its total. The next year’s book lists it."
+        },
+        {
+          "pages": [
+            57
+          ],
+          "text": "Public Works revenue totals include $111 and $125 that are not on any line."
+        },
+        {
+          "pages": [
+            75
+          ],
+          "text": "Downtown “Transportation” is printed as $247 but should be −$247. The total only adds up with the minus sign."
+        }
+      ]
     }
   ]
 }

@@ -5,6 +5,23 @@ import sys
 from pathlib import Path
 
 
+def stale_findings(spec, load_report):
+    """Findings whose page and amount no longer appear as a mismatch in their book's report."""
+    reports = {book['book']: load_report(book['report']) for book in spec['books']}
+    stale = []
+    for finding in spec['findings']:
+        report = reports.get(finding['book'])
+        if report is None:
+            stale.append(f"{finding['book']} (no report)")
+            continue
+        found = {abs(c['difference']) for s in report['sections'] if s['page'] in finding['pages']
+                 for c in s['columns'] if c.get('status') == 'mismatch'}
+        missing = [a for a in finding['amounts'] if a not in found]
+        if missing:
+            stale.append(f"{finding['book']} page {finding['pages']}: {missing}")
+    return stale
+
+
 def validate(data):
     rows = data['rows']
     checks = []
@@ -60,6 +77,24 @@ def validate(data):
               f"matched on fund and account code and taken only from PDF sections that reconcile to their own "
               f"printed totals. {conflicting} disagree. Rows without a confirmation are not thereby wrong; "
               f"the PDF simply does not print a reconciling figure for them.")
+
+    # Every mistake shown to residents must still be one the parser finds, at the
+    # page and for the amount the sentence gives. A finding that stops matching,
+    # because the parser or the source changed, fails rather than going out stale.
+    findings_path = Path(__file__).resolve().parents[1] / 'data/book_findings.json'
+    if findings_path.exists():
+        spec = json.loads(findings_path.read_text(encoding='utf-8'))
+        root = Path(__file__).resolve().parents[1]
+
+        def load(relative):
+            path = root / relative
+            return json.loads(path.read_text(encoding='utf-8')) if path.exists() else None
+
+        stale = stale_findings(spec, load)
+        check('Budget book mistakes shown to residents still match the parser', not stale,
+              f"{len(spec['findings'])} findings across {len(spec['books'])} budget books, each checked against "
+              f"that book's report for its page and amount. "
+              + ('All match.' if not stale else 'No longer found: ' + '; '.join(stale)))
 
     applied = data.get('appliedAmendments', [])
     by_id = {r['id']: r for r in rows}

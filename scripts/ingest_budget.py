@@ -727,6 +727,39 @@ PDF_FUND_IDS = {
 }
 
 
+def rounding_only(section):
+    """A section whose every disagreement is a few dollars: rounding, not a mistake."""
+    bad = [c for c in section.get("columns", []) if c.get("status") == "mismatch"]
+    return bool(bad) and all(abs(c["difference"]) <= 3 for c in bad)
+
+
+def budget_book_findings(root):
+    """The mistakes found in each adopted budget book, for residents to read.
+
+    The sentences are written by hand from traced findings. How many small
+    rounding differences each book has is counted from that book's report.
+    """
+    spec_path = root / "data/book_findings.json"
+    if not spec_path.exists():
+        return []
+    spec = json.loads(spec_path.read_text(encoding="utf-8"))
+    books = []
+    for book in spec["books"]:
+        report_path = root / book["report"]
+        rounding = 0
+        if report_path.exists():
+            report = json.loads(report_path.read_text(encoding="utf-8"))
+            rounding = sum(1 for s in report.get("sections", []) if rounding_only(s))
+        books.append({
+            "book": book["book"],
+            "url": book.get("url"),
+            "rounding": rounding,
+            "findings": [{"pages": f["pages"], "text": f["text"]}
+                         for f in spec["findings"] if f["book"] == book["book"]],
+        })
+    return books
+
+
 def budget_book_differences(detail_path):
     """Places where the budget book's printed total disagrees with its own rows.
 
@@ -897,6 +930,7 @@ def build_data(workbook_path: Path) -> dict[str, Any]:
     result["pdfConfirmation"] = pdf_match
     result["bookDifferences"] = budget_book_differences(
         Path(__file__).resolve().parents[1] / "data/pdf_detail.json")
+    result["bookFindings"] = budget_book_findings(Path(__file__).resolve().parents[1])
     result["validation"] = validate(result)
     result["validation"].append({"label": "Workbook formula scan", "status": "pass" if formula_errors == 0 else "check", "detail": f"{formula_cells} formulas scanned; {formula_errors} unreadable. This checks readability, not formula correctness."})
     return result

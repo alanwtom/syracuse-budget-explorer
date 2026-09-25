@@ -1,0 +1,4997 @@
+{
+  "sourcePdfSha256": "3b6b473aeddd5b0f279b57e782a14c6e60f2cf1068683828083f54863c4f1292",
+  "pageRange": [
+    25,
+    84
+  ],
+  "summary": {
+    "sections": 106,
+    "sectionsVerified": 86,
+    "sectionsUncheckable": 0,
+    "columnsExact": 332,
+    "columnsMismatched": 24,
+    "columnsIncomplete": 0,
+    "reconciliationRate": 0.9326,
+    "unreadableFigures": 0
+  },
+  "sections": [
+    {
+      "name": "REAL PROPERTY TAX ITEMS",
+      "page": 25,
+      "level": "fund",
+      "header": "Real Property Tax Items",
+      "rowCount": 13,
+      "coveredBySubtotals": 0,
+      "unreadableFigures": 0,
+      "verified": true,
+      "fund": "GENERAL FUND",
+      "columns": [
+        {
+          "column": 0,
+          "printed": 7152949,
+          "summed": 7152949,
+          "difference": 0,
+          "status": "exact",
+          "method": null,
+          "hint": null,
+          "rowsSummed": 13
+        },
+        {
+          "column": 1,
+          "printed": 8483136,
+          "summed": 8483136,
+          "difference": 0,
+          "status": "exact",
+          "method": null,
+          "hint": null,
+          "rowsSummed": 13
+        },
+        {
+          "column": 2,
+          "printed": 1330187,
+          "summed": 1330187,
+          "difference": 0,
+          "status": "exact",
+          "method": null,
+          "hint": null,
+          "rowsSummed": 13
+        }
+      ]
+    },
+    {
+      "name": "NON-PROPERTY TAX ITEMS",
+      "page": 26,
+      "level": "fund",
+      "header": "Non-Property Tax Items",
+      "rowCount": 7,
+      "coveredBySubtotals": 0,
+      "unreadableFigures": 0,
+      "verified": true,
+      "fund": "GENERAL FUND",
+      "columns": [
+        {
+          "column": 0,
+          "printed": 118041000,
+          "summed": 118041000,
+          "difference": 0,
+          "status": "exact",
+          "method": null,
+          "hint": null,
+          "rowsSummed": 7
+        },
+        {
+          "column": 1,
+          "printed": 125492845,
+          "summed": 125492845,
+          "difference": 0,
+          "status": "exact",
+          "method": null,
+          "hint": null,
+          "rowsSummed": 7
+        },
+        {
+          "column": 2,
+          "printed": 7451845,
+          "summed": 7451845,
+          "difference": 0,
+          "status": "exact",
+          "method": null,
+          "hint": null,
+          "rowsSummed": 7
+        }
+      ]
+    },
+    {
+      "name": "Finance",
+      "page": 27,
+      "level": "fund",
+      "header": "Finance",
+      "rowCount": 13,
+      "coveredBySubtotals": 0,
+      "unreadableFigures": 0,
+      "verified": false,
+      "fund": "GENERAL FUND",
+      "columns": [
+        {
+          "column": 0,
+          "printed": 4843263,
+          "summed": 4803263,
+          "difference": -40000,
+          "status": "mismatch",
+          "method": null,
+          "hint": null,
+          "rowsSummed": 13
+        },
+        {
+          "column": 1,
+          "printed": 5786634,
+          "summed": 5786634,
+          "difference": 0,
+          "status": "exact",
+          "method": null,
+          "hint": null,
+          "rowsSummed": 13
+        },
+        {
+          "column": 2,
+          "printed": 943371,
+          "summed": 983371,
+          "difference": 40000,
+          "status": "exact",
+          "method": "each row's difference matches its two years, within $1 of rounding",
+          "hint": null,
+          "rowsSummed": 13
+        }
+      ]
+    },
+    {
+      "name": "City Clerk",
+      "page": 27,
+      "level": "fund",
+      "header": "City Clerk",
+      "rowCount": 1,
+      "coveredBySubtotals": 0,
+      "unreadableFigures": 0,
+      "verified": true,
+      "fund": "GENERAL FUND",
+      "columns": [
+        {
+          "column": 0,
+          "printed": 62000,
+          "summed": 62000,
+          "difference": 0,
+          "status": "exact",
+          "method": null,
+          "hint": null,
+          "rowsSummed": 1
+        },
+        {
+          "column": 1,
+          "printed": 63860,
+          "summed": 63860,
+          "difference": 0,
+          "status": "exact",
+          "method": null,
+          "hint": null,
+          "rowsSummed": 1
+        },
+        {
+          "column": 2,
+          "printed": 1860,
+          "summed": 1860,
+          "difference": 0,
+          "status": "exact",
+          "method": null,
+          "hint": null,
+          "rowsSummed": 1
+        }
+      ]
+    },
+    {
+      "name": "Code Enforcement",
+      "page": 28,
+      "level": "fund",
+      "header": "Code Enforcement",
+      "rowCount": 13,
+      "coveredBySubtotals": 0,
+      "unreadableFigures": 0,
+      "verified": true,
+      "fund": "GENERAL FUND",
+      "columns": [
+        {
+          "column": 0,
+          "printed": 2852000,
+          "summed": 2852000,
+          "difference": 0,
+          "status": "exact",
+          "method": null,
+          "hint": null,
+          "rowsSummed": 13
+        },
+        {
+          "column": 1,
+          "printed": 2976880,
+          "summed": 2976880,
+          "difference": 0,
+          "status": "exact",
+          "method": null,
+          "hint": null,
+          "rowsSummed": 13
+        },
+        {
+          "column": 2,
+          "printed": 124880,
+          "summed": 124880,
+          "difference": 0,
+          "status": "exact",
+          "method": null,
+          "hint": null,
+          "rowsSummed": 13
+        }
+      ]
+    },
+    {
+      "name": "Parks & Recreation",
+      "page": 28,
+      "level": "fund",
+      "header": "Parks & Recreation",
+      "rowCount": 3,
+      "coveredBySubtotals": 0,
+      "unreadableFigures": 0,
+      "verified": true,
+      "fund": "GENERAL FUND",
+      "columns": [
+        {
+          "column": 0,
+          "printed": 1005000,
+          "summed": 1005000,
+          "difference": 0,
+          "status": "exact",
+          "method": null,
+          "hint": null,
+          "rowsSummed": 3
+        },
+        {
+          "column": 1,
+          "printed": 1005150,
+          "summed": 1005150,
+          "difference": 0,
+          "status": "exact",
+          "method": null,
+          "hint": null,
+          "rowsSummed": 3
+        },
+        {
+          "column": 2,
+          "printed": 150,
+          "summed": 150,
+          "difference": 0,
+          "status": "exact",
+          "method": null,
+          "hint": null,
+          "rowsSummed": 3
+        }
+      ]
+    },
+    {
+      "name": "Fire",
+      "page": 29,
+      "level": "fund",
+      "header": "Fire",
+      "rowCount": 4,
+      "coveredBySubtotals": 0,
+      "unreadableFigures": 0,
+      "verified": true,
+      "fund": "GENERAL FUND",
+      "columns": [
+        {
+          "column": 0,
+          "printed": 38000,
+          "summed": 38000,
+          "difference": 0,
+          "status": "exact",
+          "method": null,
+          "hint": null,
+          "rowsSummed": 4
+        },
+        {
+          "column": 1,
+          "printed": 339140,
+          "summed": 339140,
+          "difference": 0,
+          "status": "exact",
+          "method": null,
+          "hint": null,
+          "rowsSummed": 4
+        },
+        {
+          "column": 2,
+          "printed": 301140,
+          "summed": 301140,
+          "difference": 0,
+          "status": "exact",
+          "method": null,
+          "hint": null,
+          "rowsSummed": 4
+        }
+      ]
+    },
+    {
+      "name": "Police",
+      "page": 29,
+      "level": "fund",
+      "header": "Police",
+      "rowCount": 5,
+      "coveredBySubtotals": 0,
+      "unreadableFigures": 0,
+      "verified": true,
+      "fund": "GENERAL FUND",
+      "columns": [
+        {
+          "column": 0,
+          "printed": 1170000,
+          "summed": 1170000,
+          "difference": 0,
+          "status": "exact",
+          "method": null,
+          "hint": null,
+          "rowsSummed": 5
+        },
+        {
+          "column": 1,
+          "printed": 1580000,
+          "summed": 1580000,
+          "difference": 0,
+          "status": "exact",
+          "method": null,
+          "hint": null,
+          "rowsSummed": 5
+        },
+        {
+          "column": 2,
+          "printed": 410000,
+          "summed": 410000,
+          "difference": 0,
+          "status": "exact",
+          "method": null,
+          "hint": null,
+          "rowsSummed": 5
+        }
+      ]
+    },
+    {
+      "name": "Law",
+      "page": 29,
+      "level": "fund",
+      "header": "Law",
+      "rowCount": 1,
+      "coveredBySubtotals": 0,
+      "unreadableFigures": 0,
+      "verified": true,
+      "fund": "GENERAL FUND",
+      "columns": [
+        {
+          "column": 0,
+          "printed": 300000,
+          "summed": 300000,
+          "difference": 0,
+          "status": "exact",
+          "method": null,
+          "hint": null,
+          "rowsSummed": 1
+        },
+        {
+          "column": 1,
+          "printed": 425000,
+          "summed": 425000,
+          "difference": 0,
+          "status": "exact",
+          "method": null,
+          "hint": null,
+          "rowsSummed": 1
+        },
+        {
+          "column": 2,
+          "printed": 125000,
+          "summed": 125000,
+          "difference": 0,
+          "status": "exact",
+          "method": null,
+          "hint": null,
+          "rowsSummed": 1
+        }
+      ]
+    },
+    {
+      "name": "Public Works",
+      "page": 30,
+      "level": "fund",
+      "header": "Public Works",
+      "rowCount": 21,
+      "coveredBySubtotals": 0,
+      "unreadableFigures": 0,
+      "verified": true,
+      "fund": "GENERAL FUND",
+      "columns": [
+        {
+          "column": 0,
+          "printed": 6151600,
+          "summed": 6151600,
+          "difference": 0,
+          "status": "exact",
+          "method": null,
+          "hint": null,
+          "rowsSummed": 21
+        },
+        {
+          "column": 1,
+          "printed": 5625830,
+          "summed": 5625830,
+          "difference": 0,
+          "status": "exact",
+          "method": null,
+          "hint": null,
+          "rowsSummed": 21
+        },
+        {
+          "column": 2,
+          "printed": -525770,
+          "summed": -525770,
+          "difference": 0,
+          "status": "exact",
+          "method": null,
+          "hint": null,
+          "rowsSummed": 21
+        }
+      ]
+    },
+    {
+      "name": "Assessment",
+      "page": 31,
+      "level": "fund",
+      "header": "Assessment",
+      "rowCount": 1,
+      "coveredBySubtotals": 0,
+      "unreadableFigures": 0,
+      "verified": true,
+      "fund": "GENERAL FUND",
+      "columns": [
+        {
+          "column": 0,
+          "printed": 24000,
+          "summed": 24000,
+          "difference": 0,
+          "status": "exact",
+          "method": null,
+          "hint": null,
+          "rowsSummed": 1
+        },
+        {
+          "column": 1,
+          "printed": 500,
+          "summed": 500,
+          "difference": 0,
+          "status": "exact",
+          "method": null,
+          "hint": null,
+          "rowsSummed": 1
+        },
+        {
+          "column": 2,
+          "printed": -23500,
+          "summed": -23500,
+          "difference": 0,
+          "status": "exact",
+          "method": null,
+          "hint": null,
+          "rowsSummed": 1
+        }
+      ]
+    },
+    {
+      "name": "DEPARTMENTAL INCOME",
+      "page": 31,
+      "level": "fund",
+      "header": null,
+      "rowCount": 9,
+      "coveredBySubtotals": 9,
+      "unreadableFigures": 0,
+      "verified": true,
+      "fund": "GENERAL FUND",
+      "columns": [
+        {
+          "column": 0,
+          "printed": 16445863,
+          "summed": 16445863,
+          "difference": 0,
+          "status": "exact",
+          "method": null,
+          "hint": null,
+          "rowsSummed": 9
+        },
+        {
+          "column": 1,
+          "printed": 17802994,
+          "summed": 17802994,
+          "difference": 0,
+          "status": "exact",
+          "method": null,
+          "hint": null,
+          "rowsSummed": 9
+        },
+        {
+          "column": 2,
+          "printed": 1357131,
+          "summed": 1357131,
+          "difference": 0,
+          "status": "exact",
+          "method": null,
+          "hint": null,
+          "rowsSummed": 9
+        }
+      ]
+    },
+    {
+      "name": "USE OF MONEY & PROPERTY",
+      "page": 31,
+      "level": "fund",
+      "header": "Use of Money & Property",
+      "rowCount": 3,
+      "coveredBySubtotals": 0,
+      "unreadableFigures": 0,
+      "verified": true,
+      "fund": "GENERAL FUND",
+      "columns": [
+        {
+          "column": 0,
+          "printed": 110000,
+          "summed": 110000,
+          "difference": 0,
+          "status": "exact",
+          "method": null,
+          "hint": null,
+          "rowsSummed": 3
+        },
+        {
+          "column": 1,
+          "printed": 4071050,
+          "summed": 4071050,
+          "difference": 0,
+          "status": "exact",
+          "method": null,
+          "hint": null,
+          "rowsSummed": 3
+        },
+        {
+          "column": 2,
+          "printed": 3961050,
+          "summed": 3961050,
+          "difference": 0,
+          "status": "exact",
+          "method": null,
+          "hint": null,
+          "rowsSummed": 3
+        }
+      ]
+    },
+    {
+      "name": "SALE OF PROPERTY",
+      "page": 31,
+      "level": "fund",
+      "header": "Sale of Property",
+      "rowCount": 2,
+      "coveredBySubtotals": 0,
+      "unreadableFigures": 0,
+      "verified": true,
+      "fund": "GENERAL FUND",
+      "columns": [
+        {
+          "column": 0,
+          "printed": 1010000,
+          "summed": 1010000,
+          "difference": 0,
+          "status": "exact",
+          "method": null,
+          "hint": null,
+          "rowsSummed": 2
+        },
+        {
+          "column": 1,
+          "printed": 2927773,
+          "summed": 2927773,
+          "difference": 0,
+          "status": "exact",
+          "method": null,
+          "hint": null,
+          "rowsSummed": 2
+        },
+        {
+          "column": 2,
+          "printed": 1917773,
+          "summed": 1917773,
+          "difference": 0,
+          "status": "exact",
+          "method": null,
+          "hint": null,
+          "rowsSummed": 2
+        }
+      ]
+    },
+    {
+      "name": "STATE AID",
+      "page": 31,
+      "level": "fund",
+      "header": "State Aid",
+      "rowCount": 5,
+      "coveredBySubtotals": 0,
+      "unreadableFigures": 0,
+      "verified": true,
+      "fund": "GENERAL FUND",
+      "columns": [
+        {
+          "column": 0,
+          "printed": 76077129,
+          "summed": 76077129,
+          "difference": 0,
+          "status": "exact",
+          "method": null,
+          "hint": null,
+          "rowsSummed": 5
+        },
+        {
+          "column": 1,
+          "printed": 73733685,
+          "summed": 73733685,
+          "difference": 0,
+          "status": "exact",
+          "method": null,
+          "hint": null,
+          "rowsSummed": 5
+        },
+        {
+          "column": 2,
+          "printed": -2343444,
+          "summed": -2343444,
+          "difference": 0,
+          "status": "exact",
+          "method": null,
+          "hint": null,
+          "rowsSummed": 5
+        }
+      ]
+    },
+    {
+      "name": "MISCELLANEOUS REVENUE",
+      "page": 32,
+      "level": "fund",
+      "header": "Miscellaneous Revenue",
+      "rowCount": 6,
+      "coveredBySubtotals": 0,
+      "unreadableFigures": 0,
+      "verified": true,
+      "fund": "GENERAL FUND",
+      "columns": [
+        {
+          "column": 0,
+          "printed": 3094714,
+          "summed": 3094714,
+          "difference": 0,
+          "status": "exact",
+          "method": null,
+          "hint": null,
+          "rowsSummed": 6
+        },
+        {
+          "column": 1,
+          "printed": 3022488,
+          "summed": 3022488,
+          "difference": 0,
+          "status": "exact",
+          "method": null,
+          "hint": null,
+          "rowsSummed": 6
+        },
+        {
+          "column": 2,
+          "printed": -72226,
+          "summed": -72226,
+          "difference": 0,
+          "status": "exact",
+          "method": null,
+          "hint": null,
+          "rowsSummed": 6
+        }
+      ]
+    },
+    {
+      "name": "GENERAL FUND REVENUE",
+      "page": 32,
+      "level": "fund",
+      "header": null,
+      "rowCount": 9,
+      "coveredBySubtotals": 8,
+      "unreadableFigures": 0,
+      "verified": true,
+      "fund": "GENERAL FUND",
+      "columns": [
+        {
+          "column": 0,
+          "printed": 254299053,
+          "summed": 254299053,
+          "difference": 0,
+          "status": "exact",
+          "method": null,
+          "hint": null,
+          "rowsSummed": 9
+        },
+        {
+          "column": 1,
+          "printed": 262925356,
+          "summed": 262925356,
+          "difference": 0,
+          "status": "exact",
+          "method": null,
+          "hint": null,
+          "rowsSummed": 9
+        },
+        {
+          "column": 2,
+          "printed": 8626303,
+          "summed": 8626303,
+          "difference": 0,
+          "status": "exact",
+          "method": null,
+          "hint": null,
+          "rowsSummed": 9
+        }
+      ]
+    },
+    {
+      "name": "TAX LEVY",
+      "page": 32,
+      "level": "fund",
+      "header": "Tax Levy",
+      "rowCount": 2,
+      "coveredBySubtotals": 0,
+      "unreadableFigures": 0,
+      "verified": true,
+      "fund": "GENERAL FUND",
+      "columns": [
+        {
+          "column": 0,
+          "printed": 40851161,
+          "summed": 40851161,
+          "difference": 0,
+          "status": "exact",
+          "method": null,
+          "hint": null,
+          "rowsSummed": 2
+        },
+        {
+          "column": 1,
+          "printed": 47583565,
+          "summed": 47583565,
+          "difference": 0,
+          "status": "exact",
+          "method": null,
+          "hint": null,
+          "rowsSummed": 2
+        },
+        {
+          "column": 2,
+          "printed": 6732404,
+          "summed": 6732404,
+          "difference": 0,
+          "status": "exact",
+          "method": null,
+          "hint": null,
+          "rowsSummed": 2
+        }
+      ]
+    },
+    {
+      "name": "AVIATION FUND REVENUE",
+      "page": 33,
+      "level": "fund",
+      "header": "AVIATION FUND",
+      "rowCount": 2,
+      "coveredBySubtotals": 0,
+      "unreadableFigures": 0,
+      "verified": true,
+      "fund": "AVIATION FUND",
+      "columns": [
+        {
+          "column": 0,
+          "printed": 746413,
+          "summed": 746413,
+          "difference": 0,
+          "status": "exact",
+          "method": null,
+          "hint": null,
+          "rowsSummed": 2
+        },
+        {
+          "column": 1,
+          "printed": 0,
+          "summed": 0,
+          "difference": 0,
+          "status": "exact",
+          "method": null,
+          "hint": null,
+          "rowsSummed": 2
+        },
+        {
+          "column": 2,
+          "printed": -746413,
+          "summed": -746413,
+          "difference": 0,
+          "status": "exact",
+          "method": null,
+          "hint": null,
+          "rowsSummed": 2
+        }
+      ]
+    },
+    {
+      "name": "MUNICIPAL SIDEWALK FUND REVENUE",
+      "page": 34,
+      "level": "fund",
+      "header": "MUNICIPAL SIDEWALK FUND",
+      "rowCount": 2,
+      "coveredBySubtotals": 0,
+      "unreadableFigures": 0,
+      "verified": true,
+      "fund": "MUNICIPAL SIDEWALK FUND",
+      "columns": [
+        {
+          "column": 0,
+          "printed": 0,
+          "summed": 0,
+          "difference": 0,
+          "status": "exact",
+          "method": null,
+          "hint": null,
+          "rowsSummed": 2
+        },
+        {
+          "column": 1,
+          "printed": 4500000,
+          "summed": 4500000,
+          "difference": 0,
+          "status": "exact",
+          "method": null,
+          "hint": null,
+          "rowsSummed": 2
+        },
+        {
+          "column": 2,
+          "printed": 4500000,
+          "summed": 4500000,
+          "difference": 0,
+          "status": "exact",
+          "method": null,
+          "hint": null,
+          "rowsSummed": 2
+        }
+      ]
+    },
+    {
+      "name": "WATER FUND REVENUE",
+      "page": 35,
+      "level": "fund",
+      "header": "WATER FUND",
+      "rowCount": 22,
+      "coveredBySubtotals": 0,
+      "unreadableFigures": 0,
+      "verified": true,
+      "fund": "WATER FUND",
+      "columns": [
+        {
+          "column": 0,
+          "printed": 27892034,
+          "summed": 27892034,
+          "difference": 0,
+          "status": "exact",
+          "method": null,
+          "hint": null,
+          "rowsSummed": 22
+        },
+        {
+          "column": 1,
+          "printed": 27790500,
+          "summed": 27790500,
+          "difference": 0,
+          "status": "exact",
+          "method": null,
+          "hint": null,
+          "rowsSummed": 22
+        },
+        {
+          "column": 2,
+          "printed": -101534,
+          "summed": -101534,
+          "difference": 0,
+          "status": "exact",
+          "method": null,
+          "hint": null,
+          "rowsSummed": 22
+        }
+      ]
+    },
+    {
+      "name": "SEWER FUND REVENUE",
+      "page": 36,
+      "level": "fund",
+      "header": "SEWER FUND",
+      "rowCount": 3,
+      "coveredBySubtotals": 0,
+      "unreadableFigures": 0,
+      "verified": true,
+      "fund": "SEWER FUND",
+      "columns": [
+        {
+          "column": 0,
+          "printed": 7153500,
+          "summed": 7153500,
+          "difference": 0,
+          "status": "exact",
+          "method": null,
+          "hint": null,
+          "rowsSummed": 3
+        },
+        {
+          "column": 1,
+          "printed": 7189066,
+          "summed": 7189066,
+          "difference": 0,
+          "status": "exact",
+          "method": null,
+          "hint": null,
+          "rowsSummed": 3
+        },
+        {
+          "column": 2,
+          "printed": 35566,
+          "summed": 35566,
+          "difference": 0,
+          "status": "exact",
+          "method": null,
+          "hint": null,
+          "rowsSummed": 3
+        }
+      ]
+    },
+    {
+      "name": "DOWNTOWN SPECIAL ASSESSMENT REVENUE",
+      "page": 37,
+      "level": "fund",
+      "header": "DOWNTOWN SPECIAL ASSESSMENT",
+      "rowCount": 2,
+      "coveredBySubtotals": 0,
+      "unreadableFigures": 0,
+      "verified": true,
+      "fund": "DOWNTOWN SPECIAL ASSESSMENT",
+      "columns": [
+        {
+          "column": 0,
+          "printed": 1024400,
+          "summed": 1024400,
+          "difference": 0,
+          "status": "exact",
+          "method": null,
+          "hint": null,
+          "rowsSummed": 2
+        },
+        {
+          "column": 1,
+          "printed": 1075620,
+          "summed": 1075620,
+          "difference": 0,
+          "status": "exact",
+          "method": null,
+          "hint": null,
+          "rowsSummed": 2
+        },
+        {
+          "column": 2,
+          "printed": 51220,
+          "summed": 51220,
+          "difference": 0,
+          "status": "exact",
+          "method": null,
+          "hint": null,
+          "rowsSummed": 2
+        }
+      ]
+    },
+    {
+      "name": "All Other",
+      "page": 40,
+      "level": "department",
+      "header": "ALL FUNDS TOTAL REVENUES",
+      "rowCount": 7,
+      "coveredBySubtotals": 0,
+      "unreadableFigures": 0,
+      "verified": true,
+      "fund": "TOTAL CROUSE-MARSHALL SPECIAL ASSESSMENT",
+      "columns": [
+        {
+          "column": 0,
+          "printed": 310508921,
+          "summed": 310508921,
+          "difference": 0,
+          "status": "exact",
+          "method": null,
+          "hint": null,
+          "rowsSummed": 6
+        }
+      ]
+    },
+    {
+      "name": "Executive",
+      "page": 41,
+      "level": "department",
+      "header": "Executive",
+      "rowCount": 12,
+      "coveredBySubtotals": 0,
+      "unreadableFigures": 0,
+      "verified": true,
+      "fund": "GENERAL FUND",
+      "columns": [
+        {
+          "column": 0,
+          "printed": 8011215,
+          "summed": 8011215,
+          "difference": 0,
+          "status": "exact",
+          "method": null,
+          "hint": null,
+          "rowsSummed": 12
+        },
+        {
+          "column": 1,
+          "printed": 8266706,
+          "summed": 8266706,
+          "difference": 0,
+          "status": "exact",
+          "method": null,
+          "hint": null,
+          "rowsSummed": 12
+        },
+        {
+          "column": 2,
+          "printed": 255491,
+          "summed": 255491,
+          "difference": 0,
+          "status": "exact",
+          "method": null,
+          "hint": null,
+          "rowsSummed": 12
+        }
+      ]
+    },
+    {
+      "name": "Finance",
+      "page": 41,
+      "level": "department",
+      "header": "Finance",
+      "rowCount": 4,
+      "coveredBySubtotals": 0,
+      "unreadableFigures": 0,
+      "verified": true,
+      "fund": "GENERAL FUND",
+      "columns": [
+        {
+          "column": 0,
+          "printed": 3487217,
+          "summed": 3487217,
+          "difference": 0,
+          "status": "exact",
+          "method": null,
+          "hint": null,
+          "rowsSummed": 4
+        },
+        {
+          "column": 1,
+          "printed": 3671808,
+          "summed": 3671808,
+          "difference": 0,
+          "status": "exact",
+          "method": null,
+          "hint": null,
+          "rowsSummed": 4
+        },
+        {
+          "column": 2,
+          "printed": 184591,
+          "summed": 184591,
+          "difference": 0,
+          "status": "exact",
+          "method": null,
+          "hint": null,
+          "rowsSummed": 4
+        }
+      ]
+    },
+    {
+      "name": "Assessment",
+      "page": 42,
+      "level": "department",
+      "header": "Assessment",
+      "rowCount": 2,
+      "coveredBySubtotals": 0,
+      "unreadableFigures": 0,
+      "verified": true,
+      "fund": "GENERAL FUND",
+      "columns": [
+        {
+          "column": 0,
+          "printed": 790534,
+          "summed": 790534,
+          "difference": 0,
+          "status": "exact",
+          "method": null,
+          "hint": null,
+          "rowsSummed": 2
+        },
+        {
+          "column": 1,
+          "printed": 798492,
+          "summed": 798492,
+          "difference": 0,
+          "status": "exact",
+          "method": null,
+          "hint": null,
+          "rowsSummed": 2
+        },
+        {
+          "column": 2,
+          "printed": 7958,
+          "summed": 7958,
+          "difference": 0,
+          "status": "exact",
+          "method": null,
+          "hint": null,
+          "rowsSummed": 2
+        }
+      ]
+    },
+    {
+      "name": "Law Department",
+      "page": 42,
+      "level": "department",
+      "header": "Department of Law",
+      "rowCount": 2,
+      "coveredBySubtotals": 0,
+      "unreadableFigures": 0,
+      "verified": true,
+      "fund": "GENERAL FUND",
+      "columns": [
+        {
+          "column": 0,
+          "printed": 4214461,
+          "summed": 4214461,
+          "difference": 0,
+          "status": "exact",
+          "method": null,
+          "hint": null,
+          "rowsSummed": 2
+        },
+        {
+          "column": 1,
+          "printed": 4354892,
+          "summed": 4354892,
+          "difference": 0,
+          "status": "exact",
+          "method": null,
+          "hint": null,
+          "rowsSummed": 2
+        },
+        {
+          "column": 2,
+          "printed": 140431,
+          "summed": 140431,
+          "difference": 0,
+          "status": "exact",
+          "method": null,
+          "hint": null,
+          "rowsSummed": 2
+        }
+      ]
+    },
+    {
+      "name": "Neighborhood & Business Development",
+      "page": 42,
+      "level": "department",
+      "header": "Neighborhood & Business Development",
+      "rowCount": 3,
+      "coveredBySubtotals": 0,
+      "unreadableFigures": 0,
+      "verified": true,
+      "fund": "GENERAL FUND",
+      "columns": [
+        {
+          "column": 0,
+          "printed": 5327064,
+          "summed": 5327064,
+          "difference": 0,
+          "status": "exact",
+          "method": null,
+          "hint": null,
+          "rowsSummed": 3
+        },
+        {
+          "column": 1,
+          "printed": 5661553,
+          "summed": 5661553,
+          "difference": 0,
+          "status": "exact",
+          "method": null,
+          "hint": null,
+          "rowsSummed": 3
+        },
+        {
+          "column": 2,
+          "printed": 334489,
+          "summed": 334489,
+          "difference": 0,
+          "status": "exact",
+          "method": null,
+          "hint": null,
+          "rowsSummed": 3
+        }
+      ]
+    },
+    {
+      "name": "Public Works",
+      "page": 42,
+      "level": "department",
+      "header": "Public Works",
+      "rowCount": 9,
+      "coveredBySubtotals": 0,
+      "unreadableFigures": 0,
+      "verified": true,
+      "fund": "GENERAL FUND",
+      "columns": [
+        {
+          "column": 0,
+          "printed": 36375336,
+          "summed": 36375336,
+          "difference": 0,
+          "status": "exact",
+          "method": null,
+          "hint": null,
+          "rowsSummed": 9
+        },
+        {
+          "column": 1,
+          "printed": 39876237,
+          "summed": 39876237,
+          "difference": 0,
+          "status": "exact",
+          "method": null,
+          "hint": null,
+          "rowsSummed": 9
+        },
+        {
+          "column": 2,
+          "printed": 3500901,
+          "summed": 3500901,
+          "difference": 0,
+          "status": "exact",
+          "method": null,
+          "hint": null,
+          "rowsSummed": 9
+        }
+      ]
+    },
+    {
+      "name": "Fire",
+      "page": 43,
+      "level": "department",
+      "header": "Fire",
+      "rowCount": 2,
+      "coveredBySubtotals": 0,
+      "unreadableFigures": 0,
+      "verified": false,
+      "fund": "GENERAL FUND",
+      "columns": [
+        {
+          "column": 0,
+          "printed": 42260108,
+          "summed": 42260108,
+          "difference": 0,
+          "status": "exact",
+          "method": null,
+          "hint": null,
+          "rowsSummed": 2
+        },
+        {
+          "column": 1,
+          "printed": 43000001,
+          "summed": 43000000,
+          "difference": -1,
+          "status": "mismatch",
+          "method": null,
+          "hint": null,
+          "rowsSummed": 2
+        },
+        {
+          "column": 2,
+          "printed": 739893,
+          "summed": 739892,
+          "difference": -1,
+          "status": "exact",
+          "method": "each row's difference matches its two years, within $1 of rounding",
+          "hint": null,
+          "rowsSummed": 2
+        }
+      ]
+    },
+    {
+      "name": "Police",
+      "page": 43,
+      "level": "department",
+      "header": "Police",
+      "rowCount": 2,
+      "coveredBySubtotals": 0,
+      "unreadableFigures": 0,
+      "verified": true,
+      "fund": "GENERAL FUND",
+      "columns": [
+        {
+          "column": 0,
+          "printed": 55867350,
+          "summed": 55867350,
+          "difference": 0,
+          "status": "exact",
+          "method": null,
+          "hint": null,
+          "rowsSummed": 2
+        },
+        {
+          "column": 1,
+          "printed": 57261600,
+          "summed": 57261600,
+          "difference": 0,
+          "status": "exact",
+          "method": null,
+          "hint": null,
+          "rowsSummed": 2
+        },
+        {
+          "column": 2,
+          "printed": 1394250,
+          "summed": 1394250,
+          "difference": 0,
+          "status": "exact",
+          "method": null,
+          "hint": null,
+          "rowsSummed": 2
+        }
+      ]
+    },
+    {
+      "name": "Parks, Recreation & Youth Programs",
+      "page": 43,
+      "level": "department",
+      "header": "Parks, Rec. & Youth Prog.",
+      "rowCount": 4,
+      "coveredBySubtotals": 0,
+      "unreadableFigures": 0,
+      "verified": true,
+      "fund": "GENERAL FUND",
+      "columns": [
+        {
+          "column": 0,
+          "printed": 9757614,
+          "summed": 9757614,
+          "difference": 0,
+          "status": "exact",
+          "method": null,
+          "hint": null,
+          "rowsSummed": 4
+        },
+        {
+          "column": 1,
+          "printed": 10847366,
+          "summed": 10847366,
+          "difference": 0,
+          "status": "exact",
+          "method": null,
+          "hint": null,
+          "rowsSummed": 4
+        },
+        {
+          "column": 2,
+          "printed": 1089752,
+          "summed": 1089752,
+          "difference": 0,
+          "status": "exact",
+          "method": null,
+          "hint": null,
+          "rowsSummed": 4
+        }
+      ]
+    },
+    {
+      "name": "DEPARTMENTAL",
+      "page": 43,
+      "level": "fund",
+      "header": null,
+      "rowCount": 15,
+      "coveredBySubtotals": 9,
+      "unreadableFigures": 0,
+      "verified": false,
+      "fund": "GENERAL FUND",
+      "columns": [
+        {
+          "column": 0,
+          "printed": 169450687,
+          "summed": 169450687,
+          "difference": 0,
+          "status": "exact",
+          "method": null,
+          "hint": null,
+          "rowsSummed": 15
+        },
+        {
+          "column": 1,
+          "printed": 177220469,
+          "summed": 177220468,
+          "difference": -1,
+          "status": "mismatch",
+          "method": null,
+          "hint": null,
+          "rowsSummed": 15
+        },
+        {
+          "column": 2,
+          "printed": 7769782,
+          "summed": 7769781,
+          "difference": -1,
+          "status": "exact",
+          "method": "each row's difference matches its two years, within $1 of rounding",
+          "hint": null,
+          "rowsSummed": 15
+        }
+      ]
+    },
+    {
+      "name": "SPECIAL OBJECTS",
+      "page": 45,
+      "level": "fund",
+      "header": "Special Objects of Expense",
+      "rowCount": 48,
+      "coveredBySubtotals": 0,
+      "unreadableFigures": 0,
+      "verified": true,
+      "fund": "GENERAL FUND",
+      "columns": [
+        {
+          "column": 0,
+          "printed": 93569840,
+          "summed": 93569840,
+          "difference": 0,
+          "status": "exact",
+          "method": null,
+          "hint": null,
+          "rowsSummed": 48
+        },
+        {
+          "column": 1,
+          "printed": 105436141,
+          "summed": 105436141,
+          "difference": 0,
+          "status": "exact",
+          "method": null,
+          "hint": null,
+          "rowsSummed": 48
+        },
+        {
+          "column": 2,
+          "printed": 11866301,
+          "summed": 11866301,
+          "difference": 0,
+          "status": "exact",
+          "method": null,
+          "hint": null,
+          "rowsSummed": 48
+        }
+      ]
+    },
+    {
+      "name": "CAPITAL APPROPRIATION AND DEBT SERVICE",
+      "page": 46,
+      "level": "fund",
+      "header": "Transfer to Debt Service Fund",
+      "rowCount": 2,
+      "coveredBySubtotals": 0,
+      "unreadableFigures": 0,
+      "verified": true,
+      "fund": "Transfer to Debt Service Fund",
+      "columns": [
+        {
+          "column": 0,
+          "printed": 31725220,
+          "summed": 31725220,
+          "difference": 0,
+          "status": "exact",
+          "method": null,
+          "hint": null,
+          "rowsSummed": 2
+        },
+        {
+          "column": 1,
+          "printed": 27381187,
+          "summed": 27381187,
+          "difference": 0,
+          "status": "exact",
+          "method": null,
+          "hint": null,
+          "rowsSummed": 2
+        },
+        {
+          "column": 2,
+          "printed": -4344033,
+          "summed": -4344033,
+          "difference": 0,
+          "status": "exact",
+          "method": null,
+          "hint": null,
+          "rowsSummed": 2
+        }
+      ]
+    },
+    {
+      "name": "Subtotal",
+      "page": 47,
+      "level": "department",
+      "header": "AVIATION FUND",
+      "rowCount": 1,
+      "coveredBySubtotals": 0,
+      "unreadableFigures": 0,
+      "verified": true,
+      "fund": "AVIATION FUND",
+      "columns": [
+        {
+          "column": 0,
+          "printed": 488913,
+          "summed": 488913,
+          "difference": 0,
+          "status": "exact",
+          "method": null,
+          "hint": null,
+          "rowsSummed": 1
+        },
+        {
+          "column": 1,
+          "printed": 0,
+          "summed": 0,
+          "difference": 0,
+          "status": "exact",
+          "method": null,
+          "hint": null,
+          "rowsSummed": 1
+        },
+        {
+          "column": 2,
+          "printed": 488913,
+          "summed": -488913,
+          "difference": -977826,
+          "status": "exact",
+          "method": "subtracted",
+          "hint": null,
+          "rowsSummed": 1
+        }
+      ]
+    },
+    {
+      "name": "AVIATION FUND BUDGET",
+      "page": 47,
+      "level": "fund",
+      "header": null,
+      "rowCount": 2,
+      "coveredBySubtotals": 1,
+      "unreadableFigures": 0,
+      "verified": true,
+      "fund": "AVIATION FUND",
+      "columns": [
+        {
+          "column": 0,
+          "printed": 746413,
+          "summed": 746413,
+          "difference": 0,
+          "status": "exact",
+          "method": null,
+          "hint": null,
+          "rowsSummed": 2
+        },
+        {
+          "column": 1,
+          "printed": 0,
+          "summed": 0,
+          "difference": 0,
+          "status": "exact",
+          "method": null,
+          "hint": null,
+          "rowsSummed": 2
+        },
+        {
+          "column": 2,
+          "printed": -746413,
+          "summed": 231413,
+          "difference": 977826,
+          "status": "exact",
+          "method": "each row's difference matches its two years, within $1 of rounding",
+          "hint": null,
+          "rowsSummed": 2
+        }
+      ]
+    },
+    {
+      "name": "Subtotal",
+      "page": 48,
+      "level": "department",
+      "header": "MUNICIPAL SIDEWALK DEPARTMENT",
+      "rowCount": 5,
+      "coveredBySubtotals": 0,
+      "unreadableFigures": 0,
+      "verified": true,
+      "fund": "AVIATION FUND",
+      "columns": [
+        {
+          "column": 0,
+          "printed": 0,
+          "summed": 0,
+          "difference": 0,
+          "status": "exact",
+          "method": null,
+          "hint": null,
+          "rowsSummed": 5
+        },
+        {
+          "column": 1,
+          "printed": 272453,
+          "summed": 272453,
+          "difference": 0,
+          "status": "exact",
+          "method": null,
+          "hint": null,
+          "rowsSummed": 5
+        },
+        {
+          "column": 2,
+          "printed": 272453,
+          "summed": 272453,
+          "difference": 0,
+          "status": "exact",
+          "method": null,
+          "hint": null,
+          "rowsSummed": 5
+        }
+      ]
+    },
+    {
+      "name": "Subtotal",
+      "page": 48,
+      "level": "department",
+      "header": null,
+      "rowCount": 2,
+      "coveredBySubtotals": 0,
+      "unreadableFigures": 0,
+      "verified": true,
+      "fund": "AVIATION FUND",
+      "columns": [
+        {
+          "column": 0,
+          "printed": 0,
+          "summed": 0,
+          "difference": 0,
+          "status": "exact",
+          "method": null,
+          "hint": null,
+          "rowsSummed": 2
+        },
+        {
+          "column": 1,
+          "printed": 327000,
+          "summed": 327000,
+          "difference": 0,
+          "status": "exact",
+          "method": null,
+          "hint": null,
+          "rowsSummed": 2
+        },
+        {
+          "column": 2,
+          "printed": 327000,
+          "summed": 327000,
+          "difference": 0,
+          "status": "exact",
+          "method": null,
+          "hint": null,
+          "rowsSummed": 2
+        }
+      ]
+    },
+    {
+      "name": "MUNICIPAL SIDEWALK BUDGET",
+      "page": 48,
+      "level": "fund",
+      "header": null,
+      "rowCount": 3,
+      "coveredBySubtotals": 2,
+      "unreadableFigures": 0,
+      "verified": true,
+      "fund": "AVIATION FUND",
+      "columns": [
+        {
+          "column": 0,
+          "printed": 0,
+          "summed": 0,
+          "difference": 0,
+          "status": "exact",
+          "method": null,
+          "hint": null,
+          "rowsSummed": 3
+        },
+        {
+          "column": 1,
+          "printed": 4500000,
+          "summed": 4500000,
+          "difference": 0,
+          "status": "exact",
+          "method": null,
+          "hint": null,
+          "rowsSummed": 3
+        },
+        {
+          "column": 2,
+          "printed": 4500000,
+          "summed": 4500000,
+          "difference": 0,
+          "status": "exact",
+          "method": null,
+          "hint": null,
+          "rowsSummed": 3
+        }
+      ]
+    },
+    {
+      "name": "Subtotal",
+      "page": 49,
+      "level": "department",
+      "header": "WATER FUND",
+      "rowCount": 5,
+      "coveredBySubtotals": 0,
+      "unreadableFigures": 0,
+      "verified": true,
+      "fund": "WATER FUND",
+      "columns": [
+        {
+          "column": 0,
+          "printed": 12214597,
+          "summed": 12214597,
+          "difference": 0,
+          "status": "exact",
+          "method": null,
+          "hint": null,
+          "rowsSummed": 5
+        },
+        {
+          "column": 1,
+          "printed": 13079205,
+          "summed": 13079205,
+          "difference": 0,
+          "status": "exact",
+          "method": null,
+          "hint": null,
+          "rowsSummed": 5
+        },
+        {
+          "column": 2,
+          "printed": 864608,
+          "summed": 864608,
+          "difference": 0,
+          "status": "exact",
+          "method": null,
+          "hint": null,
+          "rowsSummed": 5
+        }
+      ]
+    },
+    {
+      "name": "Subtotal",
+      "page": 49,
+      "level": "department",
+      "header": null,
+      "rowCount": 9,
+      "coveredBySubtotals": 0,
+      "unreadableFigures": 0,
+      "verified": true,
+      "fund": "WATER FUND",
+      "columns": [
+        {
+          "column": 0,
+          "printed": 6455000,
+          "summed": 6455000,
+          "difference": 0,
+          "status": "exact",
+          "method": null,
+          "hint": null,
+          "rowsSummed": 9
+        },
+        {
+          "column": 1,
+          "printed": 6475000,
+          "summed": 6475000,
+          "difference": 0,
+          "status": "exact",
+          "method": null,
+          "hint": null,
+          "rowsSummed": 9
+        },
+        {
+          "column": 2,
+          "printed": 20000,
+          "summed": 20000,
+          "difference": 0,
+          "status": "exact",
+          "method": null,
+          "hint": null,
+          "rowsSummed": 9
+        }
+      ]
+    },
+    {
+      "name": "Subtotal",
+      "page": 49,
+      "level": "department",
+      "header": null,
+      "rowCount": 2,
+      "coveredBySubtotals": 0,
+      "unreadableFigures": 0,
+      "verified": true,
+      "fund": "WATER FUND",
+      "columns": [
+        {
+          "column": 0,
+          "printed": 9222437,
+          "summed": 9222437,
+          "difference": 0,
+          "status": "exact",
+          "method": null,
+          "hint": null,
+          "rowsSummed": 2
+        },
+        {
+          "column": 1,
+          "printed": 8236295,
+          "summed": 8236295,
+          "difference": 0,
+          "status": "exact",
+          "method": null,
+          "hint": null,
+          "rowsSummed": 2
+        },
+        {
+          "column": 2,
+          "printed": -986142,
+          "summed": -986142,
+          "difference": 0,
+          "status": "exact",
+          "method": null,
+          "hint": null,
+          "rowsSummed": 2
+        }
+      ]
+    },
+    {
+      "name": "WATER FUND BUDGET",
+      "page": 49,
+      "level": "fund",
+      "header": null,
+      "rowCount": 3,
+      "coveredBySubtotals": 3,
+      "unreadableFigures": 0,
+      "verified": true,
+      "fund": "WATER FUND",
+      "columns": [
+        {
+          "column": 0,
+          "printed": 27892034,
+          "summed": 27892034,
+          "difference": 0,
+          "status": "exact",
+          "method": null,
+          "hint": null,
+          "rowsSummed": 3
+        },
+        {
+          "column": 1,
+          "printed": 27790500,
+          "summed": 27790500,
+          "difference": 0,
+          "status": "exact",
+          "method": null,
+          "hint": null,
+          "rowsSummed": 3
+        },
+        {
+          "column": 2,
+          "printed": -101534,
+          "summed": -101534,
+          "difference": 0,
+          "status": "exact",
+          "method": null,
+          "hint": null,
+          "rowsSummed": 3
+        }
+      ]
+    },
+    {
+      "name": "Subtotal",
+      "page": 50,
+      "level": "department",
+      "header": "SEWER FUND",
+      "rowCount": 5,
+      "coveredBySubtotals": 0,
+      "unreadableFigures": 0,
+      "verified": true,
+      "fund": "SEWER FUND",
+      "columns": [
+        {
+          "column": 0,
+          "printed": 1970173,
+          "summed": 1970173,
+          "difference": 0,
+          "status": "exact",
+          "method": null,
+          "hint": null,
+          "rowsSummed": 5
+        },
+        {
+          "column": 1,
+          "printed": 2141000,
+          "summed": 2141000,
+          "difference": 0,
+          "status": "exact",
+          "method": null,
+          "hint": null,
+          "rowsSummed": 5
+        },
+        {
+          "column": 2,
+          "printed": 170827,
+          "summed": 170827,
+          "difference": 0,
+          "status": "exact",
+          "method": null,
+          "hint": null,
+          "rowsSummed": 5
+        }
+      ]
+    },
+    {
+      "name": "Subtotal",
+      "page": 50,
+      "level": "department",
+      "header": null,
+      "rowCount": 2,
+      "coveredBySubtotals": 0,
+      "unreadableFigures": 0,
+      "verified": true,
+      "fund": "SEWER FUND",
+      "columns": [
+        {
+          "column": 0,
+          "printed": 2149914,
+          "summed": 2149914,
+          "difference": 0,
+          "status": "exact",
+          "method": null,
+          "hint": null,
+          "rowsSummed": 2
+        },
+        {
+          "column": 1,
+          "printed": 1183794,
+          "summed": 1183794,
+          "difference": 0,
+          "status": "exact",
+          "method": null,
+          "hint": null,
+          "rowsSummed": 2
+        },
+        {
+          "column": 2,
+          "printed": 966120,
+          "summed": 770160,
+          "difference": -195960,
+          "status": "exact",
+          "method": "each row's difference matches its two years, within $1 of rounding",
+          "hint": null,
+          "rowsSummed": 2
+        }
+      ]
+    },
+    {
+      "name": "SEWER FUND BUDGET",
+      "page": 50,
+      "level": "fund",
+      "header": null,
+      "rowCount": 3,
+      "coveredBySubtotals": 2,
+      "unreadableFigures": 0,
+      "verified": true,
+      "fund": "SEWER FUND",
+      "columns": [
+        {
+          "column": 0,
+          "printed": 7153500,
+          "summed": 7153500,
+          "difference": 0,
+          "status": "exact",
+          "method": null,
+          "hint": null,
+          "rowsSummed": 3
+        },
+        {
+          "column": 1,
+          "printed": 7189066,
+          "summed": 7189066,
+          "difference": 0,
+          "status": "exact",
+          "method": null,
+          "hint": null,
+          "rowsSummed": 3
+        },
+        {
+          "column": 2,
+          "printed": 35566,
+          "summed": 1967806,
+          "difference": 1932240,
+          "status": "exact",
+          "method": "each row's difference matches its two years, within $1 of rounding",
+          "hint": null,
+          "rowsSummed": 3
+        }
+      ]
+    },
+    {
+      "name": "DOWNTOWN SPECIAL ASSESSMENT",
+      "page": 51,
+      "level": "fund",
+      "header": "DOWNTOWN SPECIAL ASSESSMENT",
+      "rowCount": 6,
+      "coveredBySubtotals": 0,
+      "unreadableFigures": 0,
+      "verified": true,
+      "fund": "DOWNTOWN SPECIAL ASSESSMENT",
+      "columns": [
+        {
+          "column": 0,
+          "printed": 1024400,
+          "summed": 1024400,
+          "difference": 0,
+          "status": "exact",
+          "method": null,
+          "hint": null,
+          "rowsSummed": 6
+        },
+        {
+          "column": 1,
+          "printed": 1075620,
+          "summed": 1075620,
+          "difference": 0,
+          "status": "exact",
+          "method": null,
+          "hint": null,
+          "rowsSummed": 6
+        },
+        {
+          "column": 2,
+          "printed": 51220,
+          "summed": 51220,
+          "difference": 0,
+          "status": "exact",
+          "method": null,
+          "hint": null,
+          "rowsSummed": 6
+        }
+      ]
+    },
+    {
+      "name": "CROUSE-MARSHALL SPECIAL ASSESSMENT",
+      "page": 52,
+      "level": "fund",
+      "header": "CROUSE MARSHALL SPECIAL ASSESSMENT",
+      "rowCount": 5,
+      "coveredBySubtotals": 0,
+      "unreadableFigures": 0,
+      "verified": true,
+      "fund": "CROUSE MARSHALL SPECIAL ASSESSMENT",
+      "columns": [
+        {
+          "column": 0,
+          "printed": 113750,
+          "summed": 113750,
+          "difference": 0,
+          "status": "exact",
+          "method": null,
+          "hint": null,
+          "rowsSummed": 5
+        },
+        {
+          "column": 1,
+          "printed": 127770,
+          "summed": 127770,
+          "difference": 0,
+          "status": "exact",
+          "method": null,
+          "hint": null,
+          "rowsSummed": 5
+        },
+        {
+          "column": 2,
+          "printed": 14020,
+          "summed": 14020,
+          "difference": 0,
+          "status": "exact",
+          "method": null,
+          "hint": null,
+          "rowsSummed": 5
+        }
+      ]
+    },
+    {
+      "name": "REAL PROPERTY TAX ITEMS",
+      "page": 54,
+      "level": "fund",
+      "header": "Real Property Tax Items",
+      "rowCount": 12,
+      "coveredBySubtotals": 0,
+      "unreadableFigures": 0,
+      "verified": false,
+      "fund": "GENERAL FUND",
+      "columns": [
+        {
+          "column": 0,
+          "printed": 7971617,
+          "summed": 7971618,
+          "difference": 1,
+          "status": "mismatch",
+          "method": null,
+          "hint": null,
+          "rowsSummed": 12
+        },
+        {
+          "column": 1,
+          "printed": 7152949,
+          "summed": 7152949,
+          "difference": 0,
+          "status": "exact",
+          "method": null,
+          "hint": null,
+          "rowsSummed": 12
+        },
+        {
+          "column": 2,
+          "printed": 7303574,
+          "summed": 7303574,
+          "difference": 0,
+          "status": "exact",
+          "method": null,
+          "hint": null,
+          "rowsSummed": 12
+        },
+        {
+          "column": 3,
+          "printed": 8483136,
+          "summed": 8483136,
+          "difference": 0,
+          "status": "exact",
+          "method": null,
+          "hint": null,
+          "rowsSummed": 12
+        }
+      ]
+    },
+    {
+      "name": "NON-PROPERTY TAX ITEMS",
+      "page": 55,
+      "level": "fund",
+      "header": "Non-Property Tax Items",
+      "rowCount": 7,
+      "coveredBySubtotals": 0,
+      "unreadableFigures": 0,
+      "verified": true,
+      "fund": "GENERAL FUND",
+      "columns": [
+        {
+          "column": 0,
+          "printed": 113012832,
+          "summed": 113012832,
+          "difference": 0,
+          "status": "exact",
+          "method": null,
+          "hint": null,
+          "rowsSummed": 7
+        },
+        {
+          "column": 1,
+          "printed": 118041000,
+          "summed": 118041000,
+          "difference": 0,
+          "status": "exact",
+          "method": null,
+          "hint": null,
+          "rowsSummed": 7
+        },
+        {
+          "column": 2,
+          "printed": 122416540,
+          "summed": 122416540,
+          "difference": 0,
+          "status": "exact",
+          "method": null,
+          "hint": null,
+          "rowsSummed": 7
+        },
+        {
+          "column": 3,
+          "printed": 125492845,
+          "summed": 125492845,
+          "difference": 0,
+          "status": "exact",
+          "method": null,
+          "hint": null,
+          "rowsSummed": 7
+        }
+      ]
+    },
+    {
+      "name": "Finance",
+      "page": 56,
+      "level": "fund",
+      "header": "Finance",
+      "rowCount": 17,
+      "coveredBySubtotals": 0,
+      "unreadableFigures": 0,
+      "verified": false,
+      "fund": "GENERAL FUND",
+      "columns": [
+        {
+          "column": 0,
+          "printed": 13719000,
+          "summed": 13692000,
+          "difference": -27000,
+          "status": "mismatch",
+          "method": null,
+          "hint": null,
+          "rowsSummed": 17
+        },
+        {
+          "column": 1,
+          "printed": 4843263,
+          "summed": 4803263,
+          "difference": -40000,
+          "status": "mismatch",
+          "method": null,
+          "hint": null,
+          "rowsSummed": 17
+        },
+        {
+          "column": 2,
+          "printed": 4488271,
+          "summed": 4487271,
+          "difference": -1000,
+          "status": "mismatch",
+          "method": null,
+          "hint": null,
+          "rowsSummed": 17
+        },
+        {
+          "column": 3,
+          "printed": 5786634,
+          "summed": 5786634,
+          "difference": 0,
+          "status": "exact",
+          "method": null,
+          "hint": null,
+          "rowsSummed": 17
+        }
+      ]
+    },
+    {
+      "name": "City Clerk",
+      "page": 56,
+      "level": "fund",
+      "header": "City Clerk",
+      "rowCount": 1,
+      "coveredBySubtotals": 0,
+      "unreadableFigures": 0,
+      "verified": true,
+      "fund": "GENERAL FUND",
+      "columns": [
+        {
+          "column": 0,
+          "printed": 53093,
+          "summed": 53093,
+          "difference": 0,
+          "status": "exact",
+          "method": null,
+          "hint": null,
+          "rowsSummed": 1
+        },
+        {
+          "column": 1,
+          "printed": 62000,
+          "summed": 62000,
+          "difference": 0,
+          "status": "exact",
+          "method": null,
+          "hint": null,
+          "rowsSummed": 1
+        },
+        {
+          "column": 2,
+          "printed": 64291,
+          "summed": 64291,
+          "difference": 0,
+          "status": "exact",
+          "method": null,
+          "hint": null,
+          "rowsSummed": 1
+        },
+        {
+          "column": 3,
+          "printed": 63860,
+          "summed": 63860,
+          "difference": 0,
+          "status": "exact",
+          "method": null,
+          "hint": null,
+          "rowsSummed": 1
+        }
+      ]
+    },
+    {
+      "name": "Code Enforcement",
+      "page": 57,
+      "level": "fund",
+      "header": "Code Enforcement",
+      "rowCount": 14,
+      "coveredBySubtotals": 0,
+      "unreadableFigures": 0,
+      "verified": false,
+      "fund": "GENERAL FUND",
+      "columns": [
+        {
+          "column": 0,
+          "printed": 3465732,
+          "summed": 3454425,
+          "difference": -11307,
+          "status": "mismatch",
+          "method": null,
+          "hint": null,
+          "rowsSummed": 14
+        },
+        {
+          "column": 1,
+          "printed": 2852000,
+          "summed": 2852000,
+          "difference": 0,
+          "status": "exact",
+          "method": null,
+          "hint": null,
+          "rowsSummed": 14
+        },
+        {
+          "column": 2,
+          "printed": 2678847,
+          "summed": 2678847,
+          "difference": 0,
+          "status": "exact",
+          "method": null,
+          "hint": null,
+          "rowsSummed": 14
+        },
+        {
+          "column": 3,
+          "printed": 2976880,
+          "summed": 2976880,
+          "difference": 0,
+          "status": "exact",
+          "method": null,
+          "hint": null,
+          "rowsSummed": 14
+        }
+      ]
+    },
+    {
+      "name": "Parks & Recreation",
+      "page": 57,
+      "level": "fund",
+      "header": "Parks & Recreation",
+      "rowCount": 6,
+      "coveredBySubtotals": 0,
+      "unreadableFigures": 0,
+      "verified": false,
+      "fund": "GENERAL FUND",
+      "columns": [
+        {
+          "column": 0,
+          "printed": 941002,
+          "summed": 941003,
+          "difference": 1,
+          "status": "mismatch",
+          "method": null,
+          "hint": null,
+          "rowsSummed": 6
+        },
+        {
+          "column": 1,
+          "printed": 1005000,
+          "summed": 1005000,
+          "difference": 0,
+          "status": "exact",
+          "method": null,
+          "hint": null,
+          "rowsSummed": 6
+        },
+        {
+          "column": 2,
+          "printed": 664635,
+          "summed": 664635,
+          "difference": 0,
+          "status": "exact",
+          "method": null,
+          "hint": null,
+          "rowsSummed": 6
+        },
+        {
+          "column": 3,
+          "printed": 1005150,
+          "summed": 1005150,
+          "difference": 0,
+          "status": "exact",
+          "method": null,
+          "hint": null,
+          "rowsSummed": 6
+        }
+      ]
+    },
+    {
+      "name": "Fire",
+      "page": 58,
+      "level": "fund",
+      "header": "Fire",
+      "rowCount": 4,
+      "coveredBySubtotals": 0,
+      "unreadableFigures": 0,
+      "verified": true,
+      "fund": "GENERAL FUND",
+      "columns": [
+        {
+          "column": 0,
+          "printed": 180039,
+          "summed": 180039,
+          "difference": 0,
+          "status": "exact",
+          "method": null,
+          "hint": null,
+          "rowsSummed": 4
+        },
+        {
+          "column": 1,
+          "printed": 38000,
+          "summed": 38000,
+          "difference": 0,
+          "status": "exact",
+          "method": null,
+          "hint": null,
+          "rowsSummed": 4
+        },
+        {
+          "column": 2,
+          "printed": 36750,
+          "summed": 36750,
+          "difference": 0,
+          "status": "exact",
+          "method": null,
+          "hint": null,
+          "rowsSummed": 4
+        },
+        {
+          "column": 3,
+          "printed": 339140,
+          "summed": 339140,
+          "difference": 0,
+          "status": "exact",
+          "method": null,
+          "hint": null,
+          "rowsSummed": 4
+        }
+      ]
+    },
+    {
+      "name": "Police",
+      "page": 58,
+      "level": "fund",
+      "header": "Police",
+      "rowCount": 7,
+      "coveredBySubtotals": 0,
+      "unreadableFigures": 0,
+      "verified": true,
+      "fund": "GENERAL FUND",
+      "columns": [
+        {
+          "column": 0,
+          "printed": 1530952,
+          "summed": 1530952,
+          "difference": 0,
+          "status": "exact",
+          "method": null,
+          "hint": null,
+          "rowsSummed": 7
+        },
+        {
+          "column": 1,
+          "printed": 1170000,
+          "summed": 1170000,
+          "difference": 0,
+          "status": "exact",
+          "method": null,
+          "hint": null,
+          "rowsSummed": 7
+        },
+        {
+          "column": 2,
+          "printed": 1092190,
+          "summed": 1092190,
+          "difference": 0,
+          "status": "exact",
+          "method": null,
+          "hint": null,
+          "rowsSummed": 7
+        },
+        {
+          "column": 3,
+          "printed": 1580000,
+          "summed": 1580000,
+          "difference": 0,
+          "status": "exact",
+          "method": null,
+          "hint": null,
+          "rowsSummed": 7
+        }
+      ]
+    },
+    {
+      "name": "Law",
+      "page": 58,
+      "level": "fund",
+      "header": "Law",
+      "rowCount": 1,
+      "coveredBySubtotals": 0,
+      "unreadableFigures": 0,
+      "verified": true,
+      "fund": "GENERAL FUND",
+      "columns": [
+        {
+          "column": 0,
+          "printed": 334433,
+          "summed": 334433,
+          "difference": 0,
+          "status": "exact",
+          "method": null,
+          "hint": null,
+          "rowsSummed": 1
+        },
+        {
+          "column": 1,
+          "printed": 300000,
+          "summed": 300000,
+          "difference": 0,
+          "status": "exact",
+          "method": null,
+          "hint": null,
+          "rowsSummed": 1
+        },
+        {
+          "column": 2,
+          "printed": 429335,
+          "summed": 429335,
+          "difference": 0,
+          "status": "exact",
+          "method": null,
+          "hint": null,
+          "rowsSummed": 1
+        },
+        {
+          "column": 3,
+          "printed": 425000,
+          "summed": 425000,
+          "difference": 0,
+          "status": "exact",
+          "method": null,
+          "hint": null,
+          "rowsSummed": 1
+        }
+      ]
+    },
+    {
+      "name": "Public Works",
+      "page": 59,
+      "level": "fund",
+      "header": "Public Works",
+      "rowCount": 21,
+      "coveredBySubtotals": 0,
+      "unreadableFigures": 0,
+      "verified": false,
+      "fund": "GENERAL FUND",
+      "columns": [
+        {
+          "column": 0,
+          "printed": 5197535,
+          "summed": 5197410,
+          "difference": -125,
+          "status": "mismatch",
+          "method": null,
+          "hint": null,
+          "rowsSummed": 21
+        },
+        {
+          "column": 1,
+          "printed": 6151600,
+          "summed": 6151600,
+          "difference": 0,
+          "status": "exact",
+          "method": null,
+          "hint": null,
+          "rowsSummed": 21
+        },
+        {
+          "column": 2,
+          "printed": 4990211,
+          "summed": 4990211,
+          "difference": 0,
+          "status": "exact",
+          "method": null,
+          "hint": null,
+          "rowsSummed": 21
+        },
+        {
+          "column": 3,
+          "printed": 5625830,
+          "summed": 5625830,
+          "difference": 0,
+          "status": "exact",
+          "method": null,
+          "hint": null,
+          "rowsSummed": 21
+        }
+      ]
+    },
+    {
+      "name": "Assessment",
+      "page": 60,
+      "level": "fund",
+      "header": "Assessment",
+      "rowCount": 2,
+      "coveredBySubtotals": 0,
+      "unreadableFigures": 0,
+      "verified": true,
+      "fund": "GENERAL FUND",
+      "columns": [
+        {
+          "column": 0,
+          "printed": 343595,
+          "summed": 343595,
+          "difference": 0,
+          "status": "exact",
+          "method": null,
+          "hint": null,
+          "rowsSummed": 2
+        },
+        {
+          "column": 1,
+          "printed": 24000,
+          "summed": 24000,
+          "difference": 0,
+          "status": "exact",
+          "method": null,
+          "hint": null,
+          "rowsSummed": 2
+        },
+        {
+          "column": 2,
+          "printed": 0,
+          "summed": 0,
+          "difference": 0,
+          "status": "exact",
+          "method": null,
+          "hint": null,
+          "rowsSummed": 2
+        },
+        {
+          "column": 3,
+          "printed": 500,
+          "summed": 500,
+          "difference": 0,
+          "status": "exact",
+          "method": null,
+          "hint": null,
+          "rowsSummed": 2
+        }
+      ]
+    },
+    {
+      "name": "DEPARTMENTAL INCOME",
+      "page": 60,
+      "level": "fund",
+      "header": null,
+      "rowCount": 9,
+      "coveredBySubtotals": 9,
+      "unreadableFigures": 0,
+      "verified": false,
+      "fund": "GENERAL FUND",
+      "columns": [
+        {
+          "column": 0,
+          "printed": 25765382,
+          "summed": 25765381,
+          "difference": -1,
+          "status": "mismatch",
+          "method": null,
+          "hint": null,
+          "rowsSummed": 9
+        },
+        {
+          "column": 1,
+          "printed": 16445863,
+          "summed": 16445863,
+          "difference": 0,
+          "status": "exact",
+          "method": null,
+          "hint": null,
+          "rowsSummed": 9
+        },
+        {
+          "column": 2,
+          "printed": 14444530,
+          "summed": 14444530,
+          "difference": 0,
+          "status": "exact",
+          "method": null,
+          "hint": null,
+          "rowsSummed": 9
+        },
+        {
+          "column": 3,
+          "printed": 17802994,
+          "summed": 17802994,
+          "difference": 0,
+          "status": "exact",
+          "method": null,
+          "hint": null,
+          "rowsSummed": 9
+        }
+      ]
+    },
+    {
+      "name": "USE OF MONEY & PROPERTY",
+      "page": 60,
+      "level": "fund",
+      "header": "Use of Money & Property",
+      "rowCount": 4,
+      "coveredBySubtotals": 0,
+      "unreadableFigures": 0,
+      "verified": false,
+      "fund": "GENERAL FUND",
+      "columns": [
+        {
+          "column": 0,
+          "printed": 2881719,
+          "summed": 2881720,
+          "difference": 1,
+          "status": "mismatch",
+          "method": null,
+          "hint": null,
+          "rowsSummed": 4
+        },
+        {
+          "column": 1,
+          "printed": 110000,
+          "summed": 110000,
+          "difference": 0,
+          "status": "exact",
+          "method": null,
+          "hint": null,
+          "rowsSummed": 4
+        },
+        {
+          "column": 2,
+          "printed": 19034872,
+          "summed": 19034872,
+          "difference": 0,
+          "status": "exact",
+          "method": null,
+          "hint": null,
+          "rowsSummed": 4
+        },
+        {
+          "column": 3,
+          "printed": 4071050,
+          "summed": 4071050,
+          "difference": 0,
+          "status": "exact",
+          "method": null,
+          "hint": null,
+          "rowsSummed": 4
+        }
+      ]
+    },
+    {
+      "name": "SALE OF PROPERTY",
+      "page": 60,
+      "level": "fund",
+      "header": "Sale of Property",
+      "rowCount": 2,
+      "coveredBySubtotals": 0,
+      "unreadableFigures": 0,
+      "verified": true,
+      "fund": "GENERAL FUND",
+      "columns": [
+        {
+          "column": 0,
+          "printed": 303858,
+          "summed": 303858,
+          "difference": 0,
+          "status": "exact",
+          "method": null,
+          "hint": null,
+          "rowsSummed": 2
+        },
+        {
+          "column": 1,
+          "printed": 1010000,
+          "summed": 1010000,
+          "difference": 0,
+          "status": "exact",
+          "method": null,
+          "hint": null,
+          "rowsSummed": 2
+        },
+        {
+          "column": 2,
+          "printed": 80876,
+          "summed": 80876,
+          "difference": 0,
+          "status": "exact",
+          "method": null,
+          "hint": null,
+          "rowsSummed": 2
+        },
+        {
+          "column": 3,
+          "printed": 2927773,
+          "summed": 2927773,
+          "difference": 0,
+          "status": "exact",
+          "method": null,
+          "hint": null,
+          "rowsSummed": 2
+        }
+      ]
+    },
+    {
+      "name": "STATE AID",
+      "page": 60,
+      "level": "fund",
+      "header": "State Aid",
+      "rowCount": 5,
+      "coveredBySubtotals": 0,
+      "unreadableFigures": 0,
+      "verified": false,
+      "fund": "GENERAL FUND",
+      "columns": [
+        {
+          "column": 0,
+          "printed": 79566413,
+          "summed": 79566414,
+          "difference": 1,
+          "status": "mismatch",
+          "method": null,
+          "hint": null,
+          "rowsSummed": 5
+        },
+        {
+          "column": 1,
+          "printed": 76077129,
+          "summed": 76077129,
+          "difference": 0,
+          "status": "exact",
+          "method": null,
+          "hint": null,
+          "rowsSummed": 5
+        },
+        {
+          "column": 2,
+          "printed": 74727129,
+          "summed": 74727129,
+          "difference": 0,
+          "status": "exact",
+          "method": null,
+          "hint": null,
+          "rowsSummed": 5
+        },
+        {
+          "column": 3,
+          "printed": 73733685,
+          "summed": 73733685,
+          "difference": 0,
+          "status": "exact",
+          "method": null,
+          "hint": null,
+          "rowsSummed": 5
+        }
+      ]
+    },
+    {
+      "name": "MISCELLANEOUS REVENUE",
+      "page": 61,
+      "level": "fund",
+      "header": "Miscellaneous Revenue",
+      "rowCount": 10,
+      "coveredBySubtotals": 0,
+      "unreadableFigures": 0,
+      "verified": true,
+      "fund": "GENERAL FUND",
+      "columns": [
+        {
+          "column": 0,
+          "printed": 3334942,
+          "summed": 3334942,
+          "difference": 0,
+          "status": "exact",
+          "method": null,
+          "hint": null,
+          "rowsSummed": 10
+        },
+        {
+          "column": 1,
+          "printed": 3094714,
+          "summed": 3094714,
+          "difference": 0,
+          "status": "exact",
+          "method": null,
+          "hint": null,
+          "rowsSummed": 10
+        },
+        {
+          "column": 2,
+          "printed": 3053649,
+          "summed": 3053649,
+          "difference": 0,
+          "status": "exact",
+          "method": null,
+          "hint": null,
+          "rowsSummed": 10
+        },
+        {
+          "column": 3,
+          "printed": 3022488,
+          "summed": 3022488,
+          "difference": 0,
+          "status": "exact",
+          "method": null,
+          "hint": null,
+          "rowsSummed": 10
+        }
+      ]
+    },
+    {
+      "name": "GENERAL FUND REVENUE",
+      "page": 61,
+      "level": "fund",
+      "header": null,
+      "rowCount": 9,
+      "coveredBySubtotals": 8,
+      "unreadableFigures": 0,
+      "verified": true,
+      "fund": "GENERAL FUND",
+      "columns": [
+        {
+          "column": 0,
+          "printed": 232836763,
+          "summed": 232836763,
+          "difference": 0,
+          "status": "exact",
+          "method": null,
+          "hint": null,
+          "rowsSummed": 9
+        },
+        {
+          "column": 1,
+          "printed": 254299053,
+          "summed": 254299053,
+          "difference": 0,
+          "status": "exact",
+          "method": null,
+          "hint": null,
+          "rowsSummed": 9
+        },
+        {
+          "column": 2,
+          "printed": 264039316,
+          "summed": 264039316,
+          "difference": 0,
+          "status": "exact",
+          "method": null,
+          "hint": null,
+          "rowsSummed": 9
+        },
+        {
+          "column": 3,
+          "printed": 262925356,
+          "summed": 262925356,
+          "difference": 0,
+          "status": "exact",
+          "method": null,
+          "hint": null,
+          "rowsSummed": 9
+        }
+      ]
+    },
+    {
+      "name": "TAX LEVY",
+      "page": 61,
+      "level": "fund",
+      "header": "Tax Levy",
+      "rowCount": 2,
+      "coveredBySubtotals": 0,
+      "unreadableFigures": 0,
+      "verified": true,
+      "fund": "GENERAL FUND",
+      "columns": [
+        {
+          "column": 0,
+          "printed": 0,
+          "summed": 0,
+          "difference": 0,
+          "status": "exact",
+          "method": null,
+          "hint": null,
+          "rowsSummed": 2
+        },
+        {
+          "column": 1,
+          "printed": 40851161,
+          "summed": 40851161,
+          "difference": 0,
+          "status": "exact",
+          "method": null,
+          "hint": null,
+          "rowsSummed": 2
+        },
+        {
+          "column": 2,
+          "printed": 39857662,
+          "summed": 39857662,
+          "difference": 0,
+          "status": "exact",
+          "method": null,
+          "hint": null,
+          "rowsSummed": 2
+        },
+        {
+          "column": 3,
+          "printed": 47583565,
+          "summed": 47583565,
+          "difference": 0,
+          "status": "exact",
+          "method": null,
+          "hint": null,
+          "rowsSummed": 2
+        }
+      ]
+    },
+    {
+      "name": "AVIATION FUND REVENUE",
+      "page": 62,
+      "level": "fund",
+      "header": "AVIATION FUND",
+      "rowCount": 2,
+      "coveredBySubtotals": 0,
+      "unreadableFigures": 0,
+      "verified": true,
+      "fund": "AVIATION FUND",
+      "columns": [
+        {
+          "column": 0,
+          "printed": 0,
+          "summed": 0,
+          "difference": 0,
+          "status": "exact",
+          "method": null,
+          "hint": null,
+          "rowsSummed": 2
+        },
+        {
+          "column": 1,
+          "printed": 746413,
+          "summed": 746413,
+          "difference": 0,
+          "status": "exact",
+          "method": null,
+          "hint": null,
+          "rowsSummed": 2
+        },
+        {
+          "column": 2,
+          "printed": 0,
+          "summed": 0,
+          "difference": 0,
+          "status": "exact",
+          "method": null,
+          "hint": null,
+          "rowsSummed": 2
+        },
+        {
+          "column": 3,
+          "printed": 0,
+          "summed": 0,
+          "difference": 0,
+          "status": "exact",
+          "method": null,
+          "hint": null,
+          "rowsSummed": 2
+        }
+      ]
+    },
+    {
+      "name": "MUNICIPAL SIDEWALK REVENUE",
+      "page": 63,
+      "level": "fund",
+      "header": "MUNICIPAL SIDEWALK FUND",
+      "rowCount": 2,
+      "coveredBySubtotals": 0,
+      "unreadableFigures": 0,
+      "verified": true,
+      "fund": "MUNICIPAL SIDEWALK FUND",
+      "columns": [
+        {
+          "column": 0,
+          "printed": 0,
+          "summed": 0,
+          "difference": 0,
+          "status": "exact",
+          "method": null,
+          "hint": null,
+          "rowsSummed": 2
+        },
+        {
+          "column": 1,
+          "printed": 0,
+          "summed": 0,
+          "difference": 0,
+          "status": "exact",
+          "method": null,
+          "hint": null,
+          "rowsSummed": 2
+        },
+        {
+          "column": 2,
+          "printed": 0,
+          "summed": 0,
+          "difference": 0,
+          "status": "exact",
+          "method": null,
+          "hint": null,
+          "rowsSummed": 2
+        },
+        {
+          "column": 3,
+          "printed": 4500000,
+          "summed": 4500000,
+          "difference": 0,
+          "status": "exact",
+          "method": null,
+          "hint": null,
+          "rowsSummed": 2
+        }
+      ]
+    },
+    {
+      "name": "WATER FUND REVENUE",
+      "page": 64,
+      "level": "fund",
+      "header": "WATER FUND",
+      "rowCount": 22,
+      "coveredBySubtotals": 0,
+      "unreadableFigures": 0,
+      "verified": false,
+      "fund": "WATER FUND",
+      "columns": [
+        {
+          "column": 0,
+          "printed": 23941527,
+          "summed": 23941528,
+          "difference": 1,
+          "status": "mismatch",
+          "method": null,
+          "hint": null,
+          "rowsSummed": 22
+        },
+        {
+          "column": 1,
+          "printed": 27892034,
+          "summed": 27892034,
+          "difference": 0,
+          "status": "exact",
+          "method": null,
+          "hint": null,
+          "rowsSummed": 22
+        },
+        {
+          "column": 2,
+          "printed": 27117539,
+          "summed": 27117539,
+          "difference": 0,
+          "status": "exact",
+          "method": null,
+          "hint": null,
+          "rowsSummed": 22
+        },
+        {
+          "column": 3,
+          "printed": 27790500,
+          "summed": 27790500,
+          "difference": 0,
+          "status": "exact",
+          "method": null,
+          "hint": null,
+          "rowsSummed": 22
+        }
+      ]
+    },
+    {
+      "name": "SEWER FUND REVENUE",
+      "page": 65,
+      "level": "fund",
+      "header": "SEWER FUND",
+      "rowCount": 3,
+      "coveredBySubtotals": 0,
+      "unreadableFigures": 0,
+      "verified": false,
+      "fund": "SEWER FUND",
+      "columns": [
+        {
+          "column": 0,
+          "printed": 5212892,
+          "summed": 5212891,
+          "difference": -1,
+          "status": "mismatch",
+          "method": null,
+          "hint": null,
+          "rowsSummed": 3
+        },
+        {
+          "column": 1,
+          "printed": 7153500,
+          "summed": 7153500,
+          "difference": 0,
+          "status": "exact",
+          "method": null,
+          "hint": null,
+          "rowsSummed": 3
+        },
+        {
+          "column": 2,
+          "printed": 7153500,
+          "summed": 7153500,
+          "difference": 0,
+          "status": "exact",
+          "method": null,
+          "hint": null,
+          "rowsSummed": 3
+        },
+        {
+          "column": 3,
+          "printed": 7189066,
+          "summed": 7189066,
+          "difference": 0,
+          "status": "exact",
+          "method": null,
+          "hint": null,
+          "rowsSummed": 3
+        }
+      ]
+    },
+    {
+      "name": "DOWNTOWN SPECIAL ASSESSMENT REVENUE",
+      "page": 66,
+      "level": "fund",
+      "header": "DOWNTOWN SPECIAL ASSESSMENT",
+      "rowCount": 3,
+      "coveredBySubtotals": 0,
+      "unreadableFigures": 0,
+      "verified": true,
+      "fund": "DOWNTOWN SPECIAL ASSESSMENT",
+      "columns": [
+        {
+          "column": 0,
+          "printed": 872612,
+          "summed": 872612,
+          "difference": 0,
+          "status": "exact",
+          "method": null,
+          "hint": null,
+          "rowsSummed": 3
+        },
+        {
+          "column": 1,
+          "printed": 1024400,
+          "summed": 1024400,
+          "difference": 0,
+          "status": "exact",
+          "method": null,
+          "hint": null,
+          "rowsSummed": 3
+        },
+        {
+          "column": 2,
+          "printed": 1024400,
+          "summed": 1024400,
+          "difference": 0,
+          "status": "exact",
+          "method": null,
+          "hint": null,
+          "rowsSummed": 3
+        },
+        {
+          "column": 3,
+          "printed": 1075620,
+          "summed": 1075620,
+          "difference": 0,
+          "status": "exact",
+          "method": null,
+          "hint": null,
+          "rowsSummed": 3
+        }
+      ]
+    },
+    {
+      "name": "Executive",
+      "page": 69,
+      "level": "fund",
+      "header": "Executive",
+      "rowCount": 12,
+      "coveredBySubtotals": 0,
+      "unreadableFigures": 0,
+      "verified": true,
+      "fund": "GENERAL FUND",
+      "columns": [
+        {
+          "column": 0,
+          "printed": 5295163,
+          "summed": 5295163,
+          "difference": 0,
+          "status": "exact",
+          "method": null,
+          "hint": null,
+          "rowsSummed": 12
+        },
+        {
+          "column": 1,
+          "printed": 8011215,
+          "summed": 8011215,
+          "difference": 0,
+          "status": "exact",
+          "method": null,
+          "hint": null,
+          "rowsSummed": 12
+        },
+        {
+          "column": 2,
+          "printed": 7302206,
+          "summed": 7302206,
+          "difference": 0,
+          "status": "exact",
+          "method": null,
+          "hint": null,
+          "rowsSummed": 12
+        },
+        {
+          "column": 3,
+          "printed": 8266706,
+          "summed": 8266706,
+          "difference": 0,
+          "status": "exact",
+          "method": null,
+          "hint": null,
+          "rowsSummed": 12
+        }
+      ]
+    },
+    {
+      "name": "Finance",
+      "page": 69,
+      "level": "fund",
+      "header": "Finance",
+      "rowCount": 4,
+      "coveredBySubtotals": 0,
+      "unreadableFigures": 0,
+      "verified": false,
+      "fund": "GENERAL FUND",
+      "columns": [
+        {
+          "column": 0,
+          "printed": 2590507,
+          "summed": 2590508,
+          "difference": 1,
+          "status": "mismatch",
+          "method": null,
+          "hint": null,
+          "rowsSummed": 4
+        },
+        {
+          "column": 1,
+          "printed": 3487217,
+          "summed": 3487217,
+          "difference": 0,
+          "status": "exact",
+          "method": null,
+          "hint": null,
+          "rowsSummed": 4
+        },
+        {
+          "column": 2,
+          "printed": 3050884,
+          "summed": 3050884,
+          "difference": 0,
+          "status": "exact",
+          "method": null,
+          "hint": null,
+          "rowsSummed": 4
+        },
+        {
+          "column": 3,
+          "printed": 3671808,
+          "summed": 3671808,
+          "difference": 0,
+          "status": "exact",
+          "method": null,
+          "hint": null,
+          "rowsSummed": 4
+        }
+      ]
+    },
+    {
+      "name": "Assessment",
+      "page": 70,
+      "level": "fund",
+      "header": "Assessment",
+      "rowCount": 2,
+      "coveredBySubtotals": 0,
+      "unreadableFigures": 0,
+      "verified": true,
+      "fund": "GENERAL FUND",
+      "columns": [
+        {
+          "column": 0,
+          "printed": 576044,
+          "summed": 576044,
+          "difference": 0,
+          "status": "exact",
+          "method": null,
+          "hint": null,
+          "rowsSummed": 2
+        },
+        {
+          "column": 1,
+          "printed": 790534,
+          "summed": 790534,
+          "difference": 0,
+          "status": "exact",
+          "method": null,
+          "hint": null,
+          "rowsSummed": 2
+        },
+        {
+          "column": 2,
+          "printed": 654921,
+          "summed": 654921,
+          "difference": 0,
+          "status": "exact",
+          "method": null,
+          "hint": null,
+          "rowsSummed": 2
+        },
+        {
+          "column": 3,
+          "printed": 798492,
+          "summed": 798492,
+          "difference": 0,
+          "status": "exact",
+          "method": null,
+          "hint": null,
+          "rowsSummed": 2
+        }
+      ]
+    },
+    {
+      "name": "Law",
+      "page": 70,
+      "level": "fund",
+      "header": "Department of Law",
+      "rowCount": 2,
+      "coveredBySubtotals": 0,
+      "unreadableFigures": 0,
+      "verified": true,
+      "fund": "GENERAL FUND",
+      "columns": [
+        {
+          "column": 0,
+          "printed": 3552601,
+          "summed": 3552601,
+          "difference": 0,
+          "status": "exact",
+          "method": null,
+          "hint": null,
+          "rowsSummed": 2
+        },
+        {
+          "column": 1,
+          "printed": 4214461,
+          "summed": 4214461,
+          "difference": 0,
+          "status": "exact",
+          "method": null,
+          "hint": null,
+          "rowsSummed": 2
+        },
+        {
+          "column": 2,
+          "printed": 3784445,
+          "summed": 3784445,
+          "difference": 0,
+          "status": "exact",
+          "method": null,
+          "hint": null,
+          "rowsSummed": 2
+        },
+        {
+          "column": 3,
+          "printed": 4354892,
+          "summed": 4354892,
+          "difference": 0,
+          "status": "exact",
+          "method": null,
+          "hint": null,
+          "rowsSummed": 2
+        }
+      ]
+    },
+    {
+      "name": "Neighborhood & Business Development",
+      "page": 70,
+      "level": "fund",
+      "header": "Neighborhood & Business Development",
+      "rowCount": 3,
+      "coveredBySubtotals": 0,
+      "unreadableFigures": 0,
+      "verified": true,
+      "fund": "GENERAL FUND",
+      "columns": [
+        {
+          "column": 0,
+          "printed": 4054170,
+          "summed": 4054170,
+          "difference": 0,
+          "status": "exact",
+          "method": null,
+          "hint": null,
+          "rowsSummed": 3
+        },
+        {
+          "column": 1,
+          "printed": 5327064,
+          "summed": 5327064,
+          "difference": 0,
+          "status": "exact",
+          "method": null,
+          "hint": null,
+          "rowsSummed": 3
+        },
+        {
+          "column": 2,
+          "printed": 5361493,
+          "summed": 5361493,
+          "difference": 0,
+          "status": "exact",
+          "method": null,
+          "hint": null,
+          "rowsSummed": 3
+        },
+        {
+          "column": 3,
+          "printed": 5661553,
+          "summed": 5661553,
+          "difference": 0,
+          "status": "exact",
+          "method": null,
+          "hint": null,
+          "rowsSummed": 3
+        }
+      ]
+    },
+    {
+      "name": "Public Works",
+      "page": 71,
+      "level": "fund",
+      "header": "Public Works",
+      "rowCount": 9,
+      "coveredBySubtotals": 0,
+      "unreadableFigures": 0,
+      "verified": false,
+      "fund": "GENERAL FUND",
+      "columns": [
+        {
+          "column": 0,
+          "printed": 29654882,
+          "summed": 29654880,
+          "difference": -2,
+          "status": "mismatch",
+          "method": null,
+          "hint": null,
+          "rowsSummed": 9
+        },
+        {
+          "column": 1,
+          "printed": 36375336,
+          "summed": 36375336,
+          "difference": 0,
+          "status": "exact",
+          "method": null,
+          "hint": null,
+          "rowsSummed": 9
+        },
+        {
+          "column": 2,
+          "printed": 35033655,
+          "summed": 35033655,
+          "difference": 0,
+          "status": "exact",
+          "method": null,
+          "hint": null,
+          "rowsSummed": 9
+        },
+        {
+          "column": 3,
+          "printed": 39876237,
+          "summed": 39876237,
+          "difference": 0,
+          "status": "exact",
+          "method": null,
+          "hint": null,
+          "rowsSummed": 9
+        }
+      ]
+    },
+    {
+      "name": "Fire",
+      "page": 71,
+      "level": "fund",
+      "header": "Fire",
+      "rowCount": 3,
+      "coveredBySubtotals": 0,
+      "unreadableFigures": 0,
+      "verified": false,
+      "fund": "GENERAL FUND",
+      "columns": [
+        {
+          "column": 0,
+          "printed": 39772584,
+          "summed": 39772584,
+          "difference": 0,
+          "status": "exact",
+          "method": null,
+          "hint": null,
+          "rowsSummed": 3
+        },
+        {
+          "column": 1,
+          "printed": 42260108,
+          "summed": 42260108,
+          "difference": 0,
+          "status": "exact",
+          "method": null,
+          "hint": null,
+          "rowsSummed": 3
+        },
+        {
+          "column": 2,
+          "printed": 41742426,
+          "summed": 41742427,
+          "difference": 1,
+          "status": "mismatch",
+          "method": null,
+          "hint": null,
+          "rowsSummed": 3
+        },
+        {
+          "column": 3,
+          "printed": 43000001,
+          "summed": 43000000,
+          "difference": -1,
+          "status": "mismatch",
+          "method": null,
+          "hint": null,
+          "rowsSummed": 3
+        }
+      ]
+    },
+    {
+      "name": "Police",
+      "page": 71,
+      "level": "fund",
+      "header": "Police",
+      "rowCount": 3,
+      "coveredBySubtotals": 0,
+      "unreadableFigures": 0,
+      "verified": false,
+      "fund": "GENERAL FUND",
+      "columns": [
+        {
+          "column": 0,
+          "printed": 47984270,
+          "summed": 47985508,
+          "difference": 1238,
+          "status": "mismatch",
+          "method": null,
+          "hint": "adds up if Police General Services Sworn (619) is negative",
+          "rowsSummed": 3
+        },
+        {
+          "column": 1,
+          "printed": 55867350,
+          "summed": 55867350,
+          "difference": 0,
+          "status": "exact",
+          "method": null,
+          "hint": null,
+          "rowsSummed": 3
+        },
+        {
+          "column": 2,
+          "printed": 53682397,
+          "summed": 53682397,
+          "difference": 0,
+          "status": "exact",
+          "method": null,
+          "hint": null,
+          "rowsSummed": 3
+        },
+        {
+          "column": 3,
+          "printed": 57261600,
+          "summed": 57261600,
+          "difference": 0,
+          "status": "exact",
+          "method": null,
+          "hint": null,
+          "rowsSummed": 3
+        }
+      ]
+    },
+    {
+      "name": "Parks, Recreation & Youth Programs",
+      "page": 71,
+      "level": "fund",
+      "header": "Parks, Rec. & Youth Prog.",
+      "rowCount": 4,
+      "coveredBySubtotals": 0,
+      "unreadableFigures": 0,
+      "verified": false,
+      "fund": "GENERAL FUND",
+      "columns": [
+        {
+          "column": 0,
+          "printed": 7344338,
+          "summed": 7344339,
+          "difference": 1,
+          "status": "mismatch",
+          "method": null,
+          "hint": null,
+          "rowsSummed": 4
+        },
+        {
+          "column": 1,
+          "printed": 9757614,
+          "summed": 9757614,
+          "difference": 0,
+          "status": "exact",
+          "method": null,
+          "hint": null,
+          "rowsSummed": 4
+        },
+        {
+          "column": 2,
+          "printed": 8716596,
+          "summed": 8716596,
+          "difference": 0,
+          "status": "exact",
+          "method": null,
+          "hint": null,
+          "rowsSummed": 4
+        },
+        {
+          "column": 3,
+          "printed": 10847366,
+          "summed": 10847366,
+          "difference": 0,
+          "status": "exact",
+          "method": null,
+          "hint": null,
+          "rowsSummed": 4
+        }
+      ]
+    },
+    {
+      "name": "DEPARTMENTAL",
+      "page": 71,
+      "level": "fund",
+      "header": null,
+      "rowCount": 15,
+      "coveredBySubtotals": 9,
+      "unreadableFigures": 0,
+      "verified": false,
+      "fund": "GENERAL FUND",
+      "columns": [
+        {
+          "column": 0,
+          "printed": 142966570,
+          "summed": 142966569,
+          "difference": -1,
+          "status": "mismatch",
+          "method": null,
+          "hint": null,
+          "rowsSummed": 15
+        },
+        {
+          "column": 1,
+          "printed": 169450687,
+          "summed": 169450687,
+          "difference": 0,
+          "status": "exact",
+          "method": null,
+          "hint": null,
+          "rowsSummed": 15
+        },
+        {
+          "column": 2,
+          "printed": 162076759,
+          "summed": 162076759,
+          "difference": 0,
+          "status": "exact",
+          "method": null,
+          "hint": null,
+          "rowsSummed": 15
+        },
+        {
+          "column": 3,
+          "printed": 177220469,
+          "summed": 177220468,
+          "difference": -1,
+          "status": "mismatch",
+          "method": null,
+          "hint": null,
+          "rowsSummed": 15
+        }
+      ]
+    },
+    {
+      "name": "SPECIAL OBJECTS",
+      "page": 73,
+      "level": "fund",
+      "header": "Special Objects of Expense",
+      "rowCount": 49,
+      "coveredBySubtotals": 0,
+      "unreadableFigures": 0,
+      "verified": true,
+      "fund": "GENERAL FUND",
+      "columns": [
+        {
+          "column": 0,
+          "printed": 87635408,
+          "summed": 87635408,
+          "difference": 0,
+          "status": "exact",
+          "method": null,
+          "hint": null,
+          "rowsSummed": 49
+        },
+        {
+          "column": 1,
+          "printed": 93569840,
+          "summed": 93569840,
+          "difference": 0,
+          "status": "exact",
+          "method": null,
+          "hint": null,
+          "rowsSummed": 49
+        },
+        {
+          "column": 2,
+          "printed": 109874034,
+          "summed": 109874034,
+          "difference": 0,
+          "status": "exact",
+          "method": null,
+          "hint": null,
+          "rowsSummed": 49
+        },
+        {
+          "column": 3,
+          "printed": 105436141,
+          "summed": 105436141,
+          "difference": 0,
+          "status": "exact",
+          "method": null,
+          "hint": null,
+          "rowsSummed": 49
+        }
+      ]
+    },
+    {
+      "name": "CAPITAL APPROPRIATION AND DEBT SERVICE",
+      "page": 74,
+      "level": "fund",
+      "header": "Transfer to Debt Service Fund",
+      "rowCount": 2,
+      "coveredBySubtotals": 0,
+      "unreadableFigures": 0,
+      "verified": true,
+      "fund": "Transfer to Debt Service Fund",
+      "columns": [
+        {
+          "column": 0,
+          "printed": 23754659,
+          "summed": 23754659,
+          "difference": 0,
+          "status": "exact",
+          "method": null,
+          "hint": null,
+          "rowsSummed": 2
+        },
+        {
+          "column": 1,
+          "printed": 31725220,
+          "summed": 31725220,
+          "difference": 0,
+          "status": "exact",
+          "method": null,
+          "hint": null,
+          "rowsSummed": 2
+        },
+        {
+          "column": 2,
+          "printed": 31551555,
+          "summed": 31551555,
+          "difference": 0,
+          "status": "exact",
+          "method": null,
+          "hint": null,
+          "rowsSummed": 2
+        },
+        {
+          "column": 3,
+          "printed": 27381187,
+          "summed": 27381187,
+          "difference": 0,
+          "status": "exact",
+          "method": null,
+          "hint": null,
+          "rowsSummed": 2
+        }
+      ]
+    },
+    {
+      "name": "AVIATION FUND BUDGET",
+      "page": 75,
+      "level": "fund",
+      "header": "Cash Capital Appropriations & Debt Service",
+      "rowCount": 2,
+      "coveredBySubtotals": 0,
+      "unreadableFigures": 0,
+      "verified": true,
+      "fund": "AVIATION FUND",
+      "columns": [
+        {
+          "column": 0,
+          "printed": 0,
+          "summed": 0,
+          "difference": 0,
+          "status": "exact",
+          "method": null,
+          "hint": null,
+          "rowsSummed": 2
+        },
+        {
+          "column": 1,
+          "printed": 746413,
+          "summed": 746413,
+          "difference": 0,
+          "status": "exact",
+          "method": null,
+          "hint": null,
+          "rowsSummed": 2
+        },
+        {
+          "column": 2,
+          "printed": 707500,
+          "summed": 707500,
+          "difference": 0,
+          "status": "exact",
+          "method": null,
+          "hint": null,
+          "rowsSummed": 2
+        },
+        {
+          "column": 3,
+          "printed": 0,
+          "summed": 0,
+          "difference": 0,
+          "status": "exact",
+          "method": null,
+          "hint": null,
+          "rowsSummed": 2
+        }
+      ]
+    },
+    {
+      "name": "Subtotal",
+      "page": 76,
+      "level": "fund",
+      "header": "Municipal Sidewalk Operating Expenditures",
+      "rowCount": 1,
+      "coveredBySubtotals": 0,
+      "unreadableFigures": 0,
+      "verified": true,
+      "fund": "MUNICIPAL SIDEWALK FUND",
+      "columns": [
+        {
+          "column": 0,
+          "printed": 0,
+          "summed": 0,
+          "difference": 0,
+          "status": "exact",
+          "method": null,
+          "hint": null,
+          "rowsSummed": 1
+        },
+        {
+          "column": 1,
+          "printed": 0,
+          "summed": 0,
+          "difference": 0,
+          "status": "exact",
+          "method": null,
+          "hint": null,
+          "rowsSummed": 1
+        },
+        {
+          "column": 2,
+          "printed": 3727851,
+          "summed": 3727851,
+          "difference": 0,
+          "status": "exact",
+          "method": null,
+          "hint": null,
+          "rowsSummed": 1
+        },
+        {
+          "column": 3,
+          "printed": 3900547,
+          "summed": 3900547,
+          "difference": 0,
+          "status": "exact",
+          "method": null,
+          "hint": null,
+          "rowsSummed": 1
+        }
+      ]
+    },
+    {
+      "name": "Subtotal",
+      "page": 76,
+      "level": "fund",
+      "header": "Special Objects of Expense",
+      "rowCount": 5,
+      "coveredBySubtotals": 0,
+      "unreadableFigures": 0,
+      "verified": true,
+      "fund": "MUNICIPAL SIDEWALK FUND",
+      "columns": [
+        {
+          "column": 0,
+          "printed": 0,
+          "summed": 0,
+          "difference": 0,
+          "status": "exact",
+          "method": null,
+          "hint": null,
+          "rowsSummed": 5
+        },
+        {
+          "column": 1,
+          "printed": 0,
+          "summed": 0,
+          "difference": 0,
+          "status": "exact",
+          "method": null,
+          "hint": null,
+          "rowsSummed": 5
+        },
+        {
+          "column": 2,
+          "printed": 246847,
+          "summed": 246847,
+          "difference": 0,
+          "status": "exact",
+          "method": null,
+          "hint": null,
+          "rowsSummed": 5
+        },
+        {
+          "column": 3,
+          "printed": 272453,
+          "summed": 272453,
+          "difference": 0,
+          "status": "exact",
+          "method": null,
+          "hint": null,
+          "rowsSummed": 5
+        }
+      ]
+    },
+    {
+      "name": "Subtotal",
+      "page": 76,
+      "level": "department",
+      "header": "Cash Capital Appropriations & Debt Service",
+      "rowCount": 2,
+      "coveredBySubtotals": 0,
+      "unreadableFigures": 0,
+      "verified": true,
+      "fund": "MUNICIPAL SIDEWALK FUND",
+      "columns": [
+        {
+          "column": 0,
+          "printed": 0,
+          "summed": 0,
+          "difference": 0,
+          "status": "exact",
+          "method": null,
+          "hint": null,
+          "rowsSummed": 2
+        },
+        {
+          "column": 1,
+          "printed": 0,
+          "summed": 0,
+          "difference": 0,
+          "status": "exact",
+          "method": null,
+          "hint": null,
+          "rowsSummed": 2
+        },
+        {
+          "column": 2,
+          "printed": 105000,
+          "summed": 105000,
+          "difference": 0,
+          "status": "exact",
+          "method": null,
+          "hint": null,
+          "rowsSummed": 2
+        },
+        {
+          "column": 3,
+          "printed": 327000,
+          "summed": 327000,
+          "difference": 0,
+          "status": "exact",
+          "method": null,
+          "hint": null,
+          "rowsSummed": 2
+        }
+      ]
+    },
+    {
+      "name": "MUNICIPAL SIDEWALK FUND",
+      "page": 76,
+      "level": "fund",
+      "header": null,
+      "rowCount": 3,
+      "coveredBySubtotals": 3,
+      "unreadableFigures": 0,
+      "verified": true,
+      "fund": "MUNICIPAL SIDEWALK FUND",
+      "columns": [
+        {
+          "column": 0,
+          "printed": 0,
+          "summed": 0,
+          "difference": 0,
+          "status": "exact",
+          "method": null,
+          "hint": null,
+          "rowsSummed": 3
+        },
+        {
+          "column": 1,
+          "printed": 0,
+          "summed": 0,
+          "difference": 0,
+          "status": "exact",
+          "method": null,
+          "hint": null,
+          "rowsSummed": 3
+        },
+        {
+          "column": 2,
+          "printed": 4079698,
+          "summed": 4079698,
+          "difference": 0,
+          "status": "exact",
+          "method": null,
+          "hint": null,
+          "rowsSummed": 3
+        },
+        {
+          "column": 3,
+          "printed": 4500000,
+          "summed": 4500000,
+          "difference": 0,
+          "status": "exact",
+          "method": null,
+          "hint": null,
+          "rowsSummed": 3
+        }
+      ]
+    },
+    {
+      "name": "Subtotal",
+      "page": 77,
+      "level": "fund",
+      "header": "Water Departmental Operating Expenditures",
+      "rowCount": 5,
+      "coveredBySubtotals": 0,
+      "unreadableFigures": 0,
+      "verified": false,
+      "fund": "WATER FUND",
+      "columns": [
+        {
+          "column": 0,
+          "printed": 9719525,
+          "summed": 9719524,
+          "difference": -1,
+          "status": "mismatch",
+          "method": null,
+          "hint": null,
+          "rowsSummed": 5
+        },
+        {
+          "column": 1,
+          "printed": 12214597,
+          "summed": 12214597,
+          "difference": 0,
+          "status": "exact",
+          "method": null,
+          "hint": null,
+          "rowsSummed": 5
+        },
+        {
+          "column": 2,
+          "printed": 11611488,
+          "summed": 11611488,
+          "difference": 0,
+          "status": "exact",
+          "method": null,
+          "hint": null,
+          "rowsSummed": 5
+        },
+        {
+          "column": 3,
+          "printed": 13079205,
+          "summed": 13079205,
+          "difference": 0,
+          "status": "exact",
+          "method": null,
+          "hint": null,
+          "rowsSummed": 5
+        }
+      ]
+    },
+    {
+      "name": "Subtotal",
+      "page": 77,
+      "level": "fund",
+      "header": "Special Objects of Expense",
+      "rowCount": 10,
+      "coveredBySubtotals": 0,
+      "unreadableFigures": 0,
+      "verified": true,
+      "fund": "WATER FUND",
+      "columns": [
+        {
+          "column": 0,
+          "printed": 6823428,
+          "summed": 6823428,
+          "difference": 0,
+          "status": "exact",
+          "method": null,
+          "hint": null,
+          "rowsSummed": 10
+        },
+        {
+          "column": 1,
+          "printed": 6455000,
+          "summed": 6455000,
+          "difference": 0,
+          "status": "exact",
+          "method": null,
+          "hint": null,
+          "rowsSummed": 10
+        },
+        {
+          "column": 2,
+          "printed": 6338115,
+          "summed": 6338115,
+          "difference": 0,
+          "status": "exact",
+          "method": null,
+          "hint": null,
+          "rowsSummed": 10
+        },
+        {
+          "column": 3,
+          "printed": 6475000,
+          "summed": 6475000,
+          "difference": 0,
+          "status": "exact",
+          "method": null,
+          "hint": null,
+          "rowsSummed": 10
+        }
+      ]
+    },
+    {
+      "name": "Subtotal",
+      "page": 77,
+      "level": "department",
+      "header": "Cash Capital Appropriations & Debt Service",
+      "rowCount": 2,
+      "coveredBySubtotals": 0,
+      "unreadableFigures": 0,
+      "verified": true,
+      "fund": "WATER FUND",
+      "columns": [
+        {
+          "column": 0,
+          "printed": 1333758,
+          "summed": 1333758,
+          "difference": 0,
+          "status": "exact",
+          "method": null,
+          "hint": null,
+          "rowsSummed": 2
+        },
+        {
+          "column": 1,
+          "printed": 9222437,
+          "summed": 9222437,
+          "difference": 0,
+          "status": "exact",
+          "method": null,
+          "hint": null,
+          "rowsSummed": 2
+        },
+        {
+          "column": 2,
+          "printed": 9167936,
+          "summed": 9167936,
+          "difference": 0,
+          "status": "exact",
+          "method": null,
+          "hint": null,
+          "rowsSummed": 2
+        },
+        {
+          "column": 3,
+          "printed": 8236295,
+          "summed": 8236295,
+          "difference": 0,
+          "status": "exact",
+          "method": null,
+          "hint": null,
+          "rowsSummed": 2
+        }
+      ]
+    },
+    {
+      "name": "WATER FUND BUDGET",
+      "page": 77,
+      "level": "fund",
+      "header": null,
+      "rowCount": 3,
+      "coveredBySubtotals": 3,
+      "unreadableFigures": 0,
+      "verified": true,
+      "fund": "WATER FUND",
+      "columns": [
+        {
+          "column": 0,
+          "printed": 17876711,
+          "summed": 17876711,
+          "difference": 0,
+          "status": "exact",
+          "method": null,
+          "hint": null,
+          "rowsSummed": 3
+        },
+        {
+          "column": 1,
+          "printed": 27892034,
+          "summed": 27892034,
+          "difference": 0,
+          "status": "exact",
+          "method": null,
+          "hint": null,
+          "rowsSummed": 3
+        },
+        {
+          "column": 2,
+          "printed": 27117539,
+          "summed": 27117539,
+          "difference": 0,
+          "status": "exact",
+          "method": null,
+          "hint": null,
+          "rowsSummed": 3
+        },
+        {
+          "column": 3,
+          "printed": 27790500,
+          "summed": 27790500,
+          "difference": 0,
+          "status": "exact",
+          "method": null,
+          "hint": null,
+          "rowsSummed": 3
+        }
+      ]
+    },
+    {
+      "name": "Subtotal",
+      "page": 78,
+      "level": "fund",
+      "header": "Special Objects of Expense",
+      "rowCount": 6,
+      "coveredBySubtotals": 0,
+      "unreadableFigures": 0,
+      "verified": true,
+      "fund": "SEWER FUND",
+      "columns": [
+        {
+          "column": 0,
+          "printed": 2128569,
+          "summed": 2128569,
+          "difference": 0,
+          "status": "exact",
+          "method": null,
+          "hint": null,
+          "rowsSummed": 6
+        },
+        {
+          "column": 1,
+          "printed": 1970173,
+          "summed": 1970173,
+          "difference": 0,
+          "status": "exact",
+          "method": null,
+          "hint": null,
+          "rowsSummed": 6
+        },
+        {
+          "column": 2,
+          "printed": 1303243,
+          "summed": 1303243,
+          "difference": 0,
+          "status": "exact",
+          "method": null,
+          "hint": null,
+          "rowsSummed": 6
+        },
+        {
+          "column": 3,
+          "printed": 2141000,
+          "summed": 2141000,
+          "difference": 0,
+          "status": "exact",
+          "method": null,
+          "hint": null,
+          "rowsSummed": 6
+        }
+      ]
+    },
+    {
+      "name": "Subtotal",
+      "page": 78,
+      "level": "fund",
+      "header": "Cash Capital Appropriations & Debt Service",
+      "rowCount": 2,
+      "coveredBySubtotals": 0,
+      "unreadableFigures": 0,
+      "verified": true,
+      "fund": "SEWER FUND",
+      "columns": [
+        {
+          "column": 0,
+          "printed": 114186,
+          "summed": 114186,
+          "difference": 0,
+          "status": "exact",
+          "method": null,
+          "hint": null,
+          "rowsSummed": 2
+        },
+        {
+          "column": 1,
+          "printed": 2149914,
+          "summed": 2149914,
+          "difference": 0,
+          "status": "exact",
+          "method": null,
+          "hint": null,
+          "rowsSummed": 2
+        },
+        {
+          "column": 2,
+          "printed": 2149914,
+          "summed": 2149914,
+          "difference": 0,
+          "status": "exact",
+          "method": null,
+          "hint": null,
+          "rowsSummed": 2
+        },
+        {
+          "column": 3,
+          "printed": 1183794,
+          "summed": 1183794,
+          "difference": 0,
+          "status": "exact",
+          "method": null,
+          "hint": null,
+          "rowsSummed": 2
+        }
+      ]
+    },
+    {
+      "name": "SEWER FUND BUDGET",
+      "page": 78,
+      "level": "fund",
+      "header": null,
+      "rowCount": 3,
+      "coveredBySubtotals": 2,
+      "unreadableFigures": 0,
+      "verified": true,
+      "fund": "SEWER FUND",
+      "columns": [
+        {
+          "column": 0,
+          "printed": 5198938,
+          "summed": 5198938,
+          "difference": 0,
+          "status": "exact",
+          "method": null,
+          "hint": null,
+          "rowsSummed": 3
+        },
+        {
+          "column": 1,
+          "printed": 7153500,
+          "summed": 7153500,
+          "difference": 0,
+          "status": "exact",
+          "method": null,
+          "hint": null,
+          "rowsSummed": 3
+        },
+        {
+          "column": 2,
+          "printed": 7111542,
+          "summed": 7111542,
+          "difference": 0,
+          "status": "exact",
+          "method": null,
+          "hint": null,
+          "rowsSummed": 3
+        },
+        {
+          "column": 3,
+          "printed": 7189066,
+          "summed": 7189066,
+          "difference": 0,
+          "status": "exact",
+          "method": null,
+          "hint": null,
+          "rowsSummed": 3
+        }
+      ]
+    },
+    {
+      "name": "DOWNTOWN SPECIAL ASSESSMENT",
+      "page": 79,
+      "level": "fund",
+      "header": "DOWNTOWN SPECIAL ASSESSMENT",
+      "rowCount": 7,
+      "coveredBySubtotals": 0,
+      "unreadableFigures": 0,
+      "verified": true,
+      "fund": "DOWNTOWN SPECIAL ASSESSMENT",
+      "columns": [
+        {
+          "column": 0,
+          "printed": 1041087,
+          "summed": 1041087,
+          "difference": 0,
+          "status": "exact",
+          "method": null,
+          "hint": null,
+          "rowsSummed": 7
+        },
+        {
+          "column": 1,
+          "printed": 1024400,
+          "summed": 1024400,
+          "difference": 0,
+          "status": "exact",
+          "method": null,
+          "hint": null,
+          "rowsSummed": 7
+        },
+        {
+          "column": 2,
+          "printed": 1066051,
+          "summed": 1066051,
+          "difference": 0,
+          "status": "exact",
+          "method": null,
+          "hint": null,
+          "rowsSummed": 7
+        },
+        {
+          "column": 3,
+          "printed": 1075620,
+          "summed": 1075620,
+          "difference": 0,
+          "status": "exact",
+          "method": null,
+          "hint": null,
+          "rowsSummed": 7
+        }
+      ]
+    },
+    {
+      "name": "CROUSE-MARSHALL SPECIAL ASSESSMENT",
+      "page": 80,
+      "level": "fund",
+      "header": "CROUSE MARSHALL SPECIAL ASSESSMENT",
+      "rowCount": 5,
+      "coveredBySubtotals": 0,
+      "unreadableFigures": 0,
+      "verified": true,
+      "fund": "CROUSE MARSHALL SPECIAL ASSESSMENT",
+      "columns": [
+        {
+          "column": 0,
+          "printed": 93750,
+          "summed": 93750,
+          "difference": 0,
+          "status": "exact",
+          "method": null,
+          "hint": null,
+          "rowsSummed": 5
+        },
+        {
+          "column": 1,
+          "printed": 113750,
+          "summed": 113750,
+          "difference": 0,
+          "status": "exact",
+          "method": null,
+          "hint": null,
+          "rowsSummed": 5
+        },
+        {
+          "column": 2,
+          "printed": 118364,
+          "summed": 118364,
+          "difference": 0,
+          "status": "exact",
+          "method": null,
+          "hint": null,
+          "rowsSummed": 5
+        },
+        {
+          "column": 3,
+          "printed": 127770,
+          "summed": 127770,
+          "difference": 0,
+          "status": "exact",
+          "method": null,
+          "hint": null,
+          "rowsSummed": 5
+        }
+      ]
+    },
+    {
+      "name": "Subtotal",
+      "page": 82,
+      "level": "department",
+      "header": "ALL FUNDS TOTAL EXPENDITURES",
+      "rowCount": 4,
+      "coveredBySubtotals": 0,
+      "unreadableFigures": 0,
+      "verified": true,
+      "fund": "CROUSE MARSHALL SPECIAL ASSESSMENT",
+      "columns": [
+        {
+          "column": 0,
+          "printed": 106717685,
+          "summed": 106717685,
+          "difference": 0,
+          "status": "exact",
+          "method": null,
+          "hint": null,
+          "rowsSummed": 4
+        },
+        {
+          "column": 1,
+          "printed": 109935034,
+          "summed": 109935034,
+          "difference": 0,
+          "status": "exact",
+          "method": null,
+          "hint": null,
+          "rowsSummed": 4
+        }
+      ]
+    },
+    {
+      "name": "Subtotal",
+      "page": 82,
+      "level": "department",
+      "header": null,
+      "rowCount": 1,
+      "coveredBySubtotals": 0,
+      "unreadableFigures": 0,
+      "verified": true,
+      "fund": "CROUSE MARSHALL SPECIAL ASSESSMENT",
+      "columns": [
+        {
+          "column": 0,
+          "printed": 107283289,
+          "summed": 0,
+          "difference": -107283289,
+          "status": "exact",
+          "method": "growth factor applied to the line above",
+          "hint": null,
+          "rowsSummed": 0
+        },
+        {
+          "column": 1,
+          "printed": 110704579,
+          "summed": 0,
+          "difference": -110704579,
+          "status": "exact",
+          "method": "growth factor applied to the line above",
+          "hint": null,
+          "rowsSummed": 0
+        }
+      ]
+    },
+    {
+      "name": "Subtotal",
+      "page": 82,
+      "level": "department",
+      "header": null,
+      "rowCount": 1,
+      "coveredBySubtotals": 0,
+      "unreadableFigures": 0,
+      "verified": true,
+      "fund": "CROUSE MARSHALL SPECIAL ASSESSMENT",
+      "columns": [
+        {
+          "column": 0,
+          "printed": 112098193,
+          "summed": 4814904,
+          "difference": -107283289,
+          "status": "exact",
+          "method": "running total",
+          "hint": null,
+          "rowsSummed": 1
+        },
+        {
+          "column": 1,
+          "printed": 116744729,
+          "summed": 6040150,
+          "difference": -110704579,
+          "status": "exact",
+          "method": "running total",
+          "hint": null,
+          "rowsSummed": 1
+        }
+      ]
+    },
+    {
+      "name": "Subtotal",
+      "page": 82,
+      "level": "department",
+      "header": null,
+      "rowCount": 2,
+      "coveredBySubtotals": 0,
+      "unreadableFigures": 0,
+      "verified": true,
+      "fund": "CROUSE MARSHALL SPECIAL ASSESSMENT",
+      "columns": [
+        {
+          "column": 0,
+          "printed": 3485631,
+          "summed": 6144177,
+          "difference": 2658546,
+          "status": "exact",
+          "method": "lines added and taken away",
+          "hint": null,
+          "rowsSummed": 2
+        },
+        {
+          "column": 1,
+          "printed": 5100170,
+          "summed": 6980130,
+          "difference": 1879960,
+          "status": "exact",
+          "method": "lines added and taken away",
+          "hint": null,
+          "rowsSummed": 2
+        }
+      ]
+    },
+    {
+      "name": "Tax Levy & Special Assessments",
+      "page": 82,
+      "level": "department",
+      "header": null,
+      "rowCount": 3,
+      "coveredBySubtotals": 0,
+      "unreadableFigures": 0,
+      "verified": true,
+      "fund": "CROUSE MARSHALL SPECIAL ASSESSMENT",
+      "columns": [
+        {
+          "column": 0,
+          "printed": 109935034,
+          "summed": 109935034,
+          "difference": 0,
+          "status": "exact",
+          "method": null,
+          "hint": null,
+          "rowsSummed": 3
+        },
+        {
+          "column": 1,
+          "printed": 116732678,
+          "summed": 116732678,
+          "difference": 0,
+          "status": "exact",
+          "method": null,
+          "hint": null,
+          "rowsSummed": 3
+        }
+      ]
+    },
+    {
+      "name": "Full Valuation",
+      "page": 83,
+      "level": "fund",
+      "header": "Completed in Year for City Purposes for School Purposes Equalization Ratio Taxable Real Estate",
+      "rowCount": 5,
+      "coveredBySubtotals": 0,
+      "unreadableFigures": 0,
+      "verified": true,
+      "fund": "CROUSE MARSHALL SPECIAL ASSESSMENT",
+      "columns": [
+        {
+          "column": 0,
+          "printed": null,
+          "summed": 19598020347,
+          "difference": null,
+          "status": "no printed total",
+          "method": null,
+          "hint": null,
+          "rowsSummed": 5
+        },
+        {
+          "column": 1,
+          "printed": null,
+          "summed": 19794384011,
+          "difference": null,
+          "status": "no printed total",
+          "method": null,
+          "hint": null,
+          "rowsSummed": 5
+        },
+        {
+          "column": 2,
+          "printed": 28660085807,
+          "summed": 28660085807,
+          "difference": 0,
+          "status": "exact",
+          "method": null,
+          "hint": null,
+          "rowsSummed": 5
+        }
+      ]
+    },
+    {
+      "name": "Exclusions",
+      "page": 83,
+      "level": "department",
+      "header": "Net Debt and Capital Exclusions",
+      "rowCount": 2,
+      "coveredBySubtotals": 0,
+      "unreadableFigures": 0,
+      "verified": true,
+      "fund": "CROUSE MARSHALL SPECIAL ASSESSMENT",
+      "columns": [
+        {
+          "column": 0,
+          "printed": null,
+          "summed": 0,
+          "difference": null,
+          "status": "no printed total",
+          "method": null,
+          "hint": null,
+          "rowsSummed": 0
+        },
+        {
+          "column": 1,
+          "printed": null,
+          "summed": 0,
+          "difference": null,
+          "status": "no printed total",
+          "method": null,
+          "hint": null,
+          "rowsSummed": 0
+        },
+        {
+          "column": 2,
+          "printed": 37417483,
+          "summed": 37417483,
+          "difference": 0,
+          "status": "exact",
+          "method": null,
+          "hint": null,
+          "rowsSummed": 2
+        }
+      ]
+    }
+  ]
+}
