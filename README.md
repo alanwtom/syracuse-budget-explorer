@@ -80,8 +80,11 @@ Then open <http://localhost:3000>. No database or API keys are needed.
 
 ## Update the data
 
-Needs Python 3.12. The PDF and spreadsheet are not stored in this repository; download them from
-the City's site first.
+Needs Python 3.12. The budget PDFs are not in the repository itself. Exact copies of the five
+books this project read are archived in the
+[budget-books release](https://github.com/alanwtom/syracuse-budget-explorer/releases/tag/budget-books),
+with their fingerprints, in case the City replaces or removes them. The Auditor's spreadsheet is
+on the City's site.
 
 ```sh
 python -m pip install -r scripts/requirements.txt

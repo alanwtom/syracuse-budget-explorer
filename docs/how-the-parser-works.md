@@ -124,5 +124,9 @@ numbers printed in the book.
   its totals will stop adding up and it will show up as a mismatch, not as a wrong number.
 - Only the 2026-27 book feeds the site's numbers. The earlier books are used for finding mistakes.
 
+The exact PDFs the parser read are archived in the
+[budget-books release](https://github.com/alanwtom/syracuse-budget-explorer/releases/tag/budget-books).
+Each file's fingerprint matches the one recorded in its report.
+
 Notes comparing the spreadsheet with the budget book's fund totals are in
 [reconciliation.md](reconciliation.md).
