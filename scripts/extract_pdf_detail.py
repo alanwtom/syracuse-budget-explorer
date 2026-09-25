@@ -30,6 +30,10 @@ NUMERIC = re.compile(r"^\(?-?[\d,ç-ô]+\)?$")
 # The tables print rules between columns as runs of "=" or "_". They carry no
 # meaning and must not survive into a label, or a total line stops looking like one.
 SEPARATOR = re.compile(r"^[=_\-–—]+$")
+# Six bare digits leading a row identify the account.
+ACCOUNT_CODE = re.compile(r"^\d{6}$")
+# Left-margin headings that name the fund a row belongs to.
+FUND_HEADER = re.compile(r"\b(FUND|ASSESSMENT)\b", re.I)
 # "Total <name>" names its block; a bare "Subtotal" closes one without naming it.
 # Both end a block, and treating a subtotal as an ordinary row double-counts every
 # figure above it.
@@ -75,22 +79,32 @@ def group_into_lines(page, tolerance=ROW_TOLERANCE):
             current, baseline = [word], word["top"]
     if current:
         lines.append(current)
-    return lines
+    # Words sharing a line rarely share an exact baseline, so ordering the page
+    # by top-then-x0 can interleave them and scramble a label ("Water Sale of",
+    # "WATER FUND REVENUE: TOTAL"). Grouping has already decided which words form
+    # a line; within one, only horizontal position means anything.
+    return [sorted(line, key=lambda w: w["x0"]) for line in lines]
 
 
 def read_lines(page, page_number):
     parsed = []
     for line in group_into_lines(page):
         kept = [w for w in line if not SEPARATOR.match(w["text"])]
+
+        # An account code is six bare digits at the head of the row. Printed
+        # amounts in these tables always carry thousands separators, so a
+        # comma-less six-digit token in the leftmost position is a code and not
+        # a figure. Left unclaimed it is read as an amount and corrupts the sum.
+        code = None
+        if len(kept) > 1 and ACCOUNT_CODE.match(kept[0]["text"]):
+            code = kept[0]["text"]
+            kept = kept[1:]
+
         figures = [w for w in kept if NUMERIC.match(w["text"])]
         label_words = [w for w in kept if w not in figures]
         label = " ".join(w["text"] for w in label_words).strip().rstrip(":").strip()
         if not label and not figures:
             continue
-        code = None
-        match = re.match(r"^(\d{6})\s+(.*)$", label)
-        if match:
-            code, label = match.group(1), match.group(2)
         parsed.append({
             "page": page_number,
             "code": code,
@@ -215,6 +229,10 @@ def build_sections(lines):
     """
     sections = []
     header = None
+    # Account codes repeat across funds: 424010 is Interest on Deposits in both
+    # the General and the Water fund. A row is only identified by fund and code
+    # together, so the enclosing fund has to travel with it.
+    fund = None
     leaves = []      # rows under the current header, not yet closed by a total
     orphans = []     # rows whose header closed without printing a total
     subtotals = []   # department totals already closed inside this fund
@@ -223,6 +241,9 @@ def build_sections(lines):
         # accounting context. Without this, rows from the preceding statement
         # leak into the first total of the next one.
         if STATEMENT_START.search(line["label"]):
+            # The statement heading repeats on every page of a statement, so the
+            # accumulators reset but the fund does not: a fund's rows run across
+            # several pages and only a new fund heading ends it.
             header, leaves, orphans, subtotals = None, [], [], []
             continue
 
@@ -235,6 +256,7 @@ def build_sections(lines):
                 "page": line["page"],
                 "level": "fund" if grand else "department",
                 "header": header["label"] if header else None,
+                "fund": fund,
                 "printed": line["columns"],
                 "rows": members,
                 "coveredBySubtotals": len(subtotals) if grand else 0,
@@ -248,6 +270,8 @@ def build_sections(lines):
             continue
 
         if not line["figures"] and line["indent"] <= HEADER_MAX_X:
+            if FUND_HEADER.search(line["label"]):
+                fund = line["label"].strip()
             # The previous header ended without a total of its own, so its rows
             # stay eligible for the enclosing fund total but must not be counted
             # toward the next department's.
@@ -256,7 +280,7 @@ def build_sections(lines):
             continue
 
         if line["figures"]:
-            leaves.append(line)
+            leaves.append(dict(line, fund=fund))
     return sections
 
 
@@ -294,6 +318,9 @@ def reconcile(sections):
                 "status": status,
                 "rowsSummed": len(values),
             })
+        verified = bool([c for c in per_column if c["printed"] is not None]) and all(
+            c["status"] == "exact" for c in per_column if c["printed"] is not None
+        )
         results.append({
             "name": section["name"],
             "page": section["page"],
@@ -302,7 +329,24 @@ def reconcile(sections):
             "rowCount": len(section["rows"]),
             "coveredBySubtotals": section["coveredBySubtotals"],
             "unreadableFigures": sum(damaged),
+            "verified": verified,
+            "fund": section.get("fund"),
             "columns": per_column,
+            # The line items themselves, so the extraction can feed something
+            # other than a reconciliation report. A row inherits its section's
+            # verified flag: a figure is only trustworthy if the block it sits
+            # in adds up to the total the document prints for it.
+            "rows": [
+                {
+                    "code": row["code"],
+                    "label": row["label"],
+                    "fund": row.get("fund"),
+                    "page": row["page"],
+                    "values": row["columns"],
+                    "unreadable": any(f["unreadable"] for f in row["figures"]),
+                }
+                for row in section["rows"]
+            ],
         })
     return results
 

@@ -25,6 +25,14 @@ class ValidationTests(unittest.TestCase):
         self.data['funds'][0]['formal']['fy27Adopted'] += 1000
         self.assertEqual(self.status('Formal totals match the adopted PDF'), 'check')
 
+    def test_pdf_confirmed_rows_are_reported(self):
+        self.assertEqual(self.status('Account rows confirmed by the adopted PDF'), 'pass')
+
+    def test_a_row_conflicting_with_the_pdf_fails_the_check(self):
+        """A disagreement between the two sources must not pass quietly."""
+        self.data['pdfConfirmation'] = {'confirmed': 99, 'conflicting': 1, 'available': 100}
+        self.assertEqual(self.status('Account rows confirmed by the adopted PDF'), 'check')
+
     def test_duplicate_id(self):
         self.data['rows'].append(copy.deepcopy(self.data['rows'][0]))
         self.assertEqual(self.status('Unique record IDs'), 'check')

@@ -71,6 +71,9 @@ type Row = {
   sourceSheet: string;
   sourceRow: number | null;
   adoptedMethod: string;
+  pdfConfirmed?: boolean;
+  pdfPage?: number;
+  pdfValue?: number;
   note?: string;
   amendments?: string[];
 };
@@ -784,6 +787,16 @@ function RowSheet({ row, onClose }: { row: Row | null; onClose: () => void }) {
                   <br />
                   <ExternalSource source={data.sources.workbook}>Auditor workbook</ExternalSource>
                   <p className="pt-1 text-xs leading-5 text-[#52656d]">{row.sourceSheet}{row.sourceRow ? `, row ${row.sourceRow}` : ''} · {row.adoptedMethod.replaceAll('_', ' ')}</p>
+                  {row.pdfConfirmed === true && (
+                    <p className="pt-1 text-xs leading-5 text-[#2f6b4f]">
+                      Confirmed against the adopted PDF, page {row.pdfPage}. That page&rsquo;s section adds up to the total the budget book prints for it.
+                    </p>
+                  )}
+                  {row.pdfConfirmed === false && (
+                    <p className="pt-1 text-xs leading-5 text-[#a33126]">
+                      The adopted PDF prints {fmtMoney(row.pdfValue)} for this account on page {row.pdfPage}. The figures disagree and neither is presented as settled.
+                    </p>
+                  )}
                 </div>
               </div>
             </div>

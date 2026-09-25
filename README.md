@@ -69,6 +69,18 @@ a block that does not reconcile is reported as a mismatch. It is most accurate o
 which it was developed against, so the earlier years carry more unexplained disagreements and
 should be treated as unverified until those are examined.
 
+### What the PDF now contributes to the interface
+
+The explorer's account history comes from the workbook, which the PDF does not carry. The PDF
+supplies a second, authoritative reading of the adopted figures. Rows are matched on fund and
+account code together, because a code such as 424010 appears in more than one fund, and only
+rows from PDF sections that reconcile to their own printed totals are used.
+
+100 account rows currently carry the same FY27 figure in both sources, and none disagree.
+Opening such a row in the explorer shows which page of the budget book confirms it. A row
+without a confirmation is not thereby wrong; the PDF simply does not print a reconciling figure
+for it.
+
 Three parsing details matter for a future year's document. Column positions are measured per
 page, because the tables do not set their columns identically throughout. Word spacing is split
 at 1.5pt, because the revenue pages set text tightly enough that the default runs whole labels

@@ -718,6 +718,62 @@ def build_summary() -> dict[str, Any]:
     }
 
 
+# Fund headings as the adopted PDF prints them, mapped to the explorer's fund ids.
+PDF_FUND_IDS = {
+    "GENERAL FUND": "general-fund",
+    "WATER FUND": "water-fund",
+    "SEWER FUND": "sewer-fund",
+    "MUNICIPAL SIDEWALK FUND": "sidewalk-fund",
+}
+
+
+def confirm_rows_against_pdf(rows, detail_path):
+    """Mark workbook rows whose figure the adopted PDF independently confirms.
+
+    Only rows from a PDF section that reconciles to its own printed total are
+    used: a figure is trustworthy when the block it sits in adds up. Account
+    codes repeat between funds, so rows are matched on fund and code together.
+
+    The workbook stays the source of history, which the PDF does not carry. This
+    records which adopted figures have a second, authoritative witness.
+    """
+    if not detail_path.exists():
+        return {"confirmed": 0, "conflicting": 0, "available": 0}
+
+    detail = json.loads(detail_path.read_text(encoding="utf-8"))
+    from_pdf = {}
+    for section in detail.get("sections", []):
+        if not section.get("verified"):
+            continue
+        for row in section.get("rows", []):
+            fund_id = PDF_FUND_IDS.get((row.get("fund") or "").upper())
+            if not row.get("code") or not fund_id or row.get("unreadable"):
+                continue
+            values = row.get("values") or []
+            if len(values) > 3 and values[3] is not None:
+                from_pdf.setdefault((fund_id, row["code"]), (values[3], row["page"]))
+
+    confirmed = conflicting = 0
+    for row in rows:
+        key = (row["fundId"], row.get("code"))
+        if key not in from_pdf:
+            continue
+        pdf_value, page = from_pdf[key]
+        adopted = row["values"].get("fy27Adjusted", row["values"].get("fy27Proposed"))
+        if adopted is None:
+            continue
+        if abs(pdf_value - adopted) < 0.5:
+            row["pdfConfirmed"] = True
+            row["pdfPage"] = page
+            confirmed += 1
+        else:
+            row["pdfConfirmed"] = False
+            row["pdfPage"] = page
+            row["pdfValue"] = pdf_value
+            conflicting += 1
+    return {"confirmed": confirmed, "conflicting": conflicting, "available": len(from_pdf)}
+
+
 def build_funds() -> list[dict[str, Any]]:
     funds: list[dict[str, Any]] = []
     for config in FUND_CONFIG.values():
@@ -815,6 +871,8 @@ def build_data(workbook_path: Path) -> dict[str, Any]:
             ],
         },
     }
+    pdf_match = confirm_rows_against_pdf(rows, Path(__file__).resolve().parents[1] / "data/pdf_detail.json")
+    result["pdfConfirmation"] = pdf_match
     result["validation"] = validate(result)
     result["validation"].append({"label": "Workbook formula scan", "status": "pass" if formula_errors == 0 else "check", "detail": f"{formula_cells} formulas scanned; {formula_errors} unreadable. This checks readability, not formula correctness."})
     return result

@@ -5,16 +5,448 @@
     77
   ],
   "summary": {
-    "sections": 38,
-    "sectionsVerified": 23,
+    "sections": 49,
+    "sectionsVerified": 29,
     "sectionsUncheckable": 0,
-    "columnsExact": 97,
-    "columnsMismatched": 35,
-    "columnsIncomplete": 11,
-    "reconciliationRate": 0.7348,
-    "unreadableFigures": 11
+    "columnsExact": 128,
+    "columnsMismatched": 43,
+    "columnsIncomplete": 14,
+    "reconciliationRate": 0.7485,
+    "unreadableFigures": 13
   },
   "sections": [
+    {
+      "name": "REAL PROPERTY TAX ITEMS",
+      "page": 50,
+      "level": "fund",
+      "header": "Real Property Tax Items",
+      "rowCount": 17,
+      "coveredBySubtotals": 0,
+      "unreadableFigures": 1,
+      "verified": false,
+      "fund": "GENERAL FUND",
+      "columns": [
+        {
+          "column": 0,
+          "printed": 8801161,
+          "summed": 8801160,
+          "difference": -1,
+          "status": "incomplete: unreadable figures excluded",
+          "rowsSummed": 12
+        },
+        {
+          "column": 1,
+          "printed": 7985700,
+          "summed": 22379509,
+          "difference": 14393809,
+          "status": "incomplete: unreadable figures excluded",
+          "rowsSummed": 12
+        },
+        {
+          "column": 2,
+          "printed": 6948003,
+          "summed": 6948003,
+          "difference": 0,
+          "status": "exact",
+          "rowsSummed": 12
+        },
+        {
+          "column": 3,
+          "printed": 7026807,
+          "summed": 7026807,
+          "difference": 0,
+          "status": "exact",
+          "rowsSummed": 11
+        }
+      ],
+      "rows": [
+        {
+          "code": null,
+          "label": "Unreserved, Undesignated",
+          "fund": "GENERAL FUND",
+          "page": 50,
+          "values": [
+            0,
+            14393809,
+            0,
+            null
+          ],
+          "unreadable": true
+        },
+        {
+          "code": "410010",
+          "label": "School District Tax Buyout",
+          "fund": "GENERAL FUND",
+          "page": 50,
+          "values": [
+            -2678538,
+            -2700000,
+            -2678538,
+            -2700000
+          ],
+          "unreadable": false
+        },
+        {
+          "code": "410020",
+          "label": "Special Lighting Assessments",
+          "fund": "GENERAL FUND",
+          "page": 50,
+          "values": [
+            265201,
+            275000,
+            260801,
+            275000
+          ],
+          "unreadable": false
+        },
+        {
+          "code": "410030",
+          "label": "Assessable Improvements",
+          "fund": "GENERAL FUND",
+          "page": 50,
+          "values": [
+            74307,
+            50000,
+            77717,
+            80000
+          ],
+          "unreadable": false
+        },
+        {
+          "code": "410040",
+          "label": "Assessable Improvements Buyout",
+          "fund": "GENERAL FUND",
+          "page": 50,
+          "values": [
+            -236886,
+            -300000,
+            -306806,
+            -300000
+          ],
+          "unreadable": false
+        },
+        {
+          "code": "410810",
+          "label": "PILOT Non-Profit Houses",
+          "fund": "GENERAL FUND",
+          "page": 50,
+          "values": [
+            2032201,
+            1750000,
+            2500000,
+            null
+          ],
+          "unreadable": false
+        },
+        {
+          "code": null,
+          "label": "",
+          "fund": "GENERAL FUND",
+          "page": 50,
+          "values": [
+            null,
+            null,
+            null,
+            2000000
+          ],
+          "unreadable": false
+        },
+        {
+          "code": "410830",
+          "label": "PILOT Ontrack",
+          "fund": "GENERAL FUND",
+          "page": 50,
+          "values": [
+            0,
+            5000,
+            0,
+            null
+          ],
+          "unreadable": false
+        },
+        {
+          "code": null,
+          "label": "",
+          "fund": "GENERAL FUND",
+          "page": 50,
+          "values": [
+            null,
+            null,
+            null,
+            0
+          ],
+          "unreadable": false
+        },
+        {
+          "code": "410840",
+          "label": "PILOT SIDA",
+          "fund": "GENERAL FUND",
+          "page": 50,
+          "values": [
+            2621528,
+            4000000,
+            2700000,
+            null
+          ],
+          "unreadable": false
+        },
+        {
+          "code": null,
+          "label": "",
+          "fund": "GENERAL FUND",
+          "page": 50,
+          "values": [
+            null,
+            null,
+            null,
+            3571307
+          ],
+          "unreadable": false
+        },
+        {
+          "code": "410500",
+          "label": "Prior Years' Tax Collection",
+          "fund": "GENERAL FUND",
+          "page": 50,
+          "values": [
+            4108988,
+            4000000,
+            3500000,
+            null
+          ],
+          "unreadable": false
+        },
+        {
+          "code": null,
+          "label": "",
+          "fund": "GENERAL FUND",
+          "page": 50,
+          "values": [
+            null,
+            null,
+            null,
+            4000000
+          ],
+          "unreadable": false
+        },
+        {
+          "code": "410900",
+          "label": "Fees & Penalties",
+          "fund": "GENERAL FUND",
+          "page": 50,
+          "values": [
+            2613359,
+            2100000,
+            2089129,
+            2100000
+          ],
+          "unreadable": false
+        },
+        {
+          "code": "425940",
+          "label": "Light Works Infrastructure Payment",
+          "fund": "GENERAL FUND",
+          "page": 50,
+          "values": [
+            1000,
+            500,
+            500,
+            500
+          ],
+          "unreadable": false
+        },
+        {
+          "code": null,
+          "label": "Less: Uncollected City Taxes Current Year",
+          "fund": "GENERAL FUND",
+          "page": 50,
+          "values": [
+            0,
+            -1194800,
+            -1194800,
+            null
+          ],
+          "unreadable": false
+        },
+        {
+          "code": null,
+          "label": "",
+          "fund": "GENERAL FUND",
+          "page": 50,
+          "values": [
+            null,
+            null,
+            null,
+            -2000000
+          ],
+          "unreadable": false
+        }
+      ]
+    },
+    {
+      "name": "NON-PROPERTY TAX ITEMS",
+      "page": 50,
+      "level": "fund",
+      "header": "Non-Property Tax Items",
+      "rowCount": 9,
+      "coveredBySubtotals": 0,
+      "unreadableFigures": 0,
+      "verified": true,
+      "fund": "GENERAL FUND",
+      "columns": [
+        {
+          "column": 0,
+          "printed": 127859558,
+          "summed": 127859558,
+          "difference": 0,
+          "status": "exact",
+          "rowsSummed": 9
+        },
+        {
+          "column": 1,
+          "printed": 130750761,
+          "summed": 130750761,
+          "difference": 0,
+          "status": "exact",
+          "rowsSummed": 9
+        },
+        {
+          "column": 2,
+          "printed": 131351104,
+          "summed": 131351104,
+          "difference": 0,
+          "status": "exact",
+          "rowsSummed": 9
+        },
+        {
+          "column": 3,
+          "printed": 133686341,
+          "summed": 133686341,
+          "difference": 0,
+          "status": "exact",
+          "rowsSummed": 9
+        }
+      ],
+      "rows": [
+        {
+          "code": "411100",
+          "label": "Sales Tax",
+          "fund": "GENERAL FUND",
+          "page": 50,
+          "values": [
+            121145765,
+            122975761,
+            124124474,
+            125986341
+          ],
+          "unreadable": false
+        },
+        {
+          "code": "411300",
+          "label": "Utilities Gross Receipts Tax",
+          "fund": "GENERAL FUND",
+          "page": 50,
+          "values": [
+            2282021,
+            2150000,
+            2173186,
+            2175000
+          ],
+          "unreadable": false
+        },
+        {
+          "code": "411500",
+          "label": "Room Occupancy Tax Rate",
+          "fund": "GENERAL FUND",
+          "page": 50,
+          "values": [
+            290030,
+            800000,
+            737000,
+            800000
+          ],
+          "unreadable": false
+        },
+        {
+          "code": "411700",
+          "label": "CATV Franchise Fee",
+          "fund": "GENERAL FUND",
+          "page": 50,
+          "values": [
+            849884,
+            1350000,
+            1000590,
+            1250000
+          ],
+          "unreadable": false
+        },
+        {
+          "code": "411710",
+          "label": "Right of Way Franchise Fee",
+          "fund": "GENERAL FUND",
+          "page": 50,
+          "values": [
+            115980,
+            125000,
+            40000,
+            125000
+          ],
+          "unreadable": false
+        },
+        {
+          "code": "425910",
+          "label": "SU Service Agreement",
+          "fund": "GENERAL FUND",
+          "page": 50,
+          "values": [
+            375000,
+            125000,
+            125000,
+            125000
+          ],
+          "unreadable": false
+        },
+        {
+          "code": "425920",
+          "label": "SU Service Supplemental",
+          "fund": "GENERAL FUND",
+          "page": 50,
+          "values": [
+            2000000,
+            2000000,
+            2000000,
+            2000000
+          ],
+          "unreadable": false
+        },
+        {
+          "code": "415900",
+          "label": "SU DOME Traffic Reimbursement",
+          "fund": "GENERAL FUND",
+          "page": 50,
+          "values": [
+            100000,
+            475000,
+            486580,
+            475000
+          ],
+          "unreadable": false
+        },
+        {
+          "code": "411400",
+          "label": "Cannabis Tax",
+          "fund": "GENERAL FUND",
+          "page": 50,
+          "values": [
+            700878,
+            750000,
+            664274,
+            750000
+          ],
+          "unreadable": false
+        }
+      ]
+    },
     {
       "name": "Finance",
       "page": 51,
@@ -23,6 +455,8 @@
       "rowCount": 18,
       "coveredBySubtotals": 0,
       "unreadableFigures": 0,
+      "verified": true,
+      "fund": "GENERAL FUND",
       "columns": [
         {
           "column": 0,
@@ -56,16 +490,254 @@
           "status": "exact",
           "rowsSummed": 18
         }
+      ],
+      "rows": [
+        {
+          "code": "412300",
+          "label": "Abstract Fees",
+          "fund": "GENERAL FUND",
+          "page": 51,
+          "values": [
+            109927,
+            100000,
+            108766,
+            100000
+          ],
+          "unreadable": false
+        },
+        {
+          "code": "412310",
+          "label": "Duplicate Tax Bill Fee",
+          "fund": "GENERAL FUND",
+          "page": 51,
+          "values": [
+            9222,
+            12000,
+            10465,
+            12000
+          ],
+          "unreadable": false
+        },
+        {
+          "code": "412320",
+          "label": "County Tax Collection Fee",
+          "fund": "GENERAL FUND",
+          "page": 51,
+          "values": [
+            746443,
+            779500,
+            769002,
+            804992
+          ],
+          "unreadable": false
+        },
+        {
+          "code": "415800",
+          "label": "Parking Restitution Surcharge",
+          "fund": "GENERAL FUND",
+          "page": 51,
+          "values": [
+            741320,
+            650000,
+            637372,
+            650000
+          ],
+          "unreadable": false
+        },
+        {
+          "code": "415810",
+          "label": "Handicapped Parking Surcharge",
+          "fund": "GENERAL FUND",
+          "page": 51,
+          "values": [
+            16906,
+            16000,
+            15754,
+            16000
+          ],
+          "unreadable": false
+        },
+        {
+          "code": "425400",
+          "label": "License Comm. Bingo Licenses",
+          "fund": "GENERAL FUND",
+          "page": 51,
+          "values": [
+            0,
+            1000,
+            800,
+            1000
+          ],
+          "unreadable": false
+        },
+        {
+          "code": "425410",
+          "label": "Bingo Receipts",
+          "fund": "GENERAL FUND",
+          "page": 51,
+          "values": [
+            3110,
+            3750,
+            3994,
+            4000
+          ],
+          "unreadable": false
+        },
+        {
+          "code": "425450",
+          "label": "Licenses",
+          "fund": "GENERAL FUND",
+          "page": 51,
+          "values": [
+            39570,
+            45000,
+            46564,
+            45000
+          ],
+          "unreadable": false
+        },
+        {
+          "code": "425750",
+          "label": "Administrative Adjudication Receipts",
+          "fund": "GENERAL FUND",
+          "page": 51,
+          "values": [
+            491288,
+            350000,
+            501000,
+            450000
+          ],
+          "unreadable": false
+        },
+        {
+          "code": "426100",
+          "label": "Fines & Penalties Viol/Traffic",
+          "fund": "GENERAL FUND",
+          "page": 51,
+          "values": [
+            32799,
+            25000,
+            23641,
+            25000
+          ],
+          "unreadable": false
+        },
+        {
+          "code": "426102",
+          "label": "School Bus Arm Violation",
+          "fund": "GENERAL FUND",
+          "page": 51,
+          "values": [
+            0,
+            1618518,
+            1600000,
+            1618518
+          ],
+          "unreadable": false
+        },
+        {
+          "code": "426104",
+          "label": "School Zone Speed Violation",
+          "fund": "GENERAL FUND",
+          "page": 51,
+          "values": [
+            0,
+            1823683,
+            1823680,
+            1823683
+          ],
+          "unreadable": false
+        },
+        {
+          "code": "426106",
+          "label": "School Zone Red Light Violations",
+          "fund": "GENERAL FUND",
+          "page": 51,
+          "values": [
+            0,
+            2557799,
+            2557799,
+            2557799
+          ],
+          "unreadable": false
+        },
+        {
+          "code": "426610",
+          "label": "Sale of Tax Property",
+          "fund": "GENERAL FUND",
+          "page": 51,
+          "values": [
+            19447,
+            15000,
+            160000,
+            15000
+          ],
+          "unreadable": false
+        },
+        {
+          "code": "427500",
+          "label": "Parking Ticket Receipts",
+          "fund": "GENERAL FUND",
+          "page": 51,
+          "values": [
+            2561107,
+            3750000,
+            2224335,
+            2750000
+          ],
+          "unreadable": false
+        },
+        {
+          "code": "427520",
+          "label": "PVB Court Costs/Charges",
+          "fund": "GENERAL FUND",
+          "page": 51,
+          "values": [
+            30,
+            2500,
+            800,
+            2500
+          ],
+          "unreadable": false
+        },
+        {
+          "code": "427710",
+          "label": "Returned Check Fees",
+          "fund": "GENERAL FUND",
+          "page": 51,
+          "values": [
+            1528,
+            2000,
+            2000,
+            2000
+          ],
+          "unreadable": false
+        },
+        {
+          "code": "427700",
+          "label": "Mise. Receipts",
+          "fund": "GENERAL FUND",
+          "page": 51,
+          "values": [
+            224954,
+            175000,
+            0,
+            175000
+          ],
+          "unreadable": false
+        }
       ]
     },
     {
       "name": "City Clerk",
       "page": 51,
       "level": "fund",
-      "header": "Clerk City",
+      "header": "City Clerk",
       "rowCount": 1,
       "coveredBySubtotals": 0,
       "unreadableFigures": 0,
+      "verified": true,
+      "fund": "GENERAL FUND",
       "columns": [
         {
           "column": 0,
@@ -99,6 +771,21 @@
           "status": "exact",
           "rowsSummed": 1
         }
+      ],
+      "rows": [
+        {
+          "code": "412550",
+          "label": "City Clerk Licenses",
+          "fund": "GENERAL FUND",
+          "page": 51,
+          "values": [
+            57139,
+            60000,
+            54336,
+            60000
+          ],
+          "unreadable": false
+        }
       ]
     },
     {
@@ -109,6 +796,8 @@
       "rowCount": 13,
       "coveredBySubtotals": 0,
       "unreadableFigures": 0,
+      "verified": true,
+      "fund": "GENERAL FUND",
       "columns": [
         {
           "column": 0,
@@ -142,16 +831,189 @@
           "status": "exact",
           "rowsSummed": 13
         }
+      ],
+      "rows": [
+        {
+          "code": "415650",
+          "label": "Boardup/Cleanup Charges",
+          "fund": "GENERAL FUND",
+          "page": 52,
+          "values": [
+            101825,
+            100000,
+            104605,
+            110000
+          ],
+          "unreadable": false
+        },
+        {
+          "code": "415660",
+          "label": "Cleanup Charges",
+          "fund": "GENERAL FUND",
+          "page": 52,
+          "values": [
+            91319,
+            228000,
+            78983,
+            80000
+          ],
+          "unreadable": false
+        },
+        {
+          "code": "415700",
+          "label": "DEMO Charges Unsafe Building",
+          "fund": "GENERAL FUND",
+          "page": 52,
+          "values": [
+            121950,
+            168000,
+            0,
+            250000
+          ],
+          "unreadable": false
+        },
+        {
+          "code": "415870",
+          "label": "Vacant Property Registry",
+          "fund": "GENERAL FUND",
+          "page": 52,
+          "values": [
+            13700,
+            25000,
+            14464,
+            25000
+          ],
+          "unreadable": false
+        },
+        {
+          "code": "415890",
+          "label": "Rental Registry Fees",
+          "fund": "GENERAL FUND",
+          "page": 52,
+          "values": [
+            172686,
+            225000,
+            160338,
+            225000
+          ],
+          "unreadable": false
+        },
+        {
+          "code": "417441",
+          "label": "Small Cell Permits",
+          "fund": "GENERAL FUND",
+          "page": 52,
+          "values": [
+            115550,
+            130000,
+            151097,
+            130000
+          ],
+          "unreadable": false
+        },
+        {
+          "code": "425500",
+          "label": "Building & Property Permits",
+          "fund": "GENERAL FUND",
+          "page": 52,
+          "values": [
+            3729369,
+            3500000,
+            4398420,
+            4250000
+          ],
+          "unreadable": false
+        },
+        {
+          "code": "425560",
+          "label": "Certificate of Compliance",
+          "fund": "GENERAL FUND",
+          "page": 52,
+          "values": [
+            104805,
+            158500,
+            65000,
+            89000
+          ],
+          "unreadable": false
+        },
+        {
+          "code": "425570",
+          "label": "Board of Zoning Appeals",
+          "fund": "GENERAL FUND",
+          "page": 52,
+          "values": [
+            0,
+            500,
+            500,
+            500
+          ],
+          "unreadable": false
+        },
+        {
+          "code": "425700",
+          "label": "Building & Property Rehab Electric Lie",
+          "fund": "GENERAL FUND",
+          "page": 52,
+          "values": [
+            36510,
+            35000,
+            37000,
+            35000
+          ],
+          "unreadable": false
+        },
+        {
+          "code": "425710",
+          "label": "Building & Property Heating Lie",
+          "fund": "GENERAL FUND",
+          "page": 52,
+          "values": [
+            54680,
+            56000,
+            59000,
+            56000
+          ],
+          "unreadable": false
+        },
+        {
+          "code": "425720",
+          "label": "Building & Property Elevator Permits",
+          "fund": "GENERAL FUND",
+          "page": 52,
+          "values": [
+            93237,
+            12000,
+            50000,
+            45000
+          ],
+          "unreadable": false
+        },
+        {
+          "code": "425480",
+          "label": "Certificates of Use",
+          "fund": "GENERAL FUND",
+          "page": 52,
+          "values": [
+            177500,
+            110000,
+            185000,
+            110000
+          ],
+          "unreadable": false
+        }
       ]
     },
     {
-      "name": "Parks Recreation: &",
+      "name": "Parks & Recreation",
       "page": 52,
       "level": "fund",
-      "header": "& Parks Recreation",
+      "header": "Parks & Recreation",
       "rowCount": 5,
       "coveredBySubtotals": 0,
       "unreadableFigures": 0,
+      "verified": true,
+      "fund": "GENERAL FUND",
       "columns": [
         {
           "column": 0,
@@ -185,6 +1047,73 @@
           "status": "exact",
           "rowsSummed": 5
         }
+      ],
+      "rows": [
+        {
+          "code": "420000",
+          "label": "Festival Beverage Revenue",
+          "fund": "GENERAL FUND",
+          "page": 52,
+          "values": [
+            28160,
+            0,
+            0,
+            0
+          ],
+          "unreadable": false
+        },
+        {
+          "code": "420010",
+          "label": "P & R Fee & Concessions",
+          "fund": "GENERAL FUND",
+          "page": 52,
+          "values": [
+            534084,
+            550000,
+            484600,
+            550100
+          ],
+          "unreadable": false
+        },
+        {
+          "code": "420020",
+          "label": "Clinton Square Rink Fees",
+          "fund": "GENERAL FUND",
+          "page": 52,
+          "values": [
+            201219,
+            200000,
+            193465,
+            240000
+          ],
+          "unreadable": false
+        },
+        {
+          "code": "420250",
+          "label": "P & R Ballfield Fees",
+          "fund": "GENERAL FUND",
+          "page": 52,
+          "values": [
+            2625,
+            5000,
+            0,
+            0
+          ],
+          "unreadable": false
+        },
+        {
+          "code": "420120",
+          "label": "P & R Reimbursement Outside Agency",
+          "fund": "GENERAL FUND",
+          "page": 52,
+          "values": [
+            26452,
+            0,
+            0,
+            0
+          ],
+          "unreadable": false
+        }
       ]
     },
     {
@@ -195,6 +1124,8 @@
       "rowCount": 4,
       "coveredBySubtotals": 0,
       "unreadableFigures": 0,
+      "verified": true,
+      "fund": "GENERAL FUND",
       "columns": [
         {
           "column": 0,
@@ -228,6 +1159,60 @@
           "status": "exact",
           "rowsSummed": 4
         }
+      ],
+      "rows": [
+        {
+          "code": "415380",
+          "label": "Fire Reimbursement Outside Agencies",
+          "fund": "GENERAL FUND",
+          "page": 52,
+          "values": [
+            25700,
+            40000,
+            36949,
+            40000
+          ],
+          "unreadable": false
+        },
+        {
+          "code": "415400",
+          "label": "Fire- Reports & Records",
+          "fund": "GENERAL FUND",
+          "page": 52,
+          "values": [
+            900,
+            5000,
+            17000,
+            25800
+          ],
+          "unreadable": false
+        },
+        {
+          "code": "422620",
+          "label": "EMS Reimbursement New York State",
+          "fund": "GENERAL FUND",
+          "page": 52,
+          "values": [
+            30050,
+            11000,
+            10894,
+            11000
+          ],
+          "unreadable": false
+        },
+        {
+          "code": "415300",
+          "label": "Fire Ambulance Billing",
+          "fund": "GENERAL FUND",
+          "page": 52,
+          "values": [
+            228222,
+            350000,
+            296272,
+            0
+          ],
+          "unreadable": false
+        }
       ]
     },
     {
@@ -238,6 +1223,8 @@
       "rowCount": 5,
       "coveredBySubtotals": 0,
       "unreadableFigures": 0,
+      "verified": true,
+      "fund": "GENERAL FUND",
       "columns": [
         {
           "column": 0,
@@ -271,6 +1258,73 @@
           "status": "exact",
           "rowsSummed": 5
         }
+      ],
+      "rows": [
+        {
+          "code": "415200",
+          "label": "Police Reports, Records & Fingerprints",
+          "fund": "GENERAL FUND",
+          "page": 53,
+          "values": [
+            7103,
+            25000,
+            8284,
+            10000
+          ],
+          "unreadable": false
+        },
+        {
+          "code": "412110",
+          "label": "City Court Criminal Div",
+          "fund": "GENERAL FUND",
+          "page": 53,
+          "values": [
+            1151,
+            2500,
+            2900,
+            2500
+          ],
+          "unreadable": false
+        },
+        {
+          "code": "415880",
+          "label": "Annual Alarm Fee",
+          "fund": "GENERAL FUND",
+          "page": 53,
+          "values": [
+            107310,
+            85000,
+            90000,
+            85000
+          ],
+          "unreadable": false
+        },
+        {
+          "code": "415910",
+          "label": "Police Services Outside Agencies",
+          "fund": "GENERAL FUND",
+          "page": 53,
+          "values": [
+            2858860,
+            2000000,
+            700000,
+            2000000
+          ],
+          "unreadable": false
+        },
+        {
+          "code": "415950",
+          "label": "Police Unclaimed Property",
+          "fund": "GENERAL FUND",
+          "page": 53,
+          "values": [
+            116696,
+            50000,
+            125000,
+            115000
+          ],
+          "unreadable": false
+        }
       ]
     },
     {
@@ -281,6 +1335,8 @@
       "rowCount": 1,
       "coveredBySubtotals": 0,
       "unreadableFigures": 0,
+      "verified": true,
+      "fund": "GENERAL FUND",
       "columns": [
         {
           "column": 0,
@@ -314,6 +1370,21 @@
           "status": "exact",
           "rowsSummed": 1
         }
+      ],
+      "rows": [
+        {
+          "code": "412200",
+          "label": "Housing Court Fines",
+          "fund": "GENERAL FUND",
+          "page": 53,
+          "values": [
+            207782,
+            350000,
+            303462,
+            350000
+          ],
+          "unreadable": false
+        }
       ]
     },
     {
@@ -324,6 +1395,8 @@
       "rowCount": 20,
       "coveredBySubtotals": 0,
       "unreadableFigures": 0,
+      "verified": true,
+      "fund": "GENERAL FUND",
       "columns": [
         {
           "column": 0,
@@ -357,6 +1430,268 @@
           "status": "exact",
           "rowsSummed": 20
         }
+      ],
+      "rows": [
+        {
+          "code": "415670",
+          "label": "Set-Out Charges",
+          "fund": "GENERAL FUND",
+          "page": 54,
+          "values": [
+            457145,
+            312000,
+            485015,
+            500000
+          ],
+          "unreadable": false
+        },
+        {
+          "code": "417100",
+          "label": "DPW Charges for Services",
+          "fund": "GENERAL FUND",
+          "page": 54,
+          "values": [
+            24396,
+            40000,
+            35000,
+            36000
+          ],
+          "unreadable": false
+        },
+        {
+          "code": "417110",
+          "label": "DPW Paving Cuts- Non-Refund",
+          "fund": "GENERAL FUND",
+          "page": 54,
+          "values": [
+            899567,
+            800000,
+            985000,
+            950000
+          ],
+          "unreadable": false
+        },
+        {
+          "code": "417120",
+          "label": "DPW Charges Outside Agencies",
+          "fund": "GENERAL FUND",
+          "page": 54,
+          "values": [
+            105213,
+            80000,
+            730000,
+            550000
+          ],
+          "unreadable": false
+        },
+        {
+          "code": "417140",
+          "label": "DPW Liability Waiver Permit",
+          "fund": "GENERAL FUND",
+          "page": 54,
+          "values": [
+            4475,
+            6500,
+            25000,
+            20000
+          ],
+          "unreadable": false
+        },
+        {
+          "code": "417150",
+          "label": "DPW Block Party Revenue",
+          "fund": "GENERAL FUND",
+          "page": 54,
+          "values": [
+            4625,
+            5000,
+            4500,
+            5000
+          ],
+          "unreadable": false
+        },
+        {
+          "code": "417200",
+          "label": "Parking Lots",
+          "fund": "GENERAL FUND",
+          "page": 54,
+          "values": [
+            18165,
+            20000,
+            18000,
+            18500
+          ],
+          "unreadable": false
+        },
+        {
+          "code": "417270",
+          "label": "Fayette St Garage",
+          "fund": "GENERAL FUND",
+          "page": 54,
+          "values": [
+            635898,
+            700000,
+            350000,
+            0
+          ],
+          "unreadable": false
+        },
+        {
+          "code": "417280",
+          "label": "Madison Irving Garage",
+          "fund": "GENERAL FUND",
+          "page": 54,
+          "values": [
+            731982,
+            650000,
+            725000,
+            735000
+          ],
+          "unreadable": false
+        },
+        {
+          "code": "417290",
+          "label": "Harrison St Garage",
+          "fund": "GENERAL FUND",
+          "page": 54,
+          "values": [
+            766662,
+            558330,
+            560000,
+            650000
+          ],
+          "unreadable": false
+        },
+        {
+          "code": "417310",
+          "label": "Washington St Garage",
+          "fund": "GENERAL FUND",
+          "page": 54,
+          "values": [
+            574823,
+            555000,
+            612000,
+            600000
+          ],
+          "unreadable": false
+        },
+        {
+          "code": "417320",
+          "label": "Armory Square Garage",
+          "fund": "GENERAL FUND",
+          "page": 54,
+          "values": [
+            182711,
+            195000,
+            214000,
+            210000
+          ],
+          "unreadable": false
+        },
+        {
+          "code": "417330",
+          "label": "ONCenter Parking Garage",
+          "fund": "GENERAL FUND",
+          "page": 54,
+          "values": [
+            0,
+            125000,
+            130693,
+            112094
+          ],
+          "unreadable": false
+        },
+        {
+          "code": "417400",
+          "label": "Parking Meter Receipts",
+          "fund": "GENERAL FUND",
+          "page": 54,
+          "values": [
+            2511018,
+            2300000,
+            2355000,
+            2400000
+          ],
+          "unreadable": false
+        },
+        {
+          "code": "417420",
+          "label": "DPW Loading Zone Permits",
+          "fund": "GENERAL FUND",
+          "page": 54,
+          "values": [
+            1240,
+            1500,
+            1900,
+            1600
+          ],
+          "unreadable": false
+        },
+        {
+          "code": "417430",
+          "label": "DPW Sidewalk Permits",
+          "fund": "GENERAL FUND",
+          "page": 54,
+          "values": [
+            500,
+            500,
+            1200,
+            1000
+          ],
+          "unreadable": false
+        },
+        {
+          "code": "417440",
+          "label": "DPW Sidewalk Cafe Permits",
+          "fund": "GENERAL FUND",
+          "page": 54,
+          "values": [
+            4700,
+            3500,
+            4500,
+            4500
+          ],
+          "unreadable": false
+        },
+        {
+          "code": "421310",
+          "label": "Refuse & Garbage Charges",
+          "fund": "GENERAL FUND",
+          "page": 54,
+          "values": [
+            6455,
+            5200,
+            3500,
+            4000
+          ],
+          "unreadable": false
+        },
+        {
+          "code": "423010",
+          "label": "DPW Charges Other Gov't",
+          "fund": "GENERAL FUND",
+          "page": 54,
+          "values": [
+            101243,
+            150000,
+            106000,
+            110000
+          ],
+          "unreadable": false
+        },
+        {
+          "code": "427730",
+          "label": "Parking Garage Registration",
+          "fund": "GENERAL FUND",
+          "page": 54,
+          "values": [
+            6900,
+            7500,
+            6000,
+            6500
+          ],
+          "unreadable": false
+        }
       ]
     },
     {
@@ -367,6 +1702,8 @@
       "rowCount": 1,
       "coveredBySubtotals": 0,
       "unreadableFigures": 0,
+      "verified": true,
+      "fund": "Assessment",
       "columns": [
         {
           "column": 0,
@@ -400,7 +1737,68 @@
           "status": "exact",
           "rowsSummed": 1
         }
+      ],
+      "rows": [
+        {
+          "code": "426630",
+          "label": "Appraisal Fees",
+          "fund": "Assessment",
+          "page": 54,
+          "values": [
+            0,
+            2000,
+            0,
+            2000
+          ],
+          "unreadable": false
+        }
       ]
+    },
+    {
+      "name": "DEPARTMENTAL INCOME",
+      "page": 54,
+      "level": "fund",
+      "header": null,
+      "rowCount": 0,
+      "coveredBySubtotals": 0,
+      "unreadableFigures": 0,
+      "verified": false,
+      "fund": "Assessment",
+      "columns": [
+        {
+          "column": 0,
+          "printed": 21281954,
+          "summed": 0,
+          "difference": -21281954,
+          "status": "mismatch",
+          "rowsSummed": 0
+        },
+        {
+          "column": 1,
+          "printed": 26925280,
+          "summed": 0,
+          "difference": -26925280,
+          "status": "mismatch",
+          "rowsSummed": 0
+        },
+        {
+          "column": 2,
+          "printed": 25465849,
+          "summed": 0,
+          "difference": -25465849,
+          "status": "mismatch",
+          "rowsSummed": 0
+        },
+        {
+          "column": 3,
+          "printed": 26863586,
+          "summed": 0,
+          "difference": -26863586,
+          "status": "mismatch",
+          "rowsSummed": 0
+        }
+      ],
+      "rows": []
     },
     {
       "name": "USE OF MONEY & PROPERTY",
@@ -410,6 +1808,8 @@
       "rowCount": 4,
       "coveredBySubtotals": 0,
       "unreadableFigures": 0,
+      "verified": true,
+      "fund": "Assessment",
       "columns": [
         {
           "column": 0,
@@ -443,16 +1843,72 @@
           "status": "exact",
           "rowsSummed": 4
         }
+      ],
+      "rows": [
+        {
+          "code": "424010",
+          "label": "Interest of Deposits",
+          "fund": "Assessment",
+          "page": 55,
+          "values": [
+            11756390,
+            9500000,
+            9000000,
+            7000000
+          ],
+          "unreadable": false
+        },
+        {
+          "code": "424020",
+          "label": "Bankruptcy Fees",
+          "fund": "Assessment",
+          "page": 55,
+          "values": [
+            32766,
+            55000,
+            45050,
+            55000
+          ],
+          "unreadable": false
+        },
+        {
+          "code": "424100",
+          "label": "Rental of Real Property",
+          "fund": "Assessment",
+          "page": 55,
+          "values": [
+            125249,
+            38000,
+            215000,
+            38000
+          ],
+          "unreadable": false
+        },
+        {
+          "code": "424140",
+          "label": "Rental of Equipment",
+          "fund": "Assessment",
+          "page": 55,
+          "values": [
+            245,
+            0,
+            0,
+            0
+          ],
+          "unreadable": false
+        }
       ]
     },
     {
       "name": "SALE OF PROPERTY",
       "page": 55,
       "level": "fund",
-      "header": "Sale Property of",
+      "header": "Sale of Property",
       "rowCount": 2,
       "coveredBySubtotals": 0,
       "unreadableFigures": 0,
+      "verified": true,
+      "fund": "Assessment",
       "columns": [
         {
           "column": 0,
@@ -486,6 +1942,1007 @@
           "status": "exact",
           "rowsSummed": 2
         }
+      ],
+      "rows": [
+        {
+          "code": "426500",
+          "label": "Sale of Scrap Equipment",
+          "fund": "Assessment",
+          "page": 55,
+          "values": [
+            38294,
+            25000,
+            32000,
+            35000
+          ],
+          "unreadable": false
+        },
+        {
+          "code": "426750",
+          "label": "Gain on Disposal of Assets",
+          "fund": "Assessment",
+          "page": 55,
+          "values": [
+            458635,
+            1470000,
+            5800000,
+            1000000
+          ],
+          "unreadable": false
+        }
+      ]
+    },
+    {
+      "name": "STATE AID",
+      "page": 55,
+      "level": "fund",
+      "header": "State Aid",
+      "rowCount": 7,
+      "coveredBySubtotals": 0,
+      "unreadableFigures": 1,
+      "verified": false,
+      "fund": "Assessment",
+      "columns": [
+        {
+          "column": 0,
+          "printed": 79542537,
+          "summed": 79542538,
+          "difference": 1,
+          "status": "incomplete: unreadable figures excluded",
+          "rowsSummed": 7
+        },
+        {
+          "column": 1,
+          "printed": 79429584,
+          "summed": 79429584,
+          "difference": 0,
+          "status": "exact",
+          "rowsSummed": 7
+        },
+        {
+          "column": 2,
+          "printed": 79580230,
+          "summed": 79580230,
+          "difference": 0,
+          "status": "exact",
+          "rowsSummed": 7
+        },
+        {
+          "column": 3,
+          "printed": null,
+          "summed": 74529584,
+          "difference": null,
+          "status": "no printed total",
+          "rowsSummed": 6
+        }
+      ],
+      "rows": [
+        {
+          "code": "430000",
+          "label": "State Aid Mise",
+          "fund": "Assessment",
+          "page": 55,
+          "values": [
+            68651,
+            0,
+            0,
+            0
+          ],
+          "unreadable": false
+        },
+        {
+          "code": "430050",
+          "label": "State Aid Mortgage Tax",
+          "fund": "Assessment",
+          "page": 55,
+          "values": [
+            2430431,
+            2500000,
+            2650646,
+            2600000
+          ],
+          "unreadable": false
+        },
+        {
+          "code": "430080",
+          "label": "State Aid State Highway Aid",
+          "fund": "Assessment",
+          "page": 55,
+          "values": [
+            90008,
+            0,
+            0,
+            0
+          ],
+          "unreadable": false
+        },
+        {
+          "code": "438200",
+          "label": "State Aid Youth Projects",
+          "fund": "Assessment",
+          "page": 55,
+          "values": [
+            24319,
+            0,
+            0,
+            0
+          ],
+          "unreadable": false
+        },
+        {
+          "code": "435210",
+          "label": "AIM State Aid",
+          "fund": "Assessment",
+          "page": 55,
+          "values": [
+            71758584,
+            71758584,
+            71758584,
+            71758584
+          ],
+          "unreadable": false
+        },
+        {
+          "code": "435209",
+          "label": "Temporary Aim Aid",
+          "fund": "Assessment",
+          "page": 55,
+          "values": [
+            5000000,
+            5000000,
+            5000000,
+            null
+          ],
+          "unreadable": true
+        },
+        {
+          "code": "435100",
+          "label": "State Aid Highway Maint",
+          "fund": "Assessment",
+          "page": 55,
+          "values": [
+            170545,
+            171000,
+            171000,
+            171000
+          ],
+          "unreadable": false
+        }
+      ]
+    },
+    {
+      "name": "MISCELLANEOUS REVENUE",
+      "page": 56,
+      "level": "fund",
+      "header": "Miscellaneous Revenue",
+      "rowCount": 7,
+      "coveredBySubtotals": 0,
+      "unreadableFigures": 0,
+      "verified": true,
+      "fund": "Assessment",
+      "columns": [
+        {
+          "column": 0,
+          "printed": 3504224,
+          "summed": 3504224,
+          "difference": 0,
+          "status": "exact",
+          "rowsSummed": 7
+        },
+        {
+          "column": 1,
+          "printed": 3493250,
+          "summed": 3493250,
+          "difference": 0,
+          "status": "exact",
+          "rowsSummed": 7
+        },
+        {
+          "column": 2,
+          "printed": 3520551,
+          "summed": 3520551,
+          "difference": 0,
+          "status": "exact",
+          "rowsSummed": 7
+        },
+        {
+          "column": 3,
+          "printed": 3493250,
+          "summed": 3493250,
+          "difference": 0,
+          "status": "exact",
+          "rowsSummed": 7
+        }
+      ],
+      "rows": [
+        {
+          "code": "426550",
+          "label": "Bid & Specs Revenue",
+          "fund": "Assessment",
+          "page": 56,
+          "values": [
+            3500,
+            2500,
+            2847,
+            2500
+          ],
+          "unreadable": false
+        },
+        {
+          "code": "426800",
+          "label": "Insurance Recoveries",
+          "fund": "Assessment",
+          "page": 56,
+          "values": [
+            159974,
+            150000,
+            176954,
+            150000
+          ],
+          "unreadable": false
+        },
+        {
+          "code": "450350",
+          "label": "Transfer from Water Fund",
+          "fund": "Assessment",
+          "page": 56,
+          "values": [
+            2800000,
+            2800000,
+            2800000,
+            2800000
+          ],
+          "unreadable": false
+        },
+        {
+          "code": "450360",
+          "label": "Transfer from Sewer Fund",
+          "fund": "Assessment",
+          "page": 56,
+          "values": [
+            540750,
+            540750,
+            540750,
+            540750
+          ],
+          "unreadable": false
+        },
+        {
+          "code": null,
+          "label": "on Bonds/RANs",
+          "fund": "Assessment",
+          "page": 56,
+          "values": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "unreadable": false
+        },
+        {
+          "code": "450312",
+          "label": "Transfer from Municipal",
+          "fund": "Assessment",
+          "page": 56,
+          "values": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "unreadable": false
+        },
+        {
+          "code": "450370",
+          "label": "Transfer from Capital Fund",
+          "fund": "Assessment",
+          "page": 56,
+          "values": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "unreadable": false
+        }
+      ]
+    },
+    {
+      "name": "GENERAL FUND REVENUE",
+      "page": 56,
+      "level": "fund",
+      "header": null,
+      "rowCount": 0,
+      "coveredBySubtotals": 0,
+      "unreadableFigures": 0,
+      "verified": false,
+      "fund": "Assessment",
+      "columns": [
+        {
+          "column": 0,
+          "printed": 253401013,
+          "summed": 0,
+          "difference": -253401013,
+          "status": "mismatch",
+          "rowsSummed": 0
+        },
+        {
+          "column": 1,
+          "printed": 274066384,
+          "summed": 0,
+          "difference": -274066384,
+          "status": "mismatch",
+          "rowsSummed": 0
+        },
+        {
+          "column": 2,
+          "printed": 261957787,
+          "summed": 0,
+          "difference": -261957787,
+          "status": "mismatch",
+          "rowsSummed": 0
+        },
+        {
+          "column": 3,
+          "printed": null,
+          "summed": 0,
+          "difference": null,
+          "status": "no printed total",
+          "rowsSummed": 0
+        }
+      ],
+      "rows": []
+    },
+    {
+      "name": "TAX LEVY",
+      "page": 57,
+      "level": "fund",
+      "header": "Tax Levy",
+      "rowCount": 2,
+      "coveredBySubtotals": 0,
+      "unreadableFigures": 0,
+      "verified": true,
+      "fund": "Assessment",
+      "columns": [
+        {
+          "column": 0,
+          "printed": 54866750,
+          "summed": 54866750,
+          "difference": 0,
+          "status": "exact",
+          "rowsSummed": 2
+        },
+        {
+          "column": 1,
+          "printed": 58970189,
+          "summed": 58970189,
+          "difference": 0,
+          "status": "exact",
+          "rowsSummed": 2
+        },
+        {
+          "column": 2,
+          "printed": 58970189,
+          "summed": 58970189,
+          "difference": 0,
+          "status": "exact",
+          "rowsSummed": 2
+        },
+        {
+          "column": 3,
+          "printed": 61913554,
+          "summed": 61913554,
+          "difference": 0,
+          "status": "exact",
+          "rowsSummed": 2
+        }
+      ],
+      "rows": [
+        {
+          "code": null,
+          "label": "Tax Levy",
+          "fund": "Assessment",
+          "page": 57,
+          "values": [
+            54323515,
+            58386325,
+            58386325,
+            61300549
+          ],
+          "unreadable": false
+        },
+        {
+          "code": null,
+          "label": "1% Added Pursuant to Law",
+          "fund": "Assessment",
+          "page": 57,
+          "values": [
+            543235,
+            583864,
+            583864,
+            613005
+          ],
+          "unreadable": false
+        }
+      ]
+    },
+    {
+      "name": "MUNICIPAL SIDEWALK REVENUE",
+      "page": 58,
+      "level": "fund",
+      "header": "MUNICIPAL SIDEWALK FUND",
+      "rowCount": 2,
+      "coveredBySubtotals": 0,
+      "unreadableFigures": 0,
+      "verified": true,
+      "fund": "MUNICIPAL SIDEWALK FUND",
+      "columns": [
+        {
+          "column": 0,
+          "printed": 2766820,
+          "summed": 2766820,
+          "difference": 0,
+          "status": "exact",
+          "rowsSummed": 2
+        },
+        {
+          "column": 1,
+          "printed": 2285237,
+          "summed": 2285237,
+          "difference": 0,
+          "status": "exact",
+          "rowsSummed": 2
+        },
+        {
+          "column": 2,
+          "printed": 3658560,
+          "summed": 3658560,
+          "difference": 0,
+          "status": "exact",
+          "rowsSummed": 2
+        },
+        {
+          "column": 3,
+          "printed": 2719688,
+          "summed": 2719688,
+          "difference": 0,
+          "status": "exact",
+          "rowsSummed": 2
+        }
+      ],
+      "rows": [
+        {
+          "code": null,
+          "label": "Unreserved, Undesignated",
+          "fund": "MUNICIPAL SIDEWALK FUND",
+          "page": 58,
+          "values": [
+            0,
+            -1349724,
+            0,
+            -915273
+          ],
+          "unreadable": false
+        },
+        {
+          "code": "499012",
+          "label": "Municipal Sidewalk Fee",
+          "fund": "MUNICIPAL SIDEWALK FUND",
+          "page": 58,
+          "values": [
+            2766820,
+            3634961,
+            3658560,
+            3634961
+          ],
+          "unreadable": false
+        }
+      ]
+    },
+    {
+      "name": "WATER FUND REVENUE",
+      "page": 59,
+      "level": "fund",
+      "header": "WATER FUND",
+      "rowCount": 22,
+      "coveredBySubtotals": 0,
+      "unreadableFigures": 0,
+      "verified": true,
+      "fund": "WATER FUND",
+      "columns": [
+        {
+          "column": 0,
+          "printed": 27667077,
+          "summed": 27667077,
+          "difference": 0,
+          "status": "exact",
+          "rowsSummed": 22
+        },
+        {
+          "column": 1,
+          "printed": 31031846,
+          "summed": 31031846,
+          "difference": 0,
+          "status": "exact",
+          "rowsSummed": 22
+        },
+        {
+          "column": 2,
+          "printed": 28056619,
+          "summed": 28056619,
+          "difference": 0,
+          "status": "exact",
+          "rowsSummed": 22
+        },
+        {
+          "column": 3,
+          "printed": 33175883,
+          "summed": 33175883,
+          "difference": 0,
+          "status": "exact",
+          "rowsSummed": 22
+        }
+      ],
+      "rows": [
+        {
+          "code": null,
+          "label": "Unreserved, Undesignated",
+          "fund": "WATER FUND",
+          "page": 59,
+          "values": [
+            0,
+            2625846,
+            0,
+            3689133
+          ],
+          "unreadable": false
+        },
+        {
+          "code": "421400",
+          "label": "Sale of Water",
+          "fund": "WATER FUND",
+          "page": 59,
+          "values": [
+            25190218,
+            26000000,
+            25590000,
+            27040000
+          ],
+          "unreadable": false
+        },
+        {
+          "code": "421420",
+          "label": "Water Frontage Tax",
+          "fund": "WATER FUND",
+          "page": 59,
+          "values": [
+            30009,
+            31000,
+            31416,
+            31000
+          ],
+          "unreadable": false
+        },
+        {
+          "code": "421440",
+          "label": "Fire Service Installation",
+          "fund": "WATER FUND",
+          "page": 59,
+          "values": [
+            31380,
+            35000,
+            29125,
+            35000
+          ],
+          "unreadable": false
+        },
+        {
+          "code": "421450",
+          "label": "Lead Pipe Removal",
+          "fund": "WATER FUND",
+          "page": 59,
+          "values": [
+            4931,
+            0,
+            0,
+            0
+          ],
+          "unreadable": false
+        },
+        {
+          "code": "421460",
+          "label": "Water Turn-on/Turn-off",
+          "fund": "WATER FUND",
+          "page": 59,
+          "values": [
+            29603,
+            32000,
+            24601,
+            32000
+          ],
+          "unreadable": false
+        },
+        {
+          "code": "421480",
+          "label": "Interest and Penalties",
+          "fund": "WATER FUND",
+          "page": 59,
+          "values": [
+            603860,
+            650000,
+            663000,
+            650000
+          ],
+          "unreadable": false
+        },
+        {
+          "code": "421490",
+          "label": "Pending Penalties",
+          "fund": "WATER FUND",
+          "page": 59,
+          "values": [
+            430700,
+            350000,
+            425877,
+            375000
+          ],
+          "unreadable": false
+        },
+        {
+          "code": "421500",
+          "label": "Meter Repairs",
+          "fund": "WATER FUND",
+          "page": 59,
+          "values": [
+            24921,
+            24000,
+            25600,
+            25750
+          ],
+          "unreadable": false
+        },
+        {
+          "code": "421510",
+          "label": "Infrastructure Improvement Fee",
+          "fund": "WATER FUND",
+          "page": 59,
+          "values": [
+            645395,
+            500000,
+            615000,
+            615000
+          ],
+          "unreadable": false
+        },
+        {
+          "code": "424010",
+          "label": "Interest of Deposits",
+          "fund": "WATER FUND",
+          "page": 59,
+          "values": [
+            40526,
+            50000,
+            10000,
+            40000
+          ],
+          "unreadable": false
+        },
+        {
+          "code": "424100",
+          "label": "Rental of Real Property",
+          "fund": "WATER FUND",
+          "page": 59,
+          "values": [
+            24190,
+            40000,
+            24000,
+            25000
+          ],
+          "unreadable": false
+        },
+        {
+          "code": "424140",
+          "label": "Rental of Equipment",
+          "fund": "WATER FUND",
+          "page": 59,
+          "values": [
+            83036,
+            45000,
+            53000,
+            45000
+          ],
+          "unreadable": false
+        },
+        {
+          "code": "425600",
+          "label": "Fees/Paving Cuts",
+          "fund": "WATER FUND",
+          "page": 59,
+          "values": [
+            22465,
+            30000,
+            35000,
+            34000
+          ],
+          "unreadable": false
+        },
+        {
+          "code": "425900",
+          "label": "Water Meter Installation",
+          "fund": "WATER FUND",
+          "page": 59,
+          "values": [
+            13827,
+            18000,
+            23000,
+            18000
+          ],
+          "unreadable": false
+        },
+        {
+          "code": "425950",
+          "label": "Service Kill Fees",
+          "fund": "WATER FUND",
+          "page": 59,
+          "values": [
+            81000,
+            75000,
+            70000,
+            70000
+          ],
+          "unreadable": false
+        },
+        {
+          "code": "426000",
+          "label": "Fire Service Maintenance Fee",
+          "fund": "WATER FUND",
+          "page": 59,
+          "values": [
+            360036,
+            371000,
+            369000,
+            371000
+          ],
+          "unreadable": false
+        },
+        {
+          "code": "426500",
+          "label": "Sale of Scrap Equipment",
+          "fund": "WATER FUND",
+          "page": 59,
+          "values": [
+            9840,
+            25000,
+            12000,
+            15000
+          ],
+          "unreadable": false
+        },
+        {
+          "code": "426750",
+          "label": "Gain on Disposal of Assets",
+          "fund": "WATER FUND",
+          "page": 59,
+          "values": [
+            0,
+            10000,
+            2000,
+            5000
+          ],
+          "unreadable": false
+        },
+        {
+          "code": "426800",
+          "label": "Insurance Recoveries",
+          "fund": "WATER FUND",
+          "page": 59,
+          "values": [
+            10485,
+            75000,
+            5000,
+            10000
+          ],
+          "unreadable": false
+        },
+        {
+          "code": "427700",
+          "label": "Mise. Receipts",
+          "fund": "WATER FUND",
+          "page": 59,
+          "values": [
+            30625,
+            45000,
+            49000,
+            50000
+          ],
+          "unreadable": false
+        },
+        {
+          "code": "427710",
+          "label": "Returned Check Fees",
+          "fund": "WATER FUND",
+          "page": 59,
+          "values": [
+            30,
+            0,
+            0,
+            0
+          ],
+          "unreadable": false
+        }
+      ]
+    },
+    {
+      "name": "SEWER FUND REVENUE",
+      "page": 60,
+      "level": "fund",
+      "header": "SEWER FUND",
+      "rowCount": 3,
+      "coveredBySubtotals": 0,
+      "unreadableFigures": 0,
+      "verified": true,
+      "fund": "SEWER FUND",
+      "columns": [
+        {
+          "column": 0,
+          "printed": 6898650,
+          "summed": 6898650,
+          "difference": 0,
+          "status": "exact",
+          "rowsSummed": 3
+        },
+        {
+          "column": 1,
+          "printed": 7483800,
+          "summed": 7483800,
+          "difference": 0,
+          "status": "exact",
+          "rowsSummed": 3
+        },
+        {
+          "column": 2,
+          "printed": 6860000,
+          "summed": 6860000,
+          "difference": 0,
+          "status": "exact",
+          "rowsSummed": 3
+        },
+        {
+          "column": 3,
+          "printed": 8966902,
+          "summed": 8966902,
+          "difference": 0,
+          "status": "exact",
+          "rowsSummed": 3
+        }
+      ],
+      "rows": [
+        {
+          "code": null,
+          "label": "Unreserved, Undesignated",
+          "fund": "SEWER FUND",
+          "page": 60,
+          "values": [
+            0,
+            728800,
+            0,
+            2086902
+          ],
+          "unreadable": false
+        },
+        {
+          "code": "421200",
+          "label": "Sewer Rents",
+          "fund": "SEWER FUND",
+          "page": 60,
+          "values": [
+            6814334,
+            6700000,
+            6800000,
+            6800000
+          ],
+          "unreadable": false
+        },
+        {
+          "code": "421490",
+          "label": "Pending Penalties",
+          "fund": "SEWER FUND",
+          "page": 60,
+          "values": [
+            84316,
+            55000,
+            60000,
+            80000
+          ],
+          "unreadable": false
+        }
+      ]
+    },
+    {
+      "name": "DOWNTOWN SPECIAL ASSESSMENT REVENUE",
+      "page": 61,
+      "level": "fund",
+      "header": "DOWNTOWN SPECIAL ASSESSMENT",
+      "rowCount": 3,
+      "coveredBySubtotals": 0,
+      "unreadableFigures": 0,
+      "verified": false,
+      "fund": "DOWNTOWN SPECIAL ASSESSMENT",
+      "columns": [
+        {
+          "column": 0,
+          "printed": 1118991,
+          "summed": 1118990,
+          "difference": -1,
+          "status": "mismatch",
+          "rowsSummed": 3
+        },
+        {
+          "column": 1,
+          "printed": 1370770,
+          "summed": 1370770,
+          "difference": 0,
+          "status": "exact",
+          "rowsSummed": 3
+        },
+        {
+          "column": 2,
+          "printed": 1370770,
+          "summed": 1370770,
+          "difference": 0,
+          "status": "exact",
+          "rowsSummed": 3
+        },
+        {
+          "column": 3,
+          "printed": 1411892,
+          "summed": 1411892,
+          "difference": 0,
+          "status": "exact",
+          "rowsSummed": 3
+        }
+      ],
+      "rows": [
+        {
+          "code": null,
+          "label": "Special Assessment Downtown",
+          "fund": "DOWNTOWN SPECIAL ASSESSMENT",
+          "page": 61,
+          "values": [
+            1118166,
+            1350209,
+            1350209,
+            1390714
+          ],
+          "unreadable": false
+        },
+        {
+          "code": null,
+          "label": "Fees & Penalties",
+          "fund": "DOWNTOWN SPECIAL ASSESSMENT",
+          "page": 61,
+          "values": [
+            824,
+            0,
+            0,
+            0
+          ],
+          "unreadable": false
+        },
+        {
+          "code": null,
+          "label": "Allowance for Uncollected Assessment",
+          "fund": "DOWNTOWN SPECIAL ASSESSMENT",
+          "page": 61,
+          "values": [
+            0,
+            20561,
+            20561,
+            21178
+          ],
+          "unreadable": false
+        }
       ]
     },
     {
@@ -496,6 +2953,8 @@
       "rowCount": 12,
       "coveredBySubtotals": 0,
       "unreadableFigures": 1,
+      "verified": true,
+      "fund": "GENERAL FUND",
       "columns": [
         {
           "column": 0,
@@ -529,6 +2988,164 @@
           "status": "no printed total",
           "rowsSummed": 11
         }
+      ],
+      "rows": [
+        {
+          "code": null,
+          "label": "Office of the Mayor",
+          "fund": "GENERAL FUND",
+          "page": 64,
+          "values": [
+            971657,
+            981358,
+            1112874,
+            970783
+          ],
+          "unreadable": false
+        },
+        {
+          "code": null,
+          "label": "Office of Administration",
+          "fund": "GENERAL FUND",
+          "page": 64,
+          "values": [
+            181914,
+            148374,
+            155992,
+            145558
+          ],
+          "unreadable": false
+        },
+        {
+          "code": null,
+          "label": "Mayor's Office to Reduce Gun Violence",
+          "fund": "GENERAL FUND",
+          "page": 64,
+          "values": [
+            179082,
+            245540,
+            256278,
+            390901
+          ],
+          "unreadable": false
+        },
+        {
+          "code": null,
+          "label": "Office of Constituent Assistance Resource Employees",
+          "fund": "GENERAL FUND",
+          "page": 64,
+          "values": [
+            313368,
+            366606,
+            376615,
+            378231
+          ],
+          "unreadable": false
+        },
+        {
+          "code": null,
+          "label": "Office of Analytics, Performance & Innovation",
+          "fund": "GENERAL FUND",
+          "page": 64,
+          "values": [
+            4251502,
+            3632022,
+            3910701,
+            4638479
+          ],
+          "unreadable": false
+        },
+        {
+          "code": null,
+          "label": "Office of Management & Budget",
+          "fund": "GENERAL FUND",
+          "page": 64,
+          "values": [
+            492299,
+            497259,
+            507071,
+            499492
+          ],
+          "unreadable": false
+        },
+        {
+          "code": null,
+          "label": "Division of Purchase",
+          "fund": "GENERAL FUND",
+          "page": 64,
+          "values": [
+            68474,
+            128578,
+            133877,
+            131968
+          ],
+          "unreadable": false
+        },
+        {
+          "code": null,
+          "label": "Division of Equity Compliance & Social Impact",
+          "fund": "GENERAL FUND",
+          "page": 64,
+          "values": [
+            159922,
+            191852,
+            126783,
+            191747
+          ],
+          "unreadable": false
+        },
+        {
+          "code": null,
+          "label": "Office of Personnel & Labor Relations",
+          "fund": "GENERAL FUND",
+          "page": 64,
+          "values": [
+            1153306,
+            1300359,
+            1187507,
+            null
+          ],
+          "unreadable": true
+        },
+        {
+          "code": null,
+          "label": "Bureau of Research",
+          "fund": "GENERAL FUND",
+          "page": 64,
+          "values": [
+            515440,
+            342331,
+            349199,
+            347903
+          ],
+          "unreadable": false
+        },
+        {
+          "code": null,
+          "label": "Syracuse Opportunity Works",
+          "fund": "GENERAL FUND",
+          "page": 64,
+          "values": [
+            69255,
+            80500,
+            80500,
+            80500
+          ],
+          "unreadable": false
+        },
+        {
+          "code": null,
+          "label": "Bureau of Information Technology",
+          "fund": "GENERAL FUND",
+          "page": 64,
+          "values": [
+            2032688,
+            1760051,
+            1629203,
+            1906171
+          ],
+          "unreadable": false
+        }
       ]
     },
     {
@@ -539,6 +3156,8 @@
       "rowCount": 4,
       "coveredBySubtotals": 0,
       "unreadableFigures": 0,
+      "verified": true,
+      "fund": "GENERAL FUND",
       "columns": [
         {
           "column": 0,
@@ -572,6 +3191,60 @@
           "status": "exact",
           "rowsSummed": 4
         }
+      ],
+      "rows": [
+        {
+          "code": null,
+          "label": "Bureau of City Payment Center",
+          "fund": "GENERAL FUND",
+          "page": 64,
+          "values": [
+            1142112,
+            1214437,
+            1199704,
+            1210052
+          ],
+          "unreadable": false
+        },
+        {
+          "code": null,
+          "label": "Bureau of Accounts",
+          "fund": "GENERAL FUND",
+          "page": 64,
+          "values": [
+            665289,
+            839524,
+            754724,
+            819713
+          ],
+          "unreadable": false
+        },
+        {
+          "code": null,
+          "label": "Parking Violations Bureau",
+          "fund": "GENERAL FUND",
+          "page": 64,
+          "values": [
+            643837,
+            991795,
+            842099,
+            968380
+          ],
+          "unreadable": false
+        },
+        {
+          "code": null,
+          "label": "Bureau of Financial Operations",
+          "fund": "GENERAL FUND",
+          "page": 64,
+          "values": [
+            1538326,
+            1526140,
+            1628787,
+            1491770
+          ],
+          "unreadable": false
+        }
       ]
     },
     {
@@ -582,6 +3255,8 @@
       "rowCount": 2,
       "coveredBySubtotals": 0,
       "unreadableFigures": 0,
+      "verified": true,
+      "fund": "Assessment",
       "columns": [
         {
           "column": 0,
@@ -615,6 +3290,34 @@
           "status": "exact",
           "rowsSummed": 2
         }
+      ],
+      "rows": [
+        {
+          "code": null,
+          "label": "Department of Assessment",
+          "fund": "Assessment",
+          "page": 65,
+          "values": [
+            761532,
+            897992,
+            802522,
+            1352852
+          ],
+          "unreadable": false
+        },
+        {
+          "code": null,
+          "label": "Board of Assessment Review",
+          "fund": "Assessment",
+          "page": 65,
+          "values": [
+            19700,
+            18786,
+            19000,
+            20200
+          ],
+          "unreadable": false
+        }
       ]
     },
     {
@@ -625,6 +3328,8 @@
       "rowCount": 2,
       "coveredBySubtotals": 0,
       "unreadableFigures": 1,
+      "verified": false,
+      "fund": "Assessment",
       "columns": [
         {
           "column": 0,
@@ -658,6 +3363,34 @@
           "status": "no printed total",
           "rowsSummed": 1
         }
+      ],
+      "rows": [
+        {
+          "code": null,
+          "label": "Law Department",
+          "fund": "Assessment",
+          "page": 65,
+          "values": [
+            4611346,
+            4403310,
+            5094403,
+            null
+          ],
+          "unreadable": true
+        },
+        {
+          "code": null,
+          "label": "Bureau of Administrative Adjudication",
+          "fund": "Assessment",
+          "page": 65,
+          "values": [
+            494613,
+            898875,
+            577399,
+            841100
+          ],
+          "unreadable": false
+        }
       ]
     },
     {
@@ -668,6 +3401,8 @@
       "rowCount": 3,
       "coveredBySubtotals": 0,
       "unreadableFigures": 0,
+      "verified": false,
+      "fund": "Assessment",
       "columns": [
         {
           "column": 0,
@@ -701,6 +3436,47 @@
           "status": "exact",
           "rowsSummed": 3
         }
+      ],
+      "rows": [
+        {
+          "code": null,
+          "label": "Neighborhood & Business Development",
+          "fund": "Assessment",
+          "page": 65,
+          "values": [
+            1871266,
+            1291825,
+            1458633,
+            1306936
+          ],
+          "unreadable": false
+        },
+        {
+          "code": null,
+          "label": "Division of Code Enforcement",
+          "fund": "Assessment",
+          "page": 65,
+          "values": [
+            4825548,
+            5805952,
+            5608359,
+            5964230
+          ],
+          "unreadable": false
+        },
+        {
+          "code": null,
+          "label": "Division of Planning & Sustainability",
+          "fund": "Assessment",
+          "page": 65,
+          "values": [
+            124202,
+            388738,
+            395219,
+            388738
+          ],
+          "unreadable": false
+        }
       ]
     },
     {
@@ -711,6 +3487,8 @@
       "rowCount": 9,
       "coveredBySubtotals": 0,
       "unreadableFigures": 0,
+      "verified": false,
+      "fund": "Assessment",
       "columns": [
         {
           "column": 0,
@@ -744,6 +3522,125 @@
           "status": "mismatch",
           "rowsSummed": 9
         }
+      ],
+      "rows": [
+        {
+          "code": null,
+          "label": "DPW Main Office",
+          "fund": "Assessment",
+          "page": 66,
+          "values": [
+            1607978,
+            2276674,
+            2180081,
+            2974804
+          ],
+          "unreadable": false
+        },
+        {
+          "code": null,
+          "label": "DPW Environmental Services",
+          "fund": "Assessment",
+          "page": 66,
+          "values": [
+            984508,
+            1227268,
+            1218413,
+            1180524
+          ],
+          "unreadable": false
+        },
+        {
+          "code": null,
+          "label": "DPW Building Services",
+          "fund": "Assessment",
+          "page": 66,
+          "values": [
+            3912298,
+            4052431,
+            4519219,
+            4724377
+          ],
+          "unreadable": false
+        },
+        {
+          "code": null,
+          "label": "DPW Street Repair",
+          "fund": "Assessment",
+          "page": 66,
+          "values": [
+            1716196,
+            1313689,
+            2121009,
+            884776
+          ],
+          "unreadable": false
+        },
+        {
+          "code": null,
+          "label": "DPW Motor Equipment Maintenance",
+          "fund": "Assessment",
+          "page": 66,
+          "values": [
+            6111721,
+            6423822,
+            6943962,
+            7160312
+          ],
+          "unreadable": false
+        },
+        {
+          "code": null,
+          "label": "DPW Snow & Ice Control",
+          "fund": "Assessment",
+          "page": 66,
+          "values": [
+            3789533,
+            4305785,
+            4744806,
+            4771016
+          ],
+          "unreadable": false
+        },
+        {
+          "code": null,
+          "label": "DPW Waste Collection, Recycling & Disposal",
+          "fund": "Assessment",
+          "page": 66,
+          "values": [
+            7691998,
+            7983033,
+            8469250,
+            8703919
+          ],
+          "unreadable": false
+        },
+        {
+          "code": null,
+          "label": "DPW Street Cleaning",
+          "fund": "Assessment",
+          "page": 66,
+          "values": [
+            1368586,
+            1528872,
+            1528384,
+            1570874
+          ],
+          "unreadable": false
+        },
+        {
+          "code": null,
+          "label": "DPW Transportation",
+          "fund": "Assessment",
+          "page": 66,
+          "values": [
+            7658306,
+            8011998,
+            7505577,
+            9151324
+          ],
+          "unreadable": false
+        }
       ]
     },
     {
@@ -754,6 +3651,8 @@
       "rowCount": 2,
       "coveredBySubtotals": 0,
       "unreadableFigures": 0,
+      "verified": true,
+      "fund": "Assessment",
       "columns": [
         {
           "column": 0,
@@ -787,6 +3686,34 @@
           "status": "exact",
           "rowsSummed": 2
         }
+      ],
+      "rows": [
+        {
+          "code": null,
+          "label": "Police Field Services Sworn",
+          "fund": "Assessment",
+          "page": 66,
+          "values": [
+            56905855,
+            54812435,
+            57036299,
+            56930396
+          ],
+          "unreadable": false
+        },
+        {
+          "code": null,
+          "label": "Police Field Services Civilian",
+          "fund": "Assessment",
+          "page": 66,
+          "values": [
+            6042594,
+            7421863,
+            6697800,
+            6816292
+          ],
+          "unreadable": false
+        }
       ]
     },
     {
@@ -797,6 +3724,8 @@
       "rowCount": 2,
       "coveredBySubtotals": 0,
       "unreadableFigures": 0,
+      "verified": true,
+      "fund": "Assessment",
       "columns": [
         {
           "column": 0,
@@ -830,6 +3759,34 @@
           "status": "exact",
           "rowsSummed": 2
         }
+      ],
+      "rows": [
+        {
+          "code": null,
+          "label": "Fire Main Sworn",
+          "fund": "Assessment",
+          "page": 66,
+          "values": [
+            44570920,
+            45256334,
+            45907437,
+            46499442
+          ],
+          "unreadable": false
+        },
+        {
+          "code": null,
+          "label": "Fire Main Civilian",
+          "fund": "Assessment",
+          "page": 66,
+          "values": [
+            1239600,
+            1270059,
+            1251659,
+            1395888
+          ],
+          "unreadable": false
+        }
       ]
     },
     {
@@ -840,6 +3797,8 @@
       "rowCount": 4,
       "coveredBySubtotals": 0,
       "unreadableFigures": 2,
+      "verified": true,
+      "fund": "Assessment",
       "columns": [
         {
           "column": 0,
@@ -873,6 +3832,60 @@
           "status": "no printed total",
           "rowsSummed": 2
         }
+      ],
+      "rows": [
+        {
+          "code": null,
+          "label": "Parks Administration",
+          "fund": "Assessment",
+          "page": 66,
+          "values": [
+            592605,
+            779168,
+            623885,
+            797849
+          ],
+          "unreadable": false
+        },
+        {
+          "code": null,
+          "label": "Parks Grounds Maintenance",
+          "fund": "Assessment",
+          "page": 66,
+          "values": [
+            6166785,
+            6420824,
+            6112188,
+            null
+          ],
+          "unreadable": true
+        },
+        {
+          "code": null,
+          "label": "Parks Recreation",
+          "fund": "Assessment",
+          "page": 66,
+          "values": [
+            4062033,
+            4483911,
+            4295270,
+            null
+          ],
+          "unreadable": true
+        },
+        {
+          "code": null,
+          "label": "Dog Control Division",
+          "fund": "Assessment",
+          "page": 66,
+          "values": [
+            413729,
+            493748,
+            367210,
+            486140
+          ],
+          "unreadable": false
+        }
       ]
     },
     {
@@ -883,6 +3896,8 @@
       "rowCount": 4,
       "coveredBySubtotals": 4,
       "unreadableFigures": 1,
+      "verified": false,
+      "fund": "Assessment",
       "columns": [
         {
           "column": 0,
@@ -916,6 +3931,60 @@
           "status": "no printed total",
           "rowsSummed": 3
         }
+      ],
+      "rows": [
+        {
+          "code": null,
+          "label": "Total Public Works",
+          "fund": null,
+          "page": 66,
+          "values": [
+            34841124,
+            37123572,
+            39230701,
+            41121923
+          ],
+          "unreadable": false
+        },
+        {
+          "code": null,
+          "label": "Total Police",
+          "fund": null,
+          "page": 66,
+          "values": [
+            62948449,
+            62234298,
+            63734099,
+            63746688
+          ],
+          "unreadable": false
+        },
+        {
+          "code": null,
+          "label": "Total Fire",
+          "fund": null,
+          "page": 66,
+          "values": [
+            45810520,
+            46526393,
+            47159096,
+            47895330
+          ],
+          "unreadable": false
+        },
+        {
+          "code": null,
+          "label": "Total Parks, Recreation & Youth Programs",
+          "fund": null,
+          "page": 66,
+          "values": [
+            11235152,
+            12177651,
+            11398553,
+            null
+          ],
+          "unreadable": true
+        }
       ]
     },
     {
@@ -926,17 +3995,11 @@
       "rowCount": 23,
       "coveredBySubtotals": 0,
       "unreadableFigures": 3,
+      "verified": false,
+      "fund": "Assessment",
       "columns": [
         {
           "column": 0,
-          "printed": null,
-          "summed": 13562484,
-          "difference": null,
-          "status": "no printed total",
-          "rowsSummed": 23
-        },
-        {
-          "column": 1,
           "printed": 102608524,
           "summed": 97368461,
           "difference": -5240063,
@@ -944,7 +4007,7 @@
           "rowsSummed": 23
         },
         {
-          "column": 2,
+          "column": 1,
           "printed": 116142222,
           "summed": 110527168,
           "difference": -5615054,
@@ -952,12 +4015,321 @@
           "rowsSummed": 23
         },
         {
-          "column": 3,
+          "column": 2,
           "printed": 112499628,
           "summed": 107743908,
           "difference": -4755720,
           "status": "incomplete: unreadable figures excluded",
           "rowsSummed": 23
+        },
+        {
+          "column": 3,
+          "printed": null,
+          "summed": 49442793,
+          "difference": null,
+          "status": "no printed total",
+          "rowsSummed": 20
+        }
+      ],
+      "rows": [
+        {
+          "code": "590810",
+          "label": "FY25 FY26 FY26 FY27 Actual Adopted Projected \u00df\u00bc\u00b1\u00b0\u00ac\u00bb\u00bc Operating Leases",
+          "fund": "Assessment",
+          "page": 68,
+          "values": [
+            789383,
+            1546495,
+            1255322,
+            3398937
+          ],
+          "unreadable": false
+        },
+        {
+          "code": "593001",
+          "label": "Summer Youth Employment Program",
+          "fund": "Assessment",
+          "page": 68,
+          "values": [
+            700000,
+            700000,
+            700000,
+            700000
+          ],
+          "unreadable": false
+        },
+        {
+          "code": "593002",
+          "label": "Community Ambassador Program",
+          "fund": "Assessment",
+          "page": 68,
+          "values": [
+            0,
+            200000,
+            0,
+            0
+          ],
+          "unreadable": false
+        },
+        {
+          "code": "593003",
+          "label": "Financial Empowerment Center",
+          "fund": "Assessment",
+          "page": 68,
+          "values": [
+            0,
+            375000,
+            175000,
+            375000
+          ],
+          "unreadable": false
+        },
+        {
+          "code": "593005",
+          "label": "CNY Works",
+          "fund": "Assessment",
+          "page": 68,
+          "values": [
+            50000,
+            50000,
+            50000,
+            50000
+          ],
+          "unreadable": false
+        },
+        {
+          "code": "593007",
+          "label": "Housing Trust",
+          "fund": "Assessment",
+          "page": 68,
+          "values": [
+            2500000,
+            0,
+            0,
+            2250000
+          ],
+          "unreadable": false
+        },
+        {
+          "code": "593009",
+          "label": "Union Apprentice Program",
+          "fund": "Assessment",
+          "page": 68,
+          "values": [
+            119822,
+            250000,
+            185000,
+            200000
+          ],
+          "unreadable": false
+        },
+        {
+          "code": "593010",
+          "label": "Landbank Seizure Fund",
+          "fund": "Assessment",
+          "page": 68,
+          "values": [
+            0,
+            100000,
+            80524,
+            300000
+          ],
+          "unreadable": false
+        },
+        {
+          "code": "540553",
+          "label": "Traffic Camera Fees",
+          "fund": "Assessment",
+          "page": 68,
+          "values": [
+            0,
+            2261852,
+            2261852,
+            2261852
+          ],
+          "unreadable": false
+        },
+        {
+          "code": "595865",
+          "label": "Community Broadband",
+          "fund": "Assessment",
+          "page": 68,
+          "values": [
+            0,
+            0,
+            0,
+            500000
+          ],
+          "unreadable": false
+        },
+        {
+          "code": "590050",
+          "label": "Allowance for Negotiations",
+          "fund": "Assessment",
+          "page": 68,
+          "values": [
+            0,
+            1500000,
+            1500000,
+            500000
+          ],
+          "unreadable": false
+        },
+        {
+          "code": "590100",
+          "label": "Employee Retirement System",
+          "fund": "Assessment",
+          "page": 68,
+          "values": [
+            5801577,
+            6502212,
+            6703227,
+            null
+          ],
+          "unreadable": true
+        },
+        {
+          "code": "590300",
+          "label": "Social Security",
+          "fund": "Assessment",
+          "page": 68,
+          "values": [
+            10422992,
+            11655185,
+            11158615,
+            null
+          ],
+          "unreadable": true
+        },
+        {
+          "code": "590400",
+          "label": "Workers Compensation",
+          "fund": "Assessment",
+          "page": 68,
+          "values": [
+            4677679,
+            3250000,
+            4250000,
+            3250000
+          ],
+          "unreadable": false
+        },
+        {
+          "code": "590150",
+          "label": "Police & Fire Retirement System",
+          "fund": "Assessment",
+          "page": 68,
+          "values": [
+            27626603,
+            31896734,
+            30136625,
+            32586504
+          ],
+          "unreadable": false
+        },
+        {
+          "code": "590410",
+          "label": "Personal Injury Protection",
+          "fund": "Assessment",
+          "page": 68,
+          "values": [
+            0,
+            41200,
+            0,
+            20000
+          ],
+          "unreadable": false
+        },
+        {
+          "code": "590500",
+          "label": "Unemployment Insurance",
+          "fund": "Assessment",
+          "page": 68,
+          "values": [
+            0,
+            51500,
+            283786,
+            390000
+          ],
+          "unreadable": false
+        },
+        {
+          "code": "590600",
+          "label": "Medical Insurance",
+          "fund": "Assessment",
+          "page": 68,
+          "values": [
+            42277192,
+            46616490,
+            46898957,
+            null
+          ],
+          "unreadable": true
+        },
+        {
+          "code": "590858",
+          "label": "Supplemental Benefits",
+          "fund": "Assessment",
+          "page": 68,
+          "values": [
+            158248,
+            360500,
+            0,
+            360500
+          ],
+          "unreadable": false
+        },
+        {
+          "code": "599300",
+          "label": "Judgement & Claims",
+          "fund": "Assessment",
+          "page": 68,
+          "values": [
+            1000275,
+            1600000,
+            750000,
+            750000
+          ],
+          "unreadable": false
+        },
+        {
+          "code": "590701",
+          "label": "Employee Assistance Program",
+          "fund": "Assessment",
+          "page": 68,
+          "values": [
+            27934,
+            40000,
+            40000,
+            40000
+          ],
+          "unreadable": false
+        },
+        {
+          "code": "590420",
+          "label": "Police 207C Expenses",
+          "fund": "Assessment",
+          "page": 68,
+          "values": [
+            1053008,
+            1320000,
+            1160000,
+            1320000
+          ],
+          "unreadable": false
+        },
+        {
+          "code": "590430",
+          "label": "Fire 207A Expenses",
+          "fund": "Assessment",
+          "page": 68,
+          "values": [
+            163748,
+            210000,
+            155000,
+            190000
+          ],
+          "unreadable": false
         }
       ]
     },
@@ -969,6 +4341,8 @@
       "rowCount": 3,
       "coveredBySubtotals": 0,
       "unreadableFigures": 1,
+      "verified": true,
+      "fund": "Transfer to Debt Service Fund",
       "columns": [
         {
           "column": 0,
@@ -1002,6 +4376,47 @@
           "status": "no printed total",
           "rowsSummed": 2
         }
+      ],
+      "rows": [
+        {
+          "code": null,
+          "label": "Cash Capital Appropriations",
+          "fund": "Transfer to Capital Projects Fund",
+          "page": 69,
+          "values": [
+            7442750,
+            2121500,
+            2121500,
+            null
+          ],
+          "unreadable": true
+        },
+        {
+          "code": null,
+          "label": "BAN Interest",
+          "fund": "Transfer to Capital Projects Fund",
+          "page": 69,
+          "values": [
+            14908,
+            0,
+            0,
+            0
+          ],
+          "unreadable": false
+        },
+        {
+          "code": null,
+          "label": "Serial Bond Principal & Interest",
+          "fund": "Transfer to Debt Service Fund",
+          "page": 69,
+          "values": [
+            23969296,
+            24850934,
+            25016271,
+            26495345
+          ],
+          "unreadable": false
+        }
       ]
     },
     {
@@ -1012,6 +4427,8 @@
       "rowCount": 5,
       "coveredBySubtotals": 0,
       "unreadableFigures": 0,
+      "verified": false,
+      "fund": "MUNICIPAL SIDEWALK FUND",
       "columns": [
         {
           "column": 0,
@@ -1045,6 +4462,73 @@
           "status": "mismatch",
           "rowsSummed": 5
         }
+      ],
+      "rows": [
+        {
+          "code": null,
+          "label": "Municipal Sidewalk Departmental Operating Expenditures",
+          "fund": "MUNICIPAL SIDEWALK FUND",
+          "page": 70,
+          "values": [
+            994364,
+            1155459,
+            1115263,
+            1160266
+          ],
+          "unreadable": false
+        },
+        {
+          "code": null,
+          "label": "Special Objects of Expense Employee Retirement System",
+          "fund": "MUNICIPAL SIDEWALK FUND",
+          "page": 70,
+          "values": [
+            0,
+            30242,
+            31177,
+            34728
+          ],
+          "unreadable": false
+        },
+        {
+          "code": null,
+          "label": "Social Security",
+          "fund": "MUNICIPAL SIDEWALK FUND",
+          "page": 70,
+          "values": [
+            11011,
+            11587,
+            12337,
+            12260
+          ],
+          "unreadable": false
+        },
+        {
+          "code": null,
+          "label": "Workers Compensation",
+          "fund": "MUNICIPAL SIDEWALK FUND",
+          "page": 70,
+          "values": [
+            0,
+            10000,
+            0,
+            10000
+          ],
+          "unreadable": false
+        },
+        {
+          "code": null,
+          "label": "Medical Insurance",
+          "fund": "MUNICIPAL SIDEWALK FUND",
+          "page": 70,
+          "values": [
+            28133,
+            36630,
+            31209,
+            35010
+          ],
+          "unreadable": false
+        }
       ]
     },
     {
@@ -1055,6 +4539,8 @@
       "rowCount": 1,
       "coveredBySubtotals": 1,
       "unreadableFigures": 0,
+      "verified": false,
+      "fund": "MUNICIPAL SIDEWALK FUND",
       "columns": [
         {
           "column": 0,
@@ -1088,6 +4574,21 @@
           "status": "mismatch",
           "rowsSummed": 1
         }
+      ],
+      "rows": [
+        {
+          "code": null,
+          "label": "Subtotal",
+          "fund": null,
+          "page": 70,
+          "values": [
+            39144,
+            88459,
+            74723,
+            91998
+          ],
+          "unreadable": false
+        }
       ]
     },
     {
@@ -1098,6 +4599,8 @@
       "rowCount": 5,
       "coveredBySubtotals": 0,
       "unreadableFigures": 0,
+      "verified": true,
+      "fund": "WATER FUND",
       "columns": [
         {
           "column": 0,
@@ -1131,6 +4634,73 @@
           "status": "exact",
           "rowsSummed": 5
         }
+      ],
+      "rows": [
+        {
+          "code": null,
+          "label": "Water Departmental Operating Expenditures Water Finance",
+          "fund": "WATER FUND",
+          "page": 71,
+          "values": [
+            202055,
+            203720,
+            185795,
+            229152
+          ],
+          "unreadable": false
+        },
+        {
+          "code": null,
+          "label": "Water Engineering",
+          "fund": "WATER FUND",
+          "page": 71,
+          "values": [
+            1338683,
+            2110782,
+            2004523,
+            2324487
+          ],
+          "unreadable": false
+        },
+        {
+          "code": null,
+          "label": "Water Quality Management",
+          "fund": "WATER FUND",
+          "page": 71,
+          "values": [
+            1314083,
+            2108435,
+            1388546,
+            1872599
+          ],
+          "unreadable": false
+        },
+        {
+          "code": null,
+          "label": "Skaneateles Watershed Program",
+          "fund": "WATER FUND",
+          "page": 71,
+          "values": [
+            1058643,
+            1151714,
+            1118693,
+            1261691
+          ],
+          "unreadable": false
+        },
+        {
+          "code": null,
+          "label": "Water Plant",
+          "fund": "WATER FUND",
+          "page": 71,
+          "values": [
+            8732129,
+            10161906,
+            8904802,
+            10970180
+          ],
+          "unreadable": false
+        }
       ]
     },
     {
@@ -1141,6 +4711,8 @@
       "rowCount": 10,
       "coveredBySubtotals": 0,
       "unreadableFigures": 0,
+      "verified": false,
+      "fund": "WATER FUND",
       "columns": [
         {
           "column": 0,
@@ -1174,6 +4746,138 @@
           "status": "exact",
           "rowsSummed": 10
         }
+      ],
+      "rows": [
+        {
+          "code": null,
+          "label": "Special Objects of Expense Fiscal Services",
+          "fund": "WATER FUND",
+          "page": 71,
+          "values": [
+            23390,
+            30000,
+            22071,
+            30000
+          ],
+          "unreadable": false
+        },
+        {
+          "code": null,
+          "label": "Bad Debt Expense",
+          "fund": "WATER FUND",
+          "page": 71,
+          "values": [
+            456851,
+            0,
+            0,
+            0
+          ],
+          "unreadable": false
+        },
+        {
+          "code": null,
+          "label": "Onon Cty Water District",
+          "fund": "WATER FUND",
+          "page": 71,
+          "values": [
+            58333,
+            50000,
+            50004,
+            1000000
+          ],
+          "unreadable": false
+        },
+        {
+          "code": null,
+          "label": "City Share of Local Assessment",
+          "fund": "WATER FUND",
+          "page": 71,
+          "values": [
+            353772,
+            400000,
+            338394,
+            400000
+          ],
+          "unreadable": false
+        },
+        {
+          "code": null,
+          "label": "Employee Retirement System",
+          "fund": "WATER FUND",
+          "page": 71,
+          "values": [
+            663079,
+            720644,
+            784901,
+            833489
+          ],
+          "unreadable": false
+        },
+        {
+          "code": null,
+          "label": "Social Security",
+          "fund": "WATER FUND",
+          "page": 71,
+          "values": [
+            440999,
+            536062,
+            448000,
+            500000
+          ],
+          "unreadable": false
+        },
+        {
+          "code": null,
+          "label": "Workers Compensation",
+          "fund": "WATER FUND",
+          "page": 71,
+          "values": [
+            131444,
+            750000,
+            700000,
+            750000
+          ],
+          "unreadable": false
+        },
+        {
+          "code": null,
+          "label": "Medical Insurance",
+          "fund": "WATER FUND",
+          "page": 71,
+          "values": [
+            2577504,
+            2699654,
+            2859276,
+            3207662
+          ],
+          "unreadable": false
+        },
+        {
+          "code": null,
+          "label": "Judgement & Claims",
+          "fund": "WATER FUND",
+          "page": 71,
+          "values": [
+            6010,
+            25000,
+            25000,
+            25000
+          ],
+          "unreadable": false
+        },
+        {
+          "code": null,
+          "label": "Transfer General Fund",
+          "fund": "WATER FUND",
+          "page": 71,
+          "values": [
+            2800000,
+            2800000,
+            2800000,
+            2800000
+          ],
+          "unreadable": false
+        }
       ]
     },
     {
@@ -1184,6 +4888,8 @@
       "rowCount": 1,
       "coveredBySubtotals": 0,
       "unreadableFigures": 0,
+      "verified": false,
+      "fund": "WATER FUND",
       "columns": [
         {
           "column": 0,
@@ -1217,6 +4923,21 @@
           "status": "mismatch",
           "rowsSummed": 1
         }
+      ],
+      "rows": [
+        {
+          "code": null,
+          "label": "Cash Capital Appropriations & Debt Service Serial Bond Principal & Interest Transfer Cash Capital",
+          "fund": "WATER FUND",
+          "page": 71,
+          "values": [
+            1278267,
+            5688929,
+            5352757,
+            5826623
+          ],
+          "unreadable": false
+        }
       ]
     },
     {
@@ -1227,6 +4948,8 @@
       "rowCount": 3,
       "coveredBySubtotals": 3,
       "unreadableFigures": 0,
+      "verified": false,
+      "fund": "WATER FUND",
       "columns": [
         {
           "column": 0,
@@ -1260,6 +4983,47 @@
           "status": "mismatch",
           "rowsSummed": 3
         }
+      ],
+      "rows": [
+        {
+          "code": null,
+          "label": "Subtotal",
+          "fund": null,
+          "page": 71,
+          "values": [
+            12645593,
+            15736557,
+            13602359,
+            16658109
+          ],
+          "unreadable": false
+        },
+        {
+          "code": null,
+          "label": "Subtotal",
+          "fund": null,
+          "page": 71,
+          "values": [
+            7463788,
+            8011360,
+            8027646,
+            9546151
+          ],
+          "unreadable": false
+        },
+        {
+          "code": null,
+          "label": "Subtotal",
+          "fund": null,
+          "page": 71,
+          "values": [
+            0,
+            1595000,
+            1595000,
+            1145000
+          ],
+          "unreadable": false
+        }
       ]
     },
     {
@@ -1270,6 +5034,8 @@
       "rowCount": 7,
       "coveredBySubtotals": 0,
       "unreadableFigures": 0,
+      "verified": false,
+      "fund": "SEWER FUND",
       "columns": [
         {
           "column": 0,
@@ -1303,6 +5069,99 @@
           "status": "mismatch",
           "rowsSummed": 7
         }
+      ],
+      "rows": [
+        {
+          "code": null,
+          "label": "Sewer Departmental Operating Expenditures",
+          "fund": "SEWER FUND",
+          "page": 72,
+          "values": [
+            3422863,
+            3828929,
+            3734135,
+            4814513
+          ],
+          "unreadable": false
+        },
+        {
+          "code": null,
+          "label": "Special Objects of Expense Bad Debt Expense",
+          "fund": "SEWER FUND",
+          "page": 72,
+          "values": [
+            115386,
+            0,
+            0,
+            0
+          ],
+          "unreadable": false
+        },
+        {
+          "code": null,
+          "label": "Employee Retirement System",
+          "fund": "SEWER FUND",
+          "page": 72,
+          "values": [
+            267676,
+            309989,
+            319572,
+            350969
+          ],
+          "unreadable": false
+        },
+        {
+          "code": null,
+          "label": "Social Security",
+          "fund": "SEWER FUND",
+          "page": 72,
+          "values": [
+            169056,
+            185950,
+            166068,
+            189325
+          ],
+          "unreadable": false
+        },
+        {
+          "code": null,
+          "label": "Workers Compensation",
+          "fund": "SEWER FUND",
+          "page": 72,
+          "values": [
+            433260,
+            420000,
+            400000,
+            400000
+          ],
+          "unreadable": false
+        },
+        {
+          "code": null,
+          "label": "Medical Insurance",
+          "fund": "SEWER FUND",
+          "page": 72,
+          "values": [
+            1183743,
+            1257307,
+            1313150,
+            1449763
+          ],
+          "unreadable": false
+        },
+        {
+          "code": null,
+          "label": "Transfer General Fund",
+          "fund": "SEWER FUND",
+          "page": 72,
+          "values": [
+            540750,
+            540750,
+            540750,
+            540750
+          ],
+          "unreadable": false
+        }
       ]
     },
     {
@@ -1313,6 +5172,8 @@
       "rowCount": 2,
       "coveredBySubtotals": 0,
       "unreadableFigures": 0,
+      "verified": true,
+      "fund": "SEWER FUND",
       "columns": [
         {
           "column": 0,
@@ -1346,6 +5207,34 @@
           "status": "exact",
           "rowsSummed": 2
         }
+      ],
+      "rows": [
+        {
+          "code": null,
+          "label": "Cash Capital Appropriations & Debt Service Serial Bond Principal & Interest",
+          "fund": "SEWER FUND",
+          "page": 72,
+          "values": [
+            48443,
+            267875,
+            267875,
+            266582
+          ],
+          "unreadable": false
+        },
+        {
+          "code": null,
+          "label": "Transfer Cash Capital",
+          "fund": "SEWER FUND",
+          "page": 72,
+          "values": [
+            0,
+            673000,
+            673000,
+            955000
+          ],
+          "unreadable": false
+        }
       ]
     },
     {
@@ -1356,6 +5245,8 @@
       "rowCount": 2,
       "coveredBySubtotals": 2,
       "unreadableFigures": 0,
+      "verified": false,
+      "fund": "SEWER FUND",
       "columns": [
         {
           "column": 0,
@@ -1389,6 +5280,34 @@
           "status": "mismatch",
           "rowsSummed": 2
         }
+      ],
+      "rows": [
+        {
+          "code": null,
+          "label": "Subtotal",
+          "fund": null,
+          "page": 72,
+          "values": [
+            2709871,
+            2713996,
+            2739540,
+            2930807
+          ],
+          "unreadable": false
+        },
+        {
+          "code": null,
+          "label": "Subtotal",
+          "fund": null,
+          "page": 72,
+          "values": [
+            48443,
+            940875,
+            940875,
+            1221582
+          ],
+          "unreadable": false
+        }
       ]
     },
     {
@@ -1399,6 +5318,8 @@
       "rowCount": 6,
       "coveredBySubtotals": 0,
       "unreadableFigures": 0,
+      "verified": true,
+      "fund": "DOWNTOWN SPECIAL ASSESSMENT",
       "columns": [
         {
           "column": 0,
@@ -1432,6 +5353,86 @@
           "status": "exact",
           "rowsSummed": 6
         }
+      ],
+      "rows": [
+        {
+          "code": null,
+          "label": "Admin",
+          "fund": "DOWNTOWN SPECIAL ASSESSMENT",
+          "page": 73,
+          "values": [
+            184645,
+            241398,
+            221280,
+            221774
+          ],
+          "unreadable": false
+        },
+        {
+          "code": null,
+          "label": "Marketing",
+          "fund": "DOWNTOWN SPECIAL ASSESSMENT",
+          "page": 73,
+          "values": [
+            9393,
+            132601,
+            334534,
+            65678
+          ],
+          "unreadable": false
+        },
+        {
+          "code": null,
+          "label": "Environ. Maintenance",
+          "fund": "DOWNTOWN SPECIAL ASSESSMENT",
+          "page": 73,
+          "values": [
+            342308,
+            377997,
+            416696,
+            461123
+          ],
+          "unreadable": false
+        },
+        {
+          "code": null,
+          "label": "Economic Develop",
+          "fund": "DOWNTOWN SPECIAL ASSESSMENT",
+          "page": 73,
+          "values": [
+            351592,
+            354630,
+            334242,
+            375018
+          ],
+          "unreadable": false
+        },
+        {
+          "code": null,
+          "label": "Security",
+          "fund": "DOWNTOWN SPECIAL ASSESSMENT",
+          "page": 73,
+          "values": [
+            250498,
+            243583,
+            398164,
+            267121
+          ],
+          "unreadable": false
+        },
+        {
+          "code": null,
+          "label": "Allowance for Uncollectable Assessment",
+          "fund": "DOWNTOWN SPECIAL ASSESSMENT",
+          "page": 73,
+          "values": [
+            0,
+            20561,
+            20562,
+            21178
+          ],
+          "unreadable": false
+        }
       ]
     },
     {
@@ -1442,6 +5443,8 @@
       "rowCount": 6,
       "coveredBySubtotals": 0,
       "unreadableFigures": 0,
+      "verified": true,
+      "fund": "CROUSE MARSHALL SPECIAL ASSESSMENT",
       "columns": [
         {
           "column": 0,
@@ -1475,6 +5478,86 @@
           "status": "exact",
           "rowsSummed": 6
         }
+      ],
+      "rows": [
+        {
+          "code": null,
+          "label": "Admin",
+          "fund": "CROUSE MARSHALL SPECIAL ASSESSMENT",
+          "page": 74,
+          "values": [
+            34201,
+            38641,
+            38829,
+            40627
+          ],
+          "unreadable": false
+        },
+        {
+          "code": null,
+          "label": "Marketing",
+          "fund": "CROUSE MARSHALL SPECIAL ASSESSMENT",
+          "page": 74,
+          "values": [
+            690,
+            3379,
+            4000,
+            7310
+          ],
+          "unreadable": false
+        },
+        {
+          "code": null,
+          "label": "Environ. Maintenance",
+          "fund": "CROUSE MARSHALL SPECIAL ASSESSMENT",
+          "page": 74,
+          "values": [
+            12779,
+            13200,
+            31316,
+            13200
+          ],
+          "unreadable": false
+        },
+        {
+          "code": null,
+          "label": "Security",
+          "fund": "CROUSE MARSHALL SPECIAL ASSESSMENT",
+          "page": 74,
+          "values": [
+            70276,
+            73688,
+            74394,
+            77113
+          ],
+          "unreadable": false
+        },
+        {
+          "code": null,
+          "label": "Personnel",
+          "fund": "CROUSE MARSHALL SPECIAL ASSESSMENT",
+          "page": 74,
+          "values": [
+            29194,
+            29059,
+            27452,
+            26061
+          ],
+          "unreadable": false
+        },
+        {
+          "code": null,
+          "label": "Economic Development",
+          "fund": "CROUSE MARSHALL SPECIAL ASSESSMENT",
+          "page": 74,
+          "values": [
+            0,
+            18600,
+            18600,
+            17552
+          ],
+          "unreadable": false
+        }
       ]
     },
     {
@@ -1485,6 +5568,8 @@
       "rowCount": 13,
       "coveredBySubtotals": 0,
       "unreadableFigures": 2,
+      "verified": false,
+      "fund": "CROUSE MARSHALL SPECIAL ASSESSMENT",
       "columns": [
         {
           "column": 0,
@@ -1518,6 +5603,177 @@
           "status": "incomplete: unreadable figures excluded",
           "rowsSummed": 10
         }
+      ],
+      "rows": [
+        {
+          "code": null,
+          "label": "General Fund",
+          "fund": "CROUSE MARSHALL SPECIAL ASSESSMENT",
+          "page": 75,
+          "values": [
+            317766823,
+            333036573,
+            332737217,
+            null
+          ],
+          "unreadable": true
+        },
+        {
+          "code": null,
+          "label": "Municipal Sidewalk Fund",
+          "fund": "CROUSE MARSHALL SPECIAL ASSESSMENT",
+          "page": 75,
+          "values": [
+            1033508,
+            2285237,
+            2686392,
+            2719688
+          ],
+          "unreadable": false
+        },
+        {
+          "code": null,
+          "label": "Water Fund",
+          "fund": "CROUSE MARSHALL SPECIAL ASSESSMENT",
+          "page": 75,
+          "values": [
+            21383072,
+            31031846,
+            28577762,
+            33175883
+          ],
+          "unreadable": false
+        },
+        {
+          "code": null,
+          "label": "Sewer Fund",
+          "fund": "CROUSE MARSHALL SPECIAL ASSESSMENT",
+          "page": 75,
+          "values": [
+            6181177,
+            7483800,
+            7414550,
+            8966902
+          ],
+          "unreadable": false
+        },
+        {
+          "code": null,
+          "label": "Downtown Special Assessment Fund",
+          "fund": "CROUSE MARSHALL SPECIAL ASSESSMENT",
+          "page": 75,
+          "values": [
+            1138436,
+            1370770,
+            1725478,
+            1411892
+          ],
+          "unreadable": false
+        },
+        {
+          "code": null,
+          "label": "Crouse-Marshall Special Assessment Fund",
+          "fund": "CROUSE MARSHALL SPECIAL ASSESSMENT",
+          "page": 75,
+          "values": [
+            147140,
+            176567,
+            194591,
+            181863
+          ],
+          "unreadable": false
+        },
+        {
+          "code": null,
+          "label": "LESS: INTERFUND APPROPRIATIONS",
+          "fund": "CROUSE MARSHALL SPECIAL ASSESSMENT",
+          "page": 75,
+          "values": [
+            -3340750,
+            -3340750,
+            -3340750,
+            -3340750
+          ],
+          "unreadable": false
+        },
+        {
+          "code": null,
+          "label": "NET TOTAL- ALL FUNDS",
+          "fund": "CROUSE MARSHALL SPECIAL ASSESSMENT",
+          "page": 75,
+          "values": [
+            344309406,
+            372044043,
+            369995240,
+            null
+          ],
+          "unreadable": true
+        },
+        {
+          "code": null,
+          "label": "",
+          "fund": "CROUSE MARSHALL SPECIAL ASSESSMENT",
+          "page": 75,
+          "values": [
+            null,
+            null,
+            null,
+            null
+          ],
+          "unreadable": false
+        },
+        {
+          "code": null,
+          "label": "PROPERTY TAX CAP CALCULATION Calculation of Tax Levy Cap & Tax Cap Margin Base Formula Per Adopted Budget FY26 FY27 Property Taxes and Special Assessments Prior Year's Property Tax Levy",
+          "fund": "CROUSE MARSHALL SPECIAL ASSESSMENT",
+          "page": 76,
+          "values": [
+            null,
+            123312473,
+            null,
+            127415912
+          ],
+          "unreadable": false
+        },
+        {
+          "code": null,
+          "label": "Downtown Special Assessment",
+          "fund": "CROUSE MARSHALL SPECIAL ASSESSMENT",
+          "page": 76,
+          "values": [
+            null,
+            1161670,
+            null,
+            1370770
+          ],
+          "unreadable": false
+        },
+        {
+          "code": null,
+          "label": "Crouse Marshall Assessment",
+          "fund": "CROUSE MARSHALL SPECIAL ASSESSMENT",
+          "page": 76,
+          "values": [
+            null,
+            147140,
+            null,
+            176567
+          ],
+          "unreadable": false
+        },
+        {
+          "code": null,
+          "label": "Special Benefit Assessments",
+          "fund": "CROUSE MARSHALL SPECIAL ASSESSMENT",
+          "page": 76,
+          "values": [
+            null,
+            6277675,
+            null,
+            7307018
+          ],
+          "unreadable": false
+        }
       ]
     },
     {
@@ -1528,6 +5784,8 @@
       "rowCount": 1,
       "coveredBySubtotals": 0,
       "unreadableFigures": 0,
+      "verified": false,
+      "fund": "CROUSE MARSHALL SPECIAL ASSESSMENT",
       "columns": [
         {
           "column": 0,
@@ -1561,6 +5819,21 @@
           "status": "mismatch",
           "rowsSummed": 0
         }
+      ],
+      "rows": [
+        {
+          "code": null,
+          "label": "Tax Base Growth Factor .0066 .0000",
+          "fund": "CROUSE MARSHALL SPECIAL ASSESSMENT",
+          "page": 76,
+          "values": [
+            null,
+            null,
+            null,
+            null
+          ],
+          "unreadable": false
+        }
       ]
     },
     {
@@ -1571,6 +5844,8 @@
       "rowCount": 13,
       "coveredBySubtotals": 0,
       "unreadableFigures": 0,
+      "verified": false,
+      "fund": "CROUSE MARSHALL SPECIAL ASSESSMENT",
       "columns": [
         {
           "column": 0,
@@ -1604,6 +5879,177 @@
           "status": "mismatch",
           "rowsSummed": 12
         }
+      ],
+      "rows": [
+        {
+          "code": null,
+          "label": "Additions PILOTS Receivable for the Prior Year",
+          "fund": "CROUSE MARSHALL SPECIAL ASSESSMENT",
+          "page": 76,
+          "values": [
+            null,
+            6208193,
+            null,
+            5755000
+          ],
+          "unreadable": false
+        },
+        {
+          "code": null,
+          "label": "Tort Exclusion Amount Claimed in PY Subtotal",
+          "fund": "CROUSE MARSHALL SPECIAL ASSESSMENT",
+          "page": 76,
+          "values": [
+            1,
+            37971084,
+            1,
+            42025267
+          ],
+          "unreadable": false
+        },
+        {
+          "code": null,
+          "label": "Allowance Levy Growth Factor .0200 .0200",
+          "fund": "CROUSE MARSHALL SPECIAL ASSESSMENT",
+          "page": 76,
+          "values": [
+            null,
+            null,
+            null,
+            null
+          ],
+          "unreadable": false
+        },
+        {
+          "code": null,
+          "label": "PROPPERTY TAX CAP BEFORE SUBTRACTIONS & EXCLUSIONS",
+          "fund": "CROUSE MARSHALL SPECIAL ASSESSMENT",
+          "page": 76,
+          "values": [
+            1,
+            40730506,
+            1,
+            44865772
+          ],
+          "unreadable": false
+        },
+        {
+          "code": null,
+          "label": "Subtractions & Exclusions Per Adopted Budget PILOTS Receivable for the Coming Year",
+          "fund": "CROUSE MARSHALL SPECIAL ASSESSMENT",
+          "page": 76,
+          "values": [
+            null,
+            5755000,
+            null,
+            5571307
+          ],
+          "unreadable": false
+        },
+        {
+          "code": null,
+          "label": "Plus Available Carryover from the Prior Year Subtotal: ( (",
+          "fund": "CROUSE MARSHALL SPECIAL ASSESSMENT",
+          "page": 76,
+          "values": [
+            null,
+            5755000,
+            null,
+            5571307
+          ],
+          "unreadable": false
+        },
+        {
+          "code": null,
+          "label": "Property Tax Cap BEFORE Exclusions",
+          "fund": "CROUSE MARSHALL SPECIAL ASSESSMENT",
+          "page": 76,
+          "values": [
+            1,
+            34975506,
+            1,
+            39294465
+          ],
+          "unreadable": false
+        },
+        {
+          "code": null,
+          "label": "Exclusions Tort Pensions ERS PFRS",
+          "fund": "CROUSE MARSHALL SPECIAL ASSESSMENT",
+          "page": 76,
+          "values": [
+            null,
+            464610,
+            null,
+            728322
+          ],
+          "unreadable": false
+        },
+        {
+          "code": null,
+          "label": "TRS Property Tax Cap AFTER Exclusions",
+          "fund": "CROUSE MARSHALL SPECIAL ASSESSMENT",
+          "page": 76,
+          "values": [
+            1,
+            35440116,
+            1,
+            40022787
+          ],
+          "unreadable": false
+        },
+        {
+          "code": null,
+          "label": "Tax Cap Margrin Calculation Adopted Tax Levy",
+          "fund": "CROUSE MARSHALL SPECIAL ASSESSMENT",
+          "page": 76,
+          "values": [
+            null,
+            127415912,
+            null,
+            130359277
+          ],
+          "unreadable": false
+        },
+        {
+          "code": null,
+          "label": "Adopted Downtown Special Assessment Levy",
+          "fund": "CROUSE MARSHALL SPECIAL ASSESSMENT",
+          "page": 76,
+          "values": [
+            null,
+            1370770,
+            null,
+            1411893
+          ],
+          "unreadable": false
+        },
+        {
+          "code": null,
+          "label": "Adopted Crouse Marshall Tax Levy",
+          "fund": "CROUSE MARSHALL SPECIAL ASSESSMENT",
+          "page": 76,
+          "values": [
+            null,
+            176567,
+            null,
+            181864
+          ],
+          "unreadable": false
+        },
+        {
+          "code": null,
+          "label": "Adopted Special Benefit Assessments",
+          "fund": "CROUSE MARSHALL SPECIAL ASSESSMENT",
+          "page": 76,
+          "values": [
+            null,
+            7307018,
+            null,
+            8172892
+          ],
+          "unreadable": false
+        }
       ]
     },
     {
@@ -1614,6 +6060,8 @@
       "rowCount": 8,
       "coveredBySubtotals": 0,
       "unreadableFigures": 0,
+      "verified": true,
+      "fund": "CROUSE MARSHALL SPECIAL ASSESSMENT",
       "columns": [
         {
           "column": 0,
@@ -1646,6 +6094,112 @@
           "difference": null,
           "status": "no printed total",
           "rowsSummed": 2
+        }
+      ],
+      "rows": [
+        {
+          "code": null,
+          "label": "Property Tax Cap After Exclusions",
+          "fund": "CROUSE MARSHALL SPECIAL ASSESSMENT",
+          "page": 76,
+          "values": [
+            1,
+            35440116,
+            1,
+            40022787
+          ],
+          "unreadable": false
+        },
+        {
+          "code": null,
+          "label": "PROPERTY TAX CAP MARGIN ( (",
+          "fund": "CROUSE MARSHALL SPECIAL ASSESSMENT",
+          "page": 76,
+          "values": [
+            null,
+            830151,
+            null,
+            103139
+          ],
+          "unreadable": false
+        },
+        {
+          "code": null,
+          "label": "",
+          "fund": "CROUSE MARSHALL SPECIAL ASSESSMENT",
+          "page": 76,
+          "values": [
+            null,
+            null,
+            null,
+            null
+          ],
+          "unreadable": false
+        },
+        {
+          "code": null,
+          "label": "City of Syracuse COMPUTATION OF CONSTITUTIONAL TAX LIMIT FY27 Budget For Assessment Taxable Assessed Rolls Completed in Value to Compute Special State Full Valuation of Year School Tax Rate Equalization Ratio* Taxable Real Estate 2021/2022 61.83%",
+          "fund": "CROUSE MARSHALL SPECIAL ASSESSMENT",
+          "page": 77,
+          "values": [
+            4019344386,
+            null,
+            6500637855,
+            null
+          ],
+          "unreadable": false
+        },
+        {
+          "code": null,
+          "label": "2022/2023 59.69%",
+          "fund": "CROUSE MARSHALL SPECIAL ASSESSMENT",
+          "page": 77,
+          "values": [
+            4184136940,
+            null,
+            7009778757,
+            null
+          ],
+          "unreadable": false
+        },
+        {
+          "code": null,
+          "label": "2023/2024 55.09%",
+          "fund": "CROUSE MARSHALL SPECIAL ASSESSMENT",
+          "page": 77,
+          "values": [
+            4378684615,
+            null,
+            7948238546,
+            null
+          ],
+          "unreadable": false
+        },
+        {
+          "code": null,
+          "label": "2024/2025 53.68%",
+          "fund": "CROUSE MARSHALL SPECIAL ASSESSMENT",
+          "page": 77,
+          "values": [
+            4524164423,
+            null,
+            8428026123,
+            null
+          ],
+          "unreadable": false
+        },
+        {
+          "code": null,
+          "label": "2025/2026 51.28%",
+          "fund": "CROUSE MARSHALL SPECIAL ASSESSMENT",
+          "page": 77,
+          "values": [
+            4628400330,
+            null,
+            9025741673,
+            null
+          ],
+          "unreadable": false
         }
       ]
     }

@@ -49,6 +49,18 @@ def validate(data):
         checks.append({'label': 'Formal totals match the adopted PDF', 'status': 'review',
                        'detail': 'data/pdf_totals.json is absent. Run scripts/extract_pdf_totals.py against the adopted PDF to verify the transcribed totals.'})
 
+    # Account rows the adopted PDF independently confirms. The workbook alone
+    # cannot establish an adopted figure; a second reading of the budget book can.
+    pdf_match = data.get('pdfConfirmation')
+    if pdf_match:
+        conflicting = pdf_match.get('conflicting', 0)
+        confirmed = pdf_match.get('confirmed', 0)
+        check('Account rows confirmed by the adopted PDF', conflicting == 0,
+              f"{confirmed} account rows carry the same FY27 figure in the adopted PDF as in the workbook, "
+              f"matched on fund and account code and taken only from PDF sections that reconcile to their own "
+              f"printed totals. {conflicting} disagree. Rows without a confirmation are not thereby wrong; "
+              f"the PDF simply does not print a reconciling figure for them.")
+
     applied = data.get('appliedAmendments', [])
     by_id = {r['id']: r for r in rows}
     check('Amendment record coverage', len(applied) == len(data['amendments']) and all(a['rowId'] in by_id for a in applied), 'Every listed amendment must map to an exported record.')
