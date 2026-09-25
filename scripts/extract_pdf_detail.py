@@ -40,8 +40,9 @@ SEPARATOR = re.compile(r"^[=_\-–—]+$")
 PAGE_HEADING = re.compile(r"Fiscal\s+Year\s+Ending", re.I)
 # Six bare digits leading a row identify the account.
 ACCOUNT_CODE = re.compile(r"^\d{6}$")
-# Left-margin headings that name the fund a row belongs to.
-FUND_HEADER = re.compile(r"\b(FUND|ASSESSMENT)\b", re.I)
+# Left-margin headings that name the fund a row belongs to. "Assessment" alone
+# is also a General Fund department, so only a special assessment district counts.
+FUND_HEADER = re.compile(r"\bFUND\b|\bSPECIAL\s+ASSESSMENT\b", re.I)
 # "Total <name>" names its block; a bare "Subtotal" closes one without naming it.
 # Both end a block, and treating a subtotal as an ordinary row double-counts every
 # figure above it.

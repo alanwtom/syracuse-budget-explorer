@@ -81,7 +81,7 @@ supplies a second, authoritative reading of the adopted figures. Rows are matche
 account code together, because a code such as 424010 appears in more than one fund, and only
 rows from PDF sections that reconcile to their own printed totals are used.
 
-100 account rows currently carry the same FY27 figure in both sources, and none disagree.
+151 account rows currently carry the same FY27 figure in both sources, and none disagree.
 Opening such a row in the explorer shows which page of the budget book confirms it. A row
 without a confirmation is not thereby wrong; the PDF simply does not print a reconciling figure
 for it.
@@ -115,6 +115,10 @@ The $3 Public Works difference is the one already recorded in the reconciliation
 workbook; the parser found it again, independently, in the PDF. The Water fund figure is the only
 one larger than rounding: the book prints a subtotal of $7,463,788 for rows that add up to
 $7,511,382.
+
+These differences are carried into the site data as `bookDifferences`, and the "Can you trust
+these numbers?" summary tells residents how many there are, which are rounding, and where the
+larger one is.
 
 On the fund expense pages a grand total's label prints on its own baseline with its figures
 underneath, while the figures beside the label belong to the block above. Read naively the Water

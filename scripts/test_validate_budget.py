@@ -33,6 +33,14 @@ class ValidationTests(unittest.TestCase):
         self.data['pdfConfirmation'] = {'confirmed': 99, 'conflicting': 1, 'available': 100}
         self.assertEqual(self.status('Account rows confirmed by the adopted PDF'), 'check')
 
+    def test_budget_book_differences_reach_the_site_data(self):
+        """Residents are told where the book's own totals do not add up."""
+        differences = self.data.get('bookDifferences')
+        self.assertIsInstance(differences, list)
+        for item in differences:
+            self.assertEqual(set(item), {'page', 'fund', 'section', 'difference'})
+            self.assertNotEqual(item['difference'], 0)
+
     def test_duplicate_id(self):
         self.data['rows'].append(copy.deepcopy(self.data['rows'][0]))
         self.assertEqual(self.status('Unique record IDs'), 'check')

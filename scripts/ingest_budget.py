@@ -727,6 +727,28 @@ PDF_FUND_IDS = {
 }
 
 
+def budget_book_differences(detail_path):
+    """Places where the budget book's printed total disagrees with its own rows.
+
+    Taken from sections the parser reads correctly: every other column of the
+    same rows matches, so the difference is in the printed total, not the parse.
+    """
+    if not detail_path.exists():
+        return []
+    detail = json.loads(detail_path.read_text(encoding="utf-8"))
+    found = []
+    for section in detail.get("sections", []):
+        for column in section.get("columns", []):
+            if column.get("status") == "mismatch":
+                found.append({
+                    "page": section["page"],
+                    "fund": section.get("fund"),
+                    "section": section["name"],
+                    "difference": column["difference"],
+                })
+    return found
+
+
 def confirm_rows_against_pdf(rows, detail_path):
     """Mark workbook rows whose figure the adopted PDF independently confirms.
 
@@ -873,6 +895,8 @@ def build_data(workbook_path: Path) -> dict[str, Any]:
     }
     pdf_match = confirm_rows_against_pdf(rows, Path(__file__).resolve().parents[1] / "data/pdf_detail.json")
     result["pdfConfirmation"] = pdf_match
+    result["bookDifferences"] = budget_book_differences(
+        Path(__file__).resolve().parents[1] / "data/pdf_detail.json")
     result["validation"] = validate(result)
     result["validation"].append({"label": "Workbook formula scan", "status": "pass" if formula_errors == 0 else "check", "detail": f"{formula_cells} formulas scanned; {formula_errors} unreadable. This checks readability, not formula correctness."})
     return result

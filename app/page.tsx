@@ -136,6 +136,7 @@ type BudgetData = {
   amendments: Amendment[];
   validation: { label: string; status: string; detail: string }[];
   pdfConfirmation?: { confirmed: number; conflicting: number; available: number };
+  bookDifferences?: { page: number; fund: string | null; section: string; difference: number }[];
   sources: Record<string, { label: string; url: string }>;
   openData: {
     catalogUrl: string;
@@ -250,7 +251,30 @@ function TrustSummary() {
   }
   items.push({ tone: 'note', text: 'Other lines use the proposed budget from the City Auditor\u2019s spreadsheet, updated with the final changes listed in the budget book.' });
   if (disagreements > 0) {
-    items.push({ tone: 'note', text: `In ${disagreements} places the City\u2019s own documents don\u2019t agree with each other. We show the difference rather than pick one.` });
+    items.push({ tone: 'note', text: `In ${disagreements} places the City\u2019s spreadsheet and the budget book don\u2019t agree. We show the difference rather than pick one.` });
+  }
+  const bookErrors = data.bookDifferences ?? [];
+  // A sentence should not open with a numeral.
+  const spelled = (n: number) =>
+    ['Zero', 'One', 'Two', 'Three', 'Four', 'Five', 'Six', 'Seven', 'Eight', 'Nine'][n] ?? String(n);
+  if (bookErrors.length > 0) {
+    // A few dollars is rounding; anything more is named, with its page.
+    const rounding = bookErrors.filter((d) => Math.abs(d.difference) <= 10);
+    const larger = bookErrors.filter((d) => Math.abs(d.difference) > 10);
+    const place = (d: (typeof bookErrors)[number]) => {
+      const fund = d.fund ? d.fund.toLowerCase().replace(/\b\w/g, (c) => c.toUpperCase()) : null;
+      return `${fund ? `a ${fund} total` : 'a total'} on page ${d.page}`;
+    };
+    let text = `The budget book\u2019s own totals don\u2019t add up in ${bookErrors.length} ${bookErrors.length === 1 ? 'place' : 'places'}.`;
+    if (rounding.length > 0) {
+      text += rounding.length === bookErrors.length
+        ? ' Each is off by a few dollars, which is rounding.'
+        : ` ${spelled(rounding.length)} ${rounding.length === 1 ? 'is' : 'are'} off by a few dollars, which is rounding.`;
+    }
+    larger.forEach((d, i) => {
+      text += ` ${i === 0 ? 'One' : 'Another'} is off by ${fmtMoney(Math.abs(d.difference))}: ${place(d)}.`;
+    });
+    items.push({ tone: 'note', text });
   }
   if (failures > 0) {
     items.push({ tone: 'bad', text: `${failures} automatic ${failures === 1 ? 'check has' : 'checks have'} failed. Treat these numbers with caution until it is fixed.` });

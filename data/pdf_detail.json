@@ -1730,7 +1730,7 @@
       "coveredBySubtotals": 0,
       "unreadableFigures": 0,
       "verified": true,
-      "fund": "Assessment",
+      "fund": "GENERAL FUND",
       "columns": [
         {
           "column": 0,
@@ -1773,7 +1773,7 @@
         {
           "code": "426630",
           "label": "Appraisal Fees",
-          "fund": "Assessment",
+          "fund": "GENERAL FUND",
           "page": 54,
           "values": [
             0,
@@ -1794,7 +1794,7 @@
       "coveredBySubtotals": 9,
       "unreadableFigures": 0,
       "verified": false,
-      "fund": "Assessment",
+      "fund": "GENERAL FUND",
       "columns": [
         {
           "column": 0,
@@ -2001,7 +2001,7 @@
       "coveredBySubtotals": 0,
       "unreadableFigures": 0,
       "verified": true,
-      "fund": "Assessment",
+      "fund": "GENERAL FUND",
       "columns": [
         {
           "column": 0,
@@ -2044,7 +2044,7 @@
         {
           "code": "424010",
           "label": "Interest of Deposits",
-          "fund": "Assessment",
+          "fund": "GENERAL FUND",
           "page": 55,
           "values": [
             11756390,
@@ -2057,7 +2057,7 @@
         {
           "code": "424020",
           "label": "Bankruptcy Fees",
-          "fund": "Assessment",
+          "fund": "GENERAL FUND",
           "page": 55,
           "values": [
             32766,
@@ -2070,7 +2070,7 @@
         {
           "code": "424100",
           "label": "Rental of Real Property",
-          "fund": "Assessment",
+          "fund": "GENERAL FUND",
           "page": 55,
           "values": [
             125249,
@@ -2083,7 +2083,7 @@
         {
           "code": "424140",
           "label": "Rental of Equipment",
-          "fund": "Assessment",
+          "fund": "GENERAL FUND",
           "page": 55,
           "values": [
             245,
@@ -2104,7 +2104,7 @@
       "coveredBySubtotals": 0,
       "unreadableFigures": 0,
       "verified": true,
-      "fund": "Assessment",
+      "fund": "GENERAL FUND",
       "columns": [
         {
           "column": 0,
@@ -2147,7 +2147,7 @@
         {
           "code": "426500",
           "label": "Sale of Scrap Equipment",
-          "fund": "Assessment",
+          "fund": "GENERAL FUND",
           "page": 55,
           "values": [
             38294,
@@ -2160,7 +2160,7 @@
         {
           "code": "426750",
           "label": "Gain on Disposal of Assets",
-          "fund": "Assessment",
+          "fund": "GENERAL FUND",
           "page": 55,
           "values": [
             458635,
@@ -2181,7 +2181,7 @@
       "coveredBySubtotals": 0,
       "unreadableFigures": 1,
       "verified": false,
-      "fund": "Assessment",
+      "fund": "GENERAL FUND",
       "columns": [
         {
           "column": 0,
@@ -2224,7 +2224,7 @@
         {
           "code": "430000",
           "label": "State Aid Mise",
-          "fund": "Assessment",
+          "fund": "GENERAL FUND",
           "page": 55,
           "values": [
             68651,
@@ -2237,7 +2237,7 @@
         {
           "code": "430050",
           "label": "State Aid Mortgage Tax",
-          "fund": "Assessment",
+          "fund": "GENERAL FUND",
           "page": 55,
           "values": [
             2430431,
@@ -2250,7 +2250,7 @@
         {
           "code": "430080",
           "label": "State Aid State Highway Aid",
-          "fund": "Assessment",
+          "fund": "GENERAL FUND",
           "page": 55,
           "values": [
             90008,
@@ -2263,7 +2263,7 @@
         {
           "code": "438200",
           "label": "State Aid Youth Projects",
-          "fund": "Assessment",
+          "fund": "GENERAL FUND",
           "page": 55,
           "values": [
             24319,
@@ -2276,7 +2276,7 @@
         {
           "code": "435210",
           "label": "AIM State Aid",
-          "fund": "Assessment",
+          "fund": "GENERAL FUND",
           "page": 55,
           "values": [
             71758584,
@@ -2289,7 +2289,7 @@
         {
           "code": "435209",
           "label": "Temporary Aim Aid",
-          "fund": "Assessment",
+          "fund": "GENERAL FUND",
           "page": 55,
           "values": [
             5000000,
@@ -2302,7 +2302,7 @@
         {
           "code": "435100",
           "label": "State Aid Highway Maint",
-          "fund": "Assessment",
+          "fund": "GENERAL FUND",
           "page": 55,
           "values": [
             170545,
@@ -2323,7 +2323,7 @@
       "coveredBySubtotals": 0,
       "unreadableFigures": 0,
       "verified": true,
-      "fund": "Assessment",
+      "fund": "GENERAL FUND",
       "columns": [
         {
           "column": 0,
@@ -2366,7 +2366,7 @@
         {
           "code": "426550",
           "label": "Bid & Specs Revenue",
-          "fund": "Assessment",
+          "fund": "GENERAL FUND",
           "page": 56,
           "values": [
             3500,
@@ -2379,7 +2379,7 @@
         {
           "code": "426800",
           "label": "Insurance Recoveries",
-          "fund": "Assessment",
+          "fund": "GENERAL FUND",
           "page": 56,
           "values": [
             159974,
@@ -2392,7 +2392,7 @@
         {
           "code": "450350",
           "label": "Transfer from Water Fund",
-          "fund": "Assessment",
+          "fund": "GENERAL FUND",
           "page": 56,
           "values": [
             2800000,
@@ -2405,7 +2405,7 @@
         {
           "code": "450360",
           "label": "Transfer from Sewer Fund",
-          "fund": "Assessment",
+          "fund": "GENERAL FUND",
           "page": 56,
           "values": [
             540750,
@@ -2418,7 +2418,7 @@
         {
           "code": null,
           "label": "on Bonds/RANs",
-          "fund": "Assessment",
+          "fund": "GENERAL FUND",
           "page": 56,
           "values": [
             0,
@@ -2431,7 +2431,7 @@
         {
           "code": "450312",
           "label": "Transfer from Municipal",
-          "fund": "Assessment",
+          "fund": "GENERAL FUND",
           "page": 56,
           "values": [
             0,
@@ -2444,7 +2444,7 @@
         {
           "code": "450370",
           "label": "Transfer from Capital Fund",
-          "fund": "Assessment",
+          "fund": "GENERAL FUND",
           "page": 56,
           "values": [
             0,
@@ -2465,7 +2465,7 @@
       "coveredBySubtotals": 7,
       "unreadableFigures": 2,
       "verified": true,
-      "fund": "Assessment",
+      "fund": "GENERAL FUND",
       "columns": [
         {
           "column": 0,
@@ -2573,7 +2573,7 @@
         {
           "code": null,
           "label": "",
-          "fund": "Assessment",
+          "fund": "GENERAL FUND",
           "page": 54,
           "values": [
             null,
@@ -2625,7 +2625,7 @@
         {
           "code": null,
           "label": "",
-          "fund": "Assessment",
+          "fund": "GENERAL FUND",
           "page": 55,
           "values": [
             null,
@@ -2659,7 +2659,7 @@
       "coveredBySubtotals": 0,
       "unreadableFigures": 0,
       "verified": true,
-      "fund": "Assessment",
+      "fund": "GENERAL FUND",
       "columns": [
         {
           "column": 0,
@@ -2702,7 +2702,7 @@
         {
           "code": null,
           "label": "Tax Levy",
-          "fund": "Assessment",
+          "fund": "GENERAL FUND",
           "page": 57,
           "values": [
             54323515,
@@ -2715,7 +2715,7 @@
         {
           "code": null,
           "label": "1% Added Pursuant to Law",
-          "fund": "Assessment",
+          "fund": "GENERAL FUND",
           "page": 57,
           "values": [
             543235,
@@ -3640,7 +3640,7 @@
       "coveredBySubtotals": 0,
       "unreadableFigures": 0,
       "verified": true,
-      "fund": "Assessment",
+      "fund": "GENERAL FUND",
       "columns": [
         {
           "column": 0,
@@ -3683,7 +3683,7 @@
         {
           "code": null,
           "label": "Department of Assessment",
-          "fund": "Assessment",
+          "fund": "GENERAL FUND",
           "page": 65,
           "values": [
             761532,
@@ -3696,7 +3696,7 @@
         {
           "code": null,
           "label": "Board of Assessment Review",
-          "fund": "Assessment",
+          "fund": "GENERAL FUND",
           "page": 65,
           "values": [
             19700,
@@ -3717,7 +3717,7 @@
       "coveredBySubtotals": 0,
       "unreadableFigures": 1,
       "verified": false,
-      "fund": "Assessment",
+      "fund": "GENERAL FUND",
       "columns": [
         {
           "column": 0,
@@ -3760,7 +3760,7 @@
         {
           "code": null,
           "label": "Law Department",
-          "fund": "Assessment",
+          "fund": "GENERAL FUND",
           "page": 65,
           "values": [
             4611346,
@@ -3773,7 +3773,7 @@
         {
           "code": null,
           "label": "Bureau of Administrative Adjudication",
-          "fund": "Assessment",
+          "fund": "GENERAL FUND",
           "page": 65,
           "values": [
             494613,
@@ -3794,7 +3794,7 @@
       "coveredBySubtotals": 0,
       "unreadableFigures": 0,
       "verified": false,
-      "fund": "Assessment",
+      "fund": "GENERAL FUND",
       "columns": [
         {
           "column": 0,
@@ -3837,7 +3837,7 @@
         {
           "code": null,
           "label": "Neighborhood & Business Development",
-          "fund": "Assessment",
+          "fund": "GENERAL FUND",
           "page": 65,
           "values": [
             1871266,
@@ -3850,7 +3850,7 @@
         {
           "code": null,
           "label": "Division of Code Enforcement",
-          "fund": "Assessment",
+          "fund": "GENERAL FUND",
           "page": 65,
           "values": [
             4825548,
@@ -3863,7 +3863,7 @@
         {
           "code": null,
           "label": "Division of Planning & Sustainability",
-          "fund": "Assessment",
+          "fund": "GENERAL FUND",
           "page": 65,
           "values": [
             124202,
@@ -3884,7 +3884,7 @@
       "coveredBySubtotals": 0,
       "unreadableFigures": 0,
       "verified": false,
-      "fund": "Assessment",
+      "fund": "GENERAL FUND",
       "columns": [
         {
           "column": 0,
@@ -3927,7 +3927,7 @@
         {
           "code": null,
           "label": "DPW Main Office",
-          "fund": "Assessment",
+          "fund": "GENERAL FUND",
           "page": 66,
           "values": [
             1607978,
@@ -3940,7 +3940,7 @@
         {
           "code": null,
           "label": "DPW Environmental Services",
-          "fund": "Assessment",
+          "fund": "GENERAL FUND",
           "page": 66,
           "values": [
             984508,
@@ -3953,7 +3953,7 @@
         {
           "code": null,
           "label": "DPW Building Services",
-          "fund": "Assessment",
+          "fund": "GENERAL FUND",
           "page": 66,
           "values": [
             3912298,
@@ -3966,7 +3966,7 @@
         {
           "code": null,
           "label": "DPW Street Repair",
-          "fund": "Assessment",
+          "fund": "GENERAL FUND",
           "page": 66,
           "values": [
             1716196,
@@ -3979,7 +3979,7 @@
         {
           "code": null,
           "label": "DPW Motor Equipment Maintenance",
-          "fund": "Assessment",
+          "fund": "GENERAL FUND",
           "page": 66,
           "values": [
             6111721,
@@ -3992,7 +3992,7 @@
         {
           "code": null,
           "label": "DPW Snow & Ice Control",
-          "fund": "Assessment",
+          "fund": "GENERAL FUND",
           "page": 66,
           "values": [
             3789533,
@@ -4005,7 +4005,7 @@
         {
           "code": null,
           "label": "DPW Waste Collection, Recycling & Disposal",
-          "fund": "Assessment",
+          "fund": "GENERAL FUND",
           "page": 66,
           "values": [
             7691998,
@@ -4018,7 +4018,7 @@
         {
           "code": null,
           "label": "DPW Street Cleaning",
-          "fund": "Assessment",
+          "fund": "GENERAL FUND",
           "page": 66,
           "values": [
             1368586,
@@ -4031,7 +4031,7 @@
         {
           "code": null,
           "label": "DPW Transportation",
-          "fund": "Assessment",
+          "fund": "GENERAL FUND",
           "page": 66,
           "values": [
             7658306,
@@ -4052,7 +4052,7 @@
       "coveredBySubtotals": 0,
       "unreadableFigures": 0,
       "verified": true,
-      "fund": "Assessment",
+      "fund": "GENERAL FUND",
       "columns": [
         {
           "column": 0,
@@ -4095,7 +4095,7 @@
         {
           "code": null,
           "label": "Police Field Services Sworn",
-          "fund": "Assessment",
+          "fund": "GENERAL FUND",
           "page": 66,
           "values": [
             56905855,
@@ -4108,7 +4108,7 @@
         {
           "code": null,
           "label": "Police Field Services Civilian",
-          "fund": "Assessment",
+          "fund": "GENERAL FUND",
           "page": 66,
           "values": [
             6042594,
@@ -4129,7 +4129,7 @@
       "coveredBySubtotals": 0,
       "unreadableFigures": 0,
       "verified": true,
-      "fund": "Assessment",
+      "fund": "GENERAL FUND",
       "columns": [
         {
           "column": 0,
@@ -4172,7 +4172,7 @@
         {
           "code": null,
           "label": "Fire Main Sworn",
-          "fund": "Assessment",
+          "fund": "GENERAL FUND",
           "page": 66,
           "values": [
             44570920,
@@ -4185,7 +4185,7 @@
         {
           "code": null,
           "label": "Fire Main Civilian",
-          "fund": "Assessment",
+          "fund": "GENERAL FUND",
           "page": 66,
           "values": [
             1239600,
@@ -4206,7 +4206,7 @@
       "coveredBySubtotals": 0,
       "unreadableFigures": 2,
       "verified": true,
-      "fund": "Assessment",
+      "fund": "GENERAL FUND",
       "columns": [
         {
           "column": 0,
@@ -4249,7 +4249,7 @@
         {
           "code": null,
           "label": "Parks Administration",
-          "fund": "Assessment",
+          "fund": "GENERAL FUND",
           "page": 66,
           "values": [
             592605,
@@ -4262,7 +4262,7 @@
         {
           "code": null,
           "label": "Parks Grounds Maintenance",
-          "fund": "Assessment",
+          "fund": "GENERAL FUND",
           "page": 66,
           "values": [
             6166785,
@@ -4275,7 +4275,7 @@
         {
           "code": null,
           "label": "Parks Recreation",
-          "fund": "Assessment",
+          "fund": "GENERAL FUND",
           "page": 66,
           "values": [
             4062033,
@@ -4288,7 +4288,7 @@
         {
           "code": null,
           "label": "Dog Control Division",
-          "fund": "Assessment",
+          "fund": "GENERAL FUND",
           "page": 66,
           "values": [
             413729,
@@ -4309,7 +4309,7 @@
       "coveredBySubtotals": 9,
       "unreadableFigures": 5,
       "verified": false,
-      "fund": "Assessment",
+      "fund": "GENERAL FUND",
       "columns": [
         {
           "column": 0,
@@ -4456,7 +4456,7 @@
         {
           "code": null,
           "label": "Board of Zoning Appeal",
-          "fund": "Assessment",
+          "fund": "GENERAL FUND",
           "page": 65,
           "values": [
             3225,
@@ -4495,7 +4495,7 @@
         {
           "code": null,
           "label": "Department of Engineering",
-          "fund": "Assessment",
+          "fund": "GENERAL FUND",
           "page": 65,
           "values": [
             1177751,
@@ -4508,7 +4508,7 @@
         {
           "code": null,
           "label": "",
-          "fund": "Assessment",
+          "fund": "GENERAL FUND",
           "page": 65,
           "values": [
             null,
@@ -4581,7 +4581,7 @@
       "coveredBySubtotals": 0,
       "unreadableFigures": 8,
       "verified": true,
-      "fund": "Assessment",
+      "fund": "GENERAL FUND",
       "columns": [
         {
           "column": 0,
@@ -4624,7 +4624,7 @@
         {
           "code": "596220",
           "label": "Blighted Property Maintenance",
-          "fund": "Assessment",
+          "fund": "GENERAL FUND",
           "page": 67,
           "values": [
             591540,
@@ -4637,7 +4637,7 @@
         {
           "code": "593620",
           "label": "Printing & Advertising",
-          "fund": "Assessment",
+          "fund": "GENERAL FUND",
           "page": 67,
           "values": [
             125213,
@@ -4650,7 +4650,7 @@
         {
           "code": "593260",
           "label": "Fiscal Services",
-          "fund": "Assessment",
+          "fund": "GENERAL FUND",
           "page": 67,
           "values": [
             490547,
@@ -4663,7 +4663,7 @@
         {
           "code": "596700",
           "label": "Postage",
-          "fund": "Assessment",
+          "fund": "GENERAL FUND",
           "page": 67,
           "values": [
             371199,
@@ -4676,7 +4676,7 @@
         {
           "code": "594310",
           "label": "Labor Relations Expense",
-          "fund": "Assessment",
+          "fund": "GENERAL FUND",
           "page": 67,
           "values": [
             0,
@@ -4689,7 +4689,7 @@
         {
           "code": "599100",
           "label": "Unallocated Insurance",
-          "fund": "Assessment",
+          "fund": "GENERAL FUND",
           "page": 67,
           "values": [
             168950,
@@ -4702,7 +4702,7 @@
         {
           "code": "599200",
           "label": "Conf & Assoc Dues",
-          "fund": "Assessment",
+          "fund": "GENERAL FUND",
           "page": 67,
           "values": [
             26474,
@@ -4715,7 +4715,7 @@
         {
           "code": "599310",
           "label": "Tax Certiorari",
-          "fund": "Assessment",
+          "fund": "GENERAL FUND",
           "page": 67,
           "values": [
             0,
@@ -4728,7 +4728,7 @@
         {
           "code": "599500",
           "label": "City Share of Local Assessment",
-          "fund": "Assessment",
+          "fund": "GENERAL FUND",
           "page": 67,
           "values": [
             373137,
@@ -4741,7 +4741,7 @@
         {
           "code": "599600",
           "label": "City Share of Tax Deeds",
-          "fund": "Assessment",
+          "fund": "GENERAL FUND",
           "page": 67,
           "values": [
             67826,
@@ -4754,7 +4754,7 @@
         {
           "code": "599890",
           "label": "External Auditors",
-          "fund": "Assessment",
+          "fund": "GENERAL FUND",
           "page": 67,
           "values": [
             146986,
@@ -4767,7 +4767,7 @@
         {
           "code": "599891",
           "label": "Financial Management System",
-          "fund": "Assessment",
+          "fund": "GENERAL FUND",
           "page": 67,
           "values": [
             0,
@@ -4780,7 +4780,7 @@
         {
           "code": "599892",
           "label": "Special Audit Services",
-          "fund": "Assessment",
+          "fund": "GENERAL FUND",
           "page": 67,
           "values": [
             88523,
@@ -4793,7 +4793,7 @@
         {
           "code": "599893",
           "label": "GASB45 Actuarial Valuation",
-          "fund": "Assessment",
+          "fund": "GENERAL FUND",
           "page": 67,
           "values": [
             0,
@@ -4806,7 +4806,7 @@
         {
           "code": "599897",
           "label": "JSCB Expenses",
-          "fund": "Assessment",
+          "fund": "GENERAL FUND",
           "page": 67,
           "values": [
             10997,
@@ -4819,7 +4819,7 @@
         {
           "code": null,
           "label": "Greater Syracuse Property Development Corporation",
-          "fund": "Assessment",
+          "fund": "GENERAL FUND",
           "page": 67,
           "values": [
             1250000,
@@ -4832,7 +4832,7 @@
         {
           "code": "594500",
           "label": "Onondaga Historical Association",
-          "fund": "Assessment",
+          "fund": "GENERAL FUND",
           "page": 67,
           "values": [
             50000,
@@ -4845,7 +4845,7 @@
         {
           "code": "595500",
           "label": "Public Events",
-          "fund": "Assessment",
+          "fund": "GENERAL FUND",
           "page": 67,
           "values": [
             180197,
@@ -4858,7 +4858,7 @@
         {
           "code": null,
           "label": "",
-          "fund": "Assessment",
+          "fund": "GENERAL FUND",
           "page": 67,
           "values": [
             null,
@@ -4871,7 +4871,7 @@
         {
           "code": "595850",
           "label": "Urban Cultural Parks Exp",
-          "fund": "Assessment",
+          "fund": "GENERAL FUND",
           "page": 67,
           "values": [
             21000,
@@ -4884,7 +4884,7 @@
         {
           "code": null,
           "label": "",
-          "fund": "Assessment",
+          "fund": "GENERAL FUND",
           "page": 67,
           "values": [
             null,
@@ -4897,7 +4897,7 @@
         {
           "code": "595860",
           "label": "Internet & Networking Services",
-          "fund": "Assessment",
+          "fund": "GENERAL FUND",
           "page": 67,
           "values": [
             371433,
@@ -4910,7 +4910,7 @@
         {
           "code": null,
           "label": "",
-          "fund": "Assessment",
+          "fund": "GENERAL FUND",
           "page": 67,
           "values": [
             null,
@@ -4923,7 +4923,7 @@
         {
           "code": "595905",
           "label": "Arts Acquisition Conservation Fund",
-          "fund": "Assessment",
+          "fund": "GENERAL FUND",
           "page": 67,
           "values": [
             23500,
@@ -4936,7 +4936,7 @@
         {
           "code": null,
           "label": "",
-          "fund": "Assessment",
+          "fund": "GENERAL FUND",
           "page": 67,
           "values": [
             null,
@@ -4949,7 +4949,7 @@
         {
           "code": "595910",
           "label": "University Neighborhood Grants",
-          "fund": "Assessment",
+          "fund": "GENERAL FUND",
           "page": 67,
           "values": [
             284078,
@@ -4962,7 +4962,7 @@
         {
           "code": null,
           "label": "",
-          "fund": "Assessment",
+          "fund": "GENERAL FUND",
           "page": 67,
           "values": [
             null,
@@ -4975,7 +4975,7 @@
         {
           "code": "595911",
           "label": "Downtown District Matching",
-          "fund": "Assessment",
+          "fund": "GENERAL FUND",
           "page": 67,
           "values": [
             15000,
@@ -4988,7 +4988,7 @@
         {
           "code": null,
           "label": "",
-          "fund": "Assessment",
+          "fund": "GENERAL FUND",
           "page": 67,
           "values": [
             null,
@@ -5001,7 +5001,7 @@
         {
           "code": "595912",
           "label": "Crouse-Marshall Matching",
-          "fund": "Assessment",
+          "fund": "GENERAL FUND",
           "page": 67,
           "values": [
             9560,
@@ -5014,7 +5014,7 @@
         {
           "code": "595940",
           "label": "Leadership Syracuse",
-          "fund": "Assessment",
+          "fund": "GENERAL FUND",
           "page": 67,
           "values": [
             15000,
@@ -5027,7 +5027,7 @@
         {
           "code": "595946",
           "label": "Home HeadQuarters",
-          "fund": "Assessment",
+          "fund": "GENERAL FUND",
           "page": 67,
           "values": [
             500000,
@@ -5040,7 +5040,7 @@
         {
           "code": "595950",
           "label": "Mandated Drug Testing",
-          "fund": "Assessment",
+          "fund": "GENERAL FUND",
           "page": 67,
           "values": [
             5326,
@@ -5053,7 +5053,7 @@
         {
           "code": "599930",
           "label": "Veteran's Post Rents",
-          "fund": "Assessment",
+          "fund": "GENERAL FUND",
           "page": 67,
           "values": [
             0,
@@ -5066,7 +5066,7 @@
         {
           "code": "593000",
           "label": "One-Time Expenditures",
-          "fund": "Assessment",
+          "fund": "GENERAL FUND",
           "page": 67,
           "values": [
             53577,
@@ -5079,7 +5079,7 @@
         {
           "code": null,
           "label": "",
-          "fund": "Assessment",
+          "fund": "GENERAL FUND",
           "page": 67,
           "values": [
             null,
@@ -5092,7 +5092,7 @@
         {
           "code": null,
           "label": "",
-          "fund": "Assessment",
+          "fund": "GENERAL FUND",
           "page": 67,
           "values": [
             null,
@@ -5105,7 +5105,7 @@
         {
           "code": "590810",
           "label": "Operating Leases",
-          "fund": "Assessment",
+          "fund": "GENERAL FUND",
           "page": 68,
           "values": [
             789383,
@@ -5118,7 +5118,7 @@
         {
           "code": "593001",
           "label": "Summer Youth Employment Program",
-          "fund": "Assessment",
+          "fund": "GENERAL FUND",
           "page": 68,
           "values": [
             700000,
@@ -5131,7 +5131,7 @@
         {
           "code": "593002",
           "label": "Community Ambassador Program",
-          "fund": "Assessment",
+          "fund": "GENERAL FUND",
           "page": 68,
           "values": [
             0,
@@ -5144,7 +5144,7 @@
         {
           "code": "593003",
           "label": "Financial Empowerment Center",
-          "fund": "Assessment",
+          "fund": "GENERAL FUND",
           "page": 68,
           "values": [
             0,
@@ -5157,7 +5157,7 @@
         {
           "code": "593005",
           "label": "CNY Works",
-          "fund": "Assessment",
+          "fund": "GENERAL FUND",
           "page": 68,
           "values": [
             50000,
@@ -5170,7 +5170,7 @@
         {
           "code": "593007",
           "label": "Housing Trust",
-          "fund": "Assessment",
+          "fund": "GENERAL FUND",
           "page": 68,
           "values": [
             2500000,
@@ -5183,7 +5183,7 @@
         {
           "code": "593009",
           "label": "Union Apprentice Program",
-          "fund": "Assessment",
+          "fund": "GENERAL FUND",
           "page": 68,
           "values": [
             119822,
@@ -5196,7 +5196,7 @@
         {
           "code": "593010",
           "label": "Landbank Seizure Fund",
-          "fund": "Assessment",
+          "fund": "GENERAL FUND",
           "page": 68,
           "values": [
             0,
@@ -5209,7 +5209,7 @@
         {
           "code": "540553",
           "label": "Traffic Camera Fees",
-          "fund": "Assessment",
+          "fund": "GENERAL FUND",
           "page": 68,
           "values": [
             0,
@@ -5222,7 +5222,7 @@
         {
           "code": "595865",
           "label": "Community Broadband",
-          "fund": "Assessment",
+          "fund": "GENERAL FUND",
           "page": 68,
           "values": [
             0,
@@ -5235,7 +5235,7 @@
         {
           "code": "590050",
           "label": "Allowance for Negotiations",
-          "fund": "Assessment",
+          "fund": "GENERAL FUND",
           "page": 68,
           "values": [
             0,
@@ -5248,7 +5248,7 @@
         {
           "code": "590100",
           "label": "Employee Retirement System",
-          "fund": "Assessment",
+          "fund": "GENERAL FUND",
           "page": 68,
           "values": [
             5801577,
@@ -5261,7 +5261,7 @@
         {
           "code": "590300",
           "label": "Social Security",
-          "fund": "Assessment",
+          "fund": "GENERAL FUND",
           "page": 68,
           "values": [
             10422992,
@@ -5274,7 +5274,7 @@
         {
           "code": "590400",
           "label": "Workers Compensation",
-          "fund": "Assessment",
+          "fund": "GENERAL FUND",
           "page": 68,
           "values": [
             4677679,
@@ -5287,7 +5287,7 @@
         {
           "code": "590150",
           "label": "Police & Fire Retirement System",
-          "fund": "Assessment",
+          "fund": "GENERAL FUND",
           "page": 68,
           "values": [
             27626603,
@@ -5300,7 +5300,7 @@
         {
           "code": "590410",
           "label": "Personal Injury Protection",
-          "fund": "Assessment",
+          "fund": "GENERAL FUND",
           "page": 68,
           "values": [
             0,
@@ -5313,7 +5313,7 @@
         {
           "code": "590500",
           "label": "Unemployment Insurance",
-          "fund": "Assessment",
+          "fund": "GENERAL FUND",
           "page": 68,
           "values": [
             0,
@@ -5326,7 +5326,7 @@
         {
           "code": "590600",
           "label": "Medical Insurance",
-          "fund": "Assessment",
+          "fund": "GENERAL FUND",
           "page": 68,
           "values": [
             42277192,
@@ -5339,7 +5339,7 @@
         {
           "code": "590858",
           "label": "Supplemental Benefits",
-          "fund": "Assessment",
+          "fund": "GENERAL FUND",
           "page": 68,
           "values": [
             158248,
@@ -5352,7 +5352,7 @@
         {
           "code": "599300",
           "label": "Judgement & Claims",
-          "fund": "Assessment",
+          "fund": "GENERAL FUND",
           "page": 68,
           "values": [
             1000275,
@@ -5365,7 +5365,7 @@
         {
           "code": "590701",
           "label": "Employee Assistance Program",
-          "fund": "Assessment",
+          "fund": "GENERAL FUND",
           "page": 68,
           "values": [
             27934,
@@ -5378,7 +5378,7 @@
         {
           "code": "590420",
           "label": "Police 207C Expenses",
-          "fund": "Assessment",
+          "fund": "GENERAL FUND",
           "page": 68,
           "values": [
             1053008,
@@ -5391,7 +5391,7 @@
         {
           "code": "590430",
           "label": "Fire 207A Expenses",
-          "fund": "Assessment",
+          "fund": "GENERAL FUND",
           "page": 68,
           "values": [
             163748,

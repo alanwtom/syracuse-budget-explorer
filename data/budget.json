@@ -3566,7 +3566,9 @@
       "change": {
         "amount": 0.0,
         "pct": 0.0
-      }
+      },
+      "pdfConfirmed": true,
+      "pdfPage": 54
     },
     {
       "id": "general-fund-revenue-424010-122",
@@ -3596,7 +3598,9 @@
       "change": {
         "amount": -2500000.0,
         "pct": -26.3
-      }
+      },
+      "pdfConfirmed": true,
+      "pdfPage": 55
     },
     {
       "id": "general-fund-revenue-424020-123",
@@ -3626,7 +3630,9 @@
       "change": {
         "amount": 0.0,
         "pct": 0.0
-      }
+      },
+      "pdfConfirmed": true,
+      "pdfPage": 55
     },
     {
       "id": "general-fund-revenue-424100-124",
@@ -3656,7 +3662,9 @@
       "change": {
         "amount": 0.0,
         "pct": 0.0
-      }
+      },
+      "pdfConfirmed": true,
+      "pdfPage": 55
     },
     {
       "id": "general-fund-revenue-424140-125",
@@ -3686,7 +3694,9 @@
       "change": {
         "amount": 0,
         "pct": null
-      }
+      },
+      "pdfConfirmed": true,
+      "pdfPage": 55
     },
     {
       "id": "general-fund-revenue-457100-126",
@@ -3746,7 +3756,9 @@
       "change": {
         "amount": 10000.0,
         "pct": 40.0
-      }
+      },
+      "pdfConfirmed": true,
+      "pdfPage": 55
     },
     {
       "id": "general-fund-revenue-426750-129",
@@ -3776,7 +3788,9 @@
       "change": {
         "amount": -470000.0,
         "pct": -32.0
-      }
+      },
+      "pdfConfirmed": true,
+      "pdfPage": 55
     },
     {
       "id": "general-fund-revenue-430000-131",
@@ -4080,7 +4094,9 @@
       "change": {
         "amount": 0.0,
         "pct": 0.0
-      }
+      },
+      "pdfConfirmed": true,
+      "pdfPage": 56
     },
     {
       "id": "general-fund-revenue-426800-143",
@@ -4110,7 +4126,9 @@
       "change": {
         "amount": 0.0,
         "pct": 0.0
-      }
+      },
+      "pdfConfirmed": true,
+      "pdfPage": 56
     },
     {
       "id": "general-fund-revenue-426900-144",
@@ -4230,7 +4248,9 @@
       "change": {
         "amount": 0.0,
         "pct": 0.0
-      }
+      },
+      "pdfConfirmed": true,
+      "pdfPage": 56
     },
     {
       "id": "general-fund-revenue-450360-148",
@@ -4260,7 +4280,9 @@
       "change": {
         "amount": 0.0,
         "pct": 0.0
-      }
+      },
+      "pdfConfirmed": true,
+      "pdfPage": 56
     },
     {
       "id": "general-fund-revenue-427110-149",
@@ -4320,7 +4342,9 @@
       "change": {
         "amount": 0,
         "pct": null
-      }
+      },
+      "pdfConfirmed": true,
+      "pdfPage": 56
     },
     {
       "id": "general-fund-revenue-450370-151",
@@ -4350,7 +4374,9 @@
       "change": {
         "amount": 0,
         "pct": null
-      }
+      },
+      "pdfConfirmed": true,
+      "pdfPage": 56
     },
     {
       "id": "general-fund-revenue-tax-levy-153",
@@ -19614,7 +19640,9 @@
       "change": {
         "amount": 0.0,
         "pct": 0.0
-      }
+      },
+      "pdfConfirmed": true,
+      "pdfPage": 67
     },
     {
       "id": "general-fund-expense-593620-843",
@@ -19644,7 +19672,9 @@
       "change": {
         "amount": -60000.0,
         "pct": -32.4
-      }
+      },
+      "pdfConfirmed": true,
+      "pdfPage": 67
     },
     {
       "id": "general-fund-expense-593260-844",
@@ -19674,7 +19704,9 @@
       "change": {
         "amount": 0.0,
         "pct": 0.0
-      }
+      },
+      "pdfConfirmed": true,
+      "pdfPage": 67
     },
     {
       "id": "general-fund-expense-596700-845",
@@ -19704,7 +19736,9 @@
       "change": {
         "amount": 20000.0,
         "pct": 6.4
-      }
+      },
+      "pdfConfirmed": true,
+      "pdfPage": 67
     },
     {
       "id": "general-fund-expense-594310-846",
@@ -19734,7 +19768,9 @@
       "change": {
         "amount": 0.0,
         "pct": 0.0
-      }
+      },
+      "pdfConfirmed": true,
+      "pdfPage": 67
     },
     {
       "id": "general-fund-expense-599100-847",
@@ -19764,7 +19800,9 @@
       "change": {
         "amount": 0.0,
         "pct": 0.0
-      }
+      },
+      "pdfConfirmed": true,
+      "pdfPage": 67
     },
     {
       "id": "general-fund-expense-599200-848",
@@ -19794,7 +19832,9 @@
       "change": {
         "amount": 1040.0,
         "pct": 3.3
-      }
+      },
+      "pdfConfirmed": true,
+      "pdfPage": 67
     },
     {
       "id": "general-fund-expense-599309-849",
@@ -19854,7 +19894,9 @@
       "change": {
         "amount": 0.0,
         "pct": 0.0
-      }
+      },
+      "pdfConfirmed": true,
+      "pdfPage": 67
     },
     {
       "id": "general-fund-expense-599500-851",
@@ -19884,7 +19926,9 @@
       "change": {
         "amount": 0.0,
         "pct": 0.0
-      }
+      },
+      "pdfConfirmed": true,
+      "pdfPage": 67
     },
     {
       "id": "general-fund-expense-599600-852",
@@ -19914,7 +19958,9 @@
       "change": {
         "amount": 7000.0,
         "pct": 10.0
-      }
+      },
+      "pdfConfirmed": true,
+      "pdfPage": 67
     },
     {
       "id": "general-fund-expense-599890-853",
@@ -19944,7 +19990,9 @@
       "change": {
         "amount": 0.0,
         "pct": 0.0
-      }
+      },
+      "pdfConfirmed": true,
+      "pdfPage": 67
     },
     {
       "id": "general-fund-expense-599891-854",
@@ -20008,7 +20056,9 @@
       "change": {
         "amount": 0.0,
         "pct": 0.0
-      }
+      },
+      "pdfConfirmed": true,
+      "pdfPage": 67
     },
     {
       "id": "general-fund-expense-599893-856",
@@ -20038,7 +20088,9 @@
       "change": {
         "amount": 0.0,
         "pct": 0.0
-      }
+      },
+      "pdfConfirmed": true,
+      "pdfPage": 67
     },
     {
       "id": "general-fund-expense-599897-857",
@@ -20068,7 +20120,9 @@
       "change": {
         "amount": 0.0,
         "pct": 0.0
-      }
+      },
+      "pdfConfirmed": true,
+      "pdfPage": 67
     },
     {
       "id": "general-fund-expense-599898-858",
@@ -20256,7 +20310,9 @@
       "change": {
         "amount": 500000.0,
         "pct": null
-      }
+      },
+      "pdfConfirmed": true,
+      "pdfPage": 68
     },
     {
       "id": "general-fund-expense-595905-864",
@@ -20376,7 +20432,9 @@
       "change": {
         "amount": 0.0,
         "pct": 0.0
-      }
+      },
+      "pdfConfirmed": true,
+      "pdfPage": 67
     },
     {
       "id": "general-fund-expense-595940-868",
@@ -20406,7 +20464,9 @@
       "change": {
         "amount": 0.0,
         "pct": 0.0
-      }
+      },
+      "pdfConfirmed": true,
+      "pdfPage": 67
     },
     {
       "id": "general-fund-expense-593001-869",
@@ -20436,7 +20496,9 @@
       "change": {
         "amount": 0.0,
         "pct": 0.0
-      }
+      },
+      "pdfConfirmed": true,
+      "pdfPage": 68
     },
     {
       "id": "general-fund-expense-593002-870",
@@ -20466,7 +20528,9 @@
       "change": {
         "amount": -200000.0,
         "pct": -100.0
-      }
+      },
+      "pdfConfirmed": true,
+      "pdfPage": 68
     },
     {
       "id": "general-fund-expense-593003-871",
@@ -20496,7 +20560,9 @@
       "change": {
         "amount": 0.0,
         "pct": 0.0
-      }
+      },
+      "pdfConfirmed": true,
+      "pdfPage": 68
     },
     {
       "id": "general-fund-expense-593005-872",
@@ -20526,7 +20592,9 @@
       "change": {
         "amount": 0.0,
         "pct": 0.0
-      }
+      },
+      "pdfConfirmed": true,
+      "pdfPage": 68
     },
     {
       "id": "general-fund-expense-593007-873",
@@ -20556,7 +20624,9 @@
       "change": {
         "amount": 2250000.0,
         "pct": null
-      }
+      },
+      "pdfConfirmed": true,
+      "pdfPage": 68
     },
     {
       "id": "general-fund-expense-593009-874",
@@ -20586,7 +20656,9 @@
       "change": {
         "amount": -50000.0,
         "pct": -20.0
-      }
+      },
+      "pdfConfirmed": true,
+      "pdfPage": 68
     },
     {
       "id": "general-fund-expense-593010-875",
@@ -20616,7 +20688,9 @@
       "change": {
         "amount": 200000.0,
         "pct": 200.0
-      }
+      },
+      "pdfConfirmed": true,
+      "pdfPage": 68
     },
     {
       "id": "general-fund-expense-595942-876",
@@ -20710,7 +20784,9 @@
       "change": {
         "amount": -15000.0,
         "pct": -50.0
-      }
+      },
+      "pdfConfirmed": true,
+      "pdfPage": 67
     },
     {
       "id": "general-fund-expense-599930-879",
@@ -20740,7 +20816,9 @@
       "change": {
         "amount": -200.0,
         "pct": -100.0
-      }
+      },
+      "pdfConfirmed": true,
+      "pdfPage": 67
     },
     {
       "id": "general-fund-expense-593000-880",
@@ -20804,7 +20882,9 @@
       "change": {
         "amount": 1852442.0,
         "pct": 119.8
-      }
+      },
+      "pdfConfirmed": true,
+      "pdfPage": 68
     },
     {
       "id": "general-fund-expense-540553-882",
@@ -20834,7 +20914,9 @@
       "change": {
         "amount": 0.0,
         "pct": 0.0
-      }
+      },
+      "pdfConfirmed": true,
+      "pdfPage": 68
     },
     {
       "id": "general-fund-expense-590050-883",
@@ -20868,7 +20950,9 @@
       "change": {
         "amount": -1000000.0,
         "pct": -66.7
-      }
+      },
+      "pdfConfirmed": true,
+      "pdfPage": 68
     },
     {
       "id": "general-fund-expense-590100-884",
@@ -20966,7 +21050,9 @@
       "change": {
         "amount": 0.0,
         "pct": 0.0
-      }
+      },
+      "pdfConfirmed": true,
+      "pdfPage": 68
     },
     {
       "id": "general-fund-expense-590150-887",
@@ -20996,7 +21082,9 @@
       "change": {
         "amount": 689770.0,
         "pct": 2.2
-      }
+      },
+      "pdfConfirmed": true,
+      "pdfPage": 68
     },
     {
       "id": "general-fund-expense-590410-888",
@@ -21026,7 +21114,9 @@
       "change": {
         "amount": -21200.0,
         "pct": -51.5
-      }
+      },
+      "pdfConfirmed": true,
+      "pdfPage": 68
     },
     {
       "id": "general-fund-expense-590500-889",
@@ -21056,7 +21146,9 @@
       "change": {
         "amount": 338500.0,
         "pct": 657.3
-      }
+      },
+      "pdfConfirmed": true,
+      "pdfPage": 68
     },
     {
       "id": "general-fund-expense-590600-890",
@@ -21120,7 +21212,9 @@
       "change": {
         "amount": 0.0,
         "pct": 0.0
-      }
+      },
+      "pdfConfirmed": true,
+      "pdfPage": 68
     },
     {
       "id": "general-fund-expense-599300-892",
@@ -21150,7 +21244,9 @@
       "change": {
         "amount": -850000.0,
         "pct": -53.1
-      }
+      },
+      "pdfConfirmed": true,
+      "pdfPage": 68
     },
     {
       "id": "general-fund-expense-597707-893",
@@ -21210,7 +21306,9 @@
       "change": {
         "amount": 0.0,
         "pct": 0.0
-      }
+      },
+      "pdfConfirmed": true,
+      "pdfPage": 68
     },
     {
       "id": "general-fund-expense-590420-895",
@@ -21240,7 +21338,9 @@
       "change": {
         "amount": 0.0,
         "pct": 0.0
-      }
+      },
+      "pdfConfirmed": true,
+      "pdfPage": 68
     },
     {
       "id": "general-fund-expense-590421-896",
@@ -21300,7 +21400,9 @@
       "change": {
         "amount": -20000.0,
         "pct": -9.5
-      }
+      },
+      "pdfConfirmed": true,
+      "pdfPage": 68
     },
     {
       "id": "general-fund-expense-590431-898",
@@ -28112,7 +28214,7 @@
     {
       "label": "Account rows confirmed by the adopted PDF",
       "status": "pass",
-      "detail": "100 account rows carry the same FY27 figure in the adopted PDF as in the workbook, matched on fund and account code and taken only from PDF sections that reconcile to their own printed totals. 0 disagree. Rows without a confirmation are not thereby wrong; the PDF simply does not print a reconciling figure for them."
+      "detail": "151 account rows carry the same FY27 figure in the adopted PDF as in the workbook, matched on fund and account code and taken only from PDF sections that reconcile to their own printed totals. 0 disagree. Rows without a confirmation are not thereby wrong; the PDF simply does not print a reconciling figure for them."
     },
     {
       "label": "Amendment record coverage",
@@ -28226,8 +28328,52 @@
     ]
   },
   "pdfConfirmation": {
-    "confirmed": 100,
+    "confirmed": 151,
     "conflicting": 0,
-    "available": 100
-  }
+    "available": 151
+  },
+  "bookDifferences": [
+    {
+      "page": 50,
+      "fund": "GENERAL FUND",
+      "section": "REAL PROPERTY TAX ITEMS",
+      "difference": -1
+    },
+    {
+      "page": 54,
+      "fund": "GENERAL FUND",
+      "section": "DEPARTMENTAL INCOME",
+      "difference": -1
+    },
+    {
+      "page": 61,
+      "fund": "DOWNTOWN SPECIAL ASSESSMENT",
+      "section": "DOWNTOWN SPECIAL ASSESSMENT REVENUE",
+      "difference": -1
+    },
+    {
+      "page": 65,
+      "fund": "GENERAL FUND",
+      "section": "Neighborhood & Business Development",
+      "difference": 1
+    },
+    {
+      "page": 66,
+      "fund": "GENERAL FUND",
+      "section": "Public Works",
+      "difference": 3
+    },
+    {
+      "page": 71,
+      "fund": "WATER FUND",
+      "section": "Subtotal",
+      "difference": 47594
+    },
+    {
+      "page": 77,
+      "fund": "CROUSE MARSHALL SPECIAL ASSESSMENT",
+      "section": "Full Valuation",
+      "difference": -1
+    }
+  ]
 }

@@ -9,6 +9,7 @@ import unittest
 
 from extract_pdf_detail import (
     FACTOR,
+    FUND_HEADER,
     PAGE_HEADING,
     join_split_figures,
     SEPARATOR,
@@ -427,6 +428,17 @@ class Worksheets(unittest.TestCase):
             line("Subtotal", 172, [("100,999", 723)]),
         ]
         self.assertEqual(self.report(rows)[1]["columns"][0]["status"], "mismatch")
+
+
+class FundHeadings(unittest.TestCase):
+    def test_funds_and_special_assessment_districts_are_funds(self):
+        for heading in ("GENERAL FUND", "WATER FUND", "DOWNTOWN SPECIAL ASSESSMENT",
+                        "CROUSE-MARSHALL SPECIAL ASSESSMENT"):
+            self.assertTrue(FUND_HEADER.search(heading), heading)
+
+    def test_the_assessment_department_is_not_a_fund(self):
+        """Read as a fund, it filed 51 General Fund lines under a fund that does not exist."""
+        self.assertIsNone(FUND_HEADER.search("Assessment"))
 
 
 class DamageReporting(unittest.TestCase):
