@@ -43,12 +43,12 @@ That check is the accuracy measure, and it is reported rather than assumed:
 
 | | |
 | --- | --- |
-| Sections found | 29 |
-| Sections reconciling on every column | 20 |
-| Column totals matching exactly | 85 |
-| Column totals disagreeing | 14 |
-| Column totals incomplete (a figure could not be read) | 11 |
-| Reconciliation rate | 85.9% |
+| Sections found | 49 |
+| Sections verified against their printed total | 29 |
+| Column totals matching exactly | 128 |
+| Column totals disagreeing | 43 |
+| Column totals incomplete (a figure could not be read) | 14 |
+| Column reconciliation rate | 74.9% |
 
 The page range is found rather than configured: the tables are the longest run of pages
 carrying a "REVENUE SUMMARY" or "EXPENDITURE SUMMARY" heading, ignoring the single mention on
@@ -56,13 +56,18 @@ the contents page. That section starts on a different page in every year.
 
 Running the same parser over the five most recent adopted budgets:
 
-| Budget | Pages found | Sections | Reconciling fully | Rate |
+| Budget | Pages found | Sections | Sections verified | Column rate |
 | --- | --- | --- | --- | --- |
-| 2022-23 | 25-79 | 58 | 40 | 78.5% |
-| 2023-24 | 25-83 | 60 | 32 | 69.7% |
-| 2024-25 | 23-77 | 58 | 38 | 75.8% |
-| 2025-26 | 38-77 | 28 | 14 | 66.0% |
-| 2026-27 | 50-77 | 30 | 21 | 85.9% |
+| 2022-23 | 25-79 | 84 | 56 | 75.3% |
+| 2023-24 | 25-83 | 90 | 51 | 69.3% |
+| 2024-25 | 23-77 | 87 | 56 | 74.9% |
+| 2025-26 | 38-77 | 47 | 26 | 66.1% |
+| 2026-27 | 50-77 | 49 | 29 | 74.9% |
+
+A section counts as verified only when the document prints a total for it and every column of
+that total matches the rows summed beneath it. Sections with nothing to check against are
+counted separately and are currently zero, so the rate cannot be improved by finding fewer
+things to verify.
 
 The parser runs on all five without modification and never silently produces a wrong figure:
 a block that does not reconcile is reported as a mismatch. It is most accurate on 2026-27,
@@ -95,7 +100,9 @@ a disagreement, because the damage is in the document and not in the parse.
 The parser reproduces the $3 Public Works difference already recorded in the reconciliation
 notes, this time from the PDF rather than the workbook, and surfaces a $1 difference in
 Neighborhood & Business Development. The remaining disagreements are recorded in
-`data/pdf_detail.json` and are not yet explained.
+`data/pdf_detail.json` with their page numbers and are not yet explained. They cluster on the
+fund expense pages, where some totals print their figures on a different line from their
+label; that layout is not yet parsed correctly and is reported rather than guessed at.
 
 ## Evidence and limits
 
