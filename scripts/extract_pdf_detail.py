@@ -30,6 +30,9 @@ NUMERIC = re.compile(r"^\(?-?[\d,ç-ô]+\)?$")
 # The tables print rules between columns as runs of "=" or "_". They carry no
 # meaning and must not survive into a label, or a total line stops looking like one.
 SEPARATOR = re.compile(r"^[=_\-–—]+$")
+# The page heading carries the fiscal year ("Fiscal Year Ending June 30, 2027"),
+# which otherwise reads as a row with a figure of 2,027.
+PAGE_HEADING = re.compile(r"Fiscal\s+Year\s+Ending", re.I)
 # Six bare digits leading a row identify the account.
 ACCOUNT_CODE = re.compile(r"^\d{6}$")
 # Left-margin headings that name the fund a row belongs to.
@@ -105,6 +108,8 @@ def read_lines(page, page_number):
         label = " ".join(w["text"] for w in label_words).strip().rstrip(":").strip()
         if not label and not figures:
             continue
+        if PAGE_HEADING.search(label):
+            continue
         parsed.append({
             "page": page_number,
             "code": code,
@@ -129,7 +134,14 @@ def join_wrapped_labels(lines):
             continue
         if pending:
             if line["figures"] and line["indent"] > HEADER_MAX_X:
-                line = dict(line, label=" ".join([p["label"] for p in pending] + [line["label"]]).strip())
+                # A wrapped label continues at the row's own indentation. One
+                # standing further left is a heading over the rows below it,
+                # and joining it would erase the boundary it marks.
+                wraps = [p for p in pending if abs(p["indent"] - line["indent"]) <= 1.5]
+                for heading in (p for p in pending if p not in wraps):
+                    merged.append(dict(heading, figures=[], code=None))
+                if wraps:
+                    line = dict(line, label=" ".join([p["label"] for p in wraps] + [line["label"]]).strip())
             else:
                 for held in pending:
                     merged.append(dict(held, figures=[], code=None))
@@ -242,13 +254,18 @@ def attach_split_totals(lines):
             # carries a figure for every column the total line does.
             and len(following["figures"]) == len(line["figures"]) >= 2
         ):
-            # The figures on the label's baseline are the closing subtotal of the
-            # block above, not an extra row inside it. Labelling them as such
-            # lets them close that block instead of being added on top of it.
-            # Indented past the fund margin so it closes the block above it
-            # rather than the whole fund.
-            out.append(dict(following, label="Subtotal", code=None,
-                            indent=HEADER_MAX_X + 1, figures=line["figures"]))
+            previous = out[-1] if out else None
+            if (previous is not None and not previous["figures"]
+                    and previous["label"] and previous["indent"] > HEADER_MAX_X):
+                # A row label left waiting above the total owns these figures:
+                # its figures printed on the total's baseline.
+                out[-1] = dict(previous, figures=line["figures"])
+            else:
+                # Otherwise they close the block above, not an extra row inside
+                # it; indented past the fund margin so they close that block
+                # rather than the whole fund.
+                out.append(dict(following, label="Subtotal", code=None,
+                                indent=HEADER_MAX_X + 1, figures=line["figures"]))
             out.append(dict(line, figures=following["figures"], splitTotal=True))
             skip = True
             continue
@@ -395,6 +412,15 @@ def build_sections(lines):
             # toward the next department's.
             orphans = orphans + leaves
             header, leaves = line, []
+            continue
+
+        if not line["figures"] and line["label"]:
+            # A sub-heading inside the fund ("Special Objects of Expense") ends
+            # the block above it even though it is indented past the fund
+            # margin. Without this, rows above it are counted again in the
+            # subtotal of the block it opens.
+            orphans = orphans + leaves
+            leaves = []
             continue
 
         if line["figures"]:

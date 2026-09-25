@@ -8,6 +8,7 @@ without a PDF.
 import unittest
 
 from extract_pdf_detail import (
+    PAGE_HEADING,
     SEPARATOR,
     join_wrapped_labels,
     shift_figures_to_waiting_labels,
@@ -196,6 +197,51 @@ class LabelOnlyLines(unittest.TestCase):
         labels = [l["label"] for l in chosen]
         self.assertIn("Serial Bond Principal & Interest", labels)
         self.assertNotIn("Serial Bond Principal & Interest Transfer - Cash Capital", labels)
+
+
+class ExpensePageLayout(unittest.TestCase):
+    """Rules found on the Municipal Sidewalk and Sewer expense pages."""
+
+    def test_the_fiscal_year_heading_is_not_a_row(self):
+        """"June 30, 2027" read as a row adds 2,027 to the first column."""
+        self.assertTrue(PAGE_HEADING.search("Fiscal Year Ending June 30, 2027"))
+
+    def test_a_sub_heading_ends_the_block_above_it(self):
+        """Without the boundary the operating line is counted again below it."""
+        lines = [
+            line("SEWER FUND", 53),
+            line("Sewer Departmental Operating Expenditures", 180, [("4,814,513", 723)]),
+            line("Special Objects of Expense", 180),
+            line("Medical Insurance", 195, [("1,449,763", 723)]),
+            line("Social Security", 195, [("189,325", 723)]),
+            line("Subtotal", 195, [("1,639,088", 723)]),
+            line("TOTAL SEWER FUND BUDGET", 53, [("6,453,601", 723)]),
+        ]
+        report = reconcile(build_sections(resolve_columns(lines)))
+        for section in report:
+            self.assertEqual(section["columns"][0]["status"], "exact", section["name"])
+
+    def test_a_heading_is_not_joined_to_the_row_beneath_it(self):
+        joined = join_wrapped_labels([
+            line("Special Objects of Expense", 180),
+            line("Employee Retirement System", 195, [("34,728", 723)]),
+        ])
+        self.assertEqual([l["label"] for l in joined],
+                         ["Special Objects of Expense", "Employee Retirement System"])
+
+    def test_figures_on_a_total_line_go_to_the_row_waiting_above_it(self):
+        repaired = attach_split_totals([
+            line("Serial Bond Principal & Interest", 195),
+            line("TOTAL MUNICIPAL SIDEWALK FUND BUDGET", 53,
+                 [("0", 444), ("1,041,319", 550), ("1,496,406", 638), ("1,467,424", 723)]),
+            line("", 0, [("1,033,508", 444), ("2,285,237", 550), ("2,686,392", 638), ("2,719,688", 723)]),
+        ])
+        bond = next(l for l in repaired if l["label"].startswith("Serial Bond"))
+        total = next(l for l in repaired if l["label"].startswith("TOTAL"))
+        self.assertEqual(bond["figures"][-1]["text"], "1,467,424")
+        self.assertEqual(total["figures"][-1]["text"], "2,719,688")
+        self.assertFalse(any(l["label"] == "Subtotal" for l in repaired),
+                         "the waiting row owns the figures; no subtotal is invented")
 
 
 class SplitTotals(unittest.TestCase):

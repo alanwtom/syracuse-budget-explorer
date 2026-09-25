@@ -5,14 +5,14 @@
     77
   ],
   "summary": {
-    "sections": 50,
-    "sectionsVerified": 30,
+    "sections": 51,
+    "sectionsVerified": 34,
     "sectionsUncheckable": 0,
-    "columnsExact": 136,
-    "columnsMismatched": 39,
-    "columnsIncomplete": 14,
-    "reconciliationRate": 0.7771,
-    "unreadableFigures": 13
+    "columnsExact": 153,
+    "columnsMismatched": 27,
+    "columnsIncomplete": 10,
+    "reconciliationRate": 0.85,
+    "unreadableFigures": 11
   },
   "sections": [
     {
@@ -4034,7 +4034,7 @@
       "rows": [
         {
           "code": "590810",
-          "label": "FY25 FY26 FY26 FY27 Actual Adopted Projected \u00df\u00bc\u00b1\u00b0\u00ac\u00bb\u00bc Operating Leases",
+          "label": "Operating Leases",
           "fund": "Assessment",
           "page": 68,
           "values": [
@@ -4424,62 +4424,49 @@
       "page": 70,
       "level": "department",
       "header": "MUNICIPAL SIDEWALK FUND",
-      "rowCount": 5,
+      "rowCount": 4,
       "coveredBySubtotals": 0,
       "unreadableFigures": 0,
-      "verified": false,
+      "verified": true,
       "fund": "MUNICIPAL SIDEWALK FUND",
       "columns": [
         {
           "column": 0,
           "printed": 39144,
-          "summed": 1033508,
-          "difference": 994364,
-          "status": "mismatch",
-          "rowsSummed": 5
+          "summed": 39144,
+          "difference": 0,
+          "status": "exact",
+          "rowsSummed": 4
         },
         {
           "column": 1,
           "printed": 88459,
-          "summed": 1243918,
-          "difference": 1155459,
-          "status": "mismatch",
-          "rowsSummed": 5
+          "summed": 88459,
+          "difference": 0,
+          "status": "exact",
+          "rowsSummed": 4
         },
         {
           "column": 2,
           "printed": 74723,
-          "summed": 1189986,
-          "difference": 1115263,
-          "status": "mismatch",
-          "rowsSummed": 5
+          "summed": 74723,
+          "difference": 0,
+          "status": "exact",
+          "rowsSummed": 4
         },
         {
           "column": 3,
           "printed": 91998,
-          "summed": 1252264,
-          "difference": 1160266,
-          "status": "mismatch",
-          "rowsSummed": 5
+          "summed": 91998,
+          "difference": 0,
+          "status": "exact",
+          "rowsSummed": 4
         }
       ],
       "rows": [
         {
           "code": null,
-          "label": "Municipal Sidewalk Departmental Operating Expenditures",
-          "fund": "MUNICIPAL SIDEWALK FUND",
-          "page": 70,
-          "values": [
-            994364,
-            1155459,
-            1115263,
-            1160266
-          ],
-          "unreadable": false
-        },
-        {
-          "code": null,
-          "label": "Special Objects of Expense Employee Retirement System",
+          "label": "Employee Retirement System",
           "fund": "MUNICIPAL SIDEWALK FUND",
           "page": 70,
           "values": [
@@ -4532,93 +4519,47 @@
       ]
     },
     {
-      "name": "Subtotal",
-      "page": 70,
-      "level": "department",
-      "header": null,
-      "rowCount": 0,
-      "coveredBySubtotals": 0,
-      "unreadableFigures": 0,
-      "verified": false,
-      "fund": "MUNICIPAL SIDEWALK FUND",
-      "columns": [
-        {
-          "column": 0,
-          "printed": 0,
-          "summed": 0,
-          "difference": 0,
-          "status": "exact",
-          "rowsSummed": 0
-        },
-        {
-          "column": 1,
-          "printed": 1041319,
-          "summed": 0,
-          "difference": -1041319,
-          "status": "mismatch",
-          "rowsSummed": 0
-        },
-        {
-          "column": 2,
-          "printed": 1496406,
-          "summed": 0,
-          "difference": -1496406,
-          "status": "mismatch",
-          "rowsSummed": 0
-        },
-        {
-          "column": 3,
-          "printed": 1467424,
-          "summed": 0,
-          "difference": -1467424,
-          "status": "mismatch",
-          "rowsSummed": 0
-        }
-      ],
-      "rows": []
-    },
-    {
       "name": "MUNICIPAL SIDEWALK FUND BUDGET",
       "page": 70,
       "level": "fund",
       "header": null,
-      "rowCount": 2,
-      "coveredBySubtotals": 2,
+      "rowCount": 3,
+      "coveredBySubtotals": 1,
       "unreadableFigures": 0,
-      "verified": false,
+      "verified": true,
       "fund": "MUNICIPAL SIDEWALK FUND",
       "columns": [
         {
           "column": 0,
           "printed": 1033508,
-          "summed": 39144,
-          "difference": -994364,
-          "status": "mismatch",
-          "rowsSummed": 2
+          "summed": 1033508,
+          "difference": 0,
+          "status": "exact",
+          "rowsSummed": 3
         },
         {
           "column": 1,
           "printed": 2285237,
-          "summed": 1129778,
-          "difference": -1155459,
-          "status": "mismatch",
-          "rowsSummed": 2
+          "summed": 2285237,
+          "difference": 0,
+          "status": "exact",
+          "rowsSummed": 3
         },
         {
           "column": 2,
           "printed": 2686392,
-          "summed": 1571129,
-          "difference": -1115263,
-          "status": "mismatch",
-          "rowsSummed": 2
+          "summed": 2686392,
+          "difference": 0,
+          "status": "exact",
+          "rowsSummed": 3
         },
         {
           "column": 3,
           "printed": 2719688,
-          "summed": 1559422,
-          "difference": -1160266,
-          "status": "mismatch",
-          "rowsSummed": 2
+          "summed": 2719688,
+          "difference": 0,
+          "status": "exact",
+          "rowsSummed": 3
         }
       ],
       "rows": [
@@ -4637,8 +4578,21 @@
         },
         {
           "code": null,
-          "label": "Subtotal",
-          "fund": null,
+          "label": "Municipal Sidewalk Departmental Operating Expenditures",
+          "fund": "MUNICIPAL SIDEWALK FUND",
+          "page": 70,
+          "values": [
+            994364,
+            1155459,
+            1115263,
+            1160266
+          ],
+          "unreadable": false
+        },
+        {
+          "code": null,
+          "label": "Serial Bond Principal & Interest",
+          "fund": "MUNICIPAL SIDEWALK FUND",
           "page": 70,
           "values": [
             0,
@@ -5017,19 +4971,19 @@
       "page": 71,
       "level": "fund",
       "header": null,
-      "rowCount": 4,
+      "rowCount": 3,
       "coveredBySubtotals": 3,
       "unreadableFigures": 0,
-      "verified": false,
+      "verified": true,
       "fund": "WATER FUND",
       "columns": [
         {
           "column": 0,
           "printed": 21387648,
-          "summed": 21389675,
-          "difference": 2027,
-          "status": "mismatch",
-          "rowsSummed": 4
+          "summed": 21387648,
+          "difference": 0,
+          "status": "exact",
+          "rowsSummed": 3
         },
         {
           "column": 1,
@@ -5095,19 +5049,6 @@
             6971623
           ],
           "unreadable": false
-        },
-        {
-          "code": null,
-          "label": "Fiscal Year Ending June",
-          "fund": "MUNICIPAL SIDEWALK FUND",
-          "page": 71,
-          "values": [
-            2027,
-            null,
-            null,
-            null
-          ],
-          "unreadable": false
         }
       ]
     },
@@ -5116,62 +5057,49 @@
       "page": 72,
       "level": "department",
       "header": "SEWER FUND",
-      "rowCount": 7,
+      "rowCount": 6,
       "coveredBySubtotals": 0,
       "unreadableFigures": 0,
-      "verified": false,
+      "verified": true,
       "fund": "SEWER FUND",
       "columns": [
         {
           "column": 0,
           "printed": 2709871,
-          "summed": 6132734,
-          "difference": 3422863,
-          "status": "mismatch",
-          "rowsSummed": 7
+          "summed": 2709871,
+          "difference": 0,
+          "status": "exact",
+          "rowsSummed": 6
         },
         {
           "column": 1,
           "printed": 2713996,
-          "summed": 6542925,
-          "difference": 3828929,
-          "status": "mismatch",
-          "rowsSummed": 7
+          "summed": 2713996,
+          "difference": 0,
+          "status": "exact",
+          "rowsSummed": 6
         },
         {
           "column": 2,
           "printed": 2739540,
-          "summed": 6473675,
-          "difference": 3734135,
-          "status": "mismatch",
-          "rowsSummed": 7
+          "summed": 2739540,
+          "difference": 0,
+          "status": "exact",
+          "rowsSummed": 6
         },
         {
           "column": 3,
           "printed": 2930807,
-          "summed": 7745320,
-          "difference": 4814513,
-          "status": "mismatch",
-          "rowsSummed": 7
+          "summed": 2930807,
+          "difference": 0,
+          "status": "exact",
+          "rowsSummed": 6
         }
       ],
       "rows": [
         {
           "code": null,
-          "label": "Sewer Departmental Operating Expenditures",
-          "fund": "SEWER FUND",
-          "page": 72,
-          "values": [
-            3422863,
-            3828929,
-            3734135,
-            4814513
-          ],
-          "unreadable": false
-        },
-        {
-          "code": null,
-          "label": "Special Objects of Expense Bad Debt Expense",
+          "label": "Bad Debt Expense",
           "fund": "SEWER FUND",
           "page": 72,
           "values": [
@@ -5296,7 +5224,7 @@
       "rows": [
         {
           "code": null,
-          "label": "Cash Capital Appropriations & Debt Service Serial Bond Principal & Interest",
+          "label": "Serial Bond Principal & Interest",
           "fund": "SEWER FUND",
           "page": 72,
           "values": [
@@ -5327,43 +5255,43 @@
       "page": 72,
       "level": "fund",
       "header": null,
-      "rowCount": 2,
+      "rowCount": 3,
       "coveredBySubtotals": 2,
       "unreadableFigures": 0,
-      "verified": false,
+      "verified": true,
       "fund": "SEWER FUND",
       "columns": [
         {
           "column": 0,
           "printed": 6181177,
-          "summed": 2758314,
-          "difference": -3422863,
-          "status": "mismatch",
-          "rowsSummed": 2
+          "summed": 6181177,
+          "difference": 0,
+          "status": "exact",
+          "rowsSummed": 3
         },
         {
           "column": 1,
           "printed": 7483800,
-          "summed": 3654871,
-          "difference": -3828929,
-          "status": "mismatch",
-          "rowsSummed": 2
+          "summed": 7483800,
+          "difference": 0,
+          "status": "exact",
+          "rowsSummed": 3
         },
         {
           "column": 2,
           "printed": 7414550,
-          "summed": 3680415,
-          "difference": -3734135,
-          "status": "mismatch",
-          "rowsSummed": 2
+          "summed": 7414550,
+          "difference": 0,
+          "status": "exact",
+          "rowsSummed": 3
         },
         {
           "column": 3,
           "printed": 8966902,
-          "summed": 4152389,
-          "difference": -4814513,
-          "status": "mismatch",
-          "rowsSummed": 2
+          "summed": 8966902,
+          "difference": 0,
+          "status": "exact",
+          "rowsSummed": 3
         }
       ],
       "rows": [
@@ -5390,6 +5318,19 @@
             940875,
             940875,
             1221582
+          ],
+          "unreadable": false
+        },
+        {
+          "code": null,
+          "label": "Sewer Departmental Operating Expenditures",
+          "fund": "SEWER FUND",
+          "page": 72,
+          "values": [
+            3422863,
+            3828929,
+            3734135,
+            4814513
           ],
           "unreadable": false
         }
@@ -5650,166 +5591,49 @@
       "page": 76,
       "level": "department",
       "header": "ALL FUNDS TOTAL EXPENDITURES",
-      "rowCount": 13,
+      "rowCount": 4,
       "coveredBySubtotals": 0,
-      "unreadableFigures": 2,
+      "unreadableFigures": 0,
       "verified": false,
       "fund": "CROUSE MARSHALL SPECIAL ASSESSMENT",
       "columns": [
         {
           "column": 0,
           "printed": 1,
-          "summed": 688618812,
-          "difference": 688618811,
-          "status": "incomplete: unreadable figures excluded",
-          "rowsSummed": 8
+          "summed": 0,
+          "difference": -1,
+          "status": "mismatch",
+          "rowsSummed": 0
         },
         {
           "column": 1,
           "printed": 30898958,
-          "summed": 874987044,
-          "difference": 844088086,
-          "status": "incomplete: unreadable figures excluded",
-          "rowsSummed": 12
+          "summed": 130898958,
+          "difference": 100000000,
+          "status": "mismatch",
+          "rowsSummed": 4
         },
         {
           "column": 2,
           "printed": 1,
-          "summed": 739990480,
-          "difference": 739990479,
-          "status": "incomplete: unreadable figures excluded",
-          "rowsSummed": 8
+          "summed": 0,
+          "difference": -1,
+          "status": "mismatch",
+          "rowsSummed": 0
         },
         {
           "column": 3,
           "printed": 36270267,
-          "summed": 179385745,
-          "difference": 143115478,
-          "status": "incomplete: unreadable figures excluded",
-          "rowsSummed": 10
+          "summed": 136270267,
+          "difference": 100000000,
+          "status": "mismatch",
+          "rowsSummed": 4
         }
       ],
       "rows": [
         {
           "code": null,
-          "label": "General Fund",
-          "fund": "CROUSE MARSHALL SPECIAL ASSESSMENT",
-          "page": 75,
-          "values": [
-            317766823,
-            333036573,
-            332737217,
-            null
-          ],
-          "unreadable": true
-        },
-        {
-          "code": null,
-          "label": "Municipal Sidewalk Fund",
-          "fund": "CROUSE MARSHALL SPECIAL ASSESSMENT",
-          "page": 75,
-          "values": [
-            1033508,
-            2285237,
-            2686392,
-            2719688
-          ],
-          "unreadable": false
-        },
-        {
-          "code": null,
-          "label": "Water Fund",
-          "fund": "CROUSE MARSHALL SPECIAL ASSESSMENT",
-          "page": 75,
-          "values": [
-            21383072,
-            31031846,
-            28577762,
-            33175883
-          ],
-          "unreadable": false
-        },
-        {
-          "code": null,
-          "label": "Sewer Fund",
-          "fund": "CROUSE MARSHALL SPECIAL ASSESSMENT",
-          "page": 75,
-          "values": [
-            6181177,
-            7483800,
-            7414550,
-            8966902
-          ],
-          "unreadable": false
-        },
-        {
-          "code": null,
-          "label": "Downtown Special Assessment Fund",
-          "fund": "CROUSE MARSHALL SPECIAL ASSESSMENT",
-          "page": 75,
-          "values": [
-            1138436,
-            1370770,
-            1725478,
-            1411892
-          ],
-          "unreadable": false
-        },
-        {
-          "code": null,
-          "label": "Crouse-Marshall Special Assessment Fund",
-          "fund": "CROUSE MARSHALL SPECIAL ASSESSMENT",
-          "page": 75,
-          "values": [
-            147140,
-            176567,
-            194591,
-            181863
-          ],
-          "unreadable": false
-        },
-        {
-          "code": null,
-          "label": "LESS: INTERFUND APPROPRIATIONS",
-          "fund": "CROUSE MARSHALL SPECIAL ASSESSMENT",
-          "page": 75,
-          "values": [
-            -3340750,
-            -3340750,
-            -3340750,
-            -3340750
-          ],
-          "unreadable": false
-        },
-        {
-          "code": null,
-          "label": "NET TOTAL- ALL FUNDS",
-          "fund": "CROUSE MARSHALL SPECIAL ASSESSMENT",
-          "page": 75,
-          "values": [
-            344309406,
-            372044043,
-            369995240,
-            null
-          ],
-          "unreadable": true
-        },
-        {
-          "code": null,
-          "label": "",
-          "fund": "CROUSE MARSHALL SPECIAL ASSESSMENT",
-          "page": 75,
-          "values": [
-            null,
-            null,
-            null,
-            null
-          ],
-          "unreadable": false
-        },
-        {
-          "code": null,
-          "label": "PROPERTY TAX CAP CALCULATION Calculation of Tax Levy Cap & Tax Cap Margin Base Formula Per Adopted Budget FY26 FY27 Property Taxes and Special Assessments Prior Year's Property Tax Levy",
+          "label": "Prior Year's Property Tax Levy",
           "fund": "CROUSE MARSHALL SPECIAL ASSESSMENT",
           "page": 76,
           "values": [
@@ -5922,11 +5746,11 @@
       ]
     },
     {
-      "name": "Tax Levy & Special Assessments",
+      "name": "Subtotal",
       "page": 76,
       "level": "department",
       "header": null,
-      "rowCount": 13,
+      "rowCount": 0,
       "coveredBySubtotals": 0,
       "unreadableFigures": 0,
       "verified": false,
@@ -5935,157 +5759,86 @@
         {
           "column": 0,
           "printed": 1,
-          "summed": 4,
-          "difference": 3,
+          "summed": 0,
+          "difference": -1,
           "status": "mismatch",
-          "rowsSummed": 4
+          "rowsSummed": 0
         },
         {
           "column": 1,
-          "printed": 36270267,
-          "summed": 303570282,
-          "difference": 267300015,
+          "printed": 37971084,
+          "summed": 0,
+          "difference": -37971084,
           "status": "mismatch",
-          "rowsSummed": 12
+          "rowsSummed": 0
         },
         {
           "column": 2,
           "printed": 1,
-          "summed": 4,
-          "difference": 3,
+          "summed": 0,
+          "difference": -1,
           "status": "mismatch",
-          "rowsSummed": 4
+          "rowsSummed": 0
         },
         {
           "column": 3,
-          "printed": 40125926,
-          "summed": 323960153,
-          "difference": 283834227,
+          "printed": 42025267,
+          "summed": 0,
+          "difference": -42025267,
           "status": "mismatch",
-          "rowsSummed": 12
+          "rowsSummed": 0
+        }
+      ],
+      "rows": []
+    },
+    {
+      "name": "Tax Levy & Special Assessments",
+      "page": 76,
+      "level": "department",
+      "header": null,
+      "rowCount": 5,
+      "coveredBySubtotals": 0,
+      "unreadableFigures": 0,
+      "verified": false,
+      "fund": "CROUSE MARSHALL SPECIAL ASSESSMENT",
+      "columns": [
+        {
+          "column": 0,
+          "printed": 1,
+          "summed": 1,
+          "difference": 0,
+          "status": "exact",
+          "rowsSummed": 1
+        },
+        {
+          "column": 1,
+          "printed": 35440116,
+          "summed": 172540534,
+          "difference": 137100418,
+          "status": "mismatch",
+          "rowsSummed": 5
+        },
+        {
+          "column": 2,
+          "printed": 1,
+          "summed": 1,
+          "difference": 0,
+          "status": "exact",
+          "rowsSummed": 1
+        },
+        {
+          "column": 3,
+          "printed": 40022787,
+          "summed": 180251852,
+          "difference": 140229065,
+          "status": "mismatch",
+          "rowsSummed": 5
         }
       ],
       "rows": [
         {
           "code": null,
-          "label": "Additions PILOTS Receivable for the Prior Year",
-          "fund": "CROUSE MARSHALL SPECIAL ASSESSMENT",
-          "page": 76,
-          "values": [
-            null,
-            6208193,
-            null,
-            5755000
-          ],
-          "unreadable": false
-        },
-        {
-          "code": null,
-          "label": "Tort Exclusion Amount Claimed in PY Subtotal",
-          "fund": "CROUSE MARSHALL SPECIAL ASSESSMENT",
-          "page": 76,
-          "values": [
-            1,
-            37971084,
-            1,
-            42025267
-          ],
-          "unreadable": false
-        },
-        {
-          "code": null,
-          "label": "Allowance Levy Growth Factor .0200 .0200",
-          "fund": "CROUSE MARSHALL SPECIAL ASSESSMENT",
-          "page": 76,
-          "values": [
-            null,
-            null,
-            null,
-            null
-          ],
-          "unreadable": false
-        },
-        {
-          "code": null,
-          "label": "PROPPERTY TAX CAP BEFORE SUBTRACTIONS & EXCLUSIONS",
-          "fund": "CROUSE MARSHALL SPECIAL ASSESSMENT",
-          "page": 76,
-          "values": [
-            1,
-            40730506,
-            1,
-            44865772
-          ],
-          "unreadable": false
-        },
-        {
-          "code": null,
-          "label": "Subtractions & Exclusions Per Adopted Budget PILOTS Receivable for the Coming Year",
-          "fund": "CROUSE MARSHALL SPECIAL ASSESSMENT",
-          "page": 76,
-          "values": [
-            null,
-            5755000,
-            null,
-            5571307
-          ],
-          "unreadable": false
-        },
-        {
-          "code": null,
-          "label": "Plus Available Carryover from the Prior Year Subtotal: ( (",
-          "fund": "CROUSE MARSHALL SPECIAL ASSESSMENT",
-          "page": 76,
-          "values": [
-            null,
-            5755000,
-            null,
-            5571307
-          ],
-          "unreadable": false
-        },
-        {
-          "code": null,
-          "label": "Property Tax Cap BEFORE Exclusions",
-          "fund": "CROUSE MARSHALL SPECIAL ASSESSMENT",
-          "page": 76,
-          "values": [
-            1,
-            34975506,
-            1,
-            39294465
-          ],
-          "unreadable": false
-        },
-        {
-          "code": null,
-          "label": "Exclusions Tort Pensions ERS PFRS",
-          "fund": "CROUSE MARSHALL SPECIAL ASSESSMENT",
-          "page": 76,
-          "values": [
-            null,
-            464610,
-            null,
-            728322
-          ],
-          "unreadable": false
-        },
-        {
-          "code": null,
-          "label": "TRS Property Tax Cap AFTER Exclusions",
-          "fund": "CROUSE MARSHALL SPECIAL ASSESSMENT",
-          "page": 76,
-          "values": [
-            1,
-            35440116,
-            1,
-            40022787
-          ],
-          "unreadable": false
-        },
-        {
-          "code": null,
-          "label": "Tax Cap Margrin Calculation Adopted Tax Levy",
+          "label": "Property Tax Cap AFTER Exclusions",
           "fund": "CROUSE MARSHALL SPECIAL ASSESSMENT",
           "page": 76,
           "values": [
@@ -6098,7 +5851,7 @@
         },
         {
           "code": null,
-          "label": "Adopted Downtown Special Assessment Levy",
+          "label": "Adopted Tax Levy",
           "fund": "CROUSE MARSHALL SPECIAL ASSESSMENT",
           "page": 76,
           "values": [
@@ -6111,7 +5864,7 @@
         },
         {
           "code": null,
-          "label": "Adopted Crouse Marshall Tax Levy",
+          "label": "Adopted Downtown Special Assessment Levy",
           "fund": "CROUSE MARSHALL SPECIAL ASSESSMENT",
           "page": 76,
           "values": [
@@ -6124,7 +5877,7 @@
         },
         {
           "code": null,
-          "label": "Adopted Special Benefit Assessments",
+          "label": "Adopted Crouse Marshall Tax Levy",
           "fund": "CROUSE MARSHALL SPECIAL ASSESSMENT",
           "page": 76,
           "values": [
@@ -6134,6 +5887,19 @@
             8172892
           ],
           "unreadable": false
+        },
+        {
+          "code": null,
+          "label": "Adopted Special Benefit Assessments",
+          "fund": "CROUSE MARSHALL SPECIAL ASSESSMENT",
+          "page": 76,
+          "values": [
+            1,
+            36270267,
+            1,
+            40125926
+          ],
+          "unreadable": false
         }
       ]
     },
@@ -6141,89 +5907,50 @@
       "name": "Full Valuation",
       "page": 77,
       "level": "department",
-      "header": null,
-      "rowCount": 8,
+      "header": "",
+      "rowCount": 5,
       "coveredBySubtotals": 0,
       "unreadableFigures": 0,
-      "verified": true,
+      "verified": false,
       "fund": "CROUSE MARSHALL SPECIAL ASSESSMENT",
       "columns": [
         {
           "column": 0,
           "printed": null,
-          "summed": 21734730695,
+          "summed": 21734730694,
           "difference": null,
           "status": "no printed total",
-          "rowsSummed": 6
+          "rowsSummed": 5
         },
         {
           "column": 1,
           "printed": null,
-          "summed": 36270267,
+          "summed": 0,
           "difference": null,
           "status": "no printed total",
-          "rowsSummed": 2
+          "rowsSummed": 0
         },
         {
           "column": 2,
           "printed": 38912422955,
-          "summed": 38912422955,
-          "difference": 0,
-          "status": "exact",
-          "rowsSummed": 6
+          "summed": 38912422954,
+          "difference": -1,
+          "status": "mismatch",
+          "rowsSummed": 5
         },
         {
           "column": 3,
           "printed": null,
-          "summed": 40125926,
+          "summed": 0,
           "difference": null,
           "status": "no printed total",
-          "rowsSummed": 2
+          "rowsSummed": 0
         }
       ],
       "rows": [
         {
           "code": null,
-          "label": "Property Tax Cap After Exclusions",
-          "fund": "CROUSE MARSHALL SPECIAL ASSESSMENT",
-          "page": 76,
-          "values": [
-            1,
-            35440116,
-            1,
-            40022787
-          ],
-          "unreadable": false
-        },
-        {
-          "code": null,
-          "label": "PROPERTY TAX CAP MARGIN ( (",
-          "fund": "CROUSE MARSHALL SPECIAL ASSESSMENT",
-          "page": 76,
-          "values": [
-            null,
-            830151,
-            null,
-            103139
-          ],
-          "unreadable": false
-        },
-        {
-          "code": null,
-          "label": "",
-          "fund": "CROUSE MARSHALL SPECIAL ASSESSMENT",
-          "page": 76,
-          "values": [
-            null,
-            null,
-            null,
-            null
-          ],
-          "unreadable": false
-        },
-        {
-          "code": null,
-          "label": "City of Syracuse COMPUTATION OF CONSTITUTIONAL TAX LIMIT FY27 Budget For Assessment Taxable Assessed Rolls Completed in Value to Compute Special State Full Valuation of Year School Tax Rate Equalization Ratio* Taxable Real Estate 2021/2022 61.83%",
+          "label": "2021/2022 61.83%",
           "fund": "CROUSE MARSHALL SPECIAL ASSESSMENT",
           "page": 77,
           "values": [
@@ -6287,6 +6014,52 @@
           "unreadable": false
         }
       ]
+    },
+    {
+      "name": "Exclusions",
+      "page": 77,
+      "level": "department",
+      "header": null,
+      "rowCount": 0,
+      "coveredBySubtotals": 0,
+      "unreadableFigures": 0,
+      "verified": false,
+      "fund": "CROUSE MARSHALL SPECIAL ASSESSMENT",
+      "columns": [
+        {
+          "column": 0,
+          "printed": null,
+          "summed": 0,
+          "difference": null,
+          "status": "no printed total",
+          "rowsSummed": 0
+        },
+        {
+          "column": 1,
+          "printed": null,
+          "summed": 0,
+          "difference": null,
+          "status": "no printed total",
+          "rowsSummed": 0
+        },
+        {
+          "column": 2,
+          "printed": 36877373,
+          "summed": 0,
+          "difference": -36877373,
+          "status": "mismatch",
+          "rowsSummed": 0
+        },
+        {
+          "column": 3,
+          "printed": null,
+          "summed": 0,
+          "difference": null,
+          "status": "no printed total",
+          "rowsSummed": 0
+        }
+      ],
+      "rows": []
     }
   ]
 }
