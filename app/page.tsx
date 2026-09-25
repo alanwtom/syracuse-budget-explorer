@@ -135,6 +135,7 @@ type BudgetData = {
   rows: Row[];
   amendments: Amendment[];
   validation: { label: string; status: string; detail: string }[];
+  pdfConfirmation?: { confirmed: number; conflicting: number; available: number };
   sources: Record<string, { label: string; url: string }>;
   openData: {
     catalogUrl: string;
@@ -201,8 +202,10 @@ function fmtPct(value: number | null) {
 }
 
 function rowBasis(row: Row) {
-  if (row.adoptedMethod === 'adopted_pdf_amendment_only') return 'FY27 amendment only';
-  return row.values.fy27Adjusted !== undefined ? 'FY27 adjusted proposal' : 'FY27 workbook proposal';
+  // The budget book prints this exact adopted amount, so it can be called adopted.
+  if (row.pdfConfirmed) return 'FY27 adopted';
+  if (row.adoptedMethod === 'adopted_pdf_amendment_only') return 'FY27 change only';
+  return row.values.fy27Adjusted !== undefined ? 'FY27 proposed, with final changes' : 'FY27 proposed';
 }
 
 function writeQuery(values: Record<string, string | null>) {
@@ -230,6 +233,40 @@ function checkState(status: string) {
   if (status in checkStates) return checkStates[status as keyof typeof checkStates];
   // An unrecognised status is reported verbatim rather than assumed to be benign.
   return { label: status, className: 'text-[#a33126]' };
+}
+
+function TrustSummary() {
+  const checks = data.validation;
+  const passed = (label: string) => checks.some((c) => c.label === label && c.status === 'pass');
+  const disagreements = checks.filter((c) => c.status === 'review').length;
+  const failures = checks.filter((c) => c.status !== 'pass' && c.status !== 'review').length;
+  const confirmed = data.pdfConfirmation?.confirmed ?? 0;
+  const items: { tone: 'good' | 'note' | 'bad'; text: string }[] = [];
+  if (passed('Formal totals match the adopted PDF')) {
+    items.push({ tone: 'good', text: 'The totals for all six City funds match the official budget book.' });
+  }
+  if (confirmed > 0) {
+    items.push({ tone: 'good', text: `${confirmed} individual budget lines match the budget book exactly. Open any line to see whether it is one of them.` });
+  }
+  items.push({ tone: 'note', text: 'Other lines use the proposed budget from the City Auditor\u2019s spreadsheet, updated with the final changes listed in the budget book.' });
+  if (disagreements > 0) {
+    items.push({ tone: 'note', text: `In ${disagreements} places the City\u2019s own documents don\u2019t agree with each other. We show the difference rather than pick one.` });
+  }
+  if (failures > 0) {
+    items.push({ tone: 'bad', text: `${failures} automatic ${failures === 1 ? 'check has' : 'checks have'} failed. Treat these numbers with caution until it is fixed.` });
+  }
+  const mark = { good: '\u2713', note: '\u2022', bad: '!' };
+  const colour = { good: 'text-[#2f6b4f]', note: 'text-[#6b7c83]', bad: 'text-[#a33126]' };
+  return (
+    <ul className="mt-4 space-y-2">
+      {items.map((item) => (
+        <li key={item.text} className="flex gap-3 text-sm leading-6 text-[#34474f]">
+          <span aria-hidden="true" className={`w-3 shrink-0 font-semibold ${colour[item.tone]}`}>{mark[item.tone]}</span>
+          <span>{item.text}</span>
+        </li>
+      ))}
+    </ul>
+  );
 }
 
 function isLargeChange(row: Row) {
@@ -363,7 +400,7 @@ function Overview() {
         <Panel
           eyebrow="One city, six funds"
           title="Where the City budget sits"
-          description="Fund shares use the gross City total. The headline subtracts inter-fund transfers to avoid double counting. The school district is separate."
+          description="Each bar is one of the City’s six funds. The headline total is a little lower than their sum because money one fund pays another is counted once. Schools are budgeted separately."
         >
           <div className="space-y-5">
             {data.funds.map((fund) => {
@@ -423,7 +460,7 @@ function MoneyIn() {
       <Panel
         eyebrow="Where money comes from"
         title="State aid is the largest source"
-        description="This follows the formal combined City and school district summary in the adopted budget."
+        description="These figures come from the adopted budget’s summary, which covers the City and the city school district together."
       >
         <ProgressList items={data.summary.revenueSources} />
       </Panel>
@@ -444,7 +481,7 @@ function MoneyIn() {
               <ArrowUpRight aria-hidden="true" className="size-5" />
             </div>
             <p className="text-sm leading-7 text-[#52656d]">
-              The adopted plan raises Temporary AIM state aid from <strong className="font-semibold text-[#173140]">$15.0M</strong> in the workbook proposal to <strong className="font-semibold text-[#173140]">$35.0M</strong>.
+              The adopted plan raises Temporary AIM state aid from <strong className="font-semibold text-[#173140]">$15.0M</strong> in the proposed budget to <strong className="font-semibold text-[#173140]">$35.0M</strong>.
             </p>
           </div>
         </Panel>
@@ -459,7 +496,7 @@ function MoneyOut({ onExplore }: { onExplore: () => void }) {
       <Panel
         eyebrow="Where money goes"
         title="School and people lead the plan"
-        description="The adopted summary groups the full City and school district plan into large service areas."
+        description="The adopted budget groups City and school spending into a few large areas."
       >
         <ProgressList items={data.summary.spendingSources} />
       </Panel>
@@ -528,7 +565,7 @@ function Changes({ onOpen }: { onOpen: (row: Row) => void }) {
       <Panel
         eyebrow="What changed"
         title="Large changes rise to the top"
-        description="Compared with FY26 adopted: workbook proposals, adjusted where amendments are mapped. These are not verified adopted account totals. Flagged at $250,000 or at 20% on a prior budget of at least $25,000."
+        description="How each line compares with last year’s adopted budget. Lines marked “adopted” match the official budget book; the rest are proposed amounts. Shown when a line changes by $250,000 or more, or by 20% or more."
       >
         <div className="mb-6 flex flex-wrap gap-2" aria-label="Change type">
           {(['all', 'revenue', 'expense'] as const).map((item) => (
@@ -556,7 +593,7 @@ function Changes({ onOpen }: { onOpen: (row: Row) => void }) {
       <Panel
         eyebrow="Why the final plan differs"
         title="The adopted amendments"
-        description="These entries are taken from the adopted PDF's final amendment list. Positive amounts add money. Negative amounts reduce the proposal."
+        description="Final changes made before the budget was adopted, as listed in the budget book. Positive amounts add money; negative amounts cut it."
       >
         <div className="divide-y divide-[#e6e8e1]">
           {data.amendments.map((amendment) => (
@@ -649,7 +686,7 @@ function Explore({ onOpen }: { onOpen: (row: Row) => void }) {
       <Panel
         eyebrow="Department to account"
         title="Follow one line through time"
-        description="Choose a fund and open a line for its history and source. FY27 detail is the workbook proposal, adjusted where a final amendment is mapped. Formal adopted totals are shown separately in Overview."
+        description="Pick a fund, then open any line to see its history and where the numbers come from. Lines marked “adopted” match the official budget book."
       >
         <div className="grid gap-4 md:grid-cols-3">
           <div className="field-label">
@@ -746,6 +783,18 @@ function RowSheet({ row, onClose }: { row: Row | null; onClose: () => void }) {
               <SheetDescription className="mt-2 leading-6">{[row.department, row.division, row.code ? `Account ${row.code}` : null].filter(Boolean).join(' · ') || 'Adopted budget line'}</SheetDescription>
             </SheetHeader>
             <div className="space-y-6 px-6 py-6">
+              {row.pdfConfirmed === true && (
+                <div className="rounded-[4px] border border-[#cfe0d6] bg-[#f1f7f3] p-4">
+                  <p className="text-sm font-semibold text-[#2f6b4f]">&#10003; Matches the official budget book</p>
+                  <p className="mt-1 text-sm leading-6 text-[#4c6b5c]">Page {row.pdfPage} of the adopted budget shows this same amount.</p>
+                </div>
+              )}
+              {row.pdfConfirmed === false && (
+                <div className="rounded-[4px] border border-[#ecd0cb] bg-[#fbf2f0] p-4">
+                  <p className="text-sm font-semibold text-[#a33126]">The budget book shows a different amount</p>
+                  <p className="mt-1 text-sm leading-6 text-[#7a4a42]">Page {row.pdfPage} shows {fmtMoney(row.pdfValue)}. We show both instead of picking one.</p>
+                </div>
+              )}
               <div className="grid gap-3 sm:grid-cols-2">
                 <div className="detail-stat">
                   <p className="eyebrow">{rowBasis(row)}</p>
@@ -760,43 +809,43 @@ function RowSheet({ row, onClose }: { row: Row | null; onClose: () => void }) {
               <div>
                 <div className="mb-3 flex flex-col gap-1 sm:flex-row sm:items-baseline sm:justify-between sm:gap-3">
                   <h3 className="text-sm font-semibold text-[#173140]">History</h3>
-                  <span className="text-xs text-[#52656d]">Actuals, budgets and proposal — different bases</span>
+                  <span className="text-xs text-[#52656d]">Spent, budgeted and proposed, by year</span>
                 </div>
                 <div className="divide-y divide-[#e6e8e1] rounded-2xl border border-[#e6e8e1] bg-white">
-                  {data.years.filter((year) => year.key !== 'fy27Adjusted' || row.values.fy27Adjusted !== undefined).map((year) => (
-                    <div key={year.key} className="flex items-center justify-between px-4 py-3 text-sm">
-                      <span className={year.key === 'fy27Adopted' ? 'font-semibold text-[#173140]' : 'text-[#5b6d74]'}>{year.key === 'fy27Adjusted' ? rowBasis(row) : year.label}</span>
-                      <span className={year.key === 'fy27Adopted' ? 'font-semibold tabular-nums text-[#173140]' : 'tabular-nums text-[#52656d]'}>{fmtMoney(row.values[year.key])}</span>
-                    </div>
-                  ))}
+                  {data.years
+                    .filter((year) => year.key !== 'fy27Adjusted' || row.values.fy27Adjusted !== undefined)
+                    // An adopted amount is shown only when the budget book confirms it.
+                    .filter((year) => year.key !== 'fy27Adopted' || row.pdfConfirmed === true)
+                    .map((year) => {
+                      const adopted = year.key === 'fy27Adopted';
+                      const label = adopted ? 'FY27 adopted' : year.key === 'fy27Adjusted' ? 'FY27 proposed, with final changes' : year.label;
+                      const value = adopted ? row.values.fy27Adjusted ?? row.values.fy27Proposed : row.values[year.key];
+                      return (
+                        <div key={year.key} className="flex items-center justify-between px-4 py-3 text-sm">
+                          <span className={adopted ? 'font-semibold text-[#173140]' : 'text-[#5b6d74]'}>{label}</span>
+                          <span className={adopted ? 'font-semibold tabular-nums text-[#173140]' : 'tabular-nums text-[#52656d]'}>{fmtMoney(value)}</span>
+                        </div>
+                      );
+                    })}
                 </div>
               </div>
 
               {row.amendments?.length ? (
                 <div className="rounded-2xl border border-[#ead79d] bg-[#fff9e7] p-4">
-                  <p className="eyebrow text-[#725619]">Final amendment applied</p>
-                  <p className="mt-1 text-sm leading-6 text-[#6e5b2d]">A published amendment has been applied to the workbook proposal. This calculated figure is not a separately verified adopted account total.</p>
+                  <p className="eyebrow text-[#725619]">Changed before adoption</p>
+                  <p className="mt-1 text-sm leading-6 text-[#6e5b2d]">The budget book lists a final change to this line, and we’ve added it to the proposed amount.{row.pdfConfirmed ? '' : ' We couldn’t check the result against the budget book.'}</p>
                 </div>
               ) : null}
               {row.note ? <p className="rounded-2xl bg-[#eef5f2] p-4 text-sm leading-6 text-[#52656d]">{row.note}</p> : null}
 
               <div className="border-t border-[#e6e8e1] pt-5">
-                <p className="eyebrow">Source trail</p>
+                <p className="eyebrow">Where this comes from</p>
                 <div className="mt-3 space-y-2">
-                  <ExternalSource source={data.sources.adoptedPdf}>Adopted PDF</ExternalSource>
+                  <ExternalSource source={data.sources.adoptedPdf}>Official budget book (PDF)</ExternalSource>
+                  {row.pdfPage ? <span className="text-xs text-[#52656d]"> &middot; page {row.pdfPage}</span> : null}
                   <br />
-                  <ExternalSource source={data.sources.workbook}>Auditor workbook</ExternalSource>
-                  <p className="pt-1 text-xs leading-5 text-[#52656d]">{row.sourceSheet}{row.sourceRow ? `, row ${row.sourceRow}` : ''} · {row.adoptedMethod.replaceAll('_', ' ')}</p>
-                  {row.pdfConfirmed === true && (
-                    <p className="pt-1 text-xs leading-5 text-[#2f6b4f]">
-                      Confirmed against the adopted PDF, page {row.pdfPage}. That page&rsquo;s section adds up to the total the budget book prints for it.
-                    </p>
-                  )}
-                  {row.pdfConfirmed === false && (
-                    <p className="pt-1 text-xs leading-5 text-[#a33126]">
-                      The adopted PDF prints {fmtMoney(row.pdfValue)} for this account on page {row.pdfPage}. The figures disagree and neither is presented as settled.
-                    </p>
-                  )}
+                  <ExternalSource source={data.sources.workbook}>City Auditor&rsquo;s spreadsheet</ExternalSource>
+                  <span className="text-xs text-[#52656d]"> &middot; {row.sourceSheet} sheet{row.sourceRow ? `, row ${row.sourceRow}` : ''}</span>
                 </div>
               </div>
             </div>
@@ -937,11 +986,12 @@ export default function Home() {
         <section id="about-project" className="panel mt-6 scroll-mt-4">
           <h2 className="section-title">About this project</h2>
           <p className="section-description">An independent civic-data project by Alan Tom, built with AI assistance to make public budget records easier to explore. Not affiliated with or endorsed by the City of Syracuse.</p>
-          <p className="mt-4 text-sm leading-6 text-[#52656d]">The work connects a workbook parser, a traceable data model and an interactive interface. The key decision: keep formal adopted totals separate from workbook account proposals and calculated amendment adjustments. Account detail has not been fully reconciled to the budget book.</p>
+          <h3 className="mt-6 text-sm font-semibold text-[#173140]">Can you trust these numbers?</h3>
+          <TrustSummary />
           <a className="mt-4 inline-block text-sm underline" href="/project-notes.html" target="_blank" rel="noreferrer">Read the project notes and source findings</a>
           <details className="mt-5 border-t border-[#dfe5df] pt-4">
-            <summary className="cursor-pointer text-sm font-semibold">Data checks and unresolved differences</summary>
-            <p className="mt-3 text-sm text-[#52656d]">Checks verify the exported data, not the authenticity or completeness of the source documents. A <strong>failed check</strong> means the exported data breaks an invariant it must satisfy. An <strong>unresolved difference</strong> means two sources disagree, or measure different things; these stay visible rather than being forced to match.</p>
+            <summary className="cursor-pointer text-sm font-semibold">Technical checks</summary>
+            <p className="mt-3 text-sm text-[#52656d]">The automatic checks behind the summary above. A <strong>failed check</strong> means something in our data is broken. An <strong>unresolved difference</strong> means two City documents disagree; we show those instead of hiding them.</p>
             <ul className="mt-4 space-y-4">{data.validation.map((item) => { const state = checkState(item.status); return <li key={item.label} className="text-sm"><strong><span className={state.className}>{state.label}</span> · {item.label}</strong><p className="mt-1 leading-6 text-[#52656d]">{item.detail}</p></li>; })}</ul>
           </details>
         </section>

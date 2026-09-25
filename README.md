@@ -43,12 +43,12 @@ That check is the accuracy measure, and it is reported rather than assumed:
 
 | | |
 | --- | --- |
-| Sections found | 50 |
-| Sections verified against their printed total | 29 |
-| Column totals matching exactly | 136 |
-| Column totals disagreeing | 39 |
-| Column totals incomplete (a figure could not be read) | 14 |
-| Column reconciliation rate | 77.7% |
+| Sections found | 51 |
+| Sections verified against their printed total | 34 |
+| Column totals matching exactly | 153 |
+| Column totals disagreeing | 27 |
+| Column totals incomplete (a figure could not be read) | 10 |
+| Column reconciliation rate | 85.0% |
 
 The page range is found rather than configured: the tables are the longest run of pages
 carrying a "REVENUE SUMMARY" or "EXPENDITURE SUMMARY" heading, ignoring the single mention on
@@ -58,11 +58,11 @@ Running the same parser over the five most recent adopted budgets:
 
 | Budget | Pages found | Sections | Sections verified | Column rate |
 | --- | --- | --- | --- | --- |
-| 2022-23 | 25-79 | 84 | 56 | 75.3% |
+| 2022-23 | 25-79 | 85 | 57 | 77.0% |
 | 2023-24 | 25-83 | 90 | 51 | 69.3% |
-| 2024-25 | 23-77 | 87 | 56 | 74.9% |
-| 2025-26 | 38-77 | 47 | 26 | 66.1% |
-| 2026-27 | 50-77 | 50 | 30 | 77.7% |
+| 2024-25 | 23-77 | 87 | 58 | 77.5% |
+| 2025-26 | 38-77 | 47 | 27 | 70.2% |
+| 2026-27 | 50-77 | 51 | 34 | 85.0% |
 
 A section counts as verified only when the document prints a total for it and every column of
 that total matches the rows summed beneath it. Sections with nothing to check against are
@@ -121,9 +121,15 @@ is read both ways and the reading under which more of that page's printed totals
 one kept. Reading it wholesale in either direction was worse than reading it in neither, which
 is what made the per-page choice necessary.
 
-Water, Sewer, Municipal Sidewalk, Downtown, Crouse-Marshall and the tax levy now reconcile
-exactly at the fund level. The Sidewalk and Sewer expense pages still do not, nor does the tax
-levy summary on page 76; those disagreements are recorded with their page numbers.
+Two more faults sat on the Sidewalk and Sewer expense pages. A sub-heading such as "Special
+Objects of Expense" is indented past the fund margin, so it was not treated as a boundary and
+the operating line above it was counted again inside the next subtotal. And the page heading
+"Fiscal Year Ending June 30, 2027" was being read as a row worth 2,027, which is exactly the
+difference that had kept the Water and Sewer totals from matching.
+
+Every fund's expense total now reconciles exactly. Still open: the General Fund revenue summary
+(pages 54 and 56) and the tax levy pages (76 and 77). Those disagreements are recorded with their
+page numbers.
 
 ## Evidence and limits
 
