@@ -5,12 +5,13 @@
     77
   ],
   "summary": {
-    "sections": 30,
-    "sectionsClean": 21,
-    "columnsExact": 86,
-    "columnsMismatched": 14,
+    "sections": 38,
+    "sectionsVerified": 23,
+    "sectionsUncheckable": 0,
+    "columnsExact": 97,
+    "columnsMismatched": 35,
     "columnsIncomplete": 11,
-    "reconciliationRate": 0.86,
+    "reconciliationRate": 0.7348,
     "unreadableFigures": 11
   },
   "sections": [
@@ -1004,45 +1005,217 @@
       ]
     },
     {
+      "name": "Subtotal",
+      "page": 70,
+      "level": "department",
+      "header": "MUNICIPAL SIDEWALK FUND",
+      "rowCount": 5,
+      "coveredBySubtotals": 0,
+      "unreadableFigures": 0,
+      "columns": [
+        {
+          "column": 0,
+          "printed": 39144,
+          "summed": 1033508,
+          "difference": 994364,
+          "status": "mismatch",
+          "rowsSummed": 5
+        },
+        {
+          "column": 1,
+          "printed": 88459,
+          "summed": 1243918,
+          "difference": 1155459,
+          "status": "mismatch",
+          "rowsSummed": 5
+        },
+        {
+          "column": 2,
+          "printed": 74723,
+          "summed": 1189986,
+          "difference": 1115263,
+          "status": "mismatch",
+          "rowsSummed": 5
+        },
+        {
+          "column": 3,
+          "printed": 91998,
+          "summed": 1252264,
+          "difference": 1160266,
+          "status": "mismatch",
+          "rowsSummed": 5
+        }
+      ]
+    },
+    {
       "name": "MUNICIPAL SIDEWALK FUND BUDGET",
       "page": 70,
       "level": "fund",
       "header": "Serial Bond Principal & Interest",
-      "rowCount": 6,
+      "rowCount": 1,
+      "coveredBySubtotals": 1,
+      "unreadableFigures": 0,
+      "columns": [
+        {
+          "column": 0,
+          "printed": 0,
+          "summed": 39144,
+          "difference": 39144,
+          "status": "mismatch",
+          "rowsSummed": 1
+        },
+        {
+          "column": 1,
+          "printed": 1041319,
+          "summed": 88459,
+          "difference": -952860,
+          "status": "mismatch",
+          "rowsSummed": 1
+        },
+        {
+          "column": 2,
+          "printed": 1496406,
+          "summed": 74723,
+          "difference": -1421683,
+          "status": "mismatch",
+          "rowsSummed": 1
+        },
+        {
+          "column": 3,
+          "printed": 1467424,
+          "summed": 91998,
+          "difference": -1375426,
+          "status": "mismatch",
+          "rowsSummed": 1
+        }
+      ]
+    },
+    {
+      "name": "Subtotal",
+      "page": 71,
+      "level": "department",
+      "header": "WATER FUND",
+      "rowCount": 5,
+      "coveredBySubtotals": 0,
+      "unreadableFigures": 0,
+      "columns": [
+        {
+          "column": 0,
+          "printed": 12645593,
+          "summed": 12645593,
+          "difference": 0,
+          "status": "exact",
+          "rowsSummed": 5
+        },
+        {
+          "column": 1,
+          "printed": 15736557,
+          "summed": 15736557,
+          "difference": 0,
+          "status": "exact",
+          "rowsSummed": 5
+        },
+        {
+          "column": 2,
+          "printed": 13602359,
+          "summed": 13602359,
+          "difference": 0,
+          "status": "exact",
+          "rowsSummed": 5
+        },
+        {
+          "column": 3,
+          "printed": 16658109,
+          "summed": 16658109,
+          "difference": 0,
+          "status": "exact",
+          "rowsSummed": 5
+        }
+      ]
+    },
+    {
+      "name": "Subtotal",
+      "page": 71,
+      "level": "department",
+      "header": null,
+      "rowCount": 10,
+      "coveredBySubtotals": 0,
+      "unreadableFigures": 0,
+      "columns": [
+        {
+          "column": 0,
+          "printed": 7463788,
+          "summed": 7511382,
+          "difference": 47594,
+          "status": "mismatch",
+          "rowsSummed": 10
+        },
+        {
+          "column": 1,
+          "printed": 8011360,
+          "summed": 8011360,
+          "difference": 0,
+          "status": "exact",
+          "rowsSummed": 10
+        },
+        {
+          "column": 2,
+          "printed": 8027646,
+          "summed": 8027646,
+          "difference": 0,
+          "status": "exact",
+          "rowsSummed": 10
+        },
+        {
+          "column": 3,
+          "printed": 9546151,
+          "summed": 9546151,
+          "difference": 0,
+          "status": "exact",
+          "rowsSummed": 10
+        }
+      ]
+    },
+    {
+      "name": "Subtotal",
+      "page": 71,
+      "level": "department",
+      "header": null,
+      "rowCount": 1,
       "coveredBySubtotals": 0,
       "unreadableFigures": 0,
       "columns": [
         {
           "column": 0,
           "printed": 0,
-          "summed": 1072652,
-          "difference": 1072652,
+          "summed": 1278267,
+          "difference": 1278267,
           "status": "mismatch",
-          "rowsSummed": 6
+          "rowsSummed": 1
         },
         {
           "column": 1,
-          "printed": 1041319,
-          "summed": 1332377,
-          "difference": 291058,
+          "printed": 1595000,
+          "summed": 5688929,
+          "difference": 4093929,
           "status": "mismatch",
-          "rowsSummed": 6
+          "rowsSummed": 1
         },
         {
           "column": 2,
-          "printed": 1496406,
-          "summed": 1264709,
-          "difference": -231697,
+          "printed": 1595000,
+          "summed": 5352757,
+          "difference": 3757757,
           "status": "mismatch",
-          "rowsSummed": 6
+          "rowsSummed": 1
         },
         {
           "column": 3,
-          "printed": 1467424,
-          "summed": 1344262,
-          "difference": -123162,
+          "printed": 1145000,
+          "summed": 5826623,
+          "difference": 4681623,
           "status": "mismatch",
-          "rowsSummed": 6
+          "rowsSummed": 1
         }
       ]
     },
@@ -1050,42 +1223,128 @@
       "name": "WATER FUND BUDGET",
       "page": 71,
       "level": "fund",
-      "header": "WATER FUND",
-      "rowCount": 19,
-      "coveredBySubtotals": 0,
+      "header": null,
+      "rowCount": 3,
+      "coveredBySubtotals": 3,
       "unreadableFigures": 0,
       "columns": [
         {
           "column": 0,
           "printed": 1278267,
-          "summed": 41544623,
-          "difference": 40266356,
+          "summed": 20109381,
+          "difference": 18831114,
           "status": "mismatch",
-          "rowsSummed": 19
+          "rowsSummed": 3
         },
         {
           "column": 1,
           "printed": 7283929,
-          "summed": 54779763,
-          "difference": 47495834,
+          "summed": 25342917,
+          "difference": 18058988,
           "status": "mismatch",
-          "rowsSummed": 19
+          "rowsSummed": 3
         },
         {
           "column": 2,
           "printed": 6947757,
-          "summed": 50207767,
-          "difference": 43260010,
+          "summed": 23225005,
+          "difference": 16277248,
           "status": "mismatch",
-          "rowsSummed": 19
+          "rowsSummed": 3
         },
         {
           "column": 3,
           "printed": 6971623,
-          "summed": 59380143,
-          "difference": 52408520,
+          "summed": 27349260,
+          "difference": 20377637,
           "status": "mismatch",
-          "rowsSummed": 19
+          "rowsSummed": 3
+        }
+      ]
+    },
+    {
+      "name": "Subtotal",
+      "page": 72,
+      "level": "department",
+      "header": "SEWER FUND",
+      "rowCount": 7,
+      "coveredBySubtotals": 0,
+      "unreadableFigures": 0,
+      "columns": [
+        {
+          "column": 0,
+          "printed": 2709871,
+          "summed": 6132734,
+          "difference": 3422863,
+          "status": "mismatch",
+          "rowsSummed": 7
+        },
+        {
+          "column": 1,
+          "printed": 2713996,
+          "summed": 6542925,
+          "difference": 3828929,
+          "status": "mismatch",
+          "rowsSummed": 7
+        },
+        {
+          "column": 2,
+          "printed": 2739540,
+          "summed": 6473675,
+          "difference": 3734135,
+          "status": "mismatch",
+          "rowsSummed": 7
+        },
+        {
+          "column": 3,
+          "printed": 2930807,
+          "summed": 7745320,
+          "difference": 4814513,
+          "status": "mismatch",
+          "rowsSummed": 7
+        }
+      ]
+    },
+    {
+      "name": "Subtotal",
+      "page": 72,
+      "level": "department",
+      "header": null,
+      "rowCount": 2,
+      "coveredBySubtotals": 0,
+      "unreadableFigures": 0,
+      "columns": [
+        {
+          "column": 0,
+          "printed": 48443,
+          "summed": 48443,
+          "difference": 0,
+          "status": "exact",
+          "rowsSummed": 2
+        },
+        {
+          "column": 1,
+          "printed": 940875,
+          "summed": 940875,
+          "difference": 0,
+          "status": "exact",
+          "rowsSummed": 2
+        },
+        {
+          "column": 2,
+          "printed": 940875,
+          "summed": 940875,
+          "difference": 0,
+          "status": "exact",
+          "rowsSummed": 2
+        },
+        {
+          "column": 3,
+          "printed": 1221582,
+          "summed": 1221582,
+          "difference": 0,
+          "status": "exact",
+          "rowsSummed": 2
         }
       ]
     },
@@ -1093,42 +1352,42 @@
       "name": "SEWER FUND BUDGET",
       "page": 72,
       "level": "fund",
-      "header": "SEWER FUND",
-      "rowCount": 11,
-      "coveredBySubtotals": 0,
+      "header": null,
+      "rowCount": 2,
+      "coveredBySubtotals": 2,
       "unreadableFigures": 0,
       "columns": [
         {
           "column": 0,
           "printed": 6181177,
-          "summed": 8939491,
-          "difference": 2758314,
+          "summed": 2758314,
+          "difference": -3422863,
           "status": "mismatch",
-          "rowsSummed": 11
+          "rowsSummed": 2
         },
         {
           "column": 1,
           "printed": 7483800,
-          "summed": 11138671,
-          "difference": 3654871,
+          "summed": 3654871,
+          "difference": -3828929,
           "status": "mismatch",
-          "rowsSummed": 11
+          "rowsSummed": 2
         },
         {
           "column": 2,
           "printed": 7414550,
-          "summed": 11094965,
-          "difference": 3680415,
+          "summed": 3680415,
+          "difference": -3734135,
           "status": "mismatch",
-          "rowsSummed": 11
+          "rowsSummed": 2
         },
         {
           "column": 3,
           "printed": 8966902,
-          "summed": 13119291,
-          "difference": 4152389,
+          "summed": 4152389,
+          "difference": -4814513,
           "status": "mismatch",
-          "rowsSummed": 11
+          "rowsSummed": 2
         }
       ]
     },
@@ -1219,45 +1478,131 @@
       ]
     },
     {
-      "name": "Tax Levy & Special Assessments",
+      "name": "Subtotal",
       "page": 76,
       "level": "department",
       "header": "ALL FUNDS TOTAL EXPENDITURES",
-      "rowCount": 29,
+      "rowCount": 13,
       "coveredBySubtotals": 0,
       "unreadableFigures": 2,
       "columns": [
         {
           "column": 0,
           "printed": 1,
-          "summed": 688618818,
-          "difference": 688618817,
+          "summed": 688618812,
+          "difference": 688618811,
           "status": "incomplete: unreadable figures excluded",
-          "rowsSummed": 14
+          "rowsSummed": 8
         },
         {
           "column": 1,
-          "printed": 36270267,
-          "summed": 1241219175,
-          "difference": 1204948908,
+          "printed": 30898958,
+          "summed": 874987044,
+          "difference": 844088086,
           "status": "incomplete: unreadable figures excluded",
-          "rowsSummed": 26
+          "rowsSummed": 12
         },
         {
           "column": 2,
           "printed": 1,
-          "summed": 739990486,
-          "difference": 739990485,
+          "summed": 739990480,
+          "difference": 739990479,
           "status": "incomplete: unreadable figures excluded",
-          "rowsSummed": 14
+          "rowsSummed": 8
+        },
+        {
+          "column": 3,
+          "printed": 36270267,
+          "summed": 179385745,
+          "difference": 143115478,
+          "status": "incomplete: unreadable figures excluded",
+          "rowsSummed": 10
+        }
+      ]
+    },
+    {
+      "name": "Subtotal",
+      "page": 76,
+      "level": "department",
+      "header": null,
+      "rowCount": 1,
+      "coveredBySubtotals": 0,
+      "unreadableFigures": 0,
+      "columns": [
+        {
+          "column": 0,
+          "printed": 1,
+          "summed": 0,
+          "difference": -1,
+          "status": "mismatch",
+          "rowsSummed": 0
+        },
+        {
+          "column": 1,
+          "printed": 31762891,
+          "summed": 0,
+          "difference": -31762891,
+          "status": "mismatch",
+          "rowsSummed": 0
+        },
+        {
+          "column": 2,
+          "printed": 1,
+          "summed": 0,
+          "difference": -1,
+          "status": "mismatch",
+          "rowsSummed": 0
+        },
+        {
+          "column": 3,
+          "printed": 36270267,
+          "summed": 0,
+          "difference": -36270267,
+          "status": "mismatch",
+          "rowsSummed": 0
+        }
+      ]
+    },
+    {
+      "name": "Tax Levy & Special Assessments",
+      "page": 76,
+      "level": "department",
+      "header": null,
+      "rowCount": 13,
+      "coveredBySubtotals": 0,
+      "unreadableFigures": 0,
+      "columns": [
+        {
+          "column": 0,
+          "printed": 1,
+          "summed": 4,
+          "difference": 3,
+          "status": "mismatch",
+          "rowsSummed": 4
+        },
+        {
+          "column": 1,
+          "printed": 36270267,
+          "summed": 303570282,
+          "difference": 267300015,
+          "status": "mismatch",
+          "rowsSummed": 12
+        },
+        {
+          "column": 2,
+          "printed": 1,
+          "summed": 4,
+          "difference": 3,
+          "status": "mismatch",
+          "rowsSummed": 4
         },
         {
           "column": 3,
           "printed": 40125926,
-          "summed": 575886432,
-          "difference": 535760506,
-          "status": "incomplete: unreadable figures excluded",
-          "rowsSummed": 24
+          "summed": 323960153,
+          "difference": 283834227,
+          "status": "mismatch",
+          "rowsSummed": 12
         }
       ]
     },

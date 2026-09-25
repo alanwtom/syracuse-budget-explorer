@@ -30,7 +30,10 @@ NUMERIC = re.compile(r"^\(?-?[\d,ç-ô]+\)?$")
 # The tables print rules between columns as runs of "=" or "_". They carry no
 # meaning and must not survive into a label, or a total line stops looking like one.
 SEPARATOR = re.compile(r"^[=_\-–—]+$")
-TOTAL_LINE = re.compile(r"^\s*TOTAL\s+(.+?)\s*$", re.I)
+# "Total <name>" names its block; a bare "Subtotal" closes one without naming it.
+# Both end a block, and treating a subtotal as an ordinary row double-counts every
+# figure above it.
+TOTAL_LINE = re.compile(r"^\s*(?:TOTAL\s+(?P<named>.+?)|(?P<bare>SUB\s*-?\s*TOTAL))\s*$", re.I)
 # Each statement restarts the hierarchy; rows never carry across one.
 STATEMENT_START = re.compile(r"(REVENUE|EXPENDITURE)\s+SUMMARY", re.I)
 
@@ -125,6 +128,38 @@ def merge_wrapped_labels(lines):
     return merged
 
 
+def attach_split_totals(lines):
+    """Give a total its figures when the document prints them on the next line.
+
+    Some fund totals are set with the label on one baseline and its figures on
+    the next, leaving a row of figures that belongs to no label at all. The
+    figures sharing the label's baseline belong to the block above it, which is
+    already counted through that block's own subtotal.
+
+    Reassigning the orphan is the only reading that leaves every figure owned by
+    something. Left alone it would be summed into the following section as if it
+    were an ordinary row.
+    """
+    out = []
+    skip = False
+    for index, line in enumerate(lines):
+        if skip:
+            skip = False
+            continue
+        following = lines[index + 1] if index + 1 < len(lines) else None
+        if (
+            TOTAL_LINE.match(line["label"])
+            and following is not None
+            and not following["label"]
+            and following["figures"]
+        ):
+            out.append(dict(line, figures=following["figures"]))
+            skip = True
+            continue
+        out.append(line)
+    return out
+
+
 def column_centres(lines, expected=4):
     """Infer column positions from the right edges of readable figures."""
     edges = sorted(f["right"] for line in lines for f in line["figures"] if not f["unreadable"])
@@ -196,7 +231,7 @@ def build_sections(lines):
             grand = line["indent"] <= HEADER_MAX_X
             members = (subtotals + orphans + leaves) if grand else leaves
             sections.append({
-                "name": total_match.group(1).strip(),
+                "name": (total_match.group("named") or total_match.group("bare")).strip(),
                 "page": line["page"],
                 "level": "fund" if grand else "department",
                 "header": header["label"] if header else None,
@@ -356,8 +391,12 @@ def main():
         "pageRange": [args.first_page, args.last_page],
         "summary": {
             "sections": len(report),
-            "sectionsClean": sum(1 for s in report
-                                 if all(c["status"] in ("exact", "no printed total") for c in s["columns"])),
+            "sectionsVerified": sum(
+                1 for s in report
+                if [c for c in s["columns"] if c["printed"] is not None]
+                and all(c["status"] == "exact" for c in s["columns"] if c["printed"] is not None)),
+            "sectionsUncheckable": sum(
+                1 for s in report if not [c for c in s["columns"] if c["printed"] is not None]),
             "columnsExact": exact,
             "columnsMismatched": mismatched,
             "columnsIncomplete": incomplete,

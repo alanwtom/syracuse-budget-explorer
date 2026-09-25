@@ -56,6 +56,11 @@ class TotalRecognition(unittest.TestCase):
     def test_department_total_is_recognised(self):
         self.assertTrue(TOTAL_LINE.match("Total Executive"))
 
+    def test_a_bare_subtotal_closes_a_block(self):
+        """Counting a subtotal as an ordinary row double-counts everything above it."""
+        self.assertTrue(TOTAL_LINE.match("Subtotal"))
+        self.assertTrue(TOTAL_LINE.match("Sub-Total"))
+
     def test_an_ordinary_row_is_not_a_total(self):
         self.assertIsNone(TOTAL_LINE.match("Sale of Water"))
 
@@ -126,6 +131,21 @@ class Hierarchy(unittest.TestCase):
         ] + self.department()
         report = self.report_for(lines)
         self.assertEqual(report[0]["columns"][0]["summed"], 150)
+
+
+class Subtotals(unittest.TestCase):
+    def test_a_subtotal_is_not_added_on_top_of_the_rows_it_summarises(self):
+        lines = [
+            line("Water Fund", 53),
+            line("Water Plant", 195, [("100", 444)]),
+            line("Water Quality", 195, [("50", 444)]),
+            line("Subtotal", 195, [("150", 444)]),
+            line("TOTAL WATER FUND BUDGET", 53, [("150", 444)]),
+        ]
+        report = reconcile(build_sections(resolve_columns(lines)))
+        fund = report[-1]
+        self.assertEqual(fund["columns"][0]["summed"], 150, "leaves were counted twice")
+        self.assertEqual(fund["columns"][0]["status"], "exact")
 
 
 class DamageReporting(unittest.TestCase):
