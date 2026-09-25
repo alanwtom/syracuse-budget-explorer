@@ -353,14 +353,58 @@ def absorb_rolled_up_subtotals(subtotals, closing):
     return subtotals
 
 
+def _block_name(text):
+    """Reduce a heading or total label to the words that name its block.
+
+    A heading and its total are not always worded alike: "Capital
+    Appropriations & Debt Service" closes at "TOTAL CAPITAL APPROPRIATION AND
+    DEBT SERVICE". The ampersand and plural endings are normalised away.
+    """
+    text = re.sub(r"^\s*TOTAL\s+", "", text or "", flags=re.I)
+    text = text.replace("&", " AND ")
+    text = re.sub(r"[^A-Za-z0-9 ]+", " ", text)
+    words = [w[:-1] if len(w) > 3 and w.endswith("S") and not w.endswith("SS") else w
+             for w in text.upper().split()]
+    return " ".join(words)
+
+
+def _matching_block(blocks, name):
+    """The innermost open block this total closes, by name.
+
+    An exact name wins over a partial one: "TOTAL DEPARTMENTAL INCOME" closes
+    "Departmental Income", and only failing that does "TOTAL GENERAL FUND
+    REVENUE" close the "GENERAL FUND" heading it begins with. A total that
+    names no open heading closes the innermost block.
+    """
+    for exact in (True, False):
+        for index in range(len(blocks) - 1, 0, -1):
+            heading = blocks[index]["name"]
+            if not heading:
+                continue
+            if exact and heading == name:
+                return index
+            if not exact and (name.startswith(heading + " ") or heading.startswith(name + " ")):
+                return index
+    # Naming no open heading, it closes the innermost block. Reaching further
+    # back, to everything opened since the previous total, was tried and cost
+    # the 2023-24 budget five points.
+    return len(blocks) - 1
+
+
 def build_sections(lines):
     """Walk the document in order, closing each block at the total that names it.
 
-    The tables nest two deep. An indented "Total <department>:" closes the leaf
-    rows above it; a left-margin "TOTAL <fund>" closes the departments below it.
-    A fund total therefore sums the department subtotals already closed, plus any
-    leaf rows in its span that no department total covered. Summing leaves alone
-    would double-count everything that has a subtotal.
+    Two kinds of nesting occur. Within a fund, an indented "Total <department>"
+    or a bare "Subtotal" closes the rows above it, and indentation is enough to
+    tell the levels apart.
+
+    At the left margin it is not. On the revenue pages every heading and every
+    total sits at the same indent: "Finance" and "Total Finance" line up exactly
+    with "Departmental Income" and "TOTAL DEPARTMENTAL INCOME". There the name
+    is what shows the nesting, so each margin heading opens a block and a margin
+    total closes the block its name matches. Blocks opened inside it and never
+    closed on their own are folded into it, and the total then counts as one row
+    of the block that encloses it.
     """
     sections = []
     header = None
@@ -368,38 +412,59 @@ def build_sections(lines):
     # the General and the Water fund. A row is only identified by fund and code
     # together, so the enclosing fund has to travel with it.
     fund = None
+    statement = None
+    blocks = [{"name": None, "members": []}]
     leaves = []      # rows under the current header, not yet closed by a total
     orphans = []     # rows whose header closed without printing a total
     subtotals = []   # department totals already closed inside this fund
+
+    def flush():
+        nonlocal leaves, orphans, subtotals
+        blocks[-1]["members"].extend(subtotals + orphans + leaves)
+        leaves, orphans, subtotals = [], [], []
+
     for line in lines:
-        # A new statement ("REVENUE SUMMARY - ADOPTED BUDGET") starts a fresh
-        # accounting context. Without this, rows from the preceding statement
-        # leak into the first total of the next one.
-        if STATEMENT_START.search(line["label"]):
-            # The statement heading repeats on every page of a statement, so the
-            # accumulators reset but the fund does not: a fund's rows run across
-            # several pages and only a new fund heading ends it.
-            header, leaves, orphans, subtotals = None, [], [], []
+        heading = STATEMENT_START.search(line["label"])
+        if heading:
+            kind = heading.group(1).upper()
+            if kind != statement:
+                # Revenue and expenditure statements never share a block.
+                statement = kind
+                blocks = [{"name": None, "members": []}]
+                leaves, orphans, subtotals = [], [], []
+            else:
+                # The heading repeats on every page of a statement. A block
+                # carries over the page break; only the rows are handed up.
+                flush()
+            header = None
             continue
 
         total_match = TOTAL_LINE.match(line["label"])
         if total_match and line["figures"]:
+            name = (total_match.group("named") or total_match.group("bare")).strip()
             grand = line["indent"] <= HEADER_MAX_X
-            members = (subtotals + orphans + leaves) if grand else leaves
+            if grand:
+                flush()
+                index = _matching_block(blocks, _block_name(name))
+                members = [m for block in blocks[index:] for m in block["members"]]
+                blocks = blocks[:index] if index > 0 else [{"name": None, "members": []}]
+            else:
+                members = leaves
             sections.append({
-                "name": (total_match.group("named") or total_match.group("bare")).strip(),
+                "name": name,
                 "page": line["page"],
                 "level": "fund" if grand else "department",
                 "header": header["label"] if header else None,
                 "fund": fund,
                 "printed": line["columns"],
                 "rows": members,
-                "coveredBySubtotals": len(subtotals) if grand else 0,
+                "coveredBySubtotals": sum(1 for m in members if m.get("closesBlock")),
             })
+            closed = dict(line, closesBlock=True)
             if grand:
-                subtotals, orphans, leaves = [], [], []
+                blocks[-1]["members"].append(closed)
             else:
-                subtotals = absorb_rolled_up_subtotals(subtotals, line) + [line]
+                subtotals = absorb_rolled_up_subtotals(subtotals, line) + [closed]
                 leaves = []
             header = None
             continue
@@ -407,11 +472,9 @@ def build_sections(lines):
         if not line["figures"] and line["indent"] <= HEADER_MAX_X:
             if FUND_HEADER.search(line["label"]):
                 fund = line["label"].strip()
-            # The previous header ended without a total of its own, so its rows
-            # stay eligible for the enclosing fund total but must not be counted
-            # toward the next department's.
-            orphans = orphans + leaves
-            header, leaves = line, []
+            flush()
+            blocks.append({"name": _block_name(line["label"]), "members": []})
+            header = line
             continue
 
         if not line["figures"] and line["label"]:

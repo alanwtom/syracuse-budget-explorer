@@ -6,13 +6,13 @@
   ],
   "summary": {
     "sections": 51,
-    "sectionsVerified": 34,
+    "sectionsVerified": 36,
     "sectionsUncheckable": 0,
-    "columnsExact": 153,
-    "columnsMismatched": 27,
-    "columnsIncomplete": 10,
-    "reconciliationRate": 0.85,
-    "unreadableFigures": 11
+    "columnsExact": 164,
+    "columnsMismatched": 22,
+    "columnsIncomplete": 4,
+    "reconciliationRate": 0.8817,
+    "unreadableFigures": 21
   },
   "sections": [
     {
@@ -20,9 +20,9 @@
       "page": 50,
       "level": "fund",
       "header": "Real Property Tax Items",
-      "rowCount": 17,
+      "rowCount": 16,
       "coveredBySubtotals": 0,
-      "unreadableFigures": 1,
+      "unreadableFigures": 0,
       "verified": false,
       "fund": "GENERAL FUND",
       "columns": [
@@ -31,16 +31,16 @@
           "printed": 8801161,
           "summed": 8801160,
           "difference": -1,
-          "status": "incomplete: unreadable figures excluded",
-          "rowsSummed": 12
+          "status": "mismatch",
+          "rowsSummed": 11
         },
         {
           "column": 1,
           "printed": 7985700,
-          "summed": 22379509,
-          "difference": 14393809,
-          "status": "incomplete: unreadable figures excluded",
-          "rowsSummed": 12
+          "summed": 7985700,
+          "difference": 0,
+          "status": "exact",
+          "rowsSummed": 11
         },
         {
           "column": 2,
@@ -48,7 +48,7 @@
           "summed": 6948003,
           "difference": 0,
           "status": "exact",
-          "rowsSummed": 12
+          "rowsSummed": 11
         },
         {
           "column": 3,
@@ -60,19 +60,6 @@
         }
       ],
       "rows": [
-        {
-          "code": null,
-          "label": "Unreserved, Undesignated",
-          "fund": "GENERAL FUND",
-          "page": 50,
-          "values": [
-            0,
-            14393809,
-            0,
-            null
-          ],
-          "unreadable": true
-        },
         {
           "code": "410010",
           "label": "School District Tax Buyout",
@@ -1759,8 +1746,8 @@
       "page": 54,
       "level": "fund",
       "header": null,
-      "rowCount": 0,
-      "coveredBySubtotals": 0,
+      "rowCount": 12,
+      "coveredBySubtotals": 9,
       "unreadableFigures": 0,
       "verified": false,
       "fund": "Assessment",
@@ -1768,37 +1755,194 @@
         {
           "column": 0,
           "printed": 21281954,
-          "summed": 0,
-          "difference": -21281954,
+          "summed": 21281953,
+          "difference": -1,
           "status": "mismatch",
-          "rowsSummed": 0
+          "rowsSummed": 9
         },
         {
           "column": 1,
           "printed": 26925280,
-          "summed": 0,
-          "difference": -26925280,
-          "status": "mismatch",
-          "rowsSummed": 0
+          "summed": 26925280,
+          "difference": 0,
+          "status": "exact",
+          "rowsSummed": 9
         },
         {
           "column": 2,
           "printed": 25465849,
-          "summed": 0,
-          "difference": -25465849,
-          "status": "mismatch",
-          "rowsSummed": 0
+          "summed": 25465849,
+          "difference": 0,
+          "status": "exact",
+          "rowsSummed": 9
         },
         {
           "column": 3,
           "printed": 26863586,
-          "summed": 0,
-          "difference": -26863586,
-          "status": "mismatch",
-          "rowsSummed": 0
+          "summed": 26863586,
+          "difference": 0,
+          "status": "exact",
+          "rowsSummed": 9
         }
       ],
-      "rows": []
+      "rows": [
+        {
+          "code": null,
+          "label": "Total Finance",
+          "fund": null,
+          "page": 51,
+          "values": [
+            4997651,
+            11926750,
+            10485972,
+            11052492
+          ],
+          "unreadable": false
+        },
+        {
+          "code": null,
+          "label": "Total City Clerk",
+          "fund": null,
+          "page": 51,
+          "values": [
+            57139,
+            60000,
+            54336,
+            60000
+          ],
+          "unreadable": false
+        },
+        {
+          "code": null,
+          "label": "",
+          "fund": "GENERAL FUND",
+          "page": 51,
+          "values": [
+            null,
+            null,
+            null,
+            null
+          ],
+          "unreadable": false
+        },
+        {
+          "code": null,
+          "label": "Total Code Enforcement",
+          "fund": null,
+          "page": 52,
+          "values": [
+            4813131,
+            4748000,
+            5304407,
+            5405500
+          ],
+          "unreadable": false
+        },
+        {
+          "code": null,
+          "label": "Total Parks & Recreation",
+          "fund": null,
+          "page": 52,
+          "values": [
+            792540,
+            755000,
+            678065,
+            790100
+          ],
+          "unreadable": false
+        },
+        {
+          "code": null,
+          "label": "Total Fire",
+          "fund": null,
+          "page": 52,
+          "values": [
+            284872,
+            406000,
+            361115,
+            76800
+          ],
+          "unreadable": false
+        },
+        {
+          "code": null,
+          "label": "",
+          "fund": "GENERAL FUND",
+          "page": 52,
+          "values": [
+            null,
+            null,
+            null,
+            null
+          ],
+          "unreadable": false
+        },
+        {
+          "code": null,
+          "label": "Total Police",
+          "fund": null,
+          "page": 53,
+          "values": [
+            3091120,
+            2162500,
+            926184,
+            2212500
+          ],
+          "unreadable": false
+        },
+        {
+          "code": null,
+          "label": "Total Law",
+          "fund": null,
+          "page": 53,
+          "values": [
+            207782,
+            350000,
+            303462,
+            350000
+          ],
+          "unreadable": false
+        },
+        {
+          "code": null,
+          "label": "",
+          "fund": "GENERAL FUND",
+          "page": 53,
+          "values": [
+            null,
+            null,
+            null,
+            null
+          ],
+          "unreadable": false
+        },
+        {
+          "code": null,
+          "label": "Total Public Works",
+          "fund": null,
+          "page": 54,
+          "values": [
+            7037718,
+            6515030,
+            7352308,
+            6914194
+          ],
+          "unreadable": false
+        },
+        {
+          "code": null,
+          "label": "Total Assessment",
+          "fund": null,
+          "page": 54,
+          "values": [
+            0,
+            2000,
+            0,
+            2000
+          ],
+          "unreadable": false
+        }
+      ]
     },
     {
       "name": "USE OF MONEY & PROPERTY",
@@ -2253,46 +2397,190 @@
       "page": 56,
       "level": "fund",
       "header": null,
-      "rowCount": 0,
-      "coveredBySubtotals": 0,
-      "unreadableFigures": 0,
-      "verified": false,
+      "rowCount": 11,
+      "coveredBySubtotals": 7,
+      "unreadableFigures": 2,
+      "verified": true,
       "fund": "Assessment",
       "columns": [
         {
           "column": 0,
           "printed": 253401013,
-          "summed": 0,
-          "difference": -253401013,
-          "status": "mismatch",
-          "rowsSummed": 0
+          "summed": 253401013,
+          "difference": 0,
+          "status": "exact",
+          "rowsSummed": 8
         },
         {
           "column": 1,
           "printed": 274066384,
-          "summed": 0,
-          "difference": -274066384,
-          "status": "mismatch",
-          "rowsSummed": 0
+          "summed": 274066384,
+          "difference": 0,
+          "status": "exact",
+          "rowsSummed": 8
         },
         {
           "column": 2,
           "printed": 261957787,
-          "summed": 0,
-          "difference": -261957787,
-          "status": "mismatch",
-          "rowsSummed": 0
+          "summed": 261957787,
+          "difference": 0,
+          "status": "exact",
+          "rowsSummed": 8
         },
         {
           "column": 3,
           "printed": null,
-          "summed": 0,
+          "summed": 179197984,
           "difference": null,
           "status": "no printed total",
-          "rowsSummed": 0
+          "rowsSummed": 6
         }
       ],
-      "rows": []
+      "rows": [
+        {
+          "code": null,
+          "label": "Unreserved, Undesignated",
+          "fund": "GENERAL FUND",
+          "page": 50,
+          "values": [
+            0,
+            14393809,
+            0,
+            null
+          ],
+          "unreadable": true
+        },
+        {
+          "code": null,
+          "label": "TOTAL REAL PROPERTY TAX ITEMS",
+          "fund": null,
+          "page": 50,
+          "values": [
+            8801161,
+            7985700,
+            6948003,
+            7026807
+          ],
+          "unreadable": false
+        },
+        {
+          "code": null,
+          "label": "TOTAL NON-PROPERTY TAX ITEMS",
+          "fund": null,
+          "page": 50,
+          "values": [
+            127859558,
+            130750761,
+            131351104,
+            133686341
+          ],
+          "unreadable": false
+        },
+        {
+          "code": null,
+          "label": "",
+          "fund": "GENERAL FUND",
+          "page": 50,
+          "values": [
+            null,
+            null,
+            null,
+            null
+          ],
+          "unreadable": false
+        },
+        {
+          "code": null,
+          "label": "TOTAL DEPARTMENTAL INCOME",
+          "fund": null,
+          "page": 54,
+          "values": [
+            21281954,
+            26925280,
+            25465849,
+            26863586
+          ],
+          "unreadable": false
+        },
+        {
+          "code": null,
+          "label": "",
+          "fund": "Assessment",
+          "page": 54,
+          "values": [
+            null,
+            null,
+            null,
+            null
+          ],
+          "unreadable": false
+        },
+        {
+          "code": null,
+          "label": "TOTAL USE OF MONEY & PROPERTY",
+          "fund": null,
+          "page": 55,
+          "values": [
+            11914650,
+            9593000,
+            9260050,
+            7093000
+          ],
+          "unreadable": false
+        },
+        {
+          "code": null,
+          "label": "TOTAL SALE OF PROPERTY",
+          "fund": null,
+          "page": 55,
+          "values": [
+            496929,
+            1495000,
+            5832000,
+            1035000
+          ],
+          "unreadable": false
+        },
+        {
+          "code": null,
+          "label": "TOTAL STATE AID",
+          "fund": null,
+          "page": 55,
+          "values": [
+            79542537,
+            79429584,
+            79580230,
+            null
+          ],
+          "unreadable": true
+        },
+        {
+          "code": null,
+          "label": "",
+          "fund": "Assessment",
+          "page": 55,
+          "values": [
+            null,
+            null,
+            null,
+            null
+          ],
+          "unreadable": false
+        },
+        {
+          "code": null,
+          "label": "TOTAL MISCELLANEOUS REVENUE",
+          "fund": null,
+          "page": 56,
+          "values": [
+            3504224,
+            3493250,
+            3520551,
+            3493250
+          ],
+          "unreadable": false
+        }
+      ]
     },
     {
       "name": "TAX LEVY",
@@ -3893,46 +4181,215 @@
       "page": 66,
       "level": "fund",
       "header": null,
-      "rowCount": 4,
-      "coveredBySubtotals": 4,
-      "unreadableFigures": 1,
+      "rowCount": 17,
+      "coveredBySubtotals": 9,
+      "unreadableFigures": 5,
       "verified": false,
       "fund": "Assessment",
       "columns": [
         {
           "column": 0,
           "printed": 183731345,
-          "summed": 154835245,
-          "difference": -28896100,
+          "summed": 184512577,
+          "difference": 781232,
           "status": "incomplete: unreadable figures excluded",
-          "rowsSummed": 4
+          "rowsSummed": 15
         },
         {
           "column": 1,
           "printed": 189338053,
-          "summed": 158061914,
-          "difference": -31276139,
+          "summed": 189338054,
+          "difference": 1,
           "status": "incomplete: unreadable figures excluded",
-          "rowsSummed": 4
+          "rowsSummed": 15
         },
         {
           "column": 2,
           "printed": 192515954,
-          "summed": 161522449,
-          "difference": -30993505,
-          "status": "incomplete: unreadable figures excluded",
-          "rowsSummed": 4
+          "summed": 192515954,
+          "difference": 0,
+          "status": "exact",
+          "rowsSummed": 15
         },
         {
           "column": 3,
           "printed": null,
-          "summed": 152763941,
+          "summed": 168774743,
           "difference": null,
           "status": "no printed total",
-          "rowsSummed": 3
+          "rowsSummed": 10
         }
       ],
       "rows": [
+        {
+          "code": null,
+          "label": "Common Council",
+          "fund": "GENERAL FUND",
+          "page": 64,
+          "values": [
+            647968,
+            745848,
+            693906,
+            null
+          ],
+          "unreadable": true
+        },
+        {
+          "code": null,
+          "label": "Citizens Review Board",
+          "fund": "GENERAL FUND",
+          "page": 64,
+          "values": [
+            103912,
+            385804,
+            273306,
+            422852
+          ],
+          "unreadable": false
+        },
+        {
+          "code": null,
+          "label": "Total Executive",
+          "fund": null,
+          "page": 64,
+          "values": [
+            10388907,
+            9674830,
+            9826600,
+            null
+          ],
+          "unreadable": true
+        },
+        {
+          "code": null,
+          "label": "Total Finance",
+          "fund": null,
+          "page": 64,
+          "values": [
+            3989564,
+            4571896,
+            4425314,
+            4489915
+          ],
+          "unreadable": false
+        },
+        {
+          "code": null,
+          "label": "",
+          "fund": "GENERAL FUND",
+          "page": 64,
+          "values": [
+            null,
+            null,
+            null,
+            null
+          ],
+          "unreadable": false
+        },
+        {
+          "code": null,
+          "label": "Office of the City Auditor",
+          "fund": "GENERAL FUND",
+          "page": 65,
+          "values": [
+            298132,
+            324445,
+            321427,
+            357727
+          ],
+          "unreadable": false
+        },
+        {
+          "code": null,
+          "label": "City Clerk's Office",
+          "fund": "GENERAL FUND",
+          "page": 65,
+          "values": [
+            400093,
+            393472,
+            387565,
+            null
+          ],
+          "unreadable": true
+        },
+        {
+          "code": null,
+          "label": "Total Assessment",
+          "fund": null,
+          "page": 65,
+          "values": [
+            781232,
+            916778,
+            821522,
+            1373052
+          ],
+          "unreadable": false
+        },
+        {
+          "code": null,
+          "label": "Board of Zoning Appeal",
+          "fund": "Assessment",
+          "page": 65,
+          "values": [
+            3225,
+            8835,
+            8200,
+            8535
+          ],
+          "unreadable": false
+        },
+        {
+          "code": null,
+          "label": "Total Law",
+          "fund": null,
+          "page": 65,
+          "values": [
+            5065532,
+            5302185,
+            5671802,
+            null
+          ],
+          "unreadable": true
+        },
+        {
+          "code": null,
+          "label": "Total Neighborhood & Business Development",
+          "fund": null,
+          "page": 65,
+          "values": [
+            6821016,
+            7486514,
+            7462211,
+            7659904
+          ],
+          "unreadable": false
+        },
+        {
+          "code": null,
+          "label": "Department of Engineering",
+          "fund": "Assessment",
+          "page": 65,
+          "values": [
+            1177751,
+            1465533,
+            1101652,
+            1698817
+          ],
+          "unreadable": false
+        },
+        {
+          "code": null,
+          "label": "",
+          "fund": "Assessment",
+          "page": 65,
+          "values": [
+            null,
+            null,
+            null,
+            null
+          ],
+          "unreadable": false
+        },
         {
           "code": null,
           "label": "Total Public Works",
@@ -3992,46 +4449,527 @@
       "page": 68,
       "level": "fund",
       "header": null,
-      "rowCount": 23,
+      "rowCount": 60,
       "coveredBySubtotals": 0,
-      "unreadableFigures": 3,
-      "verified": false,
+      "unreadableFigures": 8,
+      "verified": true,
       "fund": "Assessment",
       "columns": [
         {
           "column": 0,
           "printed": 102608524,
-          "summed": 97368461,
-          "difference": -5240063,
-          "status": "incomplete: unreadable figures excluded",
-          "rowsSummed": 23
+          "summed": 102608524,
+          "difference": 0,
+          "status": "exact",
+          "rowsSummed": 52
         },
         {
           "column": 1,
           "printed": 116142222,
-          "summed": 110527168,
-          "difference": -5615054,
-          "status": "incomplete: unreadable figures excluded",
-          "rowsSummed": 23
+          "summed": 116142222,
+          "difference": 0,
+          "status": "exact",
+          "rowsSummed": 52
         },
         {
           "column": 2,
           "printed": 112499628,
-          "summed": 107743908,
-          "difference": -4755720,
-          "status": "incomplete: unreadable figures excluded",
-          "rowsSummed": 23
+          "summed": 112499628,
+          "difference": 0,
+          "status": "exact",
+          "rowsSummed": 52
         },
         {
           "column": 3,
           "printed": null,
-          "summed": 49442793,
+          "summed": 53777937,
           "difference": null,
           "status": "no printed total",
-          "rowsSummed": 20
+          "rowsSummed": 44
         }
       ],
       "rows": [
+        {
+          "code": "596220",
+          "label": "Blighted Property Maintenance",
+          "fund": "Assessment",
+          "page": 67,
+          "values": [
+            591540,
+            750000,
+            591000,
+            750000
+          ],
+          "unreadable": false
+        },
+        {
+          "code": "593620",
+          "label": "Printing & Advertising",
+          "fund": "Assessment",
+          "page": 67,
+          "values": [
+            125213,
+            185000,
+            125000,
+            125000
+          ],
+          "unreadable": false
+        },
+        {
+          "code": "593260",
+          "label": "Fiscal Services",
+          "fund": "Assessment",
+          "page": 67,
+          "values": [
+            490547,
+            500000,
+            491531,
+            500000
+          ],
+          "unreadable": false
+        },
+        {
+          "code": "596700",
+          "label": "Postage",
+          "fund": "Assessment",
+          "page": 67,
+          "values": [
+            371199,
+            310240,
+            307982,
+            330240
+          ],
+          "unreadable": false
+        },
+        {
+          "code": "594310",
+          "label": "Labor Relations Expense",
+          "fund": "Assessment",
+          "page": 67,
+          "values": [
+            0,
+            20000,
+            7800,
+            20000
+          ],
+          "unreadable": false
+        },
+        {
+          "code": "599100",
+          "label": "Unallocated Insurance",
+          "fund": "Assessment",
+          "page": 67,
+          "values": [
+            168950,
+            260800,
+            207764,
+            260800
+          ],
+          "unreadable": false
+        },
+        {
+          "code": "599200",
+          "label": "Conf & Assoc Dues",
+          "fund": "Assessment",
+          "page": 67,
+          "values": [
+            26474,
+            31064,
+            29514,
+            32104
+          ],
+          "unreadable": false
+        },
+        {
+          "code": "599310",
+          "label": "Tax Certiorari",
+          "fund": "Assessment",
+          "page": 67,
+          "values": [
+            0,
+            50000,
+            10000,
+            50000
+          ],
+          "unreadable": false
+        },
+        {
+          "code": "599500",
+          "label": "City Share of Local Assessment",
+          "fund": "Assessment",
+          "page": 67,
+          "values": [
+            373137,
+            370000,
+            369100,
+            370000
+          ],
+          "unreadable": false
+        },
+        {
+          "code": "599600",
+          "label": "City Share of Tax Deeds",
+          "fund": "Assessment",
+          "page": 67,
+          "values": [
+            67826,
+            70000,
+            75494,
+            77000
+          ],
+          "unreadable": false
+        },
+        {
+          "code": "599890",
+          "label": "External Auditors",
+          "fund": "Assessment",
+          "page": 67,
+          "values": [
+            146986,
+            144000,
+            130750,
+            144000
+          ],
+          "unreadable": false
+        },
+        {
+          "code": "599891",
+          "label": "Financial Management System",
+          "fund": "Assessment",
+          "page": 67,
+          "values": [
+            0,
+            51500,
+            10000,
+            null
+          ],
+          "unreadable": true
+        },
+        {
+          "code": "599892",
+          "label": "Special Audit Services",
+          "fund": "Assessment",
+          "page": 67,
+          "values": [
+            88523,
+            30000,
+            15000,
+            30000
+          ],
+          "unreadable": false
+        },
+        {
+          "code": "599893",
+          "label": "GASB45 Actuarial Valuation",
+          "fund": "Assessment",
+          "page": 67,
+          "values": [
+            0,
+            23800,
+            10000,
+            23800
+          ],
+          "unreadable": false
+        },
+        {
+          "code": "599897",
+          "label": "JSCB Expenses",
+          "fund": "Assessment",
+          "page": 67,
+          "values": [
+            10997,
+            15000,
+            11365,
+            15000
+          ],
+          "unreadable": false
+        },
+        {
+          "code": null,
+          "label": "Greater Syracuse Property Development Corporation",
+          "fund": "Assessment",
+          "page": 67,
+          "values": [
+            1250000,
+            750000,
+            750000,
+            750000
+          ],
+          "unreadable": false
+        },
+        {
+          "code": "594500",
+          "label": "Onondaga Historical Association",
+          "fund": "Assessment",
+          "page": 67,
+          "values": [
+            50000,
+            50000,
+            50000,
+            null
+          ],
+          "unreadable": true
+        },
+        {
+          "code": "595500",
+          "label": "Public Events",
+          "fund": "Assessment",
+          "page": 67,
+          "values": [
+            180197,
+            199250,
+            196820,
+            null
+          ],
+          "unreadable": false
+        },
+        {
+          "code": null,
+          "label": "",
+          "fund": "Assessment",
+          "page": 67,
+          "values": [
+            null,
+            null,
+            null,
+            null
+          ],
+          "unreadable": true
+        },
+        {
+          "code": "595850",
+          "label": "Urban Cultural Parks Exp",
+          "fund": "Assessment",
+          "page": 67,
+          "values": [
+            21000,
+            21000,
+            21000,
+            null
+          ],
+          "unreadable": false
+        },
+        {
+          "code": null,
+          "label": "",
+          "fund": "Assessment",
+          "page": 67,
+          "values": [
+            null,
+            null,
+            null,
+            21000
+          ],
+          "unreadable": false
+        },
+        {
+          "code": "595860",
+          "label": "Internet & Networking Services",
+          "fund": "Assessment",
+          "page": 67,
+          "values": [
+            371433,
+            407200,
+            21600,
+            null
+          ],
+          "unreadable": false
+        },
+        {
+          "code": null,
+          "label": "",
+          "fund": "Assessment",
+          "page": 67,
+          "values": [
+            null,
+            null,
+            null,
+            580200
+          ],
+          "unreadable": false
+        },
+        {
+          "code": "595905",
+          "label": "Arts Acquisition Conservation Fund",
+          "fund": "Assessment",
+          "page": 67,
+          "values": [
+            23500,
+            53500,
+            23500,
+            null
+          ],
+          "unreadable": false
+        },
+        {
+          "code": null,
+          "label": "",
+          "fund": "Assessment",
+          "page": 67,
+          "values": [
+            null,
+            null,
+            null,
+            73500
+          ],
+          "unreadable": false
+        },
+        {
+          "code": "595910",
+          "label": "University Neighborhood Grants",
+          "fund": "Assessment",
+          "page": 67,
+          "values": [
+            284078,
+            0,
+            0,
+            null
+          ],
+          "unreadable": false
+        },
+        {
+          "code": null,
+          "label": "",
+          "fund": "Assessment",
+          "page": 67,
+          "values": [
+            null,
+            null,
+            null,
+            125000
+          ],
+          "unreadable": false
+        },
+        {
+          "code": "595911",
+          "label": "Downtown District Matching",
+          "fund": "Assessment",
+          "page": 67,
+          "values": [
+            15000,
+            15000,
+            15000,
+            null
+          ],
+          "unreadable": false
+        },
+        {
+          "code": null,
+          "label": "",
+          "fund": "Assessment",
+          "page": 67,
+          "values": [
+            null,
+            null,
+            null,
+            15000
+          ],
+          "unreadable": false
+        },
+        {
+          "code": "595912",
+          "label": "Crouse-Marshall Matching",
+          "fund": "Assessment",
+          "page": 67,
+          "values": [
+            9560,
+            12500,
+            12500,
+            12500
+          ],
+          "unreadable": false
+        },
+        {
+          "code": "595940",
+          "label": "Leadership Syracuse",
+          "fund": "Assessment",
+          "page": 67,
+          "values": [
+            15000,
+            15000,
+            15000,
+            15000
+          ],
+          "unreadable": false
+        },
+        {
+          "code": "595946",
+          "label": "Home HeadQuarters",
+          "fund": "Assessment",
+          "page": 67,
+          "values": [
+            500000,
+            1250000,
+            1250000,
+            null
+          ],
+          "unreadable": true
+        },
+        {
+          "code": "595950",
+          "label": "Mandated Drug Testing",
+          "fund": "Assessment",
+          "page": 67,
+          "values": [
+            5326,
+            30000,
+            8000,
+            15000
+          ],
+          "unreadable": false
+        },
+        {
+          "code": "599930",
+          "label": "Veteran's Post Rents",
+          "fund": "Assessment",
+          "page": 67,
+          "values": [
+            0,
+            200,
+            0,
+            0
+          ],
+          "unreadable": false
+        },
+        {
+          "code": "593000",
+          "label": "One-Time Expenditures",
+          "fund": "Assessment",
+          "page": 67,
+          "values": [
+            53577,
+            0,
+            0,
+            null
+          ],
+          "unreadable": false
+        },
+        {
+          "code": null,
+          "label": "",
+          "fund": "Assessment",
+          "page": 67,
+          "values": [
+            null,
+            null,
+            null,
+            null
+          ],
+          "unreadable": true
+        },
+        {
+          "code": null,
+          "label": "",
+          "fund": "Assessment",
+          "page": 67,
+          "values": [
+            null,
+            null,
+            null,
+            null
+          ],
+          "unreadable": false
+        },
         {
           "code": "590810",
           "label": "Operating Leases",

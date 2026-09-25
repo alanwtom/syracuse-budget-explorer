@@ -112,7 +112,8 @@ class Hierarchy(unittest.TestCase):
         self.assertEqual(fund["columns"][0]["status"], "exact")
 
     def test_rows_from_a_department_without_a_total_still_reach_the_fund_total(self):
-        lines = self.department() + [
+        """As printed: the fund total closes the heading it names, above both departments."""
+        lines = [line("Departmental Operating Expenditures", 53)] + self.department() + [
             line("Common Council", 53),
             line("Common Council", 180, [("25", 444)]),
             line("TOTAL DEPARTMENTAL", 53, [("175", 444)]),
@@ -287,6 +288,52 @@ class SplitTotals(unittest.TestCase):
         ])
         total = repaired[0]
         self.assertEqual(total["figures"][0]["text"], "100")
+
+
+class NamedBlocks(unittest.TestCase):
+    """On the revenue pages every heading and total sits at the same indent."""
+
+    def revenue(self):
+        return [
+            line("GENERAL FUND", 53),
+            line("Departmental Income", 53),
+            line("Finance", 53),
+            line("Fees Abstract", 53, [("100", 723)]),
+            line("Total Finance", 53, [("100", 723)]),
+            line("City Clerk", 53),
+            line("Licenses City Clerk", 53, [("60", 723)]),
+            line("Total City Clerk", 53, [("60", 723)]),
+            line("TOTAL DEPARTMENTAL INCOME", 53, [("160", 723)]),
+            line("Sale of Property", 53),
+            line("Sale of Surplus", 53, [("40", 723)]),
+            line("TOTAL SALE OF PROPERTY", 53, [("40", 723)]),
+            line("TOTAL GENERAL FUND REVENUE", 53, [("200", 723)]),
+        ]
+
+    def test_a_category_total_sums_the_department_totals_it_names(self):
+        report = reconcile(build_sections(resolve_columns(self.revenue())))
+        income = next(s for s in report if s["name"] == "DEPARTMENTAL INCOME")
+        self.assertEqual(income["columns"][0]["summed"], 160)
+        self.assertEqual(income["columns"][0]["status"], "exact")
+
+    def test_a_fund_total_closes_the_heading_it_begins_with(self):
+        report = reconcile(build_sections(resolve_columns(self.revenue())))
+        fund = next(s for s in report if s["name"] == "GENERAL FUND REVENUE")
+        self.assertEqual(fund["columns"][0]["summed"], 200, "categories counted once each")
+        self.assertEqual(fund["columns"][0]["status"], "exact")
+
+    def test_a_heading_and_its_total_need_not_be_worded_alike(self):
+        """"Appropriations &" closes at "APPROPRIATION AND"."""
+        lines = [
+            line("Capital Appropriations & Debt Service", 53),
+            line("Transfer to Capital Projects Fund", 53),
+            line("Cash Capital", 180, [("30", 723)]),
+            line("Transfer to Debt Service Fund", 53),
+            line("Serial Bond", 180, [("70", 723)]),
+            line("TOTAL CAPITAL APPROPRIATION AND DEBT SERVICE", 53, [("100", 723)]),
+        ]
+        report = reconcile(build_sections(resolve_columns(lines)))
+        self.assertEqual(report[-1]["columns"][0]["status"], "exact")
 
 
 class DamageReporting(unittest.TestCase):
