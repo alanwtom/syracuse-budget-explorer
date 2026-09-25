@@ -5,13 +5,13 @@
     77
   ],
   "summary": {
-    "sections": 51,
-    "sectionsVerified": 29,
+    "sections": 50,
+    "sectionsVerified": 30,
     "sectionsUncheckable": 0,
-    "columnsExact": 130,
-    "columnsMismatched": 49,
+    "columnsExact": 136,
+    "columnsMismatched": 39,
     "columnsIncomplete": 14,
-    "reconciliationRate": 0.7263,
+    "reconciliationRate": 0.7771,
     "unreadableFigures": 13
   },
   "sections": [
@@ -4535,7 +4535,7 @@
       "name": "Subtotal",
       "page": 70,
       "level": "department",
-      "header": "Serial Bond Principal & Interest",
+      "header": null,
       "rowCount": 0,
       "coveredBySubtotals": 0,
       "unreadableFigures": 0,
@@ -4697,7 +4697,7 @@
       "rows": [
         {
           "code": null,
-          "label": "Water Departmental Operating Expenditures Water Finance",
+          "label": "Water Finance",
           "fund": "WATER FUND",
           "page": 71,
           "values": [
@@ -4809,7 +4809,7 @@
       "rows": [
         {
           "code": null,
-          "label": "Special Objects of Expense Fiscal Services",
+          "label": "Fiscal Services",
           "fund": "WATER FUND",
           "page": 71,
           "values": [
@@ -4944,49 +4944,49 @@
       "page": 71,
       "level": "department",
       "header": null,
-      "rowCount": 1,
+      "rowCount": 2,
       "coveredBySubtotals": 0,
       "unreadableFigures": 0,
-      "verified": false,
+      "verified": true,
       "fund": "WATER FUND",
       "columns": [
         {
           "column": 0,
-          "printed": 0,
+          "printed": 1278267,
           "summed": 1278267,
-          "difference": 1278267,
-          "status": "mismatch",
-          "rowsSummed": 1
+          "difference": 0,
+          "status": "exact",
+          "rowsSummed": 2
         },
         {
           "column": 1,
-          "printed": 1595000,
-          "summed": 5688929,
-          "difference": 4093929,
-          "status": "mismatch",
-          "rowsSummed": 1
+          "printed": 7283929,
+          "summed": 7283929,
+          "difference": 0,
+          "status": "exact",
+          "rowsSummed": 2
         },
         {
           "column": 2,
-          "printed": 1595000,
-          "summed": 5352757,
-          "difference": 3757757,
-          "status": "mismatch",
-          "rowsSummed": 1
+          "printed": 6947757,
+          "summed": 6947757,
+          "difference": 0,
+          "status": "exact",
+          "rowsSummed": 2
         },
         {
           "column": 3,
-          "printed": 1145000,
-          "summed": 5826623,
-          "difference": 4681623,
-          "status": "mismatch",
-          "rowsSummed": 1
+          "printed": 6971623,
+          "summed": 6971623,
+          "difference": 0,
+          "status": "exact",
+          "rowsSummed": 2
         }
       ],
       "rows": [
         {
           "code": null,
-          "label": "Cash Capital Appropriations & Debt Service Serial Bond Principal & Interest Transfer Cash Capital",
+          "label": "Serial Bond Principal & Interest",
           "fund": "WATER FUND",
           "page": 71,
           "values": [
@@ -4996,54 +4996,21 @@
             5826623
           ],
           "unreadable": false
+        },
+        {
+          "code": null,
+          "label": "Transfer Cash Capital",
+          "fund": "WATER FUND",
+          "page": 71,
+          "values": [
+            0,
+            1595000,
+            1595000,
+            1145000
+          ],
+          "unreadable": false
         }
       ]
-    },
-    {
-      "name": "Subtotal",
-      "page": 71,
-      "level": "department",
-      "header": null,
-      "rowCount": 0,
-      "coveredBySubtotals": 0,
-      "unreadableFigures": 0,
-      "verified": false,
-      "fund": "WATER FUND",
-      "columns": [
-        {
-          "column": 0,
-          "printed": 1278267,
-          "summed": 0,
-          "difference": -1278267,
-          "status": "mismatch",
-          "rowsSummed": 0
-        },
-        {
-          "column": 1,
-          "printed": 7283929,
-          "summed": 0,
-          "difference": -7283929,
-          "status": "mismatch",
-          "rowsSummed": 0
-        },
-        {
-          "column": 2,
-          "printed": 6947757,
-          "summed": 0,
-          "difference": -6947757,
-          "status": "mismatch",
-          "rowsSummed": 0
-        },
-        {
-          "column": 3,
-          "printed": 6971623,
-          "summed": 0,
-          "difference": -6971623,
-          "status": "mismatch",
-          "rowsSummed": 0
-        }
-      ],
-      "rows": []
     },
     {
       "name": "WATER FUND BUDGET",
@@ -5051,7 +5018,7 @@
       "level": "fund",
       "header": null,
       "rowCount": 4,
-      "coveredBySubtotals": 4,
+      "coveredBySubtotals": 3,
       "unreadableFigures": 0,
       "verified": false,
       "fund": "WATER FUND",
@@ -5059,34 +5026,34 @@
         {
           "column": 0,
           "printed": 21387648,
-          "summed": 21387648,
-          "difference": 0,
-          "status": "exact",
+          "summed": 21389675,
+          "difference": 2027,
+          "status": "mismatch",
           "rowsSummed": 4
         },
         {
           "column": 1,
           "printed": 31031846,
-          "summed": 32626846,
-          "difference": 1595000,
-          "status": "mismatch",
-          "rowsSummed": 4
+          "summed": 31031846,
+          "difference": 0,
+          "status": "exact",
+          "rowsSummed": 3
         },
         {
           "column": 2,
           "printed": 28577762,
-          "summed": 30172762,
-          "difference": 1595000,
-          "status": "mismatch",
-          "rowsSummed": 4
+          "summed": 28577762,
+          "difference": 0,
+          "status": "exact",
+          "rowsSummed": 3
         },
         {
           "column": 3,
           "printed": 33175883,
-          "summed": 34320883,
-          "difference": 1145000,
-          "status": "mismatch",
-          "rowsSummed": 4
+          "summed": 33175883,
+          "difference": 0,
+          "status": "exact",
+          "rowsSummed": 3
         }
       ],
       "rows": [
@@ -5122,23 +5089,23 @@
           "fund": null,
           "page": 71,
           "values": [
-            0,
-            1595000,
-            1595000,
-            1145000
+            1278267,
+            7283929,
+            6947757,
+            6971623
           ],
           "unreadable": false
         },
         {
           "code": null,
-          "label": "Subtotal",
-          "fund": null,
+          "label": "Fiscal Year Ending June",
+          "fund": "MUNICIPAL SIDEWALK FUND",
           "page": 71,
           "values": [
-            1278267,
-            7283929,
-            6947757,
-            6971623
+            2027,
+            null,
+            null,
+            null
           ],
           "unreadable": false
         }

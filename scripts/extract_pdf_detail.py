@@ -119,27 +119,94 @@ def read_lines(page, page_number):
     return parsed
 
 
-def merge_wrapped_labels(lines):
-    """Join a label-only line onto the following line when the label wrapped.
-
-    A wrapped label prints at the same indentation as the row it belongs to and
-    carries no figures of its own.
-    """
+def join_wrapped_labels(lines):
+    """Read a label-only line as the tail of a label that wrapped."""
     merged = []
     pending = []
     for line in lines:
         if not line["figures"] and line["indent"] > HEADER_MAX_X:
-            pending.append(line["label"])
+            pending.append(line)
             continue
         if pending:
             if line["figures"] and line["indent"] > HEADER_MAX_X:
-                line = dict(line, label=" ".join(pending + [line["label"]]).strip())
+                line = dict(line, label=" ".join([p["label"] for p in pending] + [line["label"]]).strip())
             else:
-                for text in pending:
-                    merged.append(dict(line, label=text, figures=[], code=None))
+                for held in pending:
+                    merged.append(dict(held, figures=[], code=None))
             pending = []
         merged.append(line)
+    for held in pending:
+        merged.append(dict(held, figures=[], code=None))
     return merged
+
+
+def shift_figures_to_waiting_labels(lines):
+    """Read a label-only line as a row whose figures print on the line below.
+
+    The capital and debt blocks are set this way: a label sits alone, its figures
+    print underneath, and the next label follows those figures. Every row from
+    there to the end of the block is therefore one line out of step, including
+    the block's subtotal and the fund total beneath it.
+
+    Only a label at the indentation of the rows around it starts that shift; a
+    label standing further left is the block's heading and never takes figures.
+    Once started the shift carries through rows at any indentation, because the
+    subtotal that closes the block is set further left than the rows above it.
+    """
+    merged = []
+    candidate = None   # a label-only line that may own the figures below it
+    waiting = None     # the label displaced by a shift already under way
+    for line in lines:
+        if not line["figures"] and line["indent"] > HEADER_MAX_X:
+            if candidate is not None:
+                merged.append(dict(candidate, figures=[], code=None))
+            candidate = line
+            continue
+
+        if line["figures"]:
+            if waiting is not None:
+                merged.append(dict(waiting, figures=line["figures"]))
+                waiting = dict(line, figures=[])
+                continue
+            if candidate is not None and abs(candidate["indent"] - line["indent"]) <= 1.5:
+                merged.append(dict(candidate, figures=line["figures"]))
+                candidate, waiting = None, dict(line, figures=[])
+                continue
+
+        if candidate is not None:
+            merged.append(dict(candidate, figures=[], code=None))
+            candidate = None
+        merged.append(line)
+
+    for held in (candidate, waiting):
+        if held is not None:
+            merged.append(dict(held, figures=[], code=None))
+    return merged
+
+
+def _exact_columns(lines):
+    """How many printed totals the rows beneath them actually add up to.
+
+    Scored through the same repairs the page will receive, or a reading whose
+    benefit only appears after a later repair is judged on the wrong result.
+    """
+    report = reconcile(build_sections(resolve_columns(attach_split_totals(lines))))
+    return sum(1 for s in report for c in s["columns"] if c["status"] == "exact")
+
+
+def merge_wrapped_labels(lines):
+    """Choose between the two readings of a label-only line, per page.
+
+    A label-only line is either the tail of a wrapped label or a row whose
+    figures print below it, and both sit at the same indentation, so geometry
+    cannot tell them apart. The document can: whichever reading makes more of
+    the page's printed totals add up is the one the page was set in.
+    """
+    wrapped = join_wrapped_labels(lines)
+    shifted = shift_figures_to_waiting_labels(lines)
+    if shifted == wrapped:
+        return wrapped
+    return shifted if _exact_columns(shifted) > _exact_columns(wrapped) else wrapped
 
 
 def attach_split_totals(lines):

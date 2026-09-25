@@ -9,6 +9,8 @@ import unittest
 
 from extract_pdf_detail import (
     SEPARATOR,
+    join_wrapped_labels,
+    shift_figures_to_waiting_labels,
     attach_split_totals,
     detect_page_range,
     TOTAL_LINE,
@@ -147,6 +149,53 @@ class Subtotals(unittest.TestCase):
         fund = report[-1]
         self.assertEqual(fund["columns"][0]["summed"], 150, "leaves were counted twice")
         self.assertEqual(fund["columns"][0]["status"], "exact")
+
+
+class LabelOnlyLines(unittest.TestCase):
+    """A label with no figures is either a wrapped tail or a row awaiting figures."""
+
+    def test_a_block_heading_never_takes_figures(self):
+        """It stands further left than the rows it heads."""
+        shifted = shift_figures_to_waiting_labels([
+            line("Cash Capital Appropriations & Debt Service", 180),
+            line("Serial Bond Principal & Interest", 203),
+            line("Transfer - Cash Capital", 203, [("5,826,623", 723)]),
+        ])
+        heading = shifted[0]
+        self.assertEqual(heading["label"], "Cash Capital Appropriations & Debt Service")
+        self.assertEqual(heading["figures"], [])
+
+    def test_a_row_label_takes_the_figures_beneath_it(self):
+        shifted = shift_figures_to_waiting_labels([
+            line("Serial Bond Principal & Interest", 203),
+            line("Transfer - Cash Capital", 203, [("5,826,623", 723)]),
+            line("Subtotal", 195, [("1,145,000", 723)]),
+        ])
+        by_label = {l["label"]: [f["text"] for f in l["figures"]] for l in shifted}
+        self.assertEqual(by_label["Serial Bond Principal & Interest"], ["5,826,623"])
+        self.assertEqual(by_label["Transfer - Cash Capital"], ["1,145,000"],
+                         "the shift must carry on through the block's subtotal indent")
+
+    def test_the_wrapped_reading_joins_the_label_instead(self):
+        joined = join_wrapped_labels([
+            line("Office of Constituent Assistance Resource", 180),
+            line("Employees", 180, [("313,368", 444)]),
+        ])
+        self.assertEqual(len(joined), 1)
+        self.assertEqual(joined[0]["label"], "Office of Constituent Assistance Resource Employees")
+
+    def test_the_reading_that_makes_more_totals_add_up_is_chosen(self):
+        """Geometry cannot separate the two readings, so the arithmetic does."""
+        rows = [
+            line("Serial Bond Principal & Interest", 203),
+            line("Transfer - Cash Capital", 203, [("5,826,623", 723)]),
+            line("Subtotal", 203, [("1,145,000", 723)]),
+            line("TOTAL WATER FUND BUDGET", 53, [("6,971,623", 723)]),
+        ]
+        chosen = merge_wrapped_labels(rows)
+        labels = [l["label"] for l in chosen]
+        self.assertIn("Serial Bond Principal & Interest", labels)
+        self.assertNotIn("Serial Bond Principal & Interest Transfer - Cash Capital", labels)
 
 
 class SplitTotals(unittest.TestCase):

@@ -43,12 +43,12 @@ That check is the accuracy measure, and it is reported rather than assumed:
 
 | | |
 | --- | --- |
-| Sections found | 51 |
+| Sections found | 50 |
 | Sections verified against their printed total | 29 |
-| Column totals matching exactly | 130 |
-| Column totals disagreeing | 49 |
+| Column totals matching exactly | 136 |
+| Column totals disagreeing | 39 |
 | Column totals incomplete (a figure could not be read) | 14 |
-| Column reconciliation rate | 72.6% |
+| Column reconciliation rate | 77.7% |
 
 The page range is found rather than configured: the tables are the longest run of pages
 carrying a "REVENUE SUMMARY" or "EXPENDITURE SUMMARY" heading, ignoring the single mention on
@@ -62,7 +62,7 @@ Running the same parser over the five most recent adopted budgets:
 | 2023-24 | 25-83 | 90 | 51 | 69.3% |
 | 2024-25 | 23-77 | 87 | 56 | 74.9% |
 | 2025-26 | 38-77 | 47 | 26 | 66.1% |
-| 2026-27 | 50-77 | 51 | 29 | 72.6% |
+| 2026-27 | 50-77 | 50 | 30 | 77.7% |
 
 A section counts as verified only when the document prints a total for it and every column of
 that total matches the rows summed beneath it. Sections with nothing to check against are
@@ -110,10 +110,20 @@ the closing subtotal of its block, so Water and Municipal Sidewalk report their 
 totals. A page number is also an unlabelled figure, so the repair only applies when the row
 below carries a figure for every column the total does.
 
-Those two funds still do not reconcile, and the reported rate falls from 74.9% to 72.6% because
-the repair exposes the disagreement instead of hiding it behind a wrong total. The cause is a
-block on those pages whose own rows are not being captured, which leaves a subtotal attached to
-the wrong row above it. That is unresolved.
+The capital and debt blocks compound this: a row's label sits alone with its figures printed
+underneath, so every row from there to the end of the block is one line out of step. Read as
+wrapped text, "Serial Bond Principal & Interest" was swallowed by the row below it and its
+$5,826,623 handed to its neighbour.
+
+A label-only line is either the tail of a wrapped label or a row awaiting its figures, and both
+sit at the same indentation, so geometry cannot separate them. The document decides: each page
+is read both ways and the reading under which more of that page's printed totals add up is the
+one kept. Reading it wholesale in either direction was worse than reading it in neither, which
+is what made the per-page choice necessary.
+
+Water, Sewer, Municipal Sidewalk, Downtown, Crouse-Marshall and the tax levy now reconcile
+exactly at the fund level. The Sidewalk and Sewer expense pages still do not, nor does the tax
+levy summary on page 76; those disagreements are recorded with their page numbers.
 
 ## Evidence and limits
 
